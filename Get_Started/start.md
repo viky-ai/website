@@ -42,13 +42,13 @@ The sentence "I want to see a movie from Clint Eastwood with brad pitt" will ret
 # Creating the Agent
 
 In Viky, click on the ***Agents*** tab, then on ***New Agent***
-![New agent picture](pic/01_new_agent.png)
+![New agent picture](pics/01_new_agent.png)
 The Agent Creation popup opens
 fills the ***name*** and the ***id*** fields with "IMDB_TEST", ***id*** must be url compatible
 Set the visibility as ***private***, so only you can see, use or change your agent
 Let the languages as ***english*** and uncheck ***french***
 click on ***create***
-![Create agent picture](pic/02_create_agent.png)
+![Create agent picture](pics/02_create_agent.png)
 
 The agent is now created
 Feel free to add a readme as you want
@@ -58,30 +58,30 @@ Feel free to add a readme as you want
 ## Creating the interpretation
 
 In the ***Interpretations*** tab, click on ***New Interpretation***
-![New agent interpretation](pic/03_new_interpretation.png)
+![New agent interpretation](pics/03_new_interpretation.png)
 Fill the ***ID*** with "Search"
 Interpretation can be set as ***public*** or ***private***.
 A ***public*** interpretation will be able to return a solution as a result.
 A ***private*** interpretation can only be used as for calculation or computation.
 Set your interpretation as ***Public*** and click on ***Create***
-![Create agent interpretation](pic/04_create_interpretation.png)
+![Create agent interpretation](pics/04_create_interpretation.png)
 
 ## Creating the first expression
 
 The interpretation is created, now click on it, select the ***en*** tab and type "I want to see a movie with bruce willis" in the text area, then click on ***add***.
-![New expression picture](pic/05_new_expression.png)
+![New expression picture](pics/05_new_expression.png)
 
 
 ## Testing the Agent
 
 Test it by typing "I want to see a movie with bruce willis" in the test text area and click on the arrow
-![Testing agent picture](pic/06_testing_agent.png)
+![Testing agent picture](pics/06_testing_agent.png)
 You can see the returned solution in the ***explain*** tab
 to see the full JSON return, click on the ***JSON*** tab
 The return value is an interpretation, the solution is just a part of the interpretation and the score is the match exatcitude level, 0 being a no match, and 1 being a fully exact match
 
 In the test panel, set the spellchecking to ***low***
-![Spellchecking picture](pic/23_spellchecking.png)
+![Spellchecking picture](pics/23_spellchecking.png)
 Test now the sentence "I want to see a movie with Bruce Willlis"
 The actor name has been taken as "Bruce Willis", and a spellchecking has been performed.
 Change the sentence to "I want to see a movie with Bruce Wallis"
@@ -103,7 +103,7 @@ Then, enter
     }
 
 in the solution text area, being a javascript editor, and click on ***update***
-![Customizing the solution](pic/07_update_solution.png)
+![Customizing the solution](pics/07_update_solution.png)
 Re-test the sentence : the solution has changed and matches now the expected solution for this sentence.
 
 # Variabilize the interpretation
@@ -126,7 +126,7 @@ in the javascript editor then click on ***add***
 Go back to the "search" interpretation, click on the expression and highlight "with Bruce Willis"
 A drop down list appears, displaying the different interpretations available for variabilization.
 Select the "params" interpretation.
-![Variabilize interpretation picture](pic/08_variabilize_interpretation.png)
+![Variabilize interpretation picture](pics/08_variabilize_interpretation.png)
 A line with the name of the interpretation is displayed. in front of the interpretation, a text field is displayed, containing the name of a variable usable in the sulution
 Replace the map with tag "actor" by this variable
 The solution in the javascript editor must be
@@ -138,7 +138,7 @@ The solution in the javascript editor must be
       ]
     }
 
-![Update parametrized solution picture](pic/09_update_solution.png)
+![Update parametrized solution picture](pics/09_update_solution.png)
 Testing the interpretation will return exactly the same thing as before
 Now, we will add some more actors.
 This will be done in the entities
@@ -150,7 +150,7 @@ Type "Actors" in the ***ID*** text field, let it as Private and glued, and click
 Click on the entity list to open it and enter some actors names :
 type "Bruce Willis" in the ***Terms*** text area; then click on ***Add***,
 type "Morgan Freeman" in the ***Terms*** text area; then click on ***Add***
-![Create entity picture](pic/10_create_entity.png)
+![Create entity picture](pics/10_create_entity.png)
 
 ## Linking entities to interpretations
 
@@ -161,7 +161,7 @@ Solution must be
     {
       "actor": actors
     }
-![Variabilize interpretation with data picture](pic/11_variabilize_interpretation.png)
+![Variabilize interpretation with data picture](pics/11_variabilize_interpretation.png)
 
 Test the interpretation with the sentence "I want to see a movie with Bruce Willis", the result is still the same
 Test it now with the sentence "I want to see a movie with morgan freeman", the result is now
@@ -203,7 +203,7 @@ Click on ***CSV import***
 Drag and drop the actors.csv file in the drop area
 Click on ***Repolace current entities***
 Click on ***Import***
-![Filling entities list picture](pic/12_loading_csv.png)
+![Filling entities list picture](pics/12_loading_csv.png)
 
 All your new actors are correctly imported in the entity list, you can now look for movies with all the actors existing in the list
 
@@ -220,12 +220,12 @@ Open it and add in the ***Terms*** text field
     with the actor
 
 Then click on ***Add***
-![Multiple values entity picture](pic/13_create_entity.png)
+![Multiple values entity picture](pics/13_create_entity.png)
 
 Go back in the ***params*** interpretation, open the ***with bruce willis*** expression and highlight ***with***
 Select ***with_actor*** in the drop_down list
 Click on ***update***
-![Variabilize interpretation picture](pic/14_variabilize_interpretation.png)
+![Variabilize interpretation picture](pics/14_variabilize_interpretation.png)
 
 Test the sentence "I want to see a movie with the actor Bruce Willis"
 
@@ -240,7 +240,7 @@ It is possible, in Viky.ai, to identify a type of word or data thanks to the sen
 Open the ***params*** interpretation and open the ***with bruce willis*** expression
 Click on the ***any*** button in front of the ***actors*** entities list alias
 Click on ***Update***
-![Any option picture](pic/15_any.png)
+![Any option picture](pics/15_any.png)
 test the current agent with the sentence "I want to see a movie with Benicio Del Toro"... now it works!
 
 # Adding several expressions to the same interpretation
@@ -269,7 +269,7 @@ uncheck auto solution and set the solultion as
       "director": directors
     }
 
-![From director interpretation picture](pic/16_variabilize_interpretation.png)
+![From director interpretation picture](pics/16_variabilize_interpretation.png)
 
 The agent si now able to understand as well the sentences "I want to see a movie with Brad Pitt" and "I want to see a movie from Clint Eastwood"
 
@@ -278,7 +278,7 @@ The agent si now able to understand as well the sentences "I want to see a movie
 Now, we would like to be able to understand sentences like "I want to see a movie from Clint Eastwood with brad pitt"
 
 Open the ***search*** interpretation, open the only expression existing, and in front of the ***params*** alias, click ***list*** then click on ***update***
-![List interpretation picture](pic/17_list.png)
+![List interpretation picture](pics/17_list.png)
 
 Try if with the sentence "I want to see a movie from Clint Eastwood with brad pitt"
 It works but the solution has not the correct shape. You have to update the solution
@@ -315,16 +315,16 @@ Now we want to customize our agent a bit more, in order to understand as well "I
 By chance, there is already a public agent doing it, so we are going to use it instead of recreating what has already been done
 
 Go in the ***overview*** tab and click on ***Add new dependency***
-![Adding dependency picture](pic/19_add_dependency.png)
+![Adding dependency picture](pics/19_add_dependency.png)
 Type "want" in the search bar and click on the ***Want version 3*** agent
-![Adding dependency picture 2](pic/20_add_dependency.png)
+![Adding dependency picture 2](pics/20_add_dependency.png)
 The dependency to the ***Want version 3*** agent is now created, you can navigate to this agent by clicking on it or remove this dependency if you want, but only if this agent is not used in your agent
 
 Go back now in your ***search*** interpretation
 Open the expression and highlight "I want"
 Select the interpretation ***want*** in the drop down list
 Click on ***Update***
-![Creating dependency picture2](pic/21_dependency_in_interpretation.png)
+![Creating dependency picture2](pics/21_dependency_in_interpretation.png)
 
 It's done, sentences such as "I'd like to see a movie from Clint Eastwood with brad pitt" will be perfectly understood.
 
@@ -333,7 +333,7 @@ It's done, sentences such as "I'd like to see a movie from Clint Eastwood with b
 Now, I'd like the agent to understand in the same way "I want to see a movie with Bruce Willis" and "I want a movie with Bruce Willis"
 Open the ***search*** and update the expression by removing "to see". The expression is now  "I want a movie with Bruce Willis"
 Set the ***proximity*** to Glued then click on ***update***
-![Set proximity picture](pic/22_glued.png)
+![Set proximity picture](pics/22_glued.png)
 Test the sentences "I want a movie with Bruce Willis" and "I want to see a movie with Bruce Willis". The first sentence returns a result, but not the second one
 Re-open the ***search*** interpretation and set the ***proximity*** to ***close***, re-test the 2 sentences, both are returning a result now.
 
