@@ -284,6 +284,12 @@ Then click on ***Add***.
 
 ![Multiple values entity picture](pics/13_create_entity.png)
 
+Adding multiple values in an entity using a csv file is done by separating the values with a pipe (|)
+Here, the csv file would be
+
+    Terms,Auto solution,Solution
+    with|with actor|with the actor,true,with
+
 Go back in the ***params*** interpretation, open the ***with bruce willis*** expression and highlight ***with***.
 
 Select ***with_actor*** in the drop_down list.
