@@ -289,8 +289,10 @@ Here, the csv file would be
 
     Terms,Auto solution,Solution
     with|with actor|with the actor,true,with
+    
+The solution for entities with auto solution will be the first term of the entity
 
-Go back in the ***params*** interpretation, open the ***with bruce willis*** expression and highlight ***with***.
+Now go back in the ***params*** interpretation, open the ***with bruce willis*** expression and highlight ***with***.
 
 Select ***with_actor*** in the drop_down list.
 
