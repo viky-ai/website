@@ -52,6 +52,13 @@ To create an ordered list, add line items with numbers followed by periods. The 
 3. Aut quod libero nam perferendis iure blanditiis voluptatibus.
 
 
+## Blockquotes
+
+> There is only one God, his name is Death. And there is only one thing we say
+> to Death : “Not today”.
+> <cite>Game of Thrones, Syrio Forel to Arya.</cite>
+
+
 ## Code
 
 ### Inline code
@@ -90,7 +97,6 @@ class Array
   end
 end
 ```
-
 
 JSON code sample:
 

@@ -77,6 +77,20 @@
     }
   }
 
+  blockquote{
+    border-left: 4px solid $grey_400;
+    padding: .1em 1em;
+    margin: 1em 0;
+    background-color: $grey_100;
+    cite{
+      margin-top: .5em;
+      font-size: .9em;
+      display: block;
+      text-align: right;
+      color: $grey_500;
+    }
+  }
+
   p code,
   ul code,
   li code,
