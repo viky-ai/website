@@ -41,7 +41,7 @@ In Viky, click on the _**Agents**_ tab, then on _**New Agent**_.
 ![New Agent screenshot](pics/01_new_agent.png)
 
 A pop in "Create a new agent" opens.
-> screenshot à insérer
+![Create new agent screenshot](pics/02_create_agent.png)
 
 Fill the _**name**_ and the _**id**_ fields with "Address_Tutorial".
 
@@ -56,16 +56,19 @@ Select the following options for the language: _**No language**_, _**french**_ a
 Click on _**create**_.
 
 The agent is now created. By default, you land on the _**Overview**_ page of the agent.
-> screenshot à insérer
+![Overview screenshot](pics/03_agent_overview.png)
 
 On this section, you can manage access rights, dependencies and add a _ReadMe_ to describe your agent.
 You will add 2 dependencies as seen above : _**Numbers**_ and  _**VillesFR**_.
 
 - Click on _**Add new dependency**_
 - Search and select _**Numbers**_ public agent
+![Add dependency screenshot](pics/04_add_new_dependency.png)
+![Add dependency on Numbers screenshot](pics/05_select_numbers_agent.png)
+
 - Click on _**Add new dependency**_
 - Search and select _**VillesFR**_ public agent
-> screenshots à insérer
+![Add dependency on VillesFR screenshot](pics/06_select_villesFR_agent.png)
 
 >_**Tips and tricks**_
 You can add a _ReadMe_ in this _**Overview**_ section. This is particularly useful to add a description of the purpose of your agent, and some examples of what it will be able to do. For this tutorial, copy/paste the purpose of the tutorial in the _ReadMe_ section. Add the following examples of _french postal addresses_ as an illustration (it will serve also as unitary tests during the agent creation). Examples should be as representative as possible.
@@ -80,7 +83,7 @@ You can add a _ReadMe_ in this _**Overview**_ section. This is particularly usef
 ## Create an interpretation
 
 In the _**Interpretations**_ tab, click on _**New Interpretation**_.
-> screenshot à insérer
+![New interpretation screenshot](pics/07_new_interpretation.png)
 
 Fill the _**ID**_ with "address".
 Interpretation can be set as _**public**_ or _**private**_.
@@ -89,11 +92,13 @@ A _**public**_ interpretation will be able to return a solution as a result.
 A _**private**_ interpretation can only be used for calculation or computation.
 
 Set your interpretation as _**Public**_ and click on _**Create**_.
+![create interpretation screenshot](pics/08_create_new_interpretation.png)
 
 ## Create your first expression
 
 The interpretation is created, now click on it, select the _**fr**_ tab and type "12 avenue de Flandres 75019 Paris" in the text area, then click on _**add**_.
 Let the default options as they are (_keep order_, _close_, _auto solution_). We will back to them later.
+![create expression screenshot](pics/09_first_expression.png)
 > screenshot à insérer
 
 ## Testing the Agent
@@ -137,6 +142,7 @@ The "shell" to call road types is ready. We will create a list of related entiti
 Click on the ***Entities*** tab and click on ***New entities list***.
 
 Type "road_types" in the ***ID*** text field, select Private and Glued options, and click on ***Create***.
+![create entities list screenshot](pics/10_first_entities_list.png)
 
 Click on the entity list to open it and enter road types  names :
 
@@ -145,7 +151,7 @@ type "avenue" in the ***Terms*** text area; then click on ***Add***,
 type "impasse" in the ***Terms*** text area; then click on ***Add***,
 type "passage" in the ***Terms*** text area; then click on ***Add***,
 etc...
-> screenshot à insérer
+![filling the entities list screenshot](pics/11_filling_entities.png)
 
 >_**Tips and tricks**_
 It is possible to import long lists of entities into Viky. Viky accepts CSV format, please refer to the documentation to learn more.
@@ -153,7 +159,9 @@ It is possible to import long lists of entities into Viky. Viky accepts CSV form
 ## Link entities to interpretations
 Go back in _**Interpretations**_ tab, click on _**road_type**_ private interpretation, click on _**main_road_type**_ and highlight _**main_road_type**_ entry.
 A drop-down list appears, displaying the different interpretations available for variabilization.
+![Linking eneities list to interpretationscreenshot](pics/12_linking_entities_to_interpretations.png)
 Select the ***road_types*** entities (it should be labeled like _**yourname/youragent/entities_lists/road_types**_), and click on _**Update**_.
+![updating interpretation screenshot](pics/13_updating_interpretation.png)
 
 Go back in the ***address***  public interpretation and highlight "avenue" in your expression "12 avenue de Flandres 75019 Paris".
 In the drop-down list, select  _**road_type**_ interpretation, and click on _**Update**_.
