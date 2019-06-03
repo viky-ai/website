@@ -9,11 +9,13 @@ title: "Sample guide"
   </p>
 </aside>
 
+
 ## Paragraphs
 
 To create paragraphs, use a blank line to separate one or more lines of text. You should not indent paragraphs with spaces or tabs.
 
 You can add emphasis by making text **bold** or *italic*.
+
 
 ## Headings
 
@@ -48,3 +50,56 @@ To create an ordered list, add line items with numbers followed by periods. The 
     1. Exercitationem ad tempora commodi.
     2. Animi voluptatum consequuntur quos.
 3. Aut quod libero nam perferendis iure blanditiis voluptatibus.
+
+
+## Code
+
+### Inline code
+
+To denote a word or phrase as code, enclose it in tick marks.<br />
+For example: `this is code`, right?
+
+
+### Block code
+
+To create code blocks, indent every line of the block by at least four spaces or one tab.
+
+    {
+      "solution": {
+        "type": "query",
+        "joke": {
+          "query": "Anton, do you think I’m a bad mother?",
+          "response": "My name is Paul."
+        }
+      }
+    }
+
+To set up syntax highlighting use fenced code blocks markup.
+
+Ruby code sample:
+
+```ruby
+class Array
+  def extract!
+    return to_enum(:extract!) { size } unless block_given?
+    extracted_elements = []
+    reject! do |element|
+      extracted_elements << element if yield(element)
+    end
+    extracted_elements
+  end
+end
+```
+
+
+JSON code sample:
+
+```json
+{
+  "solution": {
+    "developper": true,
+    "name": "Michel"
+  }
+}
+```
+
