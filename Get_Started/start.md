@@ -1,448 +1,163 @@
 # Purpose
+This tutorial will assist you in the creation of your first project into Viky.
+We will guide you to create your first agent to structure information from contents and to retrieve relevant information in these contents by interacting with your data in natural language.
 
-The purpose of this exercise will be to create an agent that understands sentences as "I want to see a movie with bruce willis", or "Show me the movie Leon", or "I want to see a movie from Clint Eastwood", in order to be able to search in the IMDB database.
+The use case to start on the platform is very simple and will demonstrate the different Viky's capabilities:
+You have some contents where you want to retrieve the postal address, to create some metadata for instance to classify the information.
+Furthermore, you have customers who want to query these contents by searching with a postal address. Queries should be in natural language to facilitate the interactions.
 
-The search itself won't be done here, only the sentence understanding:
+# Best Practices to start
+Definition of the perimeter and the usage is your priority before starting any new project on Viky.
+It will help you to ensure the right creation of agents.
 
-The sentence "I want to see a movie with bruce willis" will return the result
+**First step...** what is a _postal address_?
+- a _postal address_ contains generally a road, its number, a postal code, a town
+- it could also contain additional information about the floor, the apartment, the building
+- it would be interesting to have the GPS details of the town to imagine a use on a map
 
-    {
-      "intention": "search_imdb",
-      "params": [
-        {
-          "actor": "Bruce Willis"
-        }
-      ]
-    }
+_Postal addresses_ could be slightly different from one country to another. So let's started in this tutorial with french postal address!
+A typical example is: 12 avenue de Flandres 75019 Paris
+Find some information about postal addresses on [Wikipedia](https://fr.wikipedia.org/wiki/Adresse_postale#France)
 
-The sentence "I want to see a movie from Clint Eastwood" will return the result
+**Second step...** can I reuse components or should I create everything from scratch?
+Think about the elementary components you will need to create agents able to identify a postal address. 
+In the example "12 avenue de Flandres 75019 Paris", the decomposition into elementary elements gives :
+- number,
+- road type, 
+- road name,
+- postal code (i.e. a specific pattern of numbers), 
+- city, 
+- it could optionally contain information about the apartment, building, floor.
 
-    {
-      "intention": "search_imdb",
-      "params": [
-        {
-          "director": "Clint Eastwood"
-        }
-      ]
-    }
+>_**Tips and tricks**_
+Open resources exist on the web to facilitate the creation of these elements.
+> For instance, road types are available on [Wikipedia](https://fr.wikipedia.org/wiki/Odonymie_en_France#Types_de_voie) or on [GitHub Gist](https://gist.github.com/384400/bf3c83a4e7d1aa66a87e)
 
-The sentence "I want to see a movie from Clint Eastwood with brad pitt" will return the result
+Viky contains already some generic agents to support you in this creation: numbers and French cities.
+We will create a module (named _**Agents**_ in Viky's world) able to identify each part of the address, and a postal address.
 
-    {
-      "intention": "search_imdb",
-      "params": [
-        {
-          "director": "Clint Eastwood"
-        },
-        {
-          "actor": "Bruce Willis"
-        }
-      ]
-    }
+# Create an agent
+In Viky, click on the _**Agents**_ tab, then on _**New Agent**_.
+> screenshot à insérer
 
-# Creating the Agent
+A pop in "Create a new agent" opens.
+> screenshot à insérer
 
-In Viky, click on the ***Agents*** tab, then on ***New Agent***.
+Fill the _**name**_ and the _**id**_ fields with "Address_Tutorial".
 
-![New agent picture](pics/01_new_agent.png)
+>_**Tips and tricks**_
+ _**id**_ must be URL-compatible.
+> préciser ce que ça veut dire URL compatible (caractères à éviter par exemple, nombre de caractères maximum, ...)
 
-The Agent Creation popup opens.
+Set the visibility as _**private**_, so you will be the unique owner of the agent, to see, use or modify your agent.
 
-Fills the ***name*** and the ***id*** fields with "IMDB_TEST", ***id*** must be url compatible.
+Select the following options for the language: _**No language**_, _**french**_ and uncheck _**english**_.
 
-Set the visibility as ***private***, so only you can see, use or change your agent.
+Click on _**create**_.
 
-Let the languages as ***english*** and uncheck ***french***.
+The agent is now created. By default, you land on the _**Overview**_ page of the agent.
+> screenshot à insérer
 
-Click on ***create***.
+On this section, you can manage access rights, dependencies and add a _ReadMe_ to describe your agent.
+You will add 2 dependencies as seen above : _**Numbers**_ and  _**VillesFR**_.
 
-![Create agent picture](pics/02_create_agent.png)
+- Click on _**Add new dependency**_
+- Search and select _**Numbers**_ public agent
+- Click on _**Add new dependency**_
+- Search and select _**VillesFR**_ public agent
+> screenshots à insérer
 
-The agent is now created.
-
-Feel free to add a readme as you want.
+>_**Tips and tricks**_
+You can add a _ReadMe_ in this _**Overview**_ section. This is particularly useful to add a description of the purpose of your agent, and some examples of what it will be able to do. For this tutorial, copy/paste the purpose of the tutorial in the _ReadMe_ section. Add the following examples of _french postal addresses_ as an illustration (it will serve also as unitary tests during the agent creation). Examples should be as representative as possible.
+>- 12 avenue de Flandres 75019 Paris
+>- 108 bis rue Jean Moulin 54230 Neuves-Maisons
+>- 240 Impasse du Fief du Breil 44690 La Haie-Fouassière
+>- 3 Passage Pommeraye 44000 Nantes
+>- 1 Rue de la Miséricorde, 20200 Bastia
 
 # First interpretation
 
-## Creating the interpretation
+## Create an interpretation
 
-In the ***Interpretations*** tab, click on ***New Interpretation***.
+In the _**Interpretations**_ tab, click on _**New Interpretation**_.
+> screenshot à insérer
 
-![New agent interpretation](pics/03_new_interpretation.png)
+Fill the _**ID**_ with "address".
+Interpretation can be set as _**public**_ or _**private**_.
 
-Fill the ***ID*** with "Search".
+A _**public**_ interpretation will be able to return a solution as a result.
+A _**private**_ interpretation can only be used for calculation or computation.
 
-Interpretation can be set as ***public*** or ***private***.
+Set your interpretation as _**Public**_ and click on _**Create**_.
 
-A ***public*** interpretation will be able to return a solution as a result.
+## Create your first expression
 
-A ***private*** interpretation can only be used as for calculation or computation.
-
-Set your interpretation as ***Public*** and click on ***Create***.
-
-![Create agent interpretation](pics/04_create_interpretation.png)
-
-## Creating the first expression
-
-The interpretation is created, now click on it, select the ***en*** tab and type "I want to see a movie with bruce willis" in the text area, then click on ***add***.
-
-![New expression picture](pics/05_new_expression.png)
-
+The interpretation is created, now click on it, select the _**fr**_ tab and type "12 avenue de Flandres 75019 Paris" in the text area, then click on _**add**_.
+Let the default options as they are (_keep order_, _close_, _auto solution_). We will back to them later.
+> screenshot à insérer
 
 ## Testing the Agent
 
-Test it by typing "I want to see a movie with bruce willis" in the test text area and click on the arrow.
+A console panel is on the right to test in live your agent. Type "12 avenue de Flandres 75019 Paris" in the text area and click on the arrow to send the request. This console calls your agent by REST API.
 
-![Testing agent picture](pics/06_testing_agent.png)
+You can see the returned solution in the _**Explain**_ tab (opened by default). The solution is available also in JSON format, click on the _**JSON**_ tab to check it.
 
-You can see the returned solution in the ***explain*** tab.
+The return value is an interpretation, the solution is just a part of the interpretation and the score is the match exactitude level, 0 means no match, and 1 means a complete exact match.
 
-to see the full JSON return, click on the ***JSON*** tab.
-
-The return value is an interpretation, the solution is just a part of the interpretation and the score is the match exatcitude level, 0 being a no match, and 1 being a fully exact match.
-
-
-In the test panel, set the spellchecking to ***low***.
-
-![Spellchecking picture](pics/23_spellchecking.png)
-
-Test now the sentence "I want to see a movie with Bruce Willlis".
-
-The actor name has been taken as "Bruce Willis", and a spellchecking has been performed.
-
-Change the sentence to "I want to see a movie with Bruce Wallis".
-
-No solution is given because the spellchecking has not been performed.
-
-Set now the spellchecking level to ***medium***, the request is re-executed and the spellchecking is performed.
-
-## Customize the solution
-
-Click on the expression to open it, then uncheck ***auto solution***.
-
-Then, enter
-
-    {
-      "intention": "search_imdb",
-      "params": [
-        {
-          "actor": "Bruce Willis"
-        }
-      ]
-    }
-
-in the solution text area, being a javascript editor, and click on ***update***.
-
-![Customizing the solution](pics/07_update_solution.png)
-
-Re-test the sentence : the solution has changed and matches now the expected solution for this sentence.
+>_**Tips and tricks**_
+The _Test Console_ has different usages. It could be a place to realize your unitary tests, each time you create a new interpretation, to validate it.
+It allows also to save your tests to create a _Test Suite_. This is a best practice to have in NLP projects, to have continuous improvements with a view of potential regressions.
+Once you run a test, you can add it to _Test Suite_ by clicking on the related button.
+It is then possible to launch a global run on all saved tests.
 
 # Variabilize the interpretation
 
-You may want to be able to see movies with other actors than Bruce Willis.
+You may want to be able to identify any _ French postal address_ with other numbers, road types and names, and cities.
 
-For that, we will now create another interpretation understanding "with Bruce Willis" and use it in the main interpretation.
+We will create sub-interpretations to variabilize each element of the initial address model we have created.
 
-## creating the sub-interpretation
+## Create a sub-interpretation
 
-Go back in the ***Interpretations*** tab and click on ***New Interpretation***.
+Go back in the _**Interpretations**_ tab and click on _**New Interpretation**_.
 
-Put "params" as an ***ID*** and let this interpretation ***private***, then click on ***Create***.
+We will start with the road types.
+Enter "road_type" as an _**ID**_, let this interpretation as _**private**_ mode, then click on _**Create**_.
+Click on this new interpretation named "road_type".
+Select the _**fr**_ language tab, enter the expression "main_road_type" and then click on _**Add**_.
 
-Select the "en" language tab then add the expression "with Bruce Willis", uncheck ***auto solution***, put
+>_**Tips and tricks**_
+We recommend best practices to name your interpretations and entities.
+Names are always in English.
+We use the singular form to name an interpretation. We use plural form to name an entities list.
+In the above example, _road types_ will have a "road_type" name for the interpretation, and we will name the list of types in the entities tab "road_type**s**".
 
-    {
-      "actor": "Bruce Willis"
-    }
+The "shell" to call road types is ready. We will create a list of related entities.
 
-in the javascript editor then click on ***add***.
-
-Go back to the "search" interpretation, click on the expression and highlight "with Bruce Willis".
-
-A drop down list appears, displaying the different interpretations available for variabilization.
-
-Select the "params" interpretation.
-
-![Variabilize interpretation picture](pics/08_variabilize_interpretation.png)
-
-A line with the name of the interpretation is displayed. in front of the interpretation, a text field is displayed, containing the name of a variable usable in the solution.
-
-Replace the map with tag "actor" by this variable.
-
-The solution in the javascript editor must be
-
-    {
-      "intention": "search_imdb",
-      "params": [
-        params
-      ]
-    }
-
-![Update parametrized solution picture](pics/09_update_solution.png)
-
-Testing the interpretation will return exactly the same thing as before.
-
-Now, we will add some more actors.
-
-This will be done in the entities
-
-## Creating the Actors entities
-
+## Create the road type entities
 Click on the ***Entities*** tab and click on ***New entities list***.
 
-Type "Actors" in the ***ID*** text field, let it as Private and glued, and click on ***Create***.
+Type "road_types" in the ***ID*** text field, select Private and Glued options, and click on ***Create***.
 
-Click on the entity list to open it and enter some actors names :
+Click on the entity list to open it and enter road types  names :
 
-type "Bruce Willis" in the ***Terms*** text area; then click on ***Add***,
+type "rue" in the ***Terms*** text area ; then click on ***Add***,
+type "avenue" in the ***Terms*** text area; then click on ***Add***,
+type "impasse" in the ***Terms*** text area; then click on ***Add***,
+type "passage" in the ***Terms*** text area; then click on ***Add***,
+etc...
+> screenshot à insérer
 
-type "Morgan Freeman" in the ***Terms*** text area; then click on ***Add***.
+>_**Tips and tricks**_
+It is possible to import long lists of entities into Viky. Viky accepts CSV format, please refer to the documentation to learn more.
 
-![Create entity picture](pics/10_create_entity.png)
+## Link entities to interpretations
+Go back in _**Interpretations**_ tab, click on _**road_type**_ private interpretation, click on _**main_road_type**_ and highlight _**main_road_type**_ entry.
+A drop-down list appears, displaying the different interpretations available for variabilization.
+Select the ***road_types*** entities (it should be labeled like _**yourname/youragent/entities_lists/road_types**_), and click on _**Update**_.
 
-## Linking entities to interpretations
+Go back in the ***address***  public interpretation and highlight "avenue" in your expression "12 avenue de Flandres 75019 Paris".
+In the drop-down list, select  _**road_type**_ interpretation, and click on _**Update**_.
 
-Go back in the ***params*** interpretation and highlight "Bruce Willis".
+Test the interpretation with the sentence "12 avenue de Flandres 75019 Paris", the result should be the same as your first test.
 
-Select the ***Actors*** entities, then replace the "Bruce Willis" string with the ***actors*** value in the solution.
-
-Solution must be
-
-    {
-      "actor": actors
-    }
-
-![Variabilize interpretation with data picture](pics/11_variabilize_interpretation.png)
-
-Test the interpretation with the sentence "I want to see a movie with Bruce Willis", the result is still the same.
-
-Test it now with the sentence "I want to see a movie with morgan freeman", the result is now.
-
-    {
-      "intention": "search_imdb",
-      "params": [
-        {
-          "actor": "Morgan Freeman"
-        }
-      ]
-    }
-
-## Filling entities with csv data
-
-Filling an entity list manually can be very boring if you have a lot of data to put in it.
-
-Another way to do it is to fill it thanks to a csv file.
-
-The shape of this csv file has to be
-
-    Terms,Auto solution,Solution
-    <value1>,<boolean1>,<solution1>
-    <value2>,<boolean2>,<solution2>
-    etc...
-
-where ***value*** is the text to be matched, ***boolean*** is the ability for the solution to be different from the text to be matched, and ***solution*** is the solution to be returned.
-
-Create a file named actors.csv.
-
-set its content as
-
-    Terms,Auto solution,Solution
-    Bruce Willis,true,Bruce Willis
-    Morgan Freeman,true,Morgan Freeman
-    Robert De Niro,true,Robert De Niro
-    Brad Pitt,true,Brad Pitt
-
-Open the ***actors*** entity list.
-
-Click on ***CSV import***.
-
-Drag and drop the actors.csv file in the drop area.
-
-Click on ***Repolace current entities***.
-
-Click on ***Import***.
-
-![Filling entities list picture](pics/12_loading_csv.png)
-
-All your new actors are correctly imported in the entity list, you can now look for movies with all the actors existing in the list.
-
-## Filling one entity with several data
-
-If you want several expressions to be interpreted in the same way in an entity, it is very simple.
-
-Let's do it to help us to understand "with Bruce Willis" or "With the actor Bruce Willis" in the same way.
-
-Open the ***Entities*** tab, then create a new entities list named "with_actor".
-
-Open it and add in the ***Terms*** text field
-
-    with
-    with actor
-    with the actor
-
-Then click on ***Add***.
-
-![Multiple values entity picture](pics/13_create_entity.png)
-
-Adding multiple values in an entity using a csv file is done by separating the values with a pipe (|)
-Here, the csv file would be
-
-    Terms,Auto solution,Solution
-    with|with actor|with the actor,true,with
-    
-The solution for entities with auto solution will be the first term of the entity
-
-Now go back in the ***params*** interpretation, open the ***with bruce willis*** expression and highlight ***with***.
-
-Select ***with_actor*** in the drop_down list.
-
-Click on ***update***.
-
-![Variabilize interpretation picture](pics/14_variabilize_interpretation.png)
-
-Test the sentence "I want to see a movie with the actor Bruce Willis".
-
-You have now several ways to query a movie giving an actor known by the system.
-
-But how about other actors?
-
-# Recognizing unknown entities
-
-If you test the current agent with the sentence "I want to see a movie with Benicio Del Toro", no answer will be found?
-
-It is possible, in Viky.ai, to identify a type of word or data thanks to the sentence structure, replacing the variable's value by the detected text. This is the ***any*** option.
-
-Open the ***params*** interpretation and open the ***with bruce willis*** expression.
-
-Click on the ***any*** button in front of the ***actors*** entities list alias.
-
-Click on ***Update***.
-
-![Any option picture](pics/15_any.png)
-
-test the current agent with the sentence "I want to see a movie with Benicio Del Toro"... now it works!
-
-# Adding several expressions to the same interpretation
-
-We will now create another set of interpretations/entities in order to understand the sentence "I want to see a movie from Clint Eastwood", Clint Eastwood being the director.
-
-For that, we have first to create an entity list named "from_director".
-
-Open it and add in the ***Terms*** text field
-
-    from
-    from director
-    from the director
-
-Then, create another entity list named "directors", open it and fill it with a csv file containing
-
-    Terms,Auto solution,Solution
-    Clint Eastwood,true,Clint Eastwood
-    Spike Lee,true,Spike Lee
-    J.J. Abrams,true,J.J. Abrams
-
-When it's done, open the ***params*** interpretation and add an expression ***from Clint Eastwood***.
-
-Highlight ***from*** and make an alias to the ***from_director*** entities list.
-
-Highlight ***Clint Eastwood*** and make an alias to the ***directors*** entities list and make it ***any***.
-
-uncheck auto solution and set the solultion as
-
-    {
-      "director": directors
-    }
-
-![From director interpretation picture](pics/16_variabilize_interpretation.png)
-
-The agent si now able to understand as well the sentences "I want to see a movie with Brad Pitt" and "I want to see a movie from Clint Eastwood".
-
-# One expression understanding several times the same intent
-
-Now, we would like to be able to understand sentences like "I want to see a movie from Clint Eastwood with brad pitt".
-
-Open the ***search*** interpretation, open the only expression existing, and in front of the ***params*** alias, click ***list*** then click on ***update***.
-
-![List interpretation picture](pics/17_list.png)
-
-Try if with the sentence "I want to see a movie from Clint Eastwood with brad pitt".
-
-It works but the solution has not the correct shape. You have to update the solution.
-
-Actualy, the list will create an array with a tag named with the entity name, so we have to remove the array creation made at the beginning from the solution.
-
-When it is done, we have a solution whose shape is :
-
-    {
-      "intention": "search_imdb",
-      "params": {
-          "params": [
-            {
-              "director": "clint eastwood"
-            },
-            {
-              "actor": "Brad Pitt"
-            }
-          ]
-        }
-      }
-    }
-
-Which is not exactly what we want.
-
-To avoid that, we will call the ***params*** element from the ***params*** value.
-
-The solution to vrite in thejavascript editor will be then :
-
-    {
-      "intention": "search_imdb",
-      "params": params.params
-    }
-
-# Creating external dependencies
-
-Now we want to customize our agent a bit more, in order to understand as well "I want", "I'd like", "I would like", etc... in the same way.
-
-By chance, there is already a public agent doing it, so we are going to use it instead of recreating what has already been done.
-
-Go in the ***overview*** tab and click on ***Add new dependency***.
-
-![Adding dependency picture](pics/19_add_dependency.png)
-
-Type "want" in the search bar and click on the ***Want version 3*** agent.
-
-![Adding dependency picture 2](pics/20_add_dependency.png)
-
-The dependency to the ***Want version 3*** agent is now created, you can navigate to this agent by clicking on it or remove this dependency if you want, but only if this agent is not used in your agent.
-
-Go back now in your ***search*** interpretation.
-
-Open the expression and highlight "I want".
-
-Select the interpretation ***want*** in the drop down list.
-
-Click on ***Update***.
-
-![Creating dependency picture2](pics/21_dependency_in_interpretation.png)
-
-It's done, sentences such as "I'd like to see a movie from Clint Eastwood with brad pitt" will be perfectly understood.
-
-# Allowing extra words
-
-Now, I'd like the agent to understand in the same way "I want to see a movie with Bruce Willis" and "I want a movie with Bruce Willis".
-
-Open the ***search*** and update the expression by removing "to see". The expression is now  "I want a movie with Bruce Willis".
-
-Set the ***proximity*** to Glued then click on ***update***.
-
-![Set proximity picture](pics/22_glued.png)
-
-Test the sentences "I want a movie with Bruce Willis" and "I want to see a movie with Bruce Willis". The first sentence returns a result, but not the second one.
-
-Re-open the ***search*** interpretation and set the ***proximity*** to ***close***, re-test the 2 sentences, both are returning a result now.
-
-Several levels of proximity can be defined, as well in interpretations as in entities lists.
-
-In the entities, the proximity is defined at the tntity list level.
-
-In the interpretations, the proximity is defined at the expression level.
+Test it now with the sentence "12 **impasse** de Flandres 75019 Paris", it should be successful as well.
