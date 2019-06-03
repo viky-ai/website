@@ -20,13 +20,13 @@ A typical example is: 12 avenue de Flandres 75019 Paris
 Find some information about postal addresses on [Wikipedia](https://fr.wikipedia.org/wiki/Adresse_postale#France)
 
 **Second step...** can I reuse components or should I create everything from scratch?
-Think about the elementary components you will need to create agents able to identify a postal address. 
+Think about the elementary components you will need to create agents able to identify a postal address.
 In the example "12 avenue de Flandres 75019 Paris", the decomposition into elementary elements gives :
 - number,
-- road type, 
+- road type,
 - road name,
-- postal code (i.e. a specific pattern of numbers), 
-- city, 
+- postal code (i.e. a specific pattern of numbers),
+- city,
 - it could optionally contain information about the apartment, building, floor.
 
 >_**Tips and tricks**_
@@ -38,7 +38,7 @@ We will create a module (named _**Agents**_ in Viky's world) able to identify ea
 
 # Create an agent
 In Viky, click on the _**Agents**_ tab, then on _**New Agent**_.
-> screenshot à insérer
+![New Agent screenshot](pics/01_new_agent.png)
 
 A pop in "Create a new agent" opens.
 > screenshot à insérer
