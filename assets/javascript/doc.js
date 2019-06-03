@@ -25,7 +25,24 @@ document.addEventListener("DOMContentLoaded", function(event) {
     });
   }
 
+  var decorateImages = function(){
+    var images = document.querySelectorAll(".doc__content img");
+    Array.prototype.forEach.call(images, function(image, i){
+      var html = [];
+      html.push("<figure>");
+      html.push(image.outerHTML);
+      if (image.title != ""){
+        html.push("<figcaption>");
+        html.push(image.title);
+        html.push("</figcaption>");
+      }
+      html.push("</figure>");
+      console.log(image.outerHTML);
+      image.outerHTML = html.join('');
+    });
+  }
+
   buildSummary();
   decorateHeadings();
-
+  decorateImages();
 });

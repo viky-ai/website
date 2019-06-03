@@ -59,6 +59,13 @@ To create an ordered list, add line items with numbers followed by periods. The 
 > <cite>Game of Thrones, Syrio Forel to Arya.</cite>
 
 
+## Images
+
+Images are automatically transformed into a `figure`. If present, image title attribute is used to generate `figcaption`.
+
+![Aerial view of a beach](img/nature.jpg "Nature is beautiful")
+
+
 ## Code
 
 ### Inline code
