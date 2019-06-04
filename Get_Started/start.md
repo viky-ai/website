@@ -29,7 +29,7 @@ In the example "12 avenue de Flandres 75019 Paris", the decomposition into eleme
 - city,
 - it could optionally contain information about the apartment, building, floor.
 
->_**Tips and tricks**_
+>_**Tips and tricks**_  
 Open resources exist on the web to facilitate the creation of these elements.  
 > For instance, road types are available on [Wikipedia](https://fr.wikipedia.org/wiki/Odonymie_en_France#Types_de_voie) or on [GitHub Gist](https://gist.github.com/384400/bf3c83a4e7d1aa66a87e)
 
@@ -45,8 +45,8 @@ A pop in "Create a new agent" opens.
 
 Fill the _**name**_ and the _**id**_ fields with "Address_Tutorial".
 
->_**Tips and tricks**_
- _**id**_ must be URL-compatible.
+>_**Tips and tricks**_  
+ _**id**_ must be URL-compatible.  
 > préciser ce que ça veut dire URL compatible (caractères à éviter par exemple, nombre de caractères maximum, ...)
 
 Set the visibility as _**private**_, so you will be the unique owner of the agent, to see, use or modify your agent.
@@ -152,7 +152,7 @@ type "passage" in the ***Terms*** text area; then click on ***Add***,
 etc...  
 ![filling the entities list screenshot](pics/11_filling_entities.png)
 
->_**Tips and tricks**_
+>_**Tips and tricks**_  
 It is possible to import long lists of entities into Viky. Viky accepts CSV format, please refer to the documentation to learn more.
 
 ## Link entities to interpretations
