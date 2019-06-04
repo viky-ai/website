@@ -178,11 +178,13 @@ Now we're going to make understandable the rest of the sentence for the system
 - Don't highlight the street name for the moment, we'll come back on it later 
 
 If you try to update the expression, an error will be displayed because the variable _**number**_ is used twice.  
-Set the second _**number**_ to _**postal_code**_ to make it available, and set _**cityfr_entities**_ to _**city**_ for an easyer reading.
+> Screenshot
+
+Set the second _**number**_ to _**postal_code**_ to make it available, and set _**cityfr_entities**_ to _**city**_ for an easyer reading.  
 Click on _**update**_
 
 Test now the sentence "12 avenue de Flandres 75019 Paris".  
-All the part are correctly understood, but the result is almost unreadable.
+All the part are correctly understood, but the result is almost unreadable.  
 > screenshot
 
 We will now customize the output in order to make it correctly readable  
