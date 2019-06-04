@@ -47,7 +47,8 @@ Fill the _**name**_ and the _**id**_ fields with "Address_Tutorial".
 
 >_**Tips and tricks**_  
  _**id**_ must be URL-compatible.  
-> préciser ce que ça veut dire URL compatible (caractères à éviter par exemple, nombre de caractères maximum, ...)
+ie: alphanumeric characters and **;/?@=&** are allowed
+Characters such as **<\>\#%\{}|\\^\~\[\]** and spaces are not allowed
 
 Set the visibility as _**private**_, so you will be the unique owner of the agent, to see, use or modify your agent.
 
