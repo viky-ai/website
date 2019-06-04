@@ -232,7 +232,7 @@ First create a new private entities list _**street_names**_
 Fill it with some very known street names such as _**Champs Elysees**_, _**Rivoli**_, etc...  
 > Screenshot
 
-Go back in the _**Adress**_ interpretation, edit the expression and highlight _**de flandres**_  
+Go back in the _**Address**_ interpretation, edit the expression and highlight _**de flandres**_  
 Create an alias to the entities list _**street_names**_, then select _**any**_ for this alias and add it to the solution  
 > Screenshot
 
