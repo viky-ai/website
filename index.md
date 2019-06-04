@@ -3,7 +3,9 @@ layout: default
 title: "Site index"
 ---
 
-# Site index <small>(for development purpose only)</small>
+# Site index
+
+_For development purpose only._
 
 ## Available guides
 
