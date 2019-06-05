@@ -178,22 +178,23 @@ Now we're going to make understandable the rest of the sentence for the system
 - Don't highlight the street name for the moment, we'll come back on it later 
 
 If you try to update the expression, an error will be displayed because the variable _**number**_ is used twice.  
-> Screenshot
+![Variables error screenshot](pics/14_error_in_variables.png)
 
 Set the second _**number**_ to _**postal_code**_ to make it available, and set _**cityfr_entities**_ to _**city**_ for an easyer reading.  
 Click on _**update**_
+![Variables OK screenshot](pics/15_adding_variables.png)
 
 Test now the sentence "12 avenue de Flandres 75019 Paris".  
 All the part are correctly understood, but the result is almost unreadable.  
-> screenshot
+![Unreadable result screenshot](pics/16_unreadable_result.png)
 
 We will now customize the output in order to make it correctly readable  
 Open the expression and uncheck _**Auto solution**_, a textfield is open in the bottom of the expression.  
-> screenshot
+![Solution textarea screenshot](pics/17_solution_textarea.png)
 
 This textfield allows you to customize the solution  
 The solution is a json map, and you can use all the variables listed in the _**Parameter name**_ area  
-> screenshot
+![update solution screenshot](pics/18_update_solution.png)
 
 Update the solution in order to have a solution like this
 
@@ -205,7 +206,7 @@ Update the solution in order to have a solution like this
     }
 
 The solution is now like this  
-> screenshot
+![complex solution screenshot](pics/19_complex_solution.png)
 
 This is much more readable, but it is still not completely OK  
 Let's remove the extra _**number**_ and only keep the city name for the moment.  
@@ -219,7 +220,7 @@ The solution will be
     }
 
 Now the solution is  
-> screenshot
+![Simple solution screenshot](pics/20_simple_solution.png)
 
 Which is much better
 
@@ -230,15 +231,15 @@ All the street names are too much to be imported easily in Viky, so we will try 
 
 First create a new private entities list _**street_names**_  
 Fill it with some very known street names such as _**Champs Elysees**_, _**Rivoli**_, etc...  
-> Screenshot
+![Entities list street_names screenshot](pics/21_entities_list_street_names.png)
 
 Go back in the _**Address**_ interpretation, edit the expression and highlight _**de flandres**_  
 Create an alias to the entities list _**street_names**_, then select _**any**_ for this alias and add it to the solution  
-> Screenshot
+![Street names with any screenshot](pics/22_street_names_any.png)
 
 Test now the sentence "12 avenue de Flandres 75019 Paris".  
 All the part are correctly understood, even the street name.  
-> screenshot
+![final result screenshot](pics/23_final_result.png)
 
  Try now another completely different address, for example : "52 avenue Breteuil 13008 Marseille", it works!  
- > Screenshot
+ ![Second final result screenshot](pics/24_final_result_2.png)
