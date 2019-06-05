@@ -2,15 +2,28 @@
 layout: default
 ---
 
-<main class="doc">
-  <h1>{{page.title}}</h1>
-  <div class="doc__summary">
-    <h2>On this page</h2>
-    <ul></ul>
+<div class="doc">
+  <div class="doc__sidebar">
+    <div>
+      {% include doc_nav.html %}
+    </div>
   </div>
-  <div class="doc__content">
-    {{ content}}
+  <main class="doc__main">
+    <article>
+      <h1>{{page.title}}</h1>
+      <div class="article__summary">
+        <h2>On this page</h2>
+        <ul></ul>
+      </div>
+      <div class="article__content">
+        {{ content}}
+      </div>
+    </article>
+  </main>
+  <div class="doc__nav">
+    <div class="article__summary">
+      <h2>On this page</h2>
+      <ul></ul>
+    </div>
   </div>
-</main>
-
-<script src="/assets/javascript/doc.js"></script>
+</div>

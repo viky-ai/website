@@ -3,14 +3,25 @@ layout: doc
 title: "Markdown reference"
 ---
 
-<aside class="info">
+<!-- <div class="color color--grey-100"></div>
+<div class="color color--grey-200"></div>
+<div class="color color--grey-300"></div>
+<div class="color color--grey-400"></div>
+<div class="color color--grey-500"></div>
+<div class="color color--grey-700"></div>
+<div class="color color--grey-900"></div> -->
+
+
+<aside class="note">
+  <h3>Only for dev</h3>
   <p>
-    This page presents the possibilities offered by the documentation publication system which transform Markdown files to a static web site.
-  </p>
-  <p>
-    You can use it as a reference when writing documentation.
+    This documentation is available only in development and is not published in production.
   </p>
 </aside>
+
+This page presents the possibilities offered by the documentation publication system which transform Markdown files to a static web site.
+
+You can use it as a reference when writing documentation. This documentation also allows us to validate the display of all graphic components available.
 
 
 ## Paragraphs, emphasis & links

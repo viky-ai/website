@@ -1,9 +1,13 @@
 ---
 ---
 
-@import "normalize.css";
-@import "github.css";
+@import "vendor/normalize.css";
+@import "vendor/github.css";
 @import "variables";
 @import "fonts";
 @import "base";
+@import "layout";
+@import "mobile_nav";
+@import "header";
+@import "article";
 @import "doc";

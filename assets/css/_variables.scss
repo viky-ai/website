@@ -1,9 +1,24 @@
 $primary_color: hsl(192, 80, 54); //#3bb8d7;
+$dark_color: #171f2b;
 
 $grey_100: hsl(192, 15, 97);
 $grey_200: hsl(192, 15, 93);
 $grey_300: hsl(192, 15, 80);
 $grey_400: hsl(192, 15, 70);
 $grey_500: hsl(192, 15, 50);
-$grey_700: hsl(192, 50, 30);
-$grey_900: hsl(192, 66, 10);
+$grey_700: hsl(192, 15, 30);
+$grey_900: hsl(192, 15, 10);
+
+
+div.color{
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+}
+div.color--grey-100{ background-color: $grey_100; }
+div.color--grey-200{ background-color: $grey_200; }
+div.color--grey-300{ background-color: $grey_300; }
+div.color--grey-400{ background-color: $grey_400; }
+div.color--grey-500{ background-color: $grey_500; }
+div.color--grey-700{ background-color: $grey_700; }
+div.color--grey-900{ background-color: $grey_900; }

@@ -1,16 +1,11 @@
 body {
   background: #fff;
-  margin: 2em auto;
-  max-width: 44em;
   font-family: "Roboto";
   font-weight: 300;
   line-height: 1.7em;
   color: $grey_700;
-  scroll-behavior: smooth;
 }
-
-h1{
-  font-weight: 300;
-  font-size: 2.6em;
-  line-height: 1.1em;
+body,
+html{
+  scroll-behavior: smooth;
 }

@@ -1,0 +1,23 @@
+<div class="header">
+  <a href="#" class="header__hamburger">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+    <span>Menu</span>
+  </a>
+  <a href="/" class="header__logo">
+    {% include logo.svg %}
+  </a>
+
+  <nav class="header__nav">
+    <a href="/" {% if page.dir == '/' %}class="current"{% endif %}>
+      Home
+    </a>
+    {% assign segments = page.dir | split: '/' %}
+    <a href="/guides/getting-started/" {% if segments[1] == 'guides' %}class="current"{% endif %}>
+      Documentation
+    </a>
+    <a href="/blog/" {% if page.categories.first == 'blog' or segments[1] == 'blog' %}class="current"{% endif %}>
+      Blog
+    </a>
+    <a href="https://viky-beta.viky.ai/users/sign_in">Login</a>
+  </nav>
+</div>
