@@ -30,18 +30,3 @@
   {% endfor %}
 </ul>
 
-<h2>FAQ</h2>
-<ul>
-  {% for p in site.pages %}
-    {% assign segments = p.dir | split: '/' %}
-    {% if segments[1] == "faq" %}
-      <li>
-        {% if page.url == p.url %}
-          <a href="{{p.url}}" class="current">{{p.title}}</a>
-        {% else %}
-          <a href="{{p.url}}">{{p.title}}</a>
-        {% endif %}
-      </li>
-    {% endif %}
-  {% endfor %}
-</ul>

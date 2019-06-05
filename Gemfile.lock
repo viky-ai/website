@@ -28,6 +28,8 @@ GEM
       pathutil (~> 0.9)
       rouge (~> 3.0)
       safe_yaml (~> 1.0)
+    jekyll-paginate-v2 (1.5.2)
+    jekyll-postfiles (2.1.1)
     jekyll-sass-converter (1.5.2)
       sass (~> 3.4)
     jekyll-watch (2.2.1)
@@ -61,6 +63,8 @@ PLATFORMS
 
 DEPENDENCIES
   jekyll (~> 4.0.0.pre.alpha1)
+  jekyll-paginate-v2
+  jekyll-postfiles
 
 BUNDLED WITH
    2.0.1

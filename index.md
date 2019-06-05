@@ -3,4 +3,4 @@ layout: default
 title: "Home"
 ---
 
-TODO
+TODO : Page de présentation du service.

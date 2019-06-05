@@ -2,7 +2,23 @@ title: viky.ai
 baseurl: ""
 url: ""
 
-markdown: kramdown
+host: 0.0.0.0
 
+pagination:
+  enabled: true
+  per_page: 5
+  permalink: '/page/:num/'
+  title: ' - page :num'
+  limit: 0
+  sort_field: 'date'
+  sort_reverse: true
+
+permalink: /blog/:year/:month/:day/:title
+
+markdown: kramdown
 sass:
-    sass_dir: assets/css
+  sass_dir: assets/css
+
+exclude:
+  - README.md
+  - CONTRIBUTING.md
