@@ -177,11 +177,11 @@ Now we're going to make understandable the rest of the sentence for the system
 - Highlitht _**Paris**_ and create an alias to the _**viky/villesfr/interpretations/cityfr_entities**_ interpretation  
 - Don't highlight the street name for the moment, we'll come back on it later 
 
-If you try to update the expression, an error will be displayed because the variable _**number**_ is used twice.  
+If you try to update the expression, an error will be displayed because the variable _**number**_ is used twice.   
 ![Variables error screenshot](pics/14_error_in_variables.png)
 
 Set the second _**number**_ to _**postal_code**_ to make it available, and set _**cityfr_entities**_ to _**city**_ for an easyer reading.  
-Click on _**update**_
+Click on _**update**_  
 ![Variables OK screenshot](pics/15_adding_variables.png)
 
 Test now the sentence "12 avenue de Flandres 75019 Paris".  
