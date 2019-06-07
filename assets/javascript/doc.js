@@ -7,7 +7,7 @@ var App = {
     Array.prototype.forEach.call(h2s, function(h2, i){
       html.push("<li>");
       html.push("<a href='#" + h2.id + "'>");
-      html.push((i+1) + ". ");
+      html.push((i+1) + ".&nbsp;");
       html.push("<em>" + h2.innerHTML + "</em>");
       html.push(svg);
       html.push("</a>");

@@ -49,6 +49,7 @@ article{
       }
       code{
         font-family: 'Roboto Mono', monospace;
+        word-wrap: break-word;
       }
       svg{
         position: absolute;
@@ -218,6 +219,7 @@ article{
   h5 code,
   h6 code{
     font-size: .75em;
+    word-wrap: break-word;
   }
 
   .highlight{
@@ -241,6 +243,7 @@ article{
     font-size: .8em;
     padding: .1em .25em;
     border-radius: .175em;
+    white-space: nowrap;
     &.tag--primary{
       border-color: $primary_color;
       color: darken($primary_color, 5%);
