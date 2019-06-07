@@ -10,7 +10,11 @@ layout: default
       <header>
         <img src="/assets/authors/{{page.avatar}}" />
         <h1>{{page.title}}</h1>
-        <p><strong>{{page.author}}</strong> on {{page.date | date_to_long_string}}</p>
+        <p>
+          <strong>{{page.author}}</strong> on {{page.date | date_to_long_string}}
+          &mdash;
+          {% include reading_time.html content=content %}
+        </p>
       </header>
       <div class="article__content">
         {{content}}

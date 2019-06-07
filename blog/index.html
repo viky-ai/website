@@ -19,7 +19,11 @@ pagination:
                   {{post.title}}
                 </a>
               </h1>
-              <p><strong>{{post.author}}</strong> on {{post.date | date_to_long_string}}</p>
+              <p>
+                <strong>{{post.author}}</strong> on {{post.date | date_to_long_string}}
+                &mdash;
+                {% include reading_time.html content=post.content %}
+              </p>
             </header>
             <div class="article__content">
               {{ post.excerpt }}
