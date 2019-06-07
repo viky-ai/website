@@ -43,6 +43,11 @@ You can add emphasis by making text __bold__ or _italic_. And
 
 To create a heading, add number signs (`#`) in front of a word or phrase. The number of number signs you use should correspond to the heading level.
 
+<aside class="info">
+  <p>Start with level 2 i.e. (<code>##</code>) in blog post & documentation pages.</p>
+  <p>Level 1 i.e. (<code>#</code>) is reserved to post or page title set with markdown metadata.</p>
+</aside>
+
 __Code__
 
     ### Headings (level 3)
