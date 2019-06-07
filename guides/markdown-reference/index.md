@@ -241,6 +241,71 @@ __Becomes__
 }
 ```
 
+
+## Tables
+
+Since it is possible to write HTML in a markdown document, you can use HTML tables.
+
+__Code__
+
+```html
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Attacker king</th>
+      <th>Defender king</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Battle of the Golden Tooth</td>
+      <td>Joffrey/Tommen Baratheon</td>
+      <td>Robb Stark</td>
+    </tr>
+    <tr>
+      <td>Battle of the Green Fork</td>
+      <td>Robb Stark</td>
+      <td>Joffrey/Tommen Baratheon</td>
+    </tr>
+    <tr>
+      <td>Battle of Castle Black</td>
+      <td>Stannis Baratheon</td>
+      <td>Mance Rayder</td>
+    </tr>
+  </tbody>
+</table>
+```
+
+__Becomes__
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Attacker king</th>
+      <th>Defender king</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Battle of the Golden Tooth</td>
+      <td>Joffrey/Tommen Baratheon</td>
+      <td>Robb Stark</td>
+    </tr>
+    <tr>
+      <td>Battle of the Green Fork</td>
+      <td>Robb Stark</td>
+      <td>Joffrey/Tommen Baratheon</td>
+    </tr>
+    <tr>
+      <td>Battle of Castle Black</td>
+      <td>Stannis Baratheon</td>
+      <td>Mance Rayder</td>
+    </tr>
+  </tbody>
+</table>
+
 ## Aside
 
 HTML block <code>aside</code> are used to display notes. Several variants are available.

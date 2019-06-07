@@ -199,6 +199,7 @@ article{
   p code,
   ul code,
   li code,
+  table code,
   blockquote code{
     font-family: 'Roboto Mono', monospace;
     background-color: $grey_100;
@@ -220,6 +221,23 @@ article{
       code{
         font-family: 'Roboto Mono', monospace;
       }
+    }
+  }
+
+  table{
+    width: 100%;
+    border-collapse : collapse;
+    thead tr th{
+      border-bottom: 1px solid $grey_300;
+      font-weight: 400;
+      color: $grey_500;
+      text-align: left;
+      padding: .25em .25em;
+    }
+    tbody tr tr,
+    tbody tr td{
+      border-bottom: 1px solid $grey_200;
+      padding: .5em .25em;
     }
   }
 
@@ -256,16 +274,25 @@ article{
       background-image: url(../icons/outline-info.svg);
       color: $grey_700;
       background-color: $grey_100;
+      code{
+        background-color: $grey_200;
+      }
     }
     &.warning{
       background-image: url(../icons/outline-warning.svg);
       background-color: #fcf9e9;
       color: darken(#fcf9e9, 80%);
+      code{
+        background-color: darken(#fcf9e9, 7%);
+      }
     }
     &.success{
       background-image: url(../icons/outline-check.svg);
       background-color: #f6fff5;
       color: darken(#f6fff5, 80%);
+      code{
+        background-color: darken(#f6fff5, 3%);
+      }
     }
   }
 }
