@@ -48,6 +48,14 @@
         background-color: #fff;
         border-color: $grey_200;
       }
+      span{
+        text-transform: uppercase;
+        border: 1px solid $grey_300;
+        color: $grey_500;
+        font-size: .7em;
+        padding: .1em .25em;
+        border-radius: 2px;
+      }
     }
   }
 }

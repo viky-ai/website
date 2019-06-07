@@ -4,11 +4,19 @@
     {% assign segments = p.dir | split: '/' %}
     {% if segments[1] == "guides" %}
       <li>
-        {% if page.url == p.url %}
-          <a href="{{p.url}}" class="current">{{p.title}}</a>
-        {% else %}
-          <a href="{{p.url}}">{{p.title}}</a>
+        {% if p.only_for_dev and jekyll.environment == 'production' %}
+          {% continue %}
         {% endif %}
+        {% if page.url == p.url %}
+          <a href="{{p.url}}" class="current">
+        {% else %}
+          <a href="{{p.url}}">
+        {% endif %}
+        {{p.title}}
+        {% if p.only_for_dev %}
+          <span>dev only</span>
+        {% endif %}
+        </a>
       </li>
     {% endif %}
   {% endfor %}

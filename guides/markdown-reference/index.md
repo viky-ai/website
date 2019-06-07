@@ -1,6 +1,7 @@
 ---
 layout: doc
 title: "Markdown reference"
+only_for_dev: true
 ---
 
 <!-- <div class="color color--grey-100"></div>
@@ -43,7 +44,7 @@ You can add emphasis by making text __bold__ or _italic_. And
 
 To create a heading, add number signs (`#`) in front of a word or phrase. The number of number signs you use should correspond to the heading level.
 
-<aside class="info">
+<aside class="primary">
   <p>Start with level 2 i.e. (<code>##</code>) in blog post & documentation pages.</p>
   <p>Level 1 i.e. (<code>#</code>) is reserved to post or page title set with markdown metadata.</p>
 </aside>
@@ -371,12 +372,12 @@ expedita dolorum fugiat debitis nisi distinctio necessitatibus soluta
 tenetur et fugit sequi.
 
 
-### Aside variant: <code>info</code>
+### Aside variant: <code>primary</code>
 
 __Code__
 
 ```html
-<aside class="info">
+<aside class="primary">
   <p>
     Lorem ipsum dolor sit amet, consectetur adipisicing elit.
     Id quia natus aut. Debitis eligendi iste, accusamus! Molestias
@@ -387,7 +388,7 @@ __Code__
 
 __Becomes__
 
-<aside class="info">
+<aside class="primary">
   <p>
     Lorem ipsum dolor sit amet, consectetur adipisicing elit.
     Id quia natus aut. Debitis eligendi iste, accusamus! Molestias
