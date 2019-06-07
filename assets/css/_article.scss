@@ -47,6 +47,9 @@ article{
         font-style: normal;
         color: hsl(192, 30, 50);
       }
+      code{
+        font-family: 'Roboto Mono', monospace;
+      }
       svg{
         position: absolute;
         top: .75em;
@@ -209,6 +212,14 @@ article{
     border-radius: 2px;
   }
 
+  h2 code,
+  h3 code,
+  h4 code,
+  h5 code,
+  h6 code{
+    font-size: .75em;
+  }
+
   .highlight{
     border-radius: 4px;
     overflow: auto;
@@ -224,6 +235,26 @@ article{
     }
   }
 
+  .tag{
+    border: 1px solid $grey_300;
+    color: $grey_500;
+    font-size: .8em;
+    padding: .1em .25em;
+    border-radius: .175em;
+    &.tag--primary{
+      border-color: $primary_color;
+      color: darken($primary_color, 5%);
+    }
+    &.tag--warning{
+      border-color: #f5be58;
+      color: darken(#f5be58, 5%);
+    }
+    &.tag--success{
+      border-color: #33c27f;
+      color: darken(#33c27f, 5%);
+    }
+  }
+
   table{
     width: 100%;
     border-collapse : collapse;
@@ -234,10 +265,20 @@ article{
       text-align: left;
       padding: .25em .25em;
     }
-    tbody tr tr,
+    tbody tr th,
     tbody tr td{
       border-bottom: 1px solid $grey_200;
       padding: .5em .25em;
+      vertical-align: top;
+    }
+    tbody tr td{
+      p{ margin: .5em 0; }
+      p:first-child{ margin: 0 0 .5em 0;}
+      p:last-child{ margin: .5em 0 0 0;}
+      p:last-child:first-child{ margin: 0;}
+    }
+    small{
+      font-size: .9em;
     }
   }
 

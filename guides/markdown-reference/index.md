@@ -122,6 +122,7 @@ __Becomes__
 > to Death : “Not today”.
 > <cite>Game of Thrones, Syrio Forel to Arya.</cite>
 
+
 ## Images
 
 Images are automatically transformed into a `figure`. If present, image title attribute is used to generate `figcaption`.
@@ -133,6 +134,7 @@ __Code__
 __Becomes__
 
 ![Aerial view of a beach](img/nature.jpg "Nature is beautiful")
+
 
 ## Code
 
@@ -305,6 +307,27 @@ __Becomes__
     </tr>
   </tbody>
 </table>
+
+
+## Tag
+
+Small tag labels to insert anywhere with several variants.
+
+__Code__
+
+```html
+<span class="tag">Base tag</span>
+<span class="tag tag--primary">Primary variant</span>
+<span class="tag tag--warning">Warning variant</span>
+<span class="tag tag--success">Success variant</span>
+```
+
+__Becomes__
+
+<span class="tag">Base tag</span>
+<span class="tag tag--primary">Primary variant</span>
+<span class="tag tag--warning">Warning variant</span>
+<span class="tag tag--success">Success variant</span>
 
 ## Aside
 
