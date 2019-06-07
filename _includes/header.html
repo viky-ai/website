@@ -12,7 +12,7 @@
       Home
     </a>
     {% assign segments = page.dir | split: '/' %}
-    <a href="/guides/getting-started/" {% if segments[1] == 'guides' %}class="current"{% endif %}>
+    <a href="/guides/getting-started/" {% if segments[1] == 'guides' or segments[1] == 'api' %}class="current"{% endif %}>
       Documentation
     </a>
     <a href="/blog/" {% if page.categories.first == 'blog' or segments[1] == 'blog' %}class="current"{% endif %}>
