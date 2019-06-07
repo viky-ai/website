@@ -314,12 +314,15 @@ article{
       }
     }
 
-    &.info{
+    &.primary{
       background-image: url(../icons/outline-info.svg);
       color: $grey_700;
       background-color: $grey_100;
+
+      color: darken($primary_color, 30%);
+      background-color: rgba($primary_color, .1);
       code{
-        background-color: $grey_200;
+        background-color: rgba($primary_color, .1);
       }
     }
     &.warning{
