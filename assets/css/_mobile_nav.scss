@@ -13,29 +13,42 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.5em 1.5em;
+    padding: 0;
     background-color: #fff;
     border-bottom: 1px solid $grey_200;
 
-    .mobile-nav__header__logo{
+    .mobile-nav__header__logo,
+    .mobile-nav__header__close{
+      display: inline-block;
+      padding: 1.5em 1.5em;
+      span{
+        font-size: .75em;
+        vertical-align: middle;
+      }
       svg{
-        display: block;
+        display: inline-block;
         height: 24px;
         width: auto;
+        vertical-align: middle;
       }
     }
     .mobile-nav__header__close{
+      text-decoration: none;
+      color: $grey_700;
+      text-transform: uppercase;
+      vertical-align: center;
       svg{
-        display: block;
-        height: 24px;
-        width: auto;
         fill: $grey_700;
       }
-    }
-    a:focus,
-    a:hover{
-      svg{
-        fill: #000;
+      &:hover,
+      &:focus{
+        span{
+          color: #000;
+          text-decoration: underline;
+        }
+        svg{
+          fill: #000;
+        }
       }
     }
   }

@@ -1,5 +1,8 @@
 .doc__main{
-  padding: 1em 2em 4em 2em;
+  padding: 1em 1em 2em 1em;
+  @media screen and (min-width: $breakpoint_small) {
+    padding: 1em 2em 4em 2em;
+  }
 }
 
 .doc__sidebar{

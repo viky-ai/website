@@ -1,11 +1,17 @@
 .blog{
   background-color: $grey_100;
-  padding: 2em;
   min-height: calc(100% - 9em);
+  padding: 1em .5em;
 
+  @media screen and (min-width: $breakpoint_small) {
+    padding: 2em;
+  }
   .blog__container{
     margin: 0 auto;
     max-width: 43em;
+    @media screen and (min-width: 82em) {
+      margin: 0 0 0 18.25em;
+    }
   }
 }
 
@@ -43,7 +49,12 @@ ul.blog-index{
 
 .blog{
   article{
-    margin: 3em 0 5em 0;
+
+    margin: 3em 0 3.5em 0;
+    @media screen and (min-width: $breakpoint_small) {
+      margin: 3em 0 5em 0;
+    }
+
     padding: 2em;
     background-color: #fff;
     border: 1px solid $grey_200;

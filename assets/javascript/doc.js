@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
       event.preventDefault();
       document.body.classList.add('mobile-nav-is-open');
     });
-    document.querySelector(".mobile-nav__header__close a").addEventListener("click", function(event){
+    document.querySelector("a.mobile-nav__header__close").addEventListener("click", function(event){
       event.preventDefault();
       document.body.classList.remove('mobile-nav-is-open');
     });
