@@ -22,7 +22,7 @@ var App = {
 
   decorateDocHeadings: function(){
     var headings = document.querySelectorAll(
-      ".doc .article__content h2, .doc .article__content h3, .doc .article__content h4, .doc .article__content h5, .doc .article__content h6"
+      ".doc .article__content > h2, .doc .article__content > h3, .doc .article__content > h4, .doc .article__content > h5, .doc .article__content > h6"
     );
     Array.prototype.forEach.call(headings, function(heading, i){
       heading.innerHTML = heading.innerHTML + "<a class='anchor' href='#" + heading.id + "'></a>";
