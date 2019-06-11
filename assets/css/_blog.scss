@@ -7,10 +7,10 @@
     padding: 2em;
   }
   .blog__container{
+    max-width: 45em;
     margin: 0 auto;
-    max-width: 43em;
-    @media screen and (min-width: 82em) {
-      margin: 0 0 0 20.25em;
+    @media screen and (min-width: $breakpoint_large) {
+      margin: 0 auto;
     }
   }
 }

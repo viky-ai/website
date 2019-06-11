@@ -5,12 +5,13 @@ html, body{
 .header{
   display: flex;
   justify-content: space-between;
-  .header__nav{
+  .header__nav,
+  .header__login{
     display: none;
   }
   @media screen and (min-width: $breakpoint_medium) {
     display: grid;
-    grid-template-columns: 19em 1fr;
+    grid-template-columns: 20em 1fr 1fr;
 
     justify-content: flex-start;
     a.header__hamburger{
@@ -20,6 +21,15 @@ html, body{
       display: flex;
       margin-left: 2em;
     }
+    .header__login{
+      display: flex;
+      justify-content: flex-end;
+      padding-right: 1em;
+    }
+  }
+  @media screen and (min-width: $breakpoint_large) {
+    justify-content: center;
+    grid-template-columns: 20em 48em 23em;
   }
 }
 
@@ -32,8 +42,8 @@ html, body{
   }
   @media screen and (min-width: $breakpoint_medium) {
     display: grid;
-    grid-column-gap: 1em;
-    grid-template-columns: 19em minmax(40em, 45em) auto;
+    grid-column-gap: 3em;
+    grid-template-columns: 20em minmax(40em, 45em) auto;
     grid-template-rows: min-content auto;
     grid-template-areas: "sidebar main nav";
     justify-items: stretch;
@@ -45,7 +55,11 @@ html, body{
       grid-area: main;
     }
   }
-  @media screen and (min-width: 85em) {
+  @media screen and (min-width: $breakpoint_large) {
+    background: linear-gradient(to right, $grey_100 0%, $grey_100 20%, #fff 20%, #fff 100%);
+    justify-content: center;
+    grid-template-columns: 20em 45em 20em;
+
     .doc__main{
       .article__summary{
         display: none;
@@ -54,12 +68,11 @@ html, body{
     .doc__nav{
       display: block;
       grid-area: nav;
-      padding: 1em;
+      padding: 1em 0;
       .article__summary{
         margin: 0;
         border-left: 1px solid $grey_100;
         padding: 1em;
-        max-width: 29em;
         position: -webkit-sticky;
         position: sticky;
         top: 1em;

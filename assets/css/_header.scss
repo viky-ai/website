@@ -38,10 +38,11 @@
       }
     }
   }
-  .header__nav{
+  .header__nav,
+  .header__login{
     a{
       display: block;
-      padding: 1.5rem 1.25rem 0 1.25rem;
+      padding: 1.5rem 1rem 0 1rem;
       text-decoration: none;
       color: $grey_700;
       font-weight: 400;
