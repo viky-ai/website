@@ -10,10 +10,16 @@ This guide will assist you in the creation of your first project into viky.ai.
 We will guide you to create your first agent to structure information from contents and to retrieve relevant information in these contents by interacting with your data in natural language.
 
 The use case to start on the platform is very simple and will demonstrate the different viky.ai's capabilities:
-You have some contents where you want to retrieve the postal address, to create some metadata for instance to classify the information.
 
 - You have some contents where you want to retrieve the postal address, to create some metadata for instance to classify the information.
 - Furthermore, you have customers who want to query these contents by searching with a postal address. Queries should be in natural language to facilitate the interactions.
+
+Concretely, you will create an agent allowing you to send a text to the [viky.ai Agents API](../../api/agents/) and it will extract the French postal addresses in a structured way.
+
+<aside class="warning">
+  <p>TODO: add an illustration.</p>
+  <pre>[text] => {API viky.ai} => [Text w/ highlight + JSON solutions]</pre>
+</aside>
 
 
 ## Best practices to start
@@ -38,8 +44,6 @@ A typical example is: _12 avenue de Flandres 75019 Paris_ (find some information
   Can I reuse components or should I create everything from scratch?
 </h3>
 
-**Second step...** can I reuse components or should I create everything from scratch?
-
 Think about the elementary components you will need to create agents able to identify a postal address.
 
 In the example "12 avenue de Flandres 75019 Paris", the decomposition into elementary elements gives :
@@ -59,7 +63,6 @@ In the example "12 avenue de Flandres 75019 Paris", the decomposition into eleme
 - `de Flandres`: Road name.
 - `75019`: Postal code (i.e. a specific pattern of numbers).
 - `Paris`: City.
-- It could optionally contain information about the apartment, building, floor.
 
 It could optionally contain information about the apartment, building, floor.
 
@@ -70,48 +73,34 @@ We will create a module (named *Agents* in viky.ai's world) able to identify eac
 
 ## Create an agent
 
-In viky.ai, click on the **Agents** tab, then on **New Agent** button.
+Login to viki.ai. You will then come to an interface listing the available agents. Then click on the **New Agent** button.
 
-![New Agent screenshot](pics/01_new_agent.png)
+![Application screenshot](img/01_new_agent.png "UI listing the available agents")
 
-A modal box "Create a new agent" opens.
+A modal box with the form "Create a new agent" opens.
 
-![Create new agent screenshot](pics/02_create_agent.png)
-
-Fill the `Name` with "Address Tutorial" and the `ID` fields with "address_tutorial".
-
-<aside class="warning">
+<aside class="note">
+  <h3>Tips and tricks</h3>
   <p>
-    <code>id</code> must be URL-compatible.
-  </p>
-  <p>
-    Alphanumeric characters and <code>;/?@=&</code> are allowed.
-    Characters such as <code><\>\#%\{}|\\^\~\[\]</code> and spaces are not allowed.
+    <code>ID</code> must be URL-compatible. Use unaccented, lowercase characters and separate the words with dashes (<code>-</code>).
   </p>
 </aside>
 
-Set the `Visibility` as `Private`, so you will be the unique owner of the agent, to see, use or modify your agent.
+1. Fill the `Name` field with "Address Tutorial".
+2. Set the `Visibility` as `Private`, so you will be the unique owner of the agent, to see, use or modify your agent.
+3. Fill the `ID` field with "address-tutorial".
+4. Check the following options for languages: `No language`, `fr (french)` and uncheck `en (english)`.
+5. Choose a background color or upload an image.
+6. Submit form with **Create** button.
 
-Select the following options for the language: `No language`, `french` and uncheck `english`.
+![Agent creation form screenshot](img/02_create_agent.png "Agent creation form filled in with the specified information.")
 
-Click on **Create** button.
+The agent is now created. By default, you land on the **Overview** tab of the agent.
 
-The agent is now created. By default, you land on the **Overview** page of the agent.
-![Overview screenshot](pics/03_agent_overview.png)
+On the left part of the UI, you can edit agent's configuration, manage access rights, dependencies and add a Readme to describe your agent. On the right part, a console allows you to play with the agent, but we will come back to it later.
 
-On this section, you can manage access rights, dependencies and add a Readme to describe your agent.
+![Overview screenshot](img/03_agent_overview.png)
 
-You will add 2 dependencies as seen above : **Numbers** and  **VillesFR**.
-
-1. Click on **Add new dependency**
-  ![Add dependency screenshot](pics/04_add_new_dependency.png)
-
-2. Search and select **Numbers** public agent
-  ![Add dependency on Numbers screenshot](pics/05_select_numbers_agent.png)
-
-3. Click on _**Add new dependency**_
-4. Search and select _**VillesFR**_ public agent
-  ![Add dependency on VillesFR screenshot](pics/06_select_villesFR_agent.png)
 
 
 <aside class="primary">
@@ -126,6 +115,36 @@ You will add 2 dependencies as seen above : **Numbers** and  **VillesFR**.
     <li>1 Rue de la Miséricorde, 20200 Bastia</li>
   </ul>
 </aside>
+
+
+## Let's add some dependencies
+
+In order not to reinvent the wheel, you will add 2 dependencies as seen above: **Numbers** and  **VillesFR**.
+
+<span class="tag tag--primary">Step 1</span> Click on **Add new dependency**
+
+![Add dependency screenshot](img/04_first_dependency.png "Access to dependency chooser")
+
+<span class="tag tag--primary">Step 2</span> Search and choose **Numbers** public agent
+
+![Search dependencies screenshot](img/05_choose_numbers_agent.png "Choose Numbers agent")
+
+<span class="tag tag--primary">Step 3</span> **Numbers** agent is now in yours dependencies. Let's add an other.
+
+![Populated dependencies section screenshot](img/06_second_dependency.png "Numbers agent is here now")
+
+<span class="tag tag--primary">Step 4</span> Click on **Add new dependency**, search and choose **VillesFR** public agent
+
+![Search dependencies screenshot](img/07_choose_villesfr_agent.png "Choose VillesFR agent")
+
+<span class="tag tag--primary">Done</span>  Well, both dependencies are in place.
+
+![Dependencies screenshot](img/08_dependencies_done.png "Everything is OK")
+
+<aside class="warning">
+  <p>TODO: add info on Numbers & VillesFR capabilities. First console example ?</p>
+</aside>
+
 
 ## First interpretation
 
