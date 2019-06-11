@@ -3,7 +3,8 @@ layout: doc
 title: "Getting Started with viky.ai (WIP)"
 ---
 
-# Purpose
+## Purpose
+
 This tutorial will assist you in the creation of your first project into Viky.
 We will guide you to create your first agent to structure information from contents and to retrieve relevant information in these contents by interacting with your data in natural language.
 
@@ -11,7 +12,8 @@ The use case to start on the platform is very simple and will demonstrate the di
 You have some contents where you want to retrieve the postal address, to create some metadata for instance to classify the information.
 Furthermore, you have customers who want to query these contents by searching with a postal address. Queries should be in natural language to facilitate the interactions.
 
-# Best Practices to start
+## Best Practices to start
+
 Definition of the perimeter and the usage is your priority before starting any new project on Viky.
 It will help you to ensure the right creation of agents.
 
@@ -41,11 +43,14 @@ Open resources exist on the web to facilitate the creation of these elements.
 Viky contains already some generic agents to support you in this creation: numbers and French cities.
 We will create a module (named _**Agents**_ in Viky's world) able to identify each part of the address, and a postal address.
 
-# Create an agent
+## Create an agent
+
 In Viky, click on the _**Agents**_ tab, then on _**New Agent**_.
+
 ![New Agent screenshot](pics/01_new_agent.png)
 
 A pop in "Create a new agent" opens.
+
 ![Create new agent screenshot](pics/02_create_agent.png)
 
 Fill the _**name**_ and the _**id**_ fields with "Address_Tutorial".
@@ -69,11 +74,14 @@ You will add 2 dependencies as seen above : _**Numbers**_ and  _**VillesFR**_.
 
 - Click on _**Add new dependency**_
 - Search and select _**Numbers**_ public agent
+
 ![Add dependency screenshot](pics/04_add_new_dependency.png)
+
 ![Add dependency on Numbers screenshot](pics/05_select_numbers_agent.png)
 
 - Click on _**Add new dependency**_
 - Search and select _**VillesFR**_ public agent
+
 ![Add dependency on VillesFR screenshot](pics/06_select_villesFR_agent.png)
 
 >_**Tips and tricks**_
@@ -84,14 +92,16 @@ You can add a _ReadMe_ in this _**Overview**_ section. This is particularly usef
 >- 3 Passage Pommeraye 44000 Nantes
 >- 1 Rue de la Miséricorde, 20200 Bastia
 
-# First interpretation
+## First interpretation
 
-## Create an interpretation
+### Create an interpretation
 
 In the _**Interpretations**_ tab, click on _**New Interpretation**_.
+
 ![New interpretation screenshot](pics/07_new_interpretation.png)
 
 Fill the _**ID**_ with "address".
+
 Interpretation can be set as _**public**_ or _**private**_.
 
 A _**public**_ interpretation will be able to return a solution as a result.
@@ -100,13 +110,13 @@ A _**private**_ interpretation can only be used for calculation or computation.
 Set your interpretation as _**Public**_ and click on _**Create**_.
 ![create interpretation screenshot](pics/08_create_new_interpretation.png)
 
-## Create your first expression
+### Create your first expression
 
 The interpretation is created, now click on it, select the _**fr**_ tab and type "12 avenue de Flandres 75019 Paris" in the text area, then click on _**add**_.
 Let the default options as they are (_keep order_, _close_, _auto solution_). We will back to them later.
 ![create expression screenshot](pics/09_first_expression.png)
 
-## Testing the Agent
+### Testing the Agent
 
 A console panel is on the right to test in live your agent. Type "12 avenue de Flandres 75019 Paris" in the text area and click on the arrow to send the request. This console calls your agent by REST API.
 
@@ -120,13 +130,13 @@ It allows also to save your tests to create a _Test Suite_. This is a best pract
 Once you run a test, you can add it to _Test Suite_ by clicking on the related button.
 It is then possible to launch a global run on all saved tests.
 
-# Variabilize the interpretation
+## Variabilize the interpretation
 
 You may want to be able to identify any _ French postal address_ with other numbers, road types and names, and cities.
 
 We will create sub-interpretations to variabilize each element of the initial address model we have created.
 
-## Create a sub-interpretation
+### Create a sub-interpretation
 
 Go back in the _**Interpretations**_ tab and click on _**New Interpretation**_.
 
@@ -143,10 +153,12 @@ In the above example, _road types_ will have a "road_type" name for the interpre
 
 The "shell" to call road types is ready. We will create a list of related entities.
 
-## Create the road type entities
+### Create the road type entities
+
 Click on the ***Entities*** tab and click on ***New entities list***.
 
 Type "road_types" in the ***ID*** text field, select Private and Glued options, and click on ***Create***.
+
 ![create entities list screenshot](pics/10_first_entities_list.png)
 
 Click on the entity list to open it and enter road types  names :
@@ -156,26 +168,32 @@ type "avenue" in the ***Terms*** text area; then click on ***Add***,
 type "impasse" in the ***Terms*** text area; then click on ***Add***,
 type "passage" in the ***Terms*** text area; then click on ***Add***,
 etc...
+
 ![filling the entities list screenshot](pics/11_filling_entities.png)
 
 >_**Tips and tricks**_
 It is possible to import long lists of entities into Viky. Viky accepts CSV format, please refer to the documentation to learn more.
 
-## Link entities to interpretations
+### Link entities to interpretations
+
 Go back in _**Interpretations**_ tab, click on _**road_type**_ private interpretation, click on _**main_road_type**_ and highlight _**main_road_type**_ entry.
+
 A drop-down list appears, displaying the different interpretations available for variabilization.
 ![Linking eneities list to interpretationscreenshot](pics/12_linking_entities_to_interpretations.png)
 Select the ***road_types*** entities (it should be labeled like _**yourname/youragent/entities_lists/road_types**_), and click on _**Update**_.
+
 ![updating interpretation screenshot](pics/13_updating_interpretation.png)
 
 Go back in the ***address***  public interpretation and highlight "avenue" in your expression "12 avenue de Flandres 75019 Paris".
+
 In the drop-down list, select  _**road_type**_ interpretation, and click on _**Update**_.
 
 Test the interpretation with the sentence "12 avenue de Flandres 75019 Paris", the result should be the same as your first test.
 
 Test it now with the sentence "12 **impasse** de Flandres 75019 Paris", it should be successful as well.
 
-## Customizing the solution
+### Customizing the solution
+
 Now we're going to make understandable the rest of the sentence for the system
 - Highlight "_**12**_" and create an alias to the _**viky/numbers/interpretations/number**_ interpretation
 - Highlight "_**75019**_" and create an alias to the _**viky/numbers/interpretations/number**_ interpretation
@@ -183,22 +201,28 @@ Now we're going to make understandable the rest of the sentence for the system
 - Don't highlight the street name for the moment, we'll come back on it later
 
 If you try to update the expression, an error will be displayed because the variable _**number**_ is used twice.
+
 ![Variables error screenshot](pics/14_error_in_variables.png)
 
 Set the second _**number**_ to _**postal_code**_ to make it available, and set _**cityfr_entities**_ to _**city**_ for an easyer reading.
+
 Click on _**update**_
+
 ![Variables OK screenshot](pics/15_adding_variables.png)
 
 Test now the sentence "12 avenue de Flandres 75019 Paris".
 All the part are correctly understood, but the result is almost unreadable.
+
 ![Unreadable result screenshot](pics/16_unreadable_result.png)
 
 We will now customize the output in order to make it correctly readable
 Open the expression and uncheck _**Auto solution**_, a textfield is open in the bottom of the expression.
+
 ![Solution textarea screenshot](pics/17_solution_textarea.png)
 
 This textfield allows you to customize the solution
 The solution is a json map, and you can use all the variables listed in the _**Parameter name**_ area
+
 ![update solution screenshot](pics/18_update_solution.png)
 
 Update the solution in order to have a solution like this
@@ -211,10 +235,12 @@ Update the solution in order to have a solution like this
     }
 
 The solution is now like this
+
 ![complex solution screenshot](pics/19_complex_solution.png)
 
 This is much more readable, but it is still not completely OK
 Let's remove the extra _**number**_ and only keep the city name for the moment.
+
 The solution will be
 
     {
@@ -225,26 +251,31 @@ The solution will be
     }
 
 Now the solution is
+
 ![Simple solution screenshot](pics/20_simple_solution.png)
 
 Which is much better
 
-## Understanding unknown words
+### Understanding unknown words
 
 We will try now to understand the street names.
 All the street names are too much to be imported easily in Viky, so we will try to manage to make the system understand unknown street names.
 
 First create a new private entities list _**street_names**_
 Fill it with some very known street names such as _**Champs Elysees**_, _**Rivoli**_, etc...
+
 ![Entities list street_names screenshot](pics/21_entities_list_street_names.png)
 
 Go back in the _**Address**_ interpretation, edit the expression and highlight _**de flandres**_
 Create an alias to the entities list _**street_names**_, then select _**any**_ for this alias and add it to the solution
+
 ![Street names with any screenshot](pics/22_street_names_any.png)
 
 Test now the sentence "12 avenue de Flandres 75019 Paris".
 All the part are correctly understood, even the street name.
+
 ![final result screenshot](pics/23_final_result.png)
 
- Try now another completely different address, for example : "52 avenue Breteuil 13008 Marseille", it works!
- ![Second final result screenshot](pics/24_final_result_2.png)
+Try now another completely different address, for example : "52 avenue Breteuil 13008 Marseille", it works!
+
+![Second final result screenshot](pics/24_final_result_2.png)
