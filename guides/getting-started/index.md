@@ -11,38 +11,46 @@ We will guide you to create your first agent to structure information from conte
 
 The use case to start on the platform is very simple and will demonstrate the different viky.ai's capabilities:
 You have some contents where you want to retrieve the postal address, to create some metadata for instance to classify the information.
+
 Furthermore, you have customers who want to query these contents by searching with a postal address. Queries should be in natural language to facilitate the interactions.
+
 
 ## Best Practices to start
 
-Definition of the perimeter and the usage is your priority before starting any new project on viky.ai.
-It will help you to ensure the right creation of agents.
+Definition of the perimeter and the usage is your priority before starting any new project on viky.ai. It will help you to ensure the right creation of agents.
 
 **First step...** what is a _postal address_?
-- a _postal address_ contains generally a road, its number, a postal code, a town
-- it could also contain additional information about the floor, the apartment, the building
-- it would be interesting to have the GPS details of the town to imagine a use on a map
+- A _postal address_ contains generally a road, its number, a postal code, a town.
+- It could also contain additional information about the floor, the apartment, the building.
+- It would be interesting to have the GPS details of the town to imagine a use on a map.
 
 _Postal addresses_ could be slightly different from one country to another. So let's started in this tutorial with french postal address!
-A typical example is: 12 avenue de Flandres 75019 Paris
-Find some information about postal addresses on [Wikipedia](https://fr.wikipedia.org/wiki/Adresse_postale#France)
+
+A typical example is: _12 avenue de Flandres 75019 Paris_
+
+Find some information about postal addresses on [Wikipedia](https://fr.wikipedia.org/wiki/Adresse_postale#France).
 
 **Second step...** can I reuse components or should I create everything from scratch?
+
 Think about the elementary components you will need to create agents able to identify a postal address.
+
 In the example "12 avenue de Flandres 75019 Paris", the decomposition into elementary elements gives :
-- number,
-- road type,
-- road name,
-- postal code (i.e. a specific pattern of numbers),
-- city,
-- it could optionally contain information about the apartment, building, floor.
+
+- Number.
+- Road type.
+- Road name.
+- Postal code (i.e. a specific pattern of numbers).
+- City.
+- It could optionally contain information about the apartment, building, floor.
 
 >_**Tips and tricks**_
 Open resources exist on the web to facilitate the creation of these elements.
 > For instance, road types are available on [Wikipedia](https://fr.wikipedia.org/wiki/Odonymie_en_France#Types_de_voie) or on [GitHub Gist](https://gist.github.com/384400/bf3c83a4e7d1aa66a87e)
 
 viky.ai contains already some generic agents to support you in this creation: numbers and French cities.
+
 We will create a module (named _**Agents**_ in viky.ai's world) able to identify each part of the address, and a postal address.
+
 
 ## Create an agent
 
@@ -71,6 +79,7 @@ The agent is now created. By default, you land on the _**Overview**_ page of the
 ![Overview screenshot](pics/03_agent_overview.png)
 
 On this section, you can manage access rights, dependencies and add a _ReadMe_ to describe your agent.
+
 You will add 2 dependencies as seen above : _**Numbers**_ and  _**VillesFR**_.
 
 - Click on _**Add new dependency**_
@@ -93,6 +102,7 @@ You can add a _ReadMe_ in this _**Overview**_ section. This is particularly usef
 >- 3 Passage Pommeraye 44000 Nantes
 >- 1 Rue de la Miséricorde, 20200 Bastia
 
+
 ## First interpretation
 
 ### Create an interpretation
@@ -109,12 +119,15 @@ A _**public**_ interpretation will be able to return a solution as a result.
 A _**private**_ interpretation can only be used for calculation or computation.
 
 Set your interpretation as _**Public**_ and click on _**Create**_.
+
 ![create interpretation screenshot](pics/08_create_new_interpretation.png)
 
 ### Create your first expression
 
 The interpretation is created, now click on it, select the _**fr**_ tab and type "12 avenue de Flandres 75019 Paris" in the text area, then click on _**add**_.
+
 Let the default options as they are (_keep order_, _close_, _auto solution_). We will back to them later.
+
 ![create expression screenshot](pics/09_first_expression.png)
 
 ### Testing the Agent
@@ -131,9 +144,10 @@ It allows also to save your tests to create a _Test Suite_. This is a best pract
 Once you run a test, you can add it to _Test Suite_ by clicking on the related button.
 It is then possible to launch a global run on all saved tests.
 
+
 ## Variabilize the interpretation
 
-You may want to be able to identify any _ French postal address_ with other numbers, road types and names, and cities.
+You may want to be able to identify any _French postal address_ with other numbers, road types and names, and cities.
 
 We will create sub-interpretations to variabilize each element of the initial address model we have created.
 
@@ -142,8 +156,11 @@ We will create sub-interpretations to variabilize each element of the initial ad
 Go back in the _**Interpretations**_ tab and click on _**New Interpretation**_.
 
 We will start with the road types.
+
 Enter "road_type" as an _**ID**_, let this interpretation as _**private**_ mode, then click on _**Create**_.
+
 Click on this new interpretation named "road_type".
+
 Select the _**fr**_ language tab, enter the expression "main_road_type" and then click on _**Add**_.
 
 >_**Tips and tricks**_
@@ -162,13 +179,13 @@ Type "road_types" in the ***ID*** text field, select Private and Glued options, 
 
 ![create entities list screenshot](pics/10_first_entities_list.png)
 
-Click on the entity list to open it and enter road types  names :
+Click on the entity list to open it and enter road types names :
 
-type "rue" in the ***Terms*** text area ; then click on ***Add***,
-type "avenue" in the ***Terms*** text area; then click on ***Add***,
-type "impasse" in the ***Terms*** text area; then click on ***Add***,
-type "passage" in the ***Terms*** text area; then click on ***Add***,
-etc...
+- type "rue" in the ***Terms*** text area ; then click on ***Add***,
+- type "avenue" in the ***Terms*** text area; then click on ***Add***,
+- type "impasse" in the ***Terms*** text area; then click on ***Add***,
+- type "passage" in the ***Terms*** text area; then click on ***Add***,
+- etc...
 
 ![filling the entities list screenshot](pics/11_filling_entities.png)
 
@@ -180,7 +197,9 @@ It is possible to import long lists of entities into viky.ai. viky.ai accepts CS
 Go back in _**Interpretations**_ tab, click on _**road_type**_ private interpretation, click on _**main_road_type**_ and highlight _**main_road_type**_ entry.
 
 A drop-down list appears, displaying the different interpretations available for variabilization.
+
 ![Linking eneities list to interpretationscreenshot](pics/12_linking_entities_to_interpretations.png)
+
 Select the ***road_types*** entities (it should be labeled like _**yourname/youragent/entities_lists/road_types**_), and click on _**Update**_.
 
 ![updating interpretation screenshot](pics/13_updating_interpretation.png)
@@ -195,7 +214,8 @@ Test it now with the sentence "12 **impasse** de Flandres 75019 Paris", it shoul
 
 ### Customizing the solution
 
-Now we're going to make understandable the rest of the sentence for the system
+Now we're going to make understandable the rest of the sentence for the system.
+
 - Highlight "_**12**_" and create an alias to the _**viky/numbers/interpretations/number**_ interpretation
 - Highlight "_**75019**_" and create an alias to the _**viky/numbers/interpretations/number**_ interpretation
 - Highlitht _**Paris**_ and create an alias to the _**viky/villesfr/interpretations/cityfr_entities**_ interpretation
@@ -212,21 +232,24 @@ Click on _**update**_
 ![Variables OK screenshot](pics/15_adding_variables.png)
 
 Test now the sentence "12 avenue de Flandres 75019 Paris".
+
 All the part are correctly understood, but the result is almost unreadable.
 
 ![Unreadable result screenshot](pics/16_unreadable_result.png)
 
-We will now customize the output in order to make it correctly readable
+We will now customize the output in order to make it correctly readable.
+
 Open the expression and uncheck _**Auto solution**_, a textfield is open in the bottom of the expression.
 
 ![Solution textarea screenshot](pics/17_solution_textarea.png)
 
-This textfield allows you to customize the solution
-The solution is a json map, and you can use all the variables listed in the _**Parameter name**_ area
+This textfield allows you to customize the solution.
+
+The solution is a json map, and you can use all the variables listed in the _**Parameter name**_ area.
 
 ![update solution screenshot](pics/18_update_solution.png)
 
-Update the solution in order to have a solution like this
+Update the solution in order to have a solution like this:
 
     {
       number: number,
@@ -235,11 +258,12 @@ Update the solution in order to have a solution like this
       city: city
     }
 
-The solution is now like this
+The solution is now like this:
 
 ![complex solution screenshot](pics/19_complex_solution.png)
 
-This is much more readable, but it is still not completely OK
+This is much more readable, but it is still not completely OK.
+
 Let's remove the extra _**number**_ and only keep the city name for the moment.
 
 The solution will be
@@ -251,28 +275,32 @@ The solution will be
       city: city.name
     }
 
-Now the solution is
+Now the solution is:
 
 ![Simple solution screenshot](pics/20_simple_solution.png)
 
-Which is much better
+Which is much better.
 
 ### Understanding unknown words
 
 We will try now to understand the street names.
+
 All the street names are too much to be imported easily in viky.ai, so we will try to manage to make the system understand unknown street names.
 
-First create a new private entities list _**street_names**_
+First create a new private entities list _**street_names**_.
+
 Fill it with some very known street names such as _**Champs Elysees**_, _**Rivoli**_, etc...
 
 ![Entities list street_names screenshot](pics/21_entities_list_street_names.png)
 
-Go back in the _**Address**_ interpretation, edit the expression and highlight _**de flandres**_
+Go back in the _**Address**_ interpretation, edit the expression and highlight _**de flandres**_.
+
 Create an alias to the entities list _**street_names**_, then select _**any**_ for this alias and add it to the solution
 
 ![Street names with any screenshot](pics/22_street_names_any.png)
 
 Test now the sentence "12 avenue de Flandres 75019 Paris".
+
 All the part are correctly understood, even the street name.
 
 ![final result screenshot](pics/23_final_result.png)
