@@ -5,30 +5,38 @@ title: "Getting Started with viky.ai (WIP)"
 
 ## Purpose
 
-This tutorial will assist you in the creation of your first project into viky.ai.
+This guide will assist you in the creation of your first project into viky.ai.
 
 We will guide you to create your first agent to structure information from contents and to retrieve relevant information in these contents by interacting with your data in natural language.
 
 The use case to start on the platform is very simple and will demonstrate the different viky.ai's capabilities:
 You have some contents where you want to retrieve the postal address, to create some metadata for instance to classify the information.
 
-Furthermore, you have customers who want to query these contents by searching with a postal address. Queries should be in natural language to facilitate the interactions.
+- You have some contents where you want to retrieve the postal address, to create some metadata for instance to classify the information.
+- Furthermore, you have customers who want to query these contents by searching with a postal address. Queries should be in natural language to facilitate the interactions.
 
 
-## Best Practices to start
+## Best practices to start
 
-Definition of the perimeter and the usage is your priority before starting any new project on viky.ai. It will help you to ensure the right creation of agents.
+__Definition of the perimeter and the usage is your priority before starting__ any new project on viky.ai. It will help you to ensure the right creation of agents.
 
-**First step...** what is a _postal address_?
+<h3>
+  <span class="tag tag--primary">1<sup>st</sup> step</span>
+  What is a postal address?
+</h3>
+
 - A _postal address_ contains generally a road, its number, a postal code, a town.
 - It could also contain additional information about the floor, the apartment, the building.
 - It would be interesting to have the GPS details of the town to imagine a use on a map.
 
 _Postal addresses_ could be slightly different from one country to another. So let's started in this tutorial with french postal address!
 
-A typical example is: _12 avenue de Flandres 75019 Paris_
+A typical example is: _12 avenue de Flandres 75019 Paris_ (find some information about postal addresses on [Wikipedia](https://en.wikipedia.org/wiki/Address#France)).
 
-Find some information about postal addresses on [Wikipedia](https://fr.wikipedia.org/wiki/Adresse_postale#France).
+<h3>
+  <span class="tag tag--primary">2<sup>nd</sup> step</span>
+  Can I reuse components or should I create everything from scratch?
+</h3>
 
 **Second step...** can I reuse components or should I create everything from scratch?
 
@@ -46,12 +54,14 @@ In the example "12 avenue de Flandres 75019 Paris", the decomposition into eleme
   </p>
 </aside>
 
-- Number.
-- Road type.
-- Road name.
-- Postal code (i.e. a specific pattern of numbers).
-- City.
+- `12`: Number.
+- `avenue`: Road type.
+- `de Flandres`: Road name.
+- `75019`: Postal code (i.e. a specific pattern of numbers).
+- `Paris`: City.
 - It could optionally contain information about the apartment, building, floor.
+
+It could optionally contain information about the apartment, building, floor.
 
 viky.ai contains already some generic agents to support you in this creation: numbers and French cities.
 
