@@ -5,16 +5,17 @@ title: "Getting Started with viky.ai (WIP)"
 
 ## Purpose
 
-This tutorial will assist you in the creation of your first project into Viky.
+This tutorial will assist you in the creation of your first project into viky.ai.
+
 We will guide you to create your first agent to structure information from contents and to retrieve relevant information in these contents by interacting with your data in natural language.
 
-The use case to start on the platform is very simple and will demonstrate the different Viky's capabilities:
+The use case to start on the platform is very simple and will demonstrate the different viky.ai's capabilities:
 You have some contents where you want to retrieve the postal address, to create some metadata for instance to classify the information.
 Furthermore, you have customers who want to query these contents by searching with a postal address. Queries should be in natural language to facilitate the interactions.
 
 ## Best Practices to start
 
-Definition of the perimeter and the usage is your priority before starting any new project on Viky.
+Definition of the perimeter and the usage is your priority before starting any new project on viky.ai.
 It will help you to ensure the right creation of agents.
 
 **First step...** what is a _postal address_?
@@ -40,12 +41,12 @@ In the example "12 avenue de Flandres 75019 Paris", the decomposition into eleme
 Open resources exist on the web to facilitate the creation of these elements.
 > For instance, road types are available on [Wikipedia](https://fr.wikipedia.org/wiki/Odonymie_en_France#Types_de_voie) or on [GitHub Gist](https://gist.github.com/384400/bf3c83a4e7d1aa66a87e)
 
-Viky contains already some generic agents to support you in this creation: numbers and French cities.
-We will create a module (named _**Agents**_ in Viky's world) able to identify each part of the address, and a postal address.
+viky.ai contains already some generic agents to support you in this creation: numbers and French cities.
+We will create a module (named _**Agents**_ in viky.ai's world) able to identify each part of the address, and a postal address.
 
 ## Create an agent
 
-In Viky, click on the _**Agents**_ tab, then on _**New Agent**_.
+In viky.ai, click on the _**Agents**_ tab, then on _**New Agent**_.
 
 ![New Agent screenshot](pics/01_new_agent.png)
 
@@ -172,7 +173,7 @@ etc...
 ![filling the entities list screenshot](pics/11_filling_entities.png)
 
 >_**Tips and tricks**_
-It is possible to import long lists of entities into Viky. Viky accepts CSV format, please refer to the documentation to learn more.
+It is possible to import long lists of entities into viky.ai. viky.ai accepts CSV format, please refer to the documentation to learn more.
 
 ### Link entities to interpretations
 
@@ -259,7 +260,7 @@ Which is much better
 ### Understanding unknown words
 
 We will try now to understand the street names.
-All the street names are too much to be imported easily in Viky, so we will try to manage to make the system understand unknown street names.
+All the street names are too much to be imported easily in viky.ai, so we will try to manage to make the system understand unknown street names.
 
 First create a new private entities list _**street_names**_
 Fill it with some very known street names such as _**Champs Elysees**_, _**Rivoli**_, etc...
