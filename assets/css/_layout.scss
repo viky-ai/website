@@ -29,7 +29,7 @@ html, body{
   }
   @media screen and (min-width: $breakpoint_large) {
     justify-content: center;
-    grid-template-columns: 20em 48em 23em;
+    grid-template-columns: 20em 45em 23em;
   }
 }
 
@@ -43,7 +43,7 @@ html, body{
   @media screen and (min-width: $breakpoint_medium) {
     display: grid;
     grid-column-gap: 3em;
-    grid-template-columns: 20em minmax(40em, 45em) auto;
+    grid-template-columns: 20em minmax(36em, 42em) auto;
     grid-template-rows: min-content auto;
     grid-template-areas: "sidebar main nav";
     justify-items: stretch;
@@ -58,8 +58,7 @@ html, body{
   @media screen and (min-width: $breakpoint_large) {
     background: linear-gradient(to right, $grey_100 0%, $grey_100 20%, #fff 20%, #fff 100%);
     justify-content: center;
-    grid-template-columns: 20em 45em 20em;
-
+    grid-template-columns: 20em 42em 20em;
     .doc__main{
       .article__summary{
         display: none;
@@ -71,8 +70,7 @@ html, body{
       padding: 1em 0;
       .article__summary{
         margin: 0;
-        border-left: 1px solid $grey_100;
-        padding: 1em;
+        padding: 1em 1em 0 0;
         position: -webkit-sticky;
         position: sticky;
         top: 1em;

@@ -4,15 +4,6 @@ title: "Markdown reference"
 only_for_dev: true
 ---
 
-<!-- <div class="color color--grey-100"></div>
-<div class="color color--grey-200"></div>
-<div class="color color--grey-300"></div>
-<div class="color color--grey-400"></div>
-<div class="color color--grey-500"></div>
-<div class="color color--grey-700"></div>
-<div class="color color--grey-900"></div> -->
-
-
 <aside class="note">
   <h3>Only for dev</h3>
   <p>
@@ -443,3 +434,18 @@ __Becomes__
     facilis dolor doloribus sequi, officiis debitis.
   </p>
 </aside>
+
+
+## Color reference
+
+### Grey (100-900)
+
+<div class="color color--grey-100"></div>
+<div class="color color--grey-200"></div>
+<div class="color color--grey-300"></div>
+<div class="color color--grey-400"></div>
+<div class="color color--grey-500"></div>
+<div class="color color--grey-600"></div>
+<div class="color color--grey-700"></div>
+<div class="color color--grey-800"></div>
+<div class="color color--grey-900"></div>
