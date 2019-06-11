@@ -248,15 +248,15 @@ article{
     white-space: nowrap;
     &.tag--primary{
       border-color: $primary_color;
-      color: darken($primary_color, 5%);
+      color: darken($primary_color, 10%);
     }
     &.tag--warning{
-      border-color: #f5be58;
-      color: darken(#f5be58, 5%);
+      border-color: $warning_color;
+      color: darken($warning_color, 17%);
     }
     &.tag--success{
-      border-color: #33c27f;
-      color: darken(#33c27f, 5%);
+      border-color: $success_color;
+      color: darken($success_color, 10%);
     }
   }
 

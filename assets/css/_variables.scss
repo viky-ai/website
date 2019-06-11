@@ -4,6 +4,8 @@ $breakpoint_large: 88em;
 $breakpoint_x_large: 95em;
 
 $primary_color: hsl(192, 80, 54); //#3bb8d7;
+$warning_color: #f5be58;
+$success_color: #33c27f;
 
 $grey_100: hsl(192, 15, 97);
 $grey_200: hsl(192, 15, 93);
@@ -14,7 +16,6 @@ $grey_600: hsl(192, 15, 40);
 $grey_700: hsl(192, 15, 30);
 $grey_800: hsl(192, 15, 20);
 $grey_900: hsl(192, 15, 10);
-
 
 div.color{
   display: inline-block;
