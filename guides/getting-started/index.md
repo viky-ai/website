@@ -119,7 +119,10 @@ On the left part of the UI, you can edit agent's configuration, manage access ri
 
 ## Let's add some dependencies
 
-In order not to reinvent the wheel, you will add 2 dependencies as seen above: **Numbers** and  **VillesFR**.
+In order not to reinvent the wheel, you will add 2 dependencies as seen above: *Numbers* and *VillesFR* :
+
+- *Numbers* agent will allow you to understands ordinal and cardinal numbers, written in digits or in letters.
+- *VillesFR* agent will allow you to recognize French cities and give you their geographical coordinates.
 
 <span class="tag tag--primary">Step 1</span> Click on **Add new dependency**
 
@@ -141,9 +144,6 @@ In order not to reinvent the wheel, you will add 2 dependencies as seen above: *
 
 ![Dependencies screenshot](img/08_dependencies_done.png "Everything is OK")
 
-<aside class="warning">
-  <p>TODO: add info on Numbers & VillesFR capabilities. First console example ?</p>
-</aside>
 
 
 ## First interpretation
@@ -152,18 +152,24 @@ In order not to reinvent the wheel, you will add 2 dependencies as seen above: *
 
 In the **Interpretations** tab, click on **New Interpretation** button.
 
-![New interpretation screenshot](pics/07_new_interpretation.png)
+![New interpretation screenshot](img/09_new_interpretation.png)
 
-Fill the `ID` with "address".
+<aside class="note">
+  <h3>Interpretation visibility</h3>
+  <ul>
+    <li>Public interpretations are those exposed by the agent, they provide final solutions.</li>
+    <li>Privates are used to perform intermediate calculations or computations.</li>
+  </ul>
+</aside>
 
-Interpretation can be set as **Public** or **Private**:
+A modal box with the form “Create a new interpretation” opens.
 
-- A **Public** interpretation will be able to return a solution as a result.
-- A **Private** interpretation can only be used for calculation or computation.
+1. Fill the `ID` with "address".
+2. Set your interpretation visibility as **Public**
+3. Fill a description: "Identifies the French postal addresses."
+3. Click on **Create** button.
 
-Set your interpretation as **Public** and click on **Create**.
-
-![create interpretation screenshot](pics/08_create_new_interpretation.png)
+![create interpretation screenshot](img/10_form_interpretation.png)
 
 ### Create your first expression
 
@@ -171,26 +177,24 @@ The interpretation is created, now click on it, select the **fr** tab and type "
 
 Let the default options as they are (_keep order_, _close_, _auto solution_). We will back to them later.
 
-![create expression screenshot](pics/09_first_expression.png)
+![create expression screenshot](img/11_first_expression.png)
 
-### Testing the Agent
+### Testing the agent
 
-A console panel is on the right to test in live your agent. Type "12 avenue de Flandres 75019 Paris" in the text area and click on the arrow to send the request. This console calls your agent by REST API.
+A console panel is on the right to test in live your agent. Type "12 avenue de Flandres 75019 Paris" in the text field and click on the arrow to send the request. This console calls your agent by REST API.
 
 You can see the returned solution in the **Explain** tab (opened by default). The solution is available also in JSON format, click on the **JSON** tab to check it.
 
-The return value is an interpretation, the solution is just a part of the interpretation and the score is the match exactitude level, 0 means no match, and 1 means a complete exact match.
+![Console screenshot](img/12_first_console.png)
+
+The return value is the interpretation you just created and the score is the match exactitude level, 0 means no match, and 1 means a complete exact match. Here the score is 1 because the phrase entered in the console exactly matches the expression you just created.
 
 <aside class="primary">
   <p>
-    The <strong>Console</strong> has different usages. It could be a place to realize your unitary tests, each time you create a new interpretation, to validate it.
+    The <strong>Console</strong> has different usages. It could be a place to realize your <strong>manual unit tests</strong>, each time you create a new interpretation, to validate it.
   </p>
   <p>
-    It allows also to save your tests to create a <strong>Test Suite</strong>. This is a best practice to have in NLP projects, to have continuous improvements with a view of potential regressions.
-  </p>
-  <p>
-    Once you run a test, you can add it to Test Suite by clicking on the related button.
-    It is then possible to launch a global run on all saved tests.
+    It allows also to save your tests to create an <strong>automated tests suite</strong>. This is a best practice to have in NLP projects, to have continuous improvements with a view of potential regressions.
   </p>
 </aside>
 
