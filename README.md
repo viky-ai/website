@@ -58,7 +58,7 @@ Your markdown content goes here.
 
 ### Manage images
 
-In order to support retina display and to ensure consistency in the display, please follow its instructions:
+In order to support retina display and to ensure consistency in the display, please follow these instructions:
 
 * Take screenshot with a viewport width of 1320px in viky.ai with a minimal pixel density of 2 (if possible).
 * In any case, resize screenshot to 1320px.

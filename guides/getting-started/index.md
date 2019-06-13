@@ -1,6 +1,6 @@
 ---
 layout: doc
-title: "Getting Started with viky.ai (WIP)"
+title: "Getting Started with viky.ai"
 ---
 
 ## Purpose
@@ -16,11 +16,7 @@ The use case to start on the platform is very simple and will demonstrate the di
 
 Concretely, you will create an agent allowing you to send a text to the [viky.ai Agents API](../../api/agents/) and it will extract the French postal addresses in a structured way.
 
-<aside class="warning">
-  <p>TODO: add an illustration.</p>
-  <pre>[text] => {API viky.ai} => [Text w/ highlight + JSON solutions]</pre>
-</aside>
-
+![Extraction example schema](img/principle.png "Send text and retreive structured French postal address")
 
 ## Best practices to start
 
@@ -109,50 +105,21 @@ On the left part of the UI, you can edit agent's configuration, manage access ri
   </p>
   <ul>
     <li>12 avenue de Flandres 75019 Paris</li>
-    <li>108 bis rue Jean Moulin 54230 Neuves-Maisons</li>
+    <li>108 rue Jean Moulin 54230 Neuves-Maisons</li>
     <li>240 Impasse du Fief du Breil 44690 La Haie-Fouassière</li>
     <li>3 Passage Pommeraye 44000 Nantes</li>
-    <li>1 Rue de la Miséricorde, 20200 Bastia</li>
+    <li>1 Rue de la Miséricorde 20200 Bastia</li>
   </ul>
 </aside>
 
 
-## Let's add some dependencies
-
-In order not to reinvent the wheel, you will add 2 dependencies as seen above: *Numbers* and *VillesFR* :
-
-- *Numbers* agent will allow you to understands ordinal and cardinal numbers, written in digits or in letters.
-- *VillesFR* agent will allow you to recognize French cities and give you their geographical coordinates.
-
-<span class="tag tag--primary">Step 1</span> Click on **Add new dependency**
-
-![Add dependency screenshot](img/04_first_dependency.png "Access to dependency chooser")
-
-<span class="tag tag--primary">Step 2</span> Search and choose **Numbers** public agent
-
-![Search dependencies screenshot](img/05_choose_numbers_agent.png "Choose Numbers agent")
-
-<span class="tag tag--primary">Step 3</span> **Numbers** agent is now in yours dependencies. Let's add an other.
-
-![Populated dependencies section screenshot](img/06_second_dependency.png "Numbers agent is here now")
-
-<span class="tag tag--primary">Step 4</span> Click on **Add new dependency**, search and choose **VillesFR** public agent
-
-![Search dependencies screenshot](img/07_choose_villesfr_agent.png "Choose VillesFR agent")
-
-<span class="tag tag--primary">Done</span>  Well, both dependencies are in place.
-
-![Dependencies screenshot](img/08_dependencies_done.png "Everything is OK")
-
-
-
-## First interpretation
+## First basic interpretation
 
 ### Create an interpretation
 
 In the **Interpretations** tab, click on **New Interpretation** button.
 
-![New interpretation screenshot](img/09_new_interpretation.png)
+![New interpretation screenshot](img/04_new_interpretation.png 'Access to "New Interpretation" button')
 
 <aside class="note">
   <h3>Interpretation visibility</h3>
@@ -169,7 +136,7 @@ A modal box with the form “Create a new interpretation” opens.
 3. Fill a description: "Identifies the French postal addresses."
 3. Click on **Create** button.
 
-![create interpretation screenshot](img/10_form_interpretation.png)
+![Interpretation form screenshot](img/05_form_interpretation.png "Creating address interpretation")
 
 ### Create your first expression
 
@@ -177,7 +144,7 @@ The interpretation is created, now click on it, select the **fr** tab and type "
 
 Let the default options as they are (_keep order_, _close_, _auto solution_). We will back to them later.
 
-![create expression screenshot](img/11_first_expression.png)
+![Expression form screenshot](img/06_first_expression.png "Adding an expression")
 
 ### Testing the agent
 
@@ -185,7 +152,7 @@ A console panel is on the right to test in live your agent. Type "12 avenue de F
 
 You can see the returned solution in the **Explain** tab (opened by default). The solution is available also in JSON format, click on the **JSON** tab to check it.
 
-![Console screenshot](img/12_first_console.png)
+![Console screenshot](img/07_first_console.png "Manual test in console")
 
 The return value is the interpretation you just created and the score is the match exactitude level, 0 means no match, and 1 means a complete exact match. Here the score is 1 because the phrase entered in the console exactly matches the expression you just created.
 
@@ -199,59 +166,43 @@ The return value is the interpretation you just created and the score is the mat
 </aside>
 
 
-## Variabilize the interpretation
+## Road types
 
-You may want to be able to identify any _French postal address_ with other numbers, road types and names, and cities.
+You want to be able to identify any _French postal address_ with other numbers, road types and names, and cities.
 
-We will create sub-interpretations to variabilize each element of the initial address model we have created.
+We will start with the road types detection by using an entities list.
 
-### Create a sub-interpretation
+### Create a road type entities list
 
-Go back in the **Interpretations** tab and click on **New Interpretation**.
+Click on the **Entities** tab and click on **New entities list** button.
+
+![Entities lists UI screenshot](img/08_new_entities_list.png 'Access to "New entities list" button')
 
 <aside class="note">
-  <h3>Tips and tricks</h3>
-  <p>
-    We recommend best practices to name your interpretations and entities.
-  </p>
+  <h3>Naming conventions</h3>
   <ul>
     <li>Names are always in English.</li>
-    <li>Use the singular form to name an interpretation.</li>
-    <li>Use plural form to name an entities list.</li>
+    <li>Favor the singular form to name an interpretation.</li>
+    <li>Favor plural form to name an entities list.</li>
   </ul>
-  <p>
-    In the above example, <em>road types</em> will have a "road_type" name for the interpretation, and we will name the list of types in the entities tab <em>road_types</em>.
-  </p>
 </aside>
 
-We will start with the road types.
+A modal box with the form “Create a new entities list” opens.
 
-Enter "road_type" as an `ID`, let this interpretation as `Private` mode, then click on **Create** button.
+1. Type "road_types" in the `ID` text field.
+2. Select Private and Glued options.
+3. Click on **Create** button.
 
-Click on this new interpretation named "road_type".
-
-Select the **fr** language tab, enter the expression "main_road_type" and then click on **Add**.
-
-
-The "shell" to call road types is ready. We will create a list of related entities.
-
-### Create the road type entities
-
-Click on the **Entities** tab and click on **New entities list**.
-
-Type "road_types" in the `ID` text field, select Private and Glued options, and click on **Create**.
-
-![create entities list screenshot](pics/10_first_entities_list.png)
+![create entities list screenshot](img/09_create_entities_list.png "Entities list creation form")
 
 Click on the entity list to open it and enter road types names:
 
-- type "rue" in the **Terms** text area ; then click on **Add**,
-- type "avenue" in the **Terms** text area; then click on **Add**,
-- type "impasse" in the **Terms** text area; then click on **Add**,
-- type "passage" in the **Terms** text area; then click on **Add**,
-- etc...
+1. Type "rue" in the **Terms** text area ; then click on **Add**,
+2. Type "avenue" in the **Terms** text area; then click on **Add**,
+3. Type "impasse" in the **Terms** text area; then click on **Add**,
+4. Type "passage" in the **Terms** text area; then click on **Add**,
 
-![filling the entities list screenshot](pics/11_filling_entities.png)
+![filling the entities list screenshot](img/10_filling_entities.png 'Adding terms in "road_types" entities list')
 
 <aside class="primary">
   <p>
@@ -260,119 +211,191 @@ Click on the entity list to open it and enter road types names:
 </aside>
 
 
-### Link entities to interpretations
+### Link entities list to interpretations
 
-Go back in **Interpretations** tab, click on **road_type** private interpretation, click on **main_road_type** and highlight **main_road_type** entry.
+Go back in **Interpretations** tab, click on **address** public interpretation.
 
-A drop-down list appears, displaying the different interpretations available for variabilization.
+<h4>
+  <span class="tag tag--primary">Step 1</span> Edit current expression in address interpretation
+</h4>
 
-![Linking eneities list to interpretationscreenshot](pics/12_linking_entities_to_interpretations.png)
+Click on expression "12 avenue de Flandres 75019 Paris" in order to edit it.
 
-Select the **road_types** entities (it should be labeled like `yourname/youragent/entities_lists/road_types`), and click on **Update**.
+![UI screenshot](img/11_edit_expression.png 'Edit an expression by clicking on it')
 
-![updating interpretation screenshot](pics/13_updating_interpretation.png)
+<h4>
+  <span class="tag tag--primary">Step 2</span> Link avenue with road_types entities list
+</h4>
 
-Go back in the **address**  public interpretation and highlight "avenue" in your expression "12 avenue de Flandres 75019 Paris".
+1. Highlight **avenue** in expression "12 avenue de Flandres 75019 Paris".
+2. A drop-down list appears, displaying the different interpretations and entities lists available.
+3. Choose the **road_types** entities list (it should be labeled like `yourname/youragent/entities_lists/road_types`).
+4. Click on **Update**
 
-In the drop-down list, select  **road_type** interpretation, and click on **Update**.
+![Interpretation form screenshot](img/12_linking_entities_to_interpretations.png "Linking an expression part to an entities list")
 
-Test the interpretation with the sentence "12 avenue de Flandres 75019 Paris", the result should be the same as your first test.
+![updating interpretation screenshot](img/13_updating_interpretation.png "Link between interpretation and entities is done")
 
-Test it now with the sentence "12 **impasse** de Flandres 75019 Paris", it should be successful as well.
 
-### Customizing the solution
+<h4>
+  <span class="tag tag--primary">Step 3</span> Validate
+</h4>
 
-Now we're going to make understandable the rest of the sentence for the system.
+Test in console the interpretation with the following sentences:
 
-- Highlight "**12**" and create an alias to the `viky/numbers/interpretations/number` interpretation.
-- Highlight "**75019**" and create an alias to the `viky/numbers/interpretations/number` interpretation.
-- Highlitht "**Paris**" and create an alias to the `viky/villesfr/interpretations/cityfr_entities` interpretation.
-- Don't highlight the street name for the moment, we'll come back on it later.
+- 12 impasse de Flandres 75019 Paris
+- 12 avenue de Flandres 75019 Paris
+- 12 rue de Flandres 75019 Paris
 
-If you try to update the expression, an error will be displayed because the variable `number` is used twice.
+All sentences are successful, interpretation **address** is found on each road type variant.
 
-![Variables error screenshot](pics/14_error_in_variables.png)
+![Console screenshots](img/14_road_types_tests.png "All variants work")
 
-Set the second **number** to **postal_code** to make it available, and set **cityfr_entities** to **city** for an easyer reading.
 
-Click on **update**.
+## Road number, postal code & city
 
-![Variables OK screenshot](pics/15_adding_variables.png)
+Let's continue with the detection of road number, postal code and city.
 
-Test now the sentence "12 avenue de Flandres 75019 Paris".
+### Let's add some dependencies
 
-All the part are correctly understood, but the result is almost unreadable.
+In order not to reinvent the wheel, you will add 2 agent dependencies as seen above:
 
-![Unreadable result screenshot](pics/16_unreadable_result.png)
+- **Numbers** agent will allow you to understands ordinal and cardinal numbers, written in digits or in letters. This seems appropriate to recognize road number and postal code.
+- **VillesFR** agent will allow you to recognize French cities and give you their geographical coordinates. This seems appropriate to recognize city.
+
+To do this, return to the agent **Overview** tab.
+
+<span class="tag tag--primary">Step 1</span> Click on **Add new dependency**
+
+![Add dependency screenshot](img/15_first_dependency.png "Access to dependency chooser")
+
+<span class="tag tag--primary">Step 2</span> Search and choose **Numbers** public agent
+
+![Search dependencies screenshot](img/16_choose_numbers_agent.png "Choose Numbers agent")
+
+<span class="tag tag--primary">Step 3</span> **Numbers** agent is now in yours dependencies. Let's add an other.
+
+![Populated dependencies section screenshot](img/17_second_dependency.png "Numbers agent is here now")
+
+<span class="tag tag--primary">Step 4</span> Click on **Add new dependency**, search and choose **VillesFR** public agent
+
+![Search dependencies screenshot](img/18_choose_villesfr_agent.png "Choose VillesFR agent")
+
+<span class="tag tag--primary">Done</span>  Well, both dependencies are in place.
+
+![Dependencies screenshot](img/19_dependencies_done.png "Everything is OK")
+
+
+### Edit address interpretation
+
+In order to make understandable road number, postal code and city, go to **Interpretations** tab. Then go to **address** interpretation and edit “12 avenue de Flandres 75019 Paris” expression.
+
+Let's start now highlights:
+
+1. Highlight "**12**" and create an alias to the `viky/numbers/interpretations/number` interpretation.
+2. Highlight "**75019**" and create an alias to the `viky/numbers/interpretations/number` interpretation.
+3. Highlitht "**Paris**" and create an alias to the `viky/villesfr/interpretations/cityfr_entities` interpretation.
+
+Don't highlight the street name for the moment, we'll come back on it later.
+
+![Interpretation form screenshot](img/20_highlight.png "Highlight road number, postal code & city")
+
+If you try to update the expression, an error will be displayed because the parameter name `number` is used twice.
+
+In parameter name column:
+1. Replace `road_types` value by `road_type`.
+1. Replace the second `number` value by `postal_code`.
+2. Replace `cityfr_entities` by `city`.
+
+![Interpretation form screenshot](img/21_parameter_names.png "Adjust parameter names")
+
+Click on **update** in order to save these modifications.
+
+### Validate with the console
+
+Test now in the console the sentence "12 avenue de Flandres 75019 Paris".
+
+![Unreadable solution screenshot](img/22_console_unreadable_result.png "Non-optimal solution, we can do better!")
+
+All the part are correctly understood, but the solution is almost unreadable.
 
 We will now customize the output in order to make it correctly readable.
 
-Open the expression and uncheck **Auto solution**, a textfield is open in the bottom of the expression.
 
-![Solution textarea screenshot](pics/17_solution_textarea.png)
+### Improve solution output
 
-This textfield allows you to customize the solution.
+Open the expression and uncheck **Auto solution**, a textarea is now open in the bottom of the form.
 
-The solution is a json map, and you can use all the variables listed in the **Parameter name** area.
+![Solution textarea screenshot](img/22_uncheck_auto_solution.png "Uncheck the Auto solution option")
 
-![update solution screenshot](pics/18_update_solution.png)
+This textarea allows you to customize the solution. The solution is a json map, and you can use all the variables listed in the **Parameter name** column.
 
 Update the solution in order to have a solution like this:
 
-    {
-      number: number,
-      road_type: road_type,
-      postal_code: postal_code,
-      city: city
-    }
+```javascript
+{
+  "number": number,
+  "road_type": road_type,
+  "postal_code": postal_code,
+  "city": city
+}
+```
+
+![Update solution screenshot](img/23_edit_solution.png "Edit solution")
 
 The solution is now like this:
 
-![complex solution screenshot](pics/19_complex_solution.png)
+![Improved but too complex solution screenshot](img/24_solution_improved.png "Solution improved but still too complex, we can do better!")
 
-This is much more readable, but it is still not completely OK.
+This is much more readable, but it is still not completely OK. Let's remove the extra **number** and only keep the city name for the moment.
 
-Let's remove the extra **number** and only keep the city name for the moment.
+Replace current solution with:
 
-The solution will be
+```javascript
+{
+  "number": number.number,
+  "road_type": road_type,
+  "postal_code": postal_code.number,
+  "city": city.name
+}
+```
 
-    {
-      number: number.number,
-      road_type: road_type,
-      postal_code: postal_code.number,
-      city: city.name
-    }
+Now the solution is much better:
 
-Now the solution is:
+![Solution screenshot](img/25_good_solution.png "There you go!")
 
-![Simple solution screenshot](pics/20_simple_solution.png)
-
-Which is much better.
-
-### Understanding unknown words
+## Road name
 
 We will try now to understand the street names.
 
-All the street names are too much to be imported easily in viky.ai, so we will try to manage to make the system understand unknown street names.
+### Road names entities list
 
-First create a new private entities list **street_names**.
+All the road names are too many to be imported easily in viky.ai, so we will try to manage to make the system understand unknown road names.
 
-Fill it with some very known street names such as **Champs Elysees**, **Rivoli**, etc...
+First create a new private entities list **road_names**.
 
-![Entities list street_names screenshot](pics/21_entities_list_street_names.png)
+Fill it with some very known road names such as **Champs Elysees**, **Rivoli**, etc...
 
-Go back in the **Address** interpretation, edit the expression and highlight **de flandres**.
+![Entities list road_names screenshot](img/26_entities_list_road_names.png)
 
-Create an alias to the entities list **street_names**, then select **any** for this alias and add it to the solution.
 
-![Street names with any screenshot](pics/22_street_names_any.png)
+### Edit address interpretation
 
-Test now the sentence "12 avenue de Flandres 75019 Paris".
+Go back in the **Address** interpretation, edit the expression then :
 
-All the part are correctly understood, even the street name.
+1. Highlight **de flandres**.
+2. Create an alias to the entities list **road_names**.
+3. Select **any** for this alias.
+4. Replace parameter name `road_names` value by `road_name`.
+5. Insert `"road_name": road_name,` in solution.
+6. Click on Update button.
 
-![final result screenshot](pics/23_final_result.png)
+![Street names with any screenshot](img/27_road_names_any.png)
 
-Try now another completely different address, for example: "52 avenue Breteuil 13008 Marseille", it works!
+In the console, test now the sentence "12 avenue de Flandres 75019 Paris". All the part are correctly understood, even the road name.
 
-![Second final result screenshot](pics/24_final_result_2.png)
+![Final solution screenshot](img/28_final_solution.png "Congratulations!")
+
+Try now another completely different address, for example: "108 rue Jean Moulin 54230 Neuves-Maisons", it works!
+
+![Successful solutions screenshot](img/29_some_tests.png "Some successful solutions")

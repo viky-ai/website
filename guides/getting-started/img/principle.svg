@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="130.97058mm"
+   height="83.543648mm"
+   viewBox="0 0 464.06901 296.0208"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="principle.svg"
+   inkscape:export-filename="/Users/jean-marie/principle.png"
+   inkscape:export-xdpi="116"
+   inkscape:export-ydpi="116">
+  <defs
+     id="defs4">
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible"
+       id="marker7386"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow2Lend">
+      <path
+         inkscape:connector-curvature="0"
+         transform="matrix(-1.1,0,0,-1.1,-1.1,0)"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         style="fill:#929292;fill-opacity:1;fill-rule:evenodd;stroke:#929292;stroke-width:0.625;stroke-linejoin:round;stroke-opacity:1"
+         id="path7388" />
+    </marker>
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible"
+       id="marker7182"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow2Lend">
+      <path
+         inkscape:connector-curvature="0"
+         transform="matrix(-1.1,0,0,-1.1,-1.1,0)"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         style="fill:#929292;fill-opacity:1;fill-rule:evenodd;stroke:#929292;stroke-width:0.625;stroke-linejoin:round;stroke-opacity:1"
+         id="path7184" />
+    </marker>
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible"
+       id="marker6648"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow2Lend">
+      <path
+         inkscape:connector-curvature="0"
+         transform="matrix(-1.1,0,0,-1.1,-1.1,0)"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         style="fill:#929292;fill-opacity:1;fill-rule:evenodd;stroke:#929292;stroke-width:0.625;stroke-linejoin:round;stroke-opacity:1"
+         id="path6650" />
+    </marker>
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible"
+       id="marker5736"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow2Lend">
+      <path
+         inkscape:connector-curvature="0"
+         transform="matrix(-1.1,0,0,-1.1,-1.1,0)"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         style="fill:#929292;fill-opacity:1;fill-rule:evenodd;stroke:#929292;stroke-width:0.625;stroke-linejoin:round;stroke-opacity:1"
+         id="path5738" />
+    </marker>
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible"
+       id="marker5378"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow2Lend">
+      <path
+         transform="matrix(-1.1,0,0,-1.1,-1.1,0)"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         style="fill:#929292;fill-opacity:1;fill-rule:evenodd;stroke:#929292;stroke-width:0.625;stroke-linejoin:round;stroke-opacity:1"
+         id="path5380"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow2Lend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow2Lend"
+       style="overflow:visible"
+       inkscape:isstock="true"
+       inkscape:collect="always">
+      <path
+         id="path4397"
+         style="fill:#929292;fill-opacity:1;fill-rule:evenodd;stroke:#929292;stroke-width:0.625;stroke-linejoin:round;stroke-opacity:1"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         transform="matrix(-1.1,0,0,-1.1,-1.1,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Lend"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path4379"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         transform="matrix(-0.8,0,0,-0.8,-10,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lstart"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Lstart"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path4376"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         transform="matrix(0.8,0,0,0.8,10,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <linearGradient
+       id="linearGradient4569">
+      <stop
+         id="stop4571"
+         offset="0"
+         style="stop-color:#b73b2f;stop-opacity:1;" />
+      <stop
+         id="stop4573"
+         offset="1"
+         style="stop-color:#451184;stop-opacity:1;" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient5759">
+      <stop
+         id="stop5761"
+         offset="0"
+         style="stop-color:#575757;stop-opacity:1;" />
+      <stop
+         id="stop5763"
+         offset="1"
+         style="stop-color:#000000;stop-opacity:1;" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient4107">
+      <stop
+         id="stop4109"
+         offset="0"
+         style="stop-color:#ff0303;stop-opacity:1;" />
+      <stop
+         style="stop-color:#ff0000;stop-opacity:1;"
+         offset="0.5"
+         id="stop4115" />
+      <stop
+         id="stop4111"
+         offset="1"
+         style="stop-color:#a10000;stop-opacity:1;" />
+    </linearGradient>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.2247465"
+     inkscape:cx="180.49108"
+     inkscape:cy="-21.181162"
+     inkscape:document-units="px"
+     inkscape:current-layer="g4311"
+     showgrid="false"
+     inkscape:window-width="1709"
+     inkscape:window-height="985"
+     inkscape:window-x="127"
+     inkscape:window-y="42"
+     inkscape:window-maximized="0"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Calque 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-493.42012,471.82672)">
+    <rect
+       style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2.46631098;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect5514"
+       width="464.06903"
+       height="296.02084"
+       x="493.4201"
+       y="-471.82672"
+       inkscape:export-filename="/Users/jean-marie/Pertimm/voqal.ai/doc/guides/getting-started/img/principle.png"
+       inkscape:export-xdpi="256"
+       inkscape:export-ydpi="256" />
+    <g
+       id="g4345"
+       inkscape:export-xdpi="239.32001"
+       inkscape:export-ydpi="239.32001">
+      <flowRoot
+         transform="translate(95.411704,-19.999956)"
+         inkscape:export-ydpi="256"
+         inkscape:export-xdpi="256"
+         inkscape:export-filename="/Users/jean-marie/Pertimm/voqal.ai/doc/guides/getting-started/img/principle.png"
+         style="font-style:normal;font-weight:normal;font-size:11.12342644px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         id="flowRoot4136"
+         xml:space="preserve"><flowRegion
+           id="flowRegion4138"><rect
+             y="-432.75781"
+             x="518.12726"
+             height="50.589905"
+             width="230.04056"
+             id="rect4140" /></flowRegion><flowPara
+           style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:11.12337589px;line-height:125%;font-family:Roboto;-inkscape-font-specification:'Roboto, Light';text-align:start;writing-mode:lr-tb;text-anchor:start"
+           id="flowPara4142">I work on viky.ai NLP platform, our offices are located at 15 rue Louise Weiss 26000 Valence.</flowPara></flowRoot>      <g
+         transform="translate(7.1481982,0)"
+         id="g4311"
+         inkscape:export-xdpi="256"
+         inkscape:export-ydpi="256">
+        <rect
+           ry="1.6792036"
+           rx="1.7035264"
+           y="-295.43781"
+           x="654.63263"
+           height="98.998108"
+           width="181.96475"
+           id="rect4202"
+           style="opacity:1;fill:#2cc2e8;fill-opacity:0.12539188;fill-rule:evenodd;stroke:none;stroke-width:1.29999995;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           inkscape:export-xdpi="256"
+           inkscape:export-ydpi="256" />
+        <rect
+           style="opacity:1;fill:#2cc2e8;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.29999995;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           id="rect4152"
+           width="182.04926"
+           height="13.769285"
+           x="654.63263"
+           y="-301.9794"
+           rx="2.3096836"
+           ry="2.2767215"
+           inkscape:export-xdpi="256"
+           inkscape:export-ydpi="256" />
+        <flowRoot
+           transform="matrix(0.27808567,0,0,0.27808567,545.63853,-435.09661)"
+           style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           id="flowRoot4144"
+           xml:space="preserve"
+           inkscape:export-xdpi="256"
+           inkscape:export-ydpi="256"><flowRegion
+             id="flowRegion4146"><rect
+               y="427.25165"
+               x="208.69833"
+               height="181.922"
+               width="854.18842"
+               id="rect4148" /></flowRegion><flowPara
+             style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:39.99981689px;line-height:125%;font-family:Roboto;-inkscape-font-specification:'Roboto, Light';text-align:start;writing-mode:lr-tb;text-anchor:start"
+             id="flowPara4150">I work on viky.ai NLP platform, our offices are located at  <flowSpan
+   style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:39.99981689px;line-height:125%;font-family:Roboto;-inkscape-font-specification:'Roboto, Light';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1"
+   id="flowSpan4154"><flowSpan
+     style="-inkscape-font-specification:'Roboto, Normal';font-family:Roboto;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:39.99981265px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%"
+     id="flowSpan4448">15 rue Louise Weiss 26000 Valence</flowSpan></flowSpan> .</flowPara></flowRoot>        <flowRoot
+           xml:space="preserve"
+           id="flowRoot4166"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40.00070953px;line-height:125%;font-family:'PT Mono';-inkscape-font-specification:'PT Mono, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           transform="matrix(0.23165431,0,0,0.23165431,613.98103,-382.80347)"
+           inkscape:export-xdpi="256"
+           inkscape:export-ydpi="256"><flowRegion
+             id="flowRegion4168"><rect
+               id="rect4170"
+               width="807.03253"
+               height="373.88525"
+               x="208.69833"
+               y="427.25165"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40.00070953px;line-height:125%;font-family:'PT Mono';-inkscape-font-specification:'PT Mono, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start" /></flowRegion><flowPara
+             id="flowPara4172"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40.00070953px;line-height:125%;font-family:'PT Mono';-inkscape-font-specification:'PT Mono, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#494949;fill-opacity:1">{</flowPara><flowPara
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40.00070953px;line-height:125%;font-family:'PT Mono';-inkscape-font-specification:'PT Mono, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#494949;fill-opacity:1"
+             id="flowPara4180">  &quot;number&quot;: 15,</flowPara><flowPara
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40.00070953px;line-height:125%;font-family:'PT Mono';-inkscape-font-specification:'PT Mono, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#494949;fill-opacity:1"
+             id="flowPara4196">  &quot;road_type&quot;: &quot;rue&quot;,</flowPara><flowPara
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40.00070953px;line-height:125%;font-family:'PT Mono';-inkscape-font-specification:'PT Mono, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#494949;fill-opacity:1"
+             id="flowPara4192">  &quot;road_name&quot;: &quot;Louise Weiss&quot;,</flowPara><flowPara
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40.00070953px;line-height:125%;font-family:'PT Mono';-inkscape-font-specification:'PT Mono, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#494949;fill-opacity:1"
+             id="flowPara4188">  &quot;postal_code&quot;: 26000,</flowPara><flowPara
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40.00070953px;line-height:125%;font-family:'PT Mono';-inkscape-font-specification:'PT Mono, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#494949;fill-opacity:1"
+             id="flowPara4198">  &quot;city&quot;: &quot;VALENCE&quot;</flowPara><flowPara
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40.00070953px;line-height:125%;font-family:'PT Mono';-inkscape-font-specification:'PT Mono, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#494949;fill-opacity:1"
+             id="flowPara4200">}</flowPara><flowPara
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40.00070953px;line-height:125%;font-family:'PT Mono';-inkscape-font-specification:'PT Mono, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#494949;fill-opacity:1"
+             id="flowPara4182" /><flowPara
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40.00070953px;line-height:125%;font-family:'PT Mono';-inkscape-font-specification:'PT Mono, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#494949;fill-opacity:1"
+             id="flowPara4184" /><flowPara
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40.00070953px;line-height:125%;font-family:'PT Mono';-inkscape-font-specification:'PT Mono, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#494949;fill-opacity:1"
+             id="flowPara4186" /></flowRoot>      </g>
+      <g
+         inkscape:export-ydpi="256"
+         inkscape:export-xdpi="256"
+         inkscape:export-filename="/Users/jean-marie/Pertimm/voqal.ai/doc/guides/getting-started/img/principle.png"
+         inkscape:label="Calque 1"
+         id="layer1-6"
+         transform="matrix(0.45353151,0,0,0.45353151,683.27486,-402.87537)">
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:Sans;-inkscape-font-specification:'Futura Medium';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+           x="-342.0452"
+           y="195.12616"
+           id="text3968"
+           sodipodi:linespacing="125%"><tspan
+             sodipodi:role="line"
+             id="tspan3970"
+             x="-342.0452"
+             y="195.12616"
+             style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-family:Futura;-inkscape-font-specification:'Futura Medium'" /></text>
+        <g
+           id="g4478"
+           transform="matrix(1.7659653,0,0,1.7659653,-283.2946,-472.70622)" />
+        <g
+           id="g4112"
+           transform="matrix(0.48487656,0,0,0.48487656,-71.242939,-100.03584)">
+          <g
+             transform="translate(18.64652,0)"
+             id="g3880">
+            <path
+               style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:40px;line-height:125%;font-family:Futura;-inkscape-font-specification:'Futura Medium';letter-spacing:0px;word-spacing:0px;opacity:0.98000004;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none"
+               d="m 174.99433,298.91629 c -29.60482,0 -53.42045,23.87073 -53.42045,53.47555 0,0.92519 0.009,1.84596 0.0551,2.75932 l 7.78128,0 14.29329,-24.72351 c 0.79115,-1.37039 2.1801,-2.21541 3.6423,-2.31783 0.87731,-0.0618 1.77158,0.13244 2.59376,0.60714 2.1925,1.26531 2.92144,4.04353 1.65559,6.23597 l -15.56257,27.04135 c -0.23075,0.39963 -0.5641,0.69331 -0.88298,0.99335 -0.20927,0.19691 -0.42413,0.39999 -0.66224,0.55187 -0.14551,0.0936 -0.28749,0.20008 -0.44149,0.27602 -0.0364,0.0177 -0.0735,0.0371 -0.11037,0.0547 -0.20686,0.10066 -0.4393,0.15187 -0.66224,0.22075 -0.14339,0.0441 -0.29226,0.0795 -0.44149,0.10949 -0.14251,0.0229 -0.29686,0.0371 -0.44149,0.0547 -0.16282,0.0177 -0.32926,0.0548 -0.49668,0.0548 l -8.99538,0 c 5.40355,23.80892 26.60534,41.50018 52.09597,41.50018 10.91632,0 21.02877,-3.25326 29.46955,-8.82983 l 21.96419,6.07051 -7.67091,-19.97748 c 3.3891,-3.70217 8.4701,-12.57632 8.49871,-19.81201 l -9.87837,0 c -0.15823,0 -0.28732,-0.0371 -0.44149,-0.0547 -0.14463,-0.0177 -0.29898,-0.0318 -0.44149,-0.0547 -0.14923,-0.0318 -0.2981,-0.0671 -0.44149,-0.11126 -0.28694,-0.0883 -0.56818,-0.18984 -0.8278,-0.33094 -0.13174,-0.0636 -0.26074,-0.14304 -0.3863,-0.22075 -0.25109,-0.15364 -0.44211,-0.34825 -0.66224,-0.55204 -0.3302,-0.30533 -0.64564,-0.63733 -0.88298,-1.04845 l -15.61776,-26.98625 c -1.26584,-2.19227 -0.53691,-4.97013 1.65559,-6.23597 0.54812,-0.31646 1.17686,-0.53297 1.76597,-0.60714 1.76732,-0.2211 3.5759,0.61844 4.52528,2.26273 l 14.2381,24.77879 8.49871,0 c 0.0925,-0.0336 0.0973,0.11302 0.11037,-1.71087 0,-29.60482 -23.87064,-53.47555 -53.47564,-53.47555 z"
+               id="path6108"
+               inkscape:export-filename="/Users/jean-marie/Desktop/logo-blue.png"
+               inkscape:export-xdpi="695"
+               inkscape:export-ydpi="695"
+               inkscape:connector-curvature="0"
+               sodipodi:nodetypes="cscccccccsccccccscsccccsccccccccscccccsc" />
+            <path
+               inkscape:export-ydpi="695.77954"
+               inkscape:export-xdpi="695.77954"
+               inkscape:export-filename="/Users/jean-marie/Desktop/logo-blue.png"
+               style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:125%;font-family:Futura;-inkscape-font-specification:'Futura Medium';text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;letter-spacing:0;word-spacing:0;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;baseline-shift:baseline;text-anchor:start;display:inline;overflow:visible;visibility:visible;fill:#30a9c8;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.99999988;marker:none;enable-background:accumulate"
+               d="m 202.53048,324.13869 c -3.10404,-0.37845 -6.29372,1.10973 -7.94684,3.97342 l -26.59968,46.08057 c -2.20463,3.81767 -0.89287,8.77791 2.92479,10.98201 3.81802,2.20428 8.77791,0.83795 10.98219,-2.98007 l 26.59967,-46.08057 c 2.20411,-3.81784 0.89323,-8.72263 -2.92479,-10.92691 -0.9545,-0.55098 -2.00048,-0.92236 -3.03534,-1.04845 z"
+               id="path6112"
+               inkscape:connector-curvature="0"
+               sodipodi:nodetypes="cccccccc" />
+            <path
+               inkscape:export-ydpi="695.77954"
+               inkscape:export-xdpi="695.77954"
+               inkscape:export-filename="/Users/jean-marie/Desktop/logo-blue.png"
+               style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:125%;font-family:Futura;-inkscape-font-specification:'Futura Medium';text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;letter-spacing:0;word-spacing:0;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;baseline-shift:baseline;text-anchor:start;display:inline;overflow:visible;visibility:visible;fill:#49d8fb;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2;marker:none;enable-background:accumulate"
+               d="m 147.34407,324.13869 c -1.03468,0.12715 -2.02557,0.49747 -2.97989,1.04845 -3.81767,2.20411 -5.18488,7.10907 -2.98025,10.92691 l 26.65513,46.08057 c 2.2041,3.81784 7.10907,5.12925 10.92691,2.92497 3.81802,-2.20428 5.12925,-7.10924 2.92497,-10.92691 l -26.60003,-46.08057 c -1.65312,-2.86351 -4.84263,-4.35204 -7.94684,-3.97342 z"
+               id="path6116"
+               inkscape:connector-curvature="0"
+               sodipodi:nodetypes="cccccccc" />
+          </g>
+          <flowRoot
+             xml:space="preserve"
+             id="flowRoot3094"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:Sans;-inkscape-font-specification:'Futura Medium';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+             transform="matrix(2.3975541,0,0,2.3975541,327.00545,-257.70639)"><flowRegion
+               id="flowRegion3096"><rect
+                 id="rect3098"
+                 width="265.64072"
+                 height="55.888046"
+                 x="-20.0093"
+                 y="228.00998" /></flowRegion><flowPara
+               id="flowPara3100"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:'Varela Round';-inkscape-font-specification:'Varela Round';text-align:start;writing-mode:lr-tb;text-anchor:start">viky<flowSpan
+   style="fill:#bbbbbb;fill-opacity:1"
+   id="flowSpan3870">.ai</flowSpan></flowPara></flowRoot>        </g>
+      </g>
+      <path
+         inkscape:export-ydpi="256"
+         inkscape:export-xdpi="256"
+         inkscape:export-filename="/Users/jean-marie/Pertimm/voqal.ai/doc/guides/getting-started/img/principle.png"
+         inkscape:connector-curvature="0"
+         id="path4370"
+         d="m 727.17105,-416.24846 0,21.26214"
+         style="fill:none;fill-rule:evenodd;stroke:#929292;stroke-width:0.885378;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2Lend)" />
+      <path
+         style="fill:none;fill-rule:evenodd;stroke:#929292;stroke-width:0.885378;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker7386)"
+         d="m 727.17105,-347.56065 0,21.26214"
+         id="path7384"
+         inkscape:connector-curvature="0"
+         inkscape:export-filename="/Users/jean-marie/Pertimm/voqal.ai/doc/guides/getting-started/img/principle.png"
+         inkscape:export-xdpi="256"
+         inkscape:export-ydpi="256" />
+    </g>
+  </g>
+</svg>
