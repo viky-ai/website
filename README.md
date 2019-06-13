@@ -28,7 +28,8 @@ To add a documentation:
 ```
 ---
 layout: doc
-title: Awesome new guide
+title: The title of the document
+description: A short description of the page's content
 ---
 
 Your markdown content goes here.
@@ -48,7 +49,8 @@ To add a post:
 ```
 ---
 layout: post
-title: Awesome blog post
+title: The title of the blog post
+description: A short description of the page's content
 author: Your Name
 avatar: your-name.jpg
 ---

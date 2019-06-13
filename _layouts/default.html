@@ -4,7 +4,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <title>{{ page.title }} - {{ site.title }}</title>
-    <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}?{{site.time | date: '%s'}}">
+    <link rel="stylesheet" href="{{ "/site_assets/css/main.css" | relative_url }}?{{site.time | date: '%s'}}">
+    {% seo %}
   </head>
   <body>
     {% include header.html %}
@@ -12,6 +13,6 @@
     {{ content}}
 
     {% include mobile_nav.html %}
-    <script src="{{ "/assets/javascript/doc.js" | relative_url }}?{{site.time | date: '%s'}}"></script>
+    <script src="{{ "/site_assets/javascript/doc.js" | relative_url }}?{{site.time | date: '%s'}}"></script>
   </body>
 </html>

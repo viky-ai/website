@@ -1,6 +1,7 @@
 ---
 layout: doc
 title: Agents API
+description: "API technical documentation from viky.ai"
 ---
 
 Welcome to the viky.ai API. You can use viky.ai API to extract information from unstructured contents or create virtual assistants to converse with your data.

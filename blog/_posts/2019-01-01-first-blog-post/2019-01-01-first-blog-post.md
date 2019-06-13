@@ -1,6 +1,7 @@
 ---
 layout: post
 title: First blog post
+description: Lorem ipsum dolor sit amet, consectetur adipisicing elit.
 author: Patrick Constant
 avatar: patrick-constant.jpg
 ---

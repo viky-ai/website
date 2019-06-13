@@ -1,8 +1,7 @@
-title: viky.ai
+title: www.viky.ai
 baseurl: ""
-url: ""
-
-host: 0.0.0.0
+url: "https://www.viky.ai"
+logo: /site_assets/img/viky-ai-logo.png
 
 pagination:
   enabled: true
@@ -17,8 +16,10 @@ permalink: /blog/:year/:month/:day/:title
 
 markdown: kramdown
 sass:
-  sass_dir: assets/css
+  sass_dir: site_assets/css
 
 exclude:
   - README.md
   - CONTRIBUTING.md
+
+host: 0.0.0.0

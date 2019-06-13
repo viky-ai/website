@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Third blog post
+description: Lorem ipsum dolor sit amet, consectetur adipisicing elit.
 author: Mathilde Wiss-Thebault
 avatar: mathilde-wiss-thebault.jpg
 ---

@@ -1,6 +1,7 @@
 ---
 layout: doc
 title: "Getting Started with viky.ai"
+description: "This guide teaches you to extract from text the French postal addresses in a structured way with viky.ai."
 ---
 
 ## Purpose

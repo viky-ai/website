@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Second blog post
+description: Lorem ipsum dolor sit amet, consectetur adipisicing elit.
 author: Sebastien Manfredini
 avatar: sebastien-manfredini.jpg
 ---
