@@ -40,7 +40,7 @@ article{
       font-size: .9em;
       text-decoration: none;
       color: $grey_300;
-      transition: all .2s ease-in-out;
+      transition: transform .2s ease-in-out;
       padding: .6em 2em .5em 0;
       line-height: 1.25em;
       em{
@@ -181,6 +181,10 @@ article{
       text-align: right;
       color: $grey_500;
     }
+  }
+
+  img{
+    max-width: 100%;
   }
 
   figure{
