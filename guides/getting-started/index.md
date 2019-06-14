@@ -371,7 +371,7 @@ We will try now to understand the street names.
 
 ### Road names entities list
 
-There are too many road names to import everyone of them in viky.ai. Instead we will try to make the system understand unknown road names.
+There are too many road names to import all of them in viky.ai. Instead we will try to make the system understand unknown road names.
 
 First create a new private entities list **road_names**.
 
