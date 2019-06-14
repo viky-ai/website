@@ -400,3 +400,44 @@ In the console, test now the sentence "12 avenue de Flandres 75019 Paris". Every
 Try now another completely different address, for example: "108 rue Jean Moulin 54230 Neuves-Maisons", it works!
 
 ![Successful solutions screenshot](img/29_some_tests.png "Some successful solutions")
+
+
+## Connect with your agent
+
+In this last step you will use your agent's abilities from your own application.
+Since viky.ai is reachable through a [public REST API](../../api/agents) you first need the agent's API key. You can find it in the configuration panel on the agent's overview screen.
+
+![Configure agent](img/30_configure_agent.png "Agent configuration")
+
+The API key is a 32 characters unique identifier that developers must provide to prove they are allowed to consume this agent. 
+
+![Agent API token](img/31_agent_api_key.png "Agent API key")
+
+Then, any HTTP client library will be able to send a sentence to the agent and get back the corresponding solution.
+A quick connection check can be made with a simple `curl` call:
+
+```bash
+$ curl -G "https://viky-beta.viky.ai/api/v1/agents/<your_username>/address-tutorial/interpret.json?" \
+            --data-urlencode "sentence=12 avenue de Flandres 75019 Paris" \
+            -H "Agent-Token: <agent_token>"
+```
+
+The HTTP response is the expected JSON:
+```json
+{
+  "interpretations": [
+    {
+      "id": "<interpretation_id>",
+      "slug": "<your_username>/address-tutorial/interpretations/address",
+      "name": "address",
+      "score": 0.91,
+      "solution": {
+        "number": 12,
+        "road_type": "avenue",
+        "postal_code": 75019,
+        "city": "PARIS"
+      }
+    }
+  ]
+}
+```
