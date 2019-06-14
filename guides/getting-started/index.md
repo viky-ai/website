@@ -32,7 +32,7 @@ In practice, you will create an agent allowing you to send a text to the [viky.a
 - It could also contain additional information about the floor, the apartment, the building.
 - It would be interesting to have the GPS coordinates of the town to use on a map for instance.
 
-_Postal addresses_ could be slightly different from one country to another. So let's start this tutorial with french postal address!
+_Postal addresses_ could be slightly different from one country to another. So let's start this tutorial with French postal address!
 
 A typical example is: _12 avenue de Flandres 75019 Paris_ (find some information about postal addresses on [Wikipedia](https://en.wikipedia.org/wiki/Address#France)).
 
@@ -102,7 +102,7 @@ On the left part of the UI, you can edit agent's configuration, manage access ri
 
 <aside class="primary">
   <p>
-    You can add a <strong>Readme</strong> in this <strong>Overview</strong> section. This is particularly useful to add a description of the purpose of your agent, and some examples of what it will be able to do. For this tutorial, copy/paste the purpose of the tutorial in the <strong>Readme</strong> section. Add the following examples of french postal addresses as an illustration (it will serve also as unitary tests during the agent creation). Examples should be as representative as possible.
+    You can add a <strong>Readme</strong> in this <strong>Overview</strong> section. This is particularly useful to add a description of the purpose of your agent, and some examples of what it will be able to do. For this tutorial, copy/paste the purpose of the tutorial in the <strong>Readme</strong> section. Add the following examples of French postal addresses as an illustration (it will serve also as unitary tests during the agent creation). Examples should be as representative as possible.
   </p>
   <ul>
     <li>12 avenue de Flandres 75019 Paris</li>
