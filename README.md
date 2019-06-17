@@ -30,6 +30,7 @@ To add a documentation:
 layout: doc
 title: The title of the document
 description: A short description of the page's content
+order: 1
 ---
 
 Your markdown content goes here.

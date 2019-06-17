@@ -1,6 +1,7 @@
 <h2>Guides</h2>
 <ul>
-  {% for p in site.pages %}
+  {% assign pages = site.pages | sort: 'order' %}
+  {% for p in pages %}
     {% assign segments = p.dir | split: '/' %}
     {% if segments[1] == "guides" %}
       <li>
@@ -24,7 +25,7 @@
 
 <h2>API reference</h2>
 <ul>
-  {% for p in site.pages %}
+  {% for p in pages %}
     {% assign segments = p.dir | split: '/' %}
     {% if segments[1] == "api" %}
       <li>
