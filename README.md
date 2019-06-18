@@ -16,12 +16,12 @@ bundle exec jekyll serve -w -l
 
 ### Guides & API reference
 
-Guides content are located in `guides` directory.
-API docs are located in `api` directory.
+Guides content are located in `doc/guides` directory.
+API docs are located in `doc/api` directory.
 
 To add a documentation:
 
-1. Create a new directory in the directory `guides`or `api`. The name of the directory will be found in the URL of the document (use "simple" characters in lowercase and replace spaces by hyphens `-`).
+1. Create a new directory in the directory `doc/guides`or `doc/api`. The name of the directory will be found in the URL of the document (use "simple" characters in lowercase and replace spaces by hyphens `-`).
 2. In this directory, create a file named `index.md`.
 3. Start with the following content:
 
