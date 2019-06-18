@@ -1,0 +1,10 @@
+# Common
+README.md
+CHANGELOG.md
+docker-compose.yml
+Dockerfile
+CONTRIBUTING.md
+
+.dockerignore
+.git
+.gitignore
