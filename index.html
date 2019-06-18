@@ -1,0 +1,136 @@
+---
+layout: default
+title: "Home"
+---
+<div class="home">
+  <header>
+    <div class="home__header">
+      <h1>Natural Language Processing platform</h1>
+      <p>
+        Extracting information from unstructured contents has never been easier
+      </p>
+    </div>
+      <div class="home__use-case home__use-case--1">
+        <div class="home__use-case__pointer"></div>
+        <div class="home__use-case__query">Great! Deliver me to 13 rue du commerce at 9 pm please</div>
+        <div class="home__use-case__anwser">
+<img src="/site_assets/img/home/viky-ai-logo-small.png" />
+<pre>
+{
+  "action": "delivery",
+  "where": "13 rue du commerce",
+  "when": "9pm"
+}</pre>
+        </div>
+      </div>
+      <div class="home__use-case home__use-case--2">
+        <div class="home__use-case__pointer"></div>
+        <div class="home__use-case__query">I want to reserve a hotel in bali with my wife to go diving</div>
+        <div class="home__use-case__anwser">
+<img src="/site_assets/img/home/viky-ai-logo-small.png" />
+<pre>
+{
+  "action": "book_hotel",
+  "where": "Bali",
+  "number_people": 2,
+  "activity": "diving"
+}</pre>
+        </div>
+      </div>
+  </header>
+
+  <p class="note">
+    /!\ Cette page est destinée à présenter le service. Le contenu est grosso modo extrait du fichier presentation.md rédigé par Mathilde & Sébastien. L'idée de ce prototype est de proposer une mise en page, afin de pouvoir se projeter et améliorer le discours :-) Jean-Marie.
+  </p>
+
+  <main>
+    <section class="ui">
+      <div class="wrapper">
+        <div>
+          <img src="/site_assets/img/home/ui.png" />
+        </div>
+        <div>
+          <h2>Collaboratively build NLP agents</h2>
+          <p>
+            viky.ai provides you with a <strong>codeless user interface to create agents</strong> and APIs to integrate them into your system.
+          </p>
+          <p>
+            Agents are your <strong>multilingual assistants to find relevant data</strong>.
+          </p>
+          <p><strong>Collaborative creation of entities and interpretations</strong> has never been as simple!</p>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="trio">
+      <div class="wrapper">
+        <div>
+          <div>{% include dry.svg %}</div>
+          <div>
+            <h2>Don't repeat yourself</h2>
+            <p>
+              viky.ai agent dependency system allows you to stay DRY.
+            </p>
+          </div>
+        </div>
+        <div>
+          <div>{% include community.svg %}</div>
+          <div>
+            <h2>Open community</h2>
+            <p>Use public agents, made available for all, by the community.</p>
+          </div>
+        </div>
+        <div>
+          <div>{% include enterprise.svg %}</div>
+          <div>
+            <h2>Enterprise ready</h2>
+            <p>
+              Work collaboratively in your space with the help of private agents.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="imagine-and-news">
+      <div class="wrapper">
+        <div>
+          <h2>Imagine new business cases</h2>
+          <p>
+            With viky.ai your unstructured contents will reveal the substance of what they hide. This will enrich your structured data and allow you to imagine new business cases.
+          </p>
+          <p>You could use it at 2 phases of your data value chain:</p>
+          <ul>
+            <li>Upstream of the value chain to structure your contents and extract relevant data (to create metadata or enrich indexes for instance).</li>
+            <li>Downstream of the value chain to send queries in natural language to find the right information. viky.ai even offers the possibility to create virtual assistants to converse with your data.</li>
+          </ul>
+        </div>
+
+        <div>
+          <h2>Last news</h2>
+          <ul class="posts">
+            {% for post in site.posts limit:3 %}
+              <li>
+                <a href="{{post.url}}">
+                  <h3>
+                    {{post.title}}
+                  </h3>
+                  <h4>
+                    By <strong>{{post.author}}</strong> on {{post.date | date_to_long_string}}
+                  </h4>
+                </a>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+
+    {% include footer.html %}
+
+  </main>
+</div>

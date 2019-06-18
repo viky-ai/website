@@ -14,7 +14,7 @@
       Home
     </a>
     {% assign segments = page.dir | split: '/' %}
-    <a href="/guides/getting-started/" {% if segments[1] == 'guides' or segments[1] == 'api' %}class="current"{% endif %}>
+    <a href="/doc/guides/getting-started/" {% if segments[1] == 'doc' %}class="current"{% endif %}>
       Documentation
     </a>
     <div class="mobile-nav__main__doc">
@@ -23,6 +23,6 @@
     <a href="/blog/" {% if page.categories.first == 'blog' or page.dir == '/blog/' %}class="current"{% endif %}>
       Blog
     </a>
-    <a href="https://viky-beta.viky.ai/users/sign_in">Login &rarr;</a>
+    <span class="login"><a href="/users/sign_in">Login &rarr;</a></span>
   </div>
 </div>

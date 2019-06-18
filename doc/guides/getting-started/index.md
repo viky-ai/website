@@ -2,6 +2,7 @@
 layout: doc
 title: "Getting Started with viky.ai"
 description: "This guide teaches you how to extract a French postal addresses from a text in a structured way with viky.ai."
+order: 1
 ---
 
 ## Purpose
@@ -409,7 +410,7 @@ Since viky.ai is reachable through a [public REST API](../../api/agents) you fir
 
 ![Configure agent](img/30_configure_agent.png "Agent configuration")
 
-The API key is a 32 characters unique identifier that developers must provide to prove they are allowed to consume this agent. 
+The API key is a 32 characters unique identifier that developers must provide to prove they are allowed to consume this agent.
 
 ![Agent API token](img/31_agent_api_key.png "Agent API key")
 

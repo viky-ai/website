@@ -1,8 +1,9 @@
 <h2>Guides</h2>
 <ul>
-  {% for p in site.pages %}
+  {% assign pages = site.pages | sort: 'order' %}
+  {% for p in pages %}
     {% assign segments = p.dir | split: '/' %}
-    {% if segments[1] == "guides" %}
+    {% if segments[1] == "doc" and segments[2] == "guides" %}
       <li>
         {% if p.only_for_dev and jekyll.environment == 'production' %}
           {% continue %}
@@ -24,9 +25,9 @@
 
 <h2>API reference</h2>
 <ul>
-  {% for p in site.pages %}
+  {% for p in pages %}
     {% assign segments = p.dir | split: '/' %}
-    {% if segments[1] == "api" %}
+    {% if segments[1] == "doc" and segments[2] == "api" %}
       <li>
         {% if page.url == p.url %}
           <a href="{{p.url}}" class="current">{{p.title}}</a>
