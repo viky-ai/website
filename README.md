@@ -12,6 +12,16 @@ bundle install
 bundle exec jekyll serve -w -l
 ```
 
+Site is now available on `http://localhost:4000/` with auto-generation & live reload.
+
+## Build for production
+
+```
+JEKYLL_ENV=production bundle exec jekyll build
+```
+
+Static site is generated in `_site` directory.
+
 ## Manage content
 
 ### Guides & API reference
