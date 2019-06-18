@@ -2,6 +2,7 @@
 layout: doc
 title: "Getting Started with viky.ai"
 description: "This guide teaches you how to extract a French postal addresses from a text in a structured way with viky.ai."
+toc: true
 order: 1
 ---
 
@@ -24,10 +25,7 @@ In practice, you will create an agent allowing you to send a text to the [viky.a
 
 **Defining the scope and usage is your first priority before starting** any new project on viky.ai. It will help you create the more appropriate design for your agents.
 
-<h3>
-  <span class="tag tag--primary">1<sup>st</sup> step</span>
-  What is a postal address?
-</h3>
+### What is a postal address?
 
 - A _postal address_ contains usually a road, a number, a postal code, a town.
 - It could also contain additional information about the floor, the apartment, the building.
@@ -37,10 +35,7 @@ _Postal addresses_ could be slightly different from one country to another. So l
 
 A typical example is: _12 avenue de Flandres 75019 Paris_ (find some information about postal addresses on [Wikipedia](https://en.wikipedia.org/wiki/Address#France)).
 
-<h3>
-  <span class="tag tag--primary">2<sup>nd</sup> step</span>
-  Can I reuse components or should I create everything from scratch?
-</h3>
+### Can I reuse components or should I create everything from scratch?
 
 Think about the elementary components you will need to create agents able to identify a postal address.
 
@@ -217,17 +212,14 @@ Click on the entities list to open it and enter road types names:
 
 Go back in the **Interpretations** tab, click on the **address** public interpretation.
 
-<h4>
-  <span class="tag tag--primary">Step 1</span> Edit current expression in address interpretation
-</h4>
+
+<span class="tag tag--primary">Step 1</span> <strong>Edit current expression in address interpretation</strong>
 
 Click on expression "12 avenue de Flandres 75019 Paris" in order to edit it.
 
 ![UI screenshot](img/11_edit_expression.png 'Edit an expression by clicking on it')
 
-<h4>
-  <span class="tag tag--primary">Step 2</span> Link avenue with road_types entities list
-</h4>
+<span class="tag tag--primary">Step 2</span> <strong>Link avenue with road_types entities list</strong>
 
 1. Highlight **avenue** in expression "12 avenue de Flandres 75019 Paris".
 2. A drop-down list appears, displaying the different interpretations and entities lists available.
@@ -238,10 +230,7 @@ Click on expression "12 avenue de Flandres 75019 Paris" in order to edit it.
 
 ![updating interpretation screenshot](img/13_updating_interpretation.png "Link between interpretation and entities list is done")
 
-
-<h4>
-  <span class="tag tag--primary">Step 3</span> Validate
-</h4>
+<span class="tag tag--primary">Step 3</span> <strong>Validate</strong>
 
 Test in console the interpretation with the following sentences:
 
