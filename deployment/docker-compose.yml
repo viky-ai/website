@@ -4,6 +4,4 @@ services:
   ## Doc
   ###################################################################
   doc:
-    image: ${DOCKER_IMAGE_DEMO}:${DOCKER_IMAGE_TAG}
-    environment:
-      NODE_ENV: "production"
+    image: ${DOCKER_IMAGE}:${DOCKER_IMAGE_TAG}
