@@ -233,12 +233,21 @@ article{
     word-wrap: break-word;
   }
 
+  div.highlight{
+    padding: 35px 0 0 0;
+    background-image: url(../img/code_dot.png);
+    background-size: 46px auto;
+    background-position: 14px 13px;
+    background-repeat: no-repeat;
+    background-color: darken(#002b36, 5%);
+  }
+
   .highlight{
     border-radius: 4px;
     overflow: auto;
     margin: 1em 0;
     pre.highlight{
-      padding: .5em 1em;
+      padding: 1em 1em;
       line-height: 1.4em;
       font-size: .85em;
       margin: 0;
