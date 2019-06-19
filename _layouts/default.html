@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <title>{{ page.title }} - {{ site.title }}</title>
     <link rel="stylesheet" href="{{ "/site_assets/css/main.css" | relative_url }}?{{site.time | date: '%s'}}">
+    {% include favicon.html %}
     {% seo %}
     {% feed_meta %}
   </head>
