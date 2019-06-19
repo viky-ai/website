@@ -3,6 +3,7 @@ stages:
   - build
   - docker_tag
   - deploy
+  - admin
 
 variables:
   GIT_SUBMODULE_STRATEGY: recursive
