@@ -1,0 +1,22 @@
+version: "2"
+services:
+  ###################################################################
+  ## Doc webapp
+  ###################################################################
+  doc:
+    labels:
+      io.rancher.container.pull_image: always
+      io.rancher.scheduler.affinity:container_label_soft_ne: io.rancher.stack_service.name=$${stack_name}/$${service_name}
+
+  ###################################################################
+  ## Stack Load Balancer
+  ###################################################################
+  lb:
+    image: rancher/lb-service-haproxy:v0.9.6
+    links:
+      - "doc"
+    labels:
+      map-public-http: 80
+      io.rancher.container.create_agent: "true"
+      io.rancher.scheduler.global: "true"
+      io.rancher.container.pull_image: always
