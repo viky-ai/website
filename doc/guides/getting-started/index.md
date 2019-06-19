@@ -424,6 +424,7 @@ The HTTP response is the expected JSON:
       "solution": {
         "number": 12,
         "road_type": "avenue",
+        "road_name": "de Flandres",
         "postal_code": 75019,
         "city": "PARIS"
       }
