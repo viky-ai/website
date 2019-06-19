@@ -1,4 +1,4 @@
-title: www.viky.ai
+title: viky.ai
 baseurl: ""
 url: "https://www.viky.ai"
 logo: /site_assets/img/viky-ai-logo.png
@@ -13,6 +13,9 @@ pagination:
   sort_reverse: true
 
 permalink: /blog/:year/:month/:day/:title
+
+feed:
+  path: blog/atom.xml
 
 markdown: kramdown
 sass:
