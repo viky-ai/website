@@ -20,7 +20,7 @@ services:
           protocol: http
           service: doc
           source_port: 80
-          target_port: 8080
+          target_port: 80
     health_check:
       response_timeout: 2000
       healthy_threshold: 2

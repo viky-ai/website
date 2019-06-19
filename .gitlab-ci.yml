@@ -66,10 +66,10 @@ deploy_preprod:
   dependencies:
     - build_doc
   environment:
-    name: preprod-${CI_PROJECT_NAME}
-    url: https://${CI_ENVIRONMENT_SLUG}-platform.viky.ai
+    name: beta-doc
+    url: https://beta-doc.viky.ai
   variables:
-    DEPLOY_RANCHER_STACK: ${CI_ENVIRONMENT_SLUG}-platform
+    DEPLOY_RANCHER_STACK: beta-doc
     DOCKER_IMAGE_TAG: ${CI_COMMIT_REF_SLUG}
   script:
     - echo "Deploy ${DEPLOY_RANCHER_STACK} on ${RANCHER_URL}/preprod ( ${CI_ENVIRONMENT_URL} )"
