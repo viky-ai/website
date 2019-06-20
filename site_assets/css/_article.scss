@@ -247,7 +247,7 @@ article{
     overflow: auto;
     margin: 1em 0;
     pre.highlight{
-      padding: 1em 1em;
+      padding: 0 1em;
       line-height: 1.4em;
       font-size: .85em;
       margin: 0;
@@ -278,7 +278,7 @@ article{
     }
   }
 
-  table{
+  & > table{
     width: 100%;
     border-collapse : collapse;
     thead tr th{

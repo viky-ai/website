@@ -35,11 +35,13 @@ var App = {
     var images = document.querySelectorAll(".article__content img");
     Array.prototype.forEach.call(images, function(image, i){
       var html = [];
+      var title = image.title;
+      image.title = "";
       html.push("<figure>");
       html.push(image.outerHTML);
-      if (image.title != ""){
+      if (title != ""){
         html.push("<figcaption>");
-        html.push(image.title);
+        html.push(title);
         html.push("</figcaption>");
       }
       html.push("</figure>");
