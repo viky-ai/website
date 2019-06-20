@@ -18,6 +18,12 @@ feed:
   path: blog/atom.xml
 
 markdown: kramdown
+kramdown:
+  highlighter: rouge
+  syntax_highlighter_opts:
+    block:
+      line_numbers: true
+
 sass:
   sass_dir: site_assets/css
 
