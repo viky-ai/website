@@ -19,17 +19,10 @@ Welcome to the viky.ai API. You can use viky.ai API to extract information from 
   </p>
 </aside>
 
-To access viky.ai resources, e.g. the `agent` endpoint for interpretation, you must specify the resource specific api token in the request header:
+To access viky.ai resources, e.g. the `agent` endpoint for interpretation, you must specify the resource specific api token:
 
-```
-Agent-Token: my-agent-api-token
-```
-
-or as a URL parameter:
-
-```
-?agent_token=my-agent-api-token
-```
+* in the request header: `Agent-Token: my-agent-api-token`,
+* or as a URL parameter: `?agent_token=my-agent-api-token`.
 
 Here is an example for the agent `viky/time`:
 

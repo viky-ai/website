@@ -1,43 +1,17 @@
 ---
 layout: default
-title: "Home"
+title: "NLP Platform - viky.ai"
 ---
+
 <div class="home">
   <header>
-    <div class="home__header">
-      <h1>Natural Language Processing platform</h1>
-      <p>
-        Extracting information from unstructured contents has never been easier
-      </p>
-    </div>
-      <div class="home__use-case home__use-case--1">
-        <div class="home__use-case__pointer"></div>
-        <div class="home__use-case__query">Great! Deliver me to 13 rue du commerce at 9 pm please</div>
-        <div class="home__use-case__anwser">
-<img src="/site_assets/img/home/viky-ai-logo-small.png" />
-<pre>
-{
-  "action": "delivery",
-  "where": "13 rue du commerce",
-  "when": "9pm"
-}</pre>
-        </div>
-      </div>
-      <div class="home__use-case home__use-case--2">
-        <div class="home__use-case__pointer"></div>
-        <div class="home__use-case__query">I want to reserve a hotel in bali with my wife to go diving</div>
-        <div class="home__use-case__anwser">
-<img src="/site_assets/img/home/viky-ai-logo-small.png" />
-<pre>
-{
-  "action": "book_hotel",
-  "where": "Bali",
-  "number_people": 2,
-  "activity": "diving"
-}</pre>
-        </div>
-      </div>
+    <h1>Natural Language Processing platform</h1>
+    <p>
+      Extracting information from unstructured contents has never been easier
+    </p>
   </header>
+
+  {% include home_use_cases.html %}
 
   <main>
     <section class="ui">

@@ -1,0 +1,195 @@
+@keyframes use-case-pointer{
+  0% {
+    opacity: 0;
+    box-shadow: 0 0 0 5px rgba($primary_color, .2);
+  }
+  15% {
+    opacity: 1;
+    box-shadow: 0 0 0 10px rgba($primary_color, .6);
+  }
+  30% {
+    box-shadow: 0 0 0 5px rgba($primary_color, .2);
+  }
+  45% {
+    box-shadow: 0 0 0 10px rgba($primary_color, .5);
+  }
+  60% {
+    box-shadow: 0 0 0 5px rgba($primary_color, .2);
+  }
+  75% {
+    box-shadow: 0 0 0 10px rgba($primary_color, .6);
+  }
+  100% {
+    opacity: 1;
+    box-shadow: 0 0 0 0 rgba($primary_color, .2);
+  }
+}
+
+@keyframes use-case-appear {
+  from {
+    opacity: 0;
+    transform: translateY(1em);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes interpretation-space{
+  from {
+    margin: 0;
+  }
+  to {
+    margin:0 .15em 0 .15em;
+  }
+}
+
+@keyframes interpretation-underline{
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes interpretation-detail {
+  from {
+    opacity: 0;
+    transform: translateY(1em);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+$animation_duration: .25s;
+$use_case_1_delay_pointer: .25s;
+$use_case_1_delay_text: 1.25s;
+$use_case_1_tag_delay_1: 1.5s;
+$use_case_1_tag_delay_2: 1.75s;
+$use_case_1_tag_delay_3: 2s;
+$use_case_1_tag_delay_4: 2.25s;
+
+$use_case_2_delay_pointer: 3s;
+$use_case_2_delay_text: 4.25s;
+$use_case_2_tag_delay_1: 4.5s;
+$use_case_2_tag_delay_2: 4.75s;
+$use_case_2_tag_delay_3: 5s;
+$use_case_2_tag_delay_4: 5.25s;
+$use_case_2_tag_delay_5: 5.5s;
+
+.use-case--first{
+  .use-case__pointer{
+    opacity: 0;
+    animation: use-case-pointer 3s ease-in-out $use_case_1_delay_pointer forwards;
+  }
+  .use-case__content{
+    opacity: 0;
+    animation: use-case-appear $animation_duration ease-in $use_case_1_delay_text forwards;
+  }
+  .interpretation{
+    animation: interpretation-space $animation_duration ease-in-out 1s forwards;
+    &:after{
+      width: 0;
+      animation: interpretation-underline $animation_duration ease-in-out 1s forwards;
+    }
+    .interpretation__tag{
+      opacity: 0;
+      animation: interpretation-detail $animation_duration ease-in-out 1s forwards;
+    }
+
+    &.interpretation--blue{
+      animation-delay: $use_case_1_tag_delay_1;
+      &:after{ animation-delay: $use_case_1_tag_delay_1 }
+      .interpretation__tag{ animation-delay: $use_case_1_tag_delay_1 + .15s }
+    }
+    &.interpretation--purple{
+      @keyframes interpretation-space-bali{
+        from { margin:0; }
+        to { margin:0 3.6em 0 .5rem; }
+      }
+      animation-name: interpretation-space-bali;
+      animation-delay: $use_case_1_tag_delay_2;
+      &:after{ animation-delay: $use_case_1_tag_delay_2 }
+      .interpretation__tag{ animation-delay: $use_case_1_tag_delay_2 + .15s }
+    }
+    &.interpretation--green{
+      animation-delay: $use_case_1_tag_delay_3;
+      &:after{ animation-delay: $use_case_1_tag_delay_3 }
+      .interpretation__tag{ animation-delay: $use_case_1_tag_delay_3 + .15s }
+    }
+    &.interpretation--pink{
+      animation-delay: $use_case_1_tag_delay_4;
+      &:after{ animation-delay: $use_case_1_tag_delay_4 }
+      .interpretation__tag{ animation-delay: $use_case_1_tag_delay_4 + .15s }
+    }
+  }
+}
+
+
+.use-case--second{
+  .use-case__pointer{
+    opacity: 0;
+    animation: use-case-pointer 2.5s ease-in-out $use_case_2_delay_pointer forwards;
+  }
+  .use-case__content{
+    opacity: 0;
+    animation: use-case-appear $animation_duration ease-in $use_case_2_delay_text forwards;
+  }
+
+  .interpretation{
+    animation: interpretation-space $animation_duration ease-in-out 1s forwards;
+    &:after{
+      width: 0;
+      animation: interpretation-underline $animation_duration ease-in-out 1s forwards;
+    }
+    .interpretation__tag{
+      opacity: 0;
+      animation: interpretation-detail $animation_duration ease-in-out 1s forwards;
+    }
+
+    &.interpretation--1{
+      @keyframes interpretation-space-globex{
+        from { margin:0; }
+        to { margin:0 2.1em 0 .5rem; }
+      }
+      animation-name: interpretation-space-globex;
+      animation-delay: $use_case_2_tag_delay_1;
+      &:after{ animation-delay: $use_case_2_tag_delay_1 }
+      .interpretation__tag{ animation-delay: $use_case_2_tag_delay_1 + .15s }
+    }
+
+    &.interpretation--2{
+      animation-delay: $use_case_2_tag_delay_2;
+      &:after{ animation-delay: $use_case_2_tag_delay_2 }
+      .interpretation__tag{ animation-delay: $use_case_2_tag_delay_2 + .15s }
+    }
+
+
+    &.interpretation--3{
+      @keyframes interpretation-space-acme{
+        from { margin:0; }
+        to { margin:0 1.1em 0 .5rem; }
+      }
+      animation-name: interpretation-space-acme;
+      animation-delay: $use_case_2_tag_delay_3;
+      &:after{ animation-delay: $use_case_2_tag_delay_3 }
+      .interpretation__tag{ animation-delay: $use_case_2_tag_delay_3 + .15s }
+    }
+
+    &.interpretation--4{
+      animation-delay: $use_case_2_tag_delay_4;
+      &:after{ animation-delay: $use_case_2_tag_delay_4 }
+      .interpretation__tag{ animation-delay: $use_case_2_tag_delay_4 + .15s }
+    }
+    &.interpretation--5{
+      animation-delay: $use_case_2_tag_delay_5;
+      &:after{ animation-delay: $use_case_2_tag_delay_5 }
+      .interpretation__tag{ animation-delay: $use_case_2_tag_delay_5 + .15s }
+    }
+  }
+}

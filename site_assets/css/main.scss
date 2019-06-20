@@ -2,7 +2,7 @@
 ---
 
 @import "vendor/normalize.css";
-@import "vendor/github.css";
+@import "vendor/solarized-dark.css";
 @import "variables";
 @import "fonts";
 @import "base";
@@ -10,6 +10,9 @@
 @import "mobile_nav";
 @import "header";
 @import "footer";
+@import "home/interpretation";
+@import "home/use_case";
+@import "home/animations";
 @import "home";
 @import "article";
 @import "doc";

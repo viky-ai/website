@@ -1,0 +1,97 @@
+
+stages:
+  - build
+  - docker_tag
+  - deploy
+  - admin
+
+variables:
+  GIT_SUBMODULE_STRATEGY: recursive
+  DOCKER_DRIVER: overlay
+  DOCKER_IMAGE: $CI_REGISTRY_IMAGE
+  BOT_NAME: $CI_PROJECT_NAME
+
+# Build docker image
+build_doc:
+  stage: build
+  image: docker:dind
+  script:
+    - echo "${CI_REGISTRY_PASSWORD}" | docker login --username "${CI_REGISTRY_USER}" --password-stdin $CI_REGISTRY
+    - docker build --pull -t ${DOCKER_IMAGE}:${CI_COMMIT_REF_SLUG} .
+    - docker push ${DOCKER_IMAGE}:${CI_COMMIT_REF_SLUG}
+
+# Tag docker image to lasted
+tag_demo:
+  stage: docker_tag
+  image: docker:dind
+  only:
+    - master
+  variables:
+    GIT_STRATEGY: none
+  script:
+    - echo "${CI_REGISTRY_PASSWORD}" | docker login --username "${CI_REGISTRY_USER}" --password-stdin $CI_REGISTRY
+    - docker pull ${DOCKER_IMAGE}:${CI_COMMIT_REF_SLUG}
+    - docker tag ${DOCKER_IMAGE}:${CI_COMMIT_REF_SLUG} ${DOCKER_IMAGE}:latest
+    - docker push ${DOCKER_IMAGE}:latest
+
+# Deploy any branches on rancher dev
+deploy_dev:
+  stage: deploy
+  except:
+    - master
+    - tags
+  image: docker-registry.pertimm.net/tools/docker-rancher-cli:latest
+  dependencies:
+    - build_doc
+  environment:
+    name: ${CI_COMMIT_REF_NAME}
+    url: https://${CI_ENVIRONMENT_SLUG}-platform-dev.viky.ai
+    on_stop: delete_env
+  variables:
+    DEPLOY_RANCHER_STACK: ${CI_ENVIRONMENT_SLUG}-platform-dev
+    DOCKER_IMAGE_TAG: ${CI_COMMIT_REF_SLUG}
+  script:
+    - echo "Deploy ${DEPLOY_RANCHER_STACK} on ${RANCHER_URL}/dev ( ${CI_ENVIRONMENT_URL} )"
+    - cd deployment
+    - rancher --debug --environment dev up --stack ${DEPLOY_RANCHER_STACK} --file docker-compose.yml --file docker-compose-rancher.yml -d --batch-size 3 --pull --force-upgrade --confirm-upgrade --prune
+
+# Deploy master on rancher preprod
+deploy_preprod:
+  stage: deploy
+  only:
+    - master
+  except:
+    - tags
+  image: docker-registry.pertimm.net/tools/docker-rancher-cli:latest
+  dependencies:
+    - build_doc
+  environment:
+    name: beta-doc
+    url: https://beta-doc.viky.ai
+  variables:
+    DEPLOY_RANCHER_STACK: beta-doc
+    DOCKER_IMAGE_TAG: ${CI_COMMIT_REF_SLUG}
+  script:
+    - echo "Deploy ${DEPLOY_RANCHER_STACK} on ${RANCHER_URL}/preprod ( ${CI_ENVIRONMENT_URL} )"
+    - cd deployment
+    - rancher --debug --environment preprod up --stack ${DEPLOY_RANCHER_STACK} --file docker-compose.yml --file docker-compose-rancher.yml -d --batch-size 3 --pull --force-upgrade --confirm-upgrade --prune
+
+# remove environment
+delete_env:
+  stage: admin
+  except:
+    - master
+    - tags
+  image: docker-registry.pertimm.net/tools/docker-rancher-cli:latest
+  environment:
+    name: ${CI_COMMIT_REF_NAME}
+    url: https://${CI_ENVIRONMENT_SLUG}-platform-dev.viky.ai
+    action: stop
+  variables:
+    DEPLOY_RANCHER_STACK: ${CI_ENVIRONMENT_SLUG}-platform-dev
+    DOCKER_IMAGE_TAG: ${CI_COMMIT_REF_SLUG}
+  script:
+    - echo "Remove ${DEPLOY_RANCHER_STACK} on ${RANCHER_URL}/dev ( ${CI_ENVIRONMENT_URL} )"
+    - rancher --debug --environment dev rm --stop --type stack ${DEPLOY_RANCHER_STACK}
+  when: manual
+  allow_failure: true
