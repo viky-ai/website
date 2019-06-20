@@ -8,13 +8,13 @@ order: 1
 
 ## Purpose
 
-This guide will assist you in the creation of your first project into viky.ai.
+This guide will assist you in the creation of your first project in viky.ai.
 
 We will guide you to create your first agent to structure information from contents and to retrieve relevant information in these contents by interacting with your data in natural language.
 
-The use case to start on the platform is very simple and will demonstrate the different viky.ai's capabilities:
+We will demonstrate different capabilities of viky.ai through a very simple use case:
 
-- You have some contents where you want to retrieve the postal address, to create some metadata for instance to classify the information.
+- You have some contents where you want to retrieve the postal address to create some metadata for instance to classify the information.
 - Furthermore, you have customers who want to query these contents by searching with a postal address. Queries should be in natural language to facilitate the interactions.
 
 In practice, you will create an agent allowing you to send a text to the [viky.ai Agents API](../../api/agents/) and it will extract the French postal addresses in a structured way.
@@ -23,13 +23,13 @@ In practice, you will create an agent allowing you to send a text to the [viky.a
 
 ## Best practices to start
 
-**Defining the scope and usage is your first priority before starting** any new project on viky.ai. It will help you create the more appropriate design for your agents.
+**Defining the scope and usage is your first priority before starting** any new project in viky.ai. It will help you create the most appropriate design for your agents.
 
 ### What is a postal address?
 
-- A _postal address_ contains usually a road, a number, a postal code, a town.
+- A _postal address_ usually contains a road, a number, a postal code, and a town.
 - It could also contain additional information about the floor, the apartment, the building.
-- It would be interesting to have the GPS coordinates of the town to use on a map for instance.
+- It would be interesting to have the GPS coordinates of the town, to use on a map, for instance.
 
 _Postal addresses_ could be slightly different from one country to another. So let's start this tutorial with French postal address!
 
@@ -37,7 +37,7 @@ A typical example is: _12 avenue de Flandres 75019 Paris_ (find some information
 
 ### Can I reuse components or should I create everything from scratch?
 
-Think about the elementary components you will need to create agents able to identify a postal address.
+Think about the elementary components you will need to create agents that are able to identify a postal address.
 
 In the example "12 avenue de Flandres 75019 Paris", the decomposition into elementary components gives:
 
@@ -51,22 +51,22 @@ In the example "12 avenue de Flandres 75019 Paris", the decomposition into eleme
   </p>
 </aside>
 
-- `12`: Number.
-- `avenue`: Road type.
-- `de Flandres`: Road name.
-- `75019`: Postal code (i.e. a specific pattern of numbers).
-- `Paris`: City.
+- `12`: Number
+- `avenue`: Road type
+- `de Flandres`: Road name
+- `75019`: Postal code (i.e. a specific pattern of numbers)
+- `Paris`: City
 
-It could optionally contain information about the apartment, building, floor.
+Optionally, it could contain information about the apartment, building, floor.
 
-viky.ai contains already some generic agents to help you in this creation: numbers and French cities.
+viky.ai already contains some generic agents - numbers and French cities - to help you in this creation.
 
 We will create a module (named *Agents* in viky.ai's world) able to identify each part of the address, and a postal address.
 
 
 ## Create an agent
 
-Login to viky.ai. You will then come to an interface listing the available agents. Then click on the **New Agent** button.
+Login to viky.ai. You will then see an interface listing the available agents. Then click on the **New Agent** button.
 
 ![Application screenshot](img/01_new_agent.png "UI listing the available agents")
 
@@ -75,12 +75,12 @@ A modal box with the form "Create a new agent" opens.
 <aside class="note">
   <h3>Tips and tricks</h3>
   <p>
-    <code>ID</code> must be URL-compatible. Use unaccented, lowercase characters and separate the words with dashes (<code>-</code>).
+    <code>ID</code> must be URL compatible. Use unaccented, lowercase characters and separate the words with a dash (<code>-</code>).
   </p>
 </aside>
 
 1. Fill the `Name` field with "Address Tutorial".
-2. Set the `Visibility` to `Private`, so now you will be the unique user to see this agent.
+2. Set the `Visibility` to `Private`, so that you will be the only user to see this agent.
 3. Fill the `ID` field with "address-tutorial".
 4. Check the following options for languages: `No language`, `fr (french)` and uncheck `en (english)`.
 5. Choose a background color or upload an image.
@@ -98,7 +98,7 @@ On the left part of the UI, you can edit agent's configuration, manage access ri
 
 <aside class="primary">
   <p>
-    You can add a <strong>Readme</strong> in this <strong>Overview</strong> section. This is particularly useful to add a description of the purpose of your agent, and some examples of what it will be able to do. For this tutorial, copy/paste the purpose of the tutorial in the <strong>Readme</strong> section. Add the following examples of French postal addresses as an illustration (it will serve also as unitary tests during the agent creation). Examples should be as representative as possible.
+    You can add a <strong>Readme</strong> in this <strong>Overview</strong> section. This is particularly useful to describe the purpose of your agent, and add some examples of what it will be able to do. For this tutorial, copy and paste the purpose of the tutorial in the <strong>Readme</strong> section. Add the following examples of French postal addresses as an illustration (it will also serve as unitary tests during the agent creation). Examples should be as representative as possible.
   </p>
   <ul>
     <li>12 avenue de Flandres 75019 Paris</li>
@@ -114,15 +114,15 @@ On the left part of the UI, you can edit agent's configuration, manage access ri
 
 ### Create an interpretation
 
-In the **Interpretations** tab, click on **New Interpretation** button.
+In the **Interpretations** tab, click on the **New Interpretation** button.
 
 ![New interpretation screenshot](img/04_new_interpretation.png 'Access to "New Interpretation" button')
 
 <aside class="note">
   <h3>Interpretation visibility</h3>
   <ul>
-    <li>Public interpretations are those exposed by the agent, they provide final solutions.</li>
-    <li>Privates are used to perform intermediate calculations or computations.</li>
+    <li>Public interpretations are those exposed by the agent; they provide final solutions.</li>
+    <li>Private interpretations are used to perform intermediate calculations or computations.</li>
   </ul>
 </aside>
 
@@ -137,9 +137,9 @@ A modal box with the form “Create a new interpretation” opens.
 
 ### Create your first expression
 
-The interpretation is created, now click on it, select the **fr** tab and type "12 avenue de Flandres 75019 Paris" in the text area, then click on **add**.
+Your first interpretation is created. Now click on it and select the **fr** tab. Type "12 avenue de Flandres 75019 Paris" in the text area, then click on **Add**.
 
-Let the default options as they are (_keep order_, _close_, _auto solution_). We will come back to them later.
+Keep the default options (_keep order_, _close_, _auto solution_) as is. We will come back to them later.
 
 ![Expression form screenshot](img/06_first_expression.png "Adding an expression")
 
@@ -147,18 +147,18 @@ Let the default options as they are (_keep order_, _close_, _auto solution_). We
 
 A console panel is on the right to test in live your agent. Type "12 avenue de Flandres 75019 Paris" in the text field and click on the arrow to send the request. This console calls your agent by REST API.
 
-You can see the returned solution in the **Explain** tab (opened by default). The solution is available also in JSON format, click on the **JSON** tab to see it.
+You can see the returned solution in the **Explain** tab (opened by default). The solution is also available in JSON format; click on the **JSON** tab to see it.
 
 ![Console screenshot](img/07_first_console.png "Manual test in console")
 
-The returned value is the interpretation you just created and the score is the match confidence level, 0 means no match, and 1 means a complete exact match. Here the score is 1 because the sentence typed in the console exactly matches the expression you just created.
+The returned value is the interpretation you just created and the score is the match confidence level: 0 means no match, and 1 means an exact match. Here the score is 1 because the sentence typed in the console exactly matches the expression you just created.
 
 <aside class="primary">
   <p>
-    The <strong>Console</strong> has different usages. It could be a place to realize your <strong>manual unit tests</strong>, each time you create a new interpretation, to validate it.
+    The <strong>Console</strong> has multiple usages. It could be a place to realize your <strong>manual unit tests</strong>, validate an interpretation each time you create a new one. 
   </p>
   <p>
-    It allows also to save your tests to create an <strong>automated tests suite</strong>. A best practice to have in an NLP project is to have continuous improvements with a view of potential regressions.
+    It also allows to save your tests to create an <strong>automated tests suite</strong>. A best practice to have in an NLP project is to have continuous improvements with a view of potential regressions.
   </p>
 </aside>
 
@@ -192,7 +192,7 @@ A modal box with the form "Create a new entities list" opens.
 
 ![create entities list screenshot](img/09_create_entities_list.png "Entities list creation form")
 
-Click on the entities list to open it and enter road types names:
+Click on the entities list you just created to open it and enter road types names:
 
 1. Type "rue" in the **Terms** text area ; then click on **Add**,
 2. Type "avenue" in the **Terms** text area; then click on **Add**,
@@ -203,26 +203,26 @@ Click on the entities list to open it and enter road types names:
 
 <aside class="primary">
   <p>
-    It is possible to import long lists of entities into viky.ai with a CSV file.
+    It is also possible to import long lists of entities into viky.ai with a CSV file.
   </p>
 </aside>
 
 
 ### Link entities list to interpretations
 
-Go back in the **Interpretations** tab, click on the **address** public interpretation.
+Go back to the **Interpretations** tab, click on the **address** public interpretation.
 
 
-<span class="tag tag--primary">Step 1</span> <strong>Edit current expression in address interpretation</strong>
+<span class="tag tag--primary">Step 1</span> <strong>Edit the current expression in address interpretation</strong>
 
-Click on expression "12 avenue de Flandres 75019 Paris" in order to edit it.
+Click on the expression "12 avenue de Flandres 75019 Paris" in order to edit it.
 
 ![UI screenshot](img/11_edit_expression.png 'Edit an expression by clicking on it')
 
 <span class="tag tag--primary">Step 2</span> <strong>Link avenue with road_types entities list</strong>
 
 1. Highlight **avenue** in expression "12 avenue de Flandres 75019 Paris".
-2. A drop-down list appears, displaying the different interpretations and entities lists available.
+2. A drop-down list appears displaying the different interpretations and entities lists available.
 3. Choose the **road_types** entities list (it should be labeled like `yourname/youragent/entities_lists/road_types`).
 4. Click on **Update**
 
@@ -251,37 +251,37 @@ Let's continue with the detection of road number, postal code and city.
 
 In order not to reinvent the wheel, you will add 2 agent dependencies as seen above:
 
-- **Numbers** agent will allow you to understands ordinal and cardinal numbers, written in digits or in letters. This seems appropriate to recognize road number and postal code.
+- **Numbers** agent will allow you to understand ordinal and cardinal numbers written in digits or in letters. This seems appropriate to recognize road number and postal code.
 - **VillesFR** agent will allow you to recognize French cities and give you their geographical coordinates. This seems appropriate to recognize city.
 
 To do this, return to the agent **Overview** tab.
 
-<span class="tag tag--primary">Step 1</span> Click on **Add new dependency**
+<span class="tag tag--primary">Step 1</span> Click on **Add new dependency**.
 
 ![Add dependency screenshot](img/15_first_dependency.png "Access to dependency chooser")
 
-<span class="tag tag--primary">Step 2</span> Search and choose the **Numbers** public agent
+<span class="tag tag--primary">Step 2</span> Search and choose the **Numbers** public agent.
 
 ![Search dependencies screenshot](img/16_choose_numbers_agent.png "Choose Numbers agent")
 
-<span class="tag tag--primary">Step 3</span> The **Numbers** agent is now in yours dependencies. Let's add an other one.
+<span class="tag tag--primary">Step 3</span> The **Numbers** agent is now in your dependencies.
 
 ![Populated dependencies section screenshot](img/17_second_dependency.png "Numbers agent is here now")
 
-<span class="tag tag--primary">Step 4</span> Click on **Add new dependency**, search and choose the **VillesFR** public agent
+<span class="tag tag--primary">Step 4</span> Let's add other dependency. Click on **Add new dependency**, search and choose the **VillesFR** public agent.
 
 ![Search dependencies screenshot](img/18_choose_villesfr_agent.png "Choose VillesFR agent")
 
-<span class="tag tag--primary">Done</span>  Well, both dependencies are in place.
+<span class="tag tag--primary">Done</span>  Now, both dependencies are in place.
 
 ![Dependencies screenshot](img/19_dependencies_done.png "Everything is OK")
 
 
 ### Edit address interpretation
 
-In order to make understandable road number, postal code and city, go to the **Interpretations** tab. Then go to the **address** interpretation and edit the "12 avenue de Flandres 75019 Paris" expression.
+In order to make the agent understand the road number, postal code and city, go to the **Interpretations** tab. Then go to the **address** interpretation and edit the "12 avenue de Flandres 75019 Paris" expression.
 
-Let's start now highlights:
+Let's start making highlights:
 
 1. Highlight "**12**" and create an alias to the `viky/numbers/interpretations/number` interpretation.
 2. Highlight "**75019**" and create an alias to the `viky/numbers/interpretations/number` interpretation.
@@ -300,22 +300,22 @@ In parameter name column:
 
 ![Interpretation form screenshot](img/21_parameter_names.png "Adjust parameter names")
 
-Click on **update** in order to save these modifications.
+Click on **Update** in order to save these modifications.
 
-### Validate with the console
+### Validate in the console
 
-Test now in the console the sentence "12 avenue de Flandres 75019 Paris".
+Now test the sentence "12 avenue de Flandres 75019 Paris" in the console.
 
-![Unreadable solution screenshot](img/22_console_unreadable_result.png "Non-optimal solution, we can do better!")
+![Unreadable solution screenshot](img/22_console_unreadable_result.png "Non-optimal solution. We can do better!")
 
-Every parts are correctly understood, but the solution is almost unreadable.
+Every part is understood correctly, but the solution is quite verbose.
 
 We will now customize the output in order to make it simpler to read.
 
 
 ### Improve solution output
 
-Open the expression and uncheck **Auto solution**, a textarea is now open in the bottom of the form.
+Open the expression and uncheck **Auto solution**. A textarea is now open at the bottom of the form.
 
 ![Solution textarea screenshot](img/22_uncheck_auto_solution.png "Uncheck the Auto solution option")
 
@@ -334,9 +334,9 @@ Update the solution in order to have a solution like this:
 
 ![Update solution screenshot](img/23_edit_solution.png "Edit solution")
 
-The solution is now like this:
+The solution now becomes:
 
-![Improved but too complex solution screenshot](img/24_solution_improved.png "Solution improved but still too complex, we can do better!")
+![Improved but too complex solution screenshot](img/24_solution_improved.png "Solution improved but still too complex. We can do better!")
 
 This is much more readable, but it is still not completely OK. Let's remove the extra **number** and only keep the city name for the moment.
 
@@ -351,28 +351,28 @@ Replace the current solution with:
 }
 ```
 
-Now the solution is much better:
+The solution is much better now:
 
 ![Solution screenshot](img/25_good_solution.png "There you go!")
 
 ## Road name
 
-We will try now to understand the street names.
+We will now try to understand the street names.
 
 ### Road names entities list
 
-There are too many road names to import all of them in viky.ai. Instead we will try to make the system understand unknown road names.
+There are too many road names to import them all in viky.ai. Instead we will try to make the agent understand unknown road names.
 
 First create a new private entities list **road_names**.
 
-Fill it with some very known road names such as **Champs Elysées**, **Rivoli**, etc...
+Fill it with some common road names such as **Champs Elysées**, **Rivoli**, etc...
 
 ![Entities list road_names screenshot](img/26_entities_list_road_names.png)
 
 
 ### Edit address interpretation
 
-Go back in the **Address** interpretation, edit the expression then:
+Go back in the **Address** interpretation, edit the expression as:
 
 1. Highlight **de Flandres**.
 2. Create an alias to the entities list **road_names**.
@@ -383,23 +383,25 @@ Go back in the **Address** interpretation, edit the expression then:
 
 ![Street names with any screenshot](img/27_road_names_any.png)
 
-In the console, test now the sentence "12 avenue de Flandres 75019 Paris". Every parts are correctly understood, even the road name.
+In the console, test the sentence "12 avenue de Flandres 75019 Paris" now. Every part is understood correctly, even the road name.
 
 ![Final solution screenshot](img/28_final_solution.png "Congratulations!")
 
-Try now another completely different address, for example: "108 rue Jean Moulin 54230 Neuves-Maisons", it works!
+Try a completely different address, for example "108 rue Jean Moulin 54230 Neuves-Maisons". It works too!
 
 ![Successful solutions screenshot](img/29_some_tests.png "Some successful solutions")
 
+Congratulations! You now have your very own agent in viky.ai that can recognize French postal addresses. In the following section,
+we will show you how you can access your agent through an external application.
 
 ## Connect with your agent
 
 In this last step you will use your agent's abilities from your own application.
-Since viky.ai is reachable through a [public REST API](../../api/agents) you first need the agent's API token. You can find it in the configuration panel on the agent's overview screen.
+Every agent in viky.ai is reachable through a [public REST API](../../api/agents). To access the API, you will first need the agent's API token. You can find it in the configuration panel in the agent's overview screen.
 
 ![Configure agent](img/30_configure_agent.png "Access to agent configuration")
 
-The API token is a 32 characters unique identifier that developers must provide to prove they are allowed to consume this agent.
+The API token is a 32 characters unique identifier that the developers must provide to prove that they are allowed to consume this agent.
 
 ![Agent API token](img/31_agent_api_key.png "Agent API token")
 
