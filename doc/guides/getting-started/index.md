@@ -410,7 +410,6 @@ A quick connection check can be made with a simple `curl` call:
 $ curl -G "https://viky-beta.viky.ai/api/v1/agents/<your_username>/address-tutorial/interpret.json?" \
        -H "Agent-Token: <agent_token>" \
        --data-urlencode "sentence=12 avenue de Flandres 75019 Paris"
-
 ```
 
 The HTTP response is the expected JSON:
