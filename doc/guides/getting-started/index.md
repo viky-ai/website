@@ -391,7 +391,8 @@ Try a completely different address, for example "108 rue Jean Moulin 54230 Neuve
 
 ![Successful solutions screenshot](img/29_some_tests.png "Some successful solutions")
 
-Congratulations! You now have your very own agent in viky.ai that can recognize French postal addresses. In the following section,
+Congratulations! You now have your very own agent in viky.ai that can recognize French postal addresses. 
+viky.ai does not limit you to use your agents within the platform. In the following section,
 we will show you how you can access your agent through an external application.
 
 ## Connect with your agent
