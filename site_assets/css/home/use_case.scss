@@ -1,6 +1,9 @@
 .use-case{
   position: relative;
   display: inline-block;
+
+
+
   .use-case__content{
     display: flex;
     padding: .2em .2em;
@@ -8,6 +11,18 @@
     border-radius: 3px;
     box-shadow: 0 2px 3px rgba(#000, .25);
     border-radius: 1.2em;
+
+    &:before{
+      content: "";
+      position: absolute;
+      width: 6px;
+      height: 1.25em;
+      background-color: #fff;
+      border-radius: 1px;
+      bottom: -1.1em;
+      left: 16px;
+      @media screen and (min-width: 1800px) { left: 17px; }
+    }
   }
   .use-case__content__img{
     img{
@@ -23,8 +38,8 @@
   .use-case__pointer{
     content: "";
     position: absolute;
-    width: 12px;
-    height: 12px;
+    width: 13px;
+    height: 13px;
     border-radius: 50%;
     background-color: $primary_color;
     border: 2px solid #fff;
