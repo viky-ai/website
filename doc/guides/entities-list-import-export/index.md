@@ -38,7 +38,7 @@ It will import two entities:
   - line 2 has only one term: `avenue` without any language. Since the `auto solution` is enabled, the `solution` column is ignored and it will automatically get the first term as a JSON string (in this case `avenue`).
   - line 3 has two terms: `rue` without any language and `street` with the english language. Again, since the `auto solution` is enabled the `solution` column is ignored even if there is a value and it will automatically get the first term as a JSON string (in this case `rue`).
 
-The example below demonstrate the use of complex import:
+The example below demonstrate a complex import:
 
 ```
 Terms,Auto solution,Solution
