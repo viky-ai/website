@@ -7,7 +7,7 @@ order: 2
 
 ## Purpose
 
-When your agent becomes more complex it will need lots of entities grouped together within lists.
+When your agent becomes more complex it will need lots of entities grouped within lists.
 As such, it becomes easier to process those lists in an external tool and then import them into viky.ai.
 
 ## File format
