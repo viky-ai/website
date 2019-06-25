@@ -1,0 +1,60 @@
+@media print {
+  @page {
+    margin: 2cm 3.5cm 1cm 3.5cm;
+  }
+  body {
+    font-size: 11pt;
+    // Force l'impression des arrières plans
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .header,
+  footer{
+    display: none;
+  }
+
+  .doc{
+    background: #fff;
+    .doc__sidebar{
+      display: none;
+    }
+    .doc__nav{
+      display: none;
+    }
+    .article__summary{
+      display: none;
+    }
+  }
+
+  article{
+    span.reading-time{
+      display: none;
+    }
+    blockquote,
+    .figure,
+    .aside
+    .highlighter-rouge{
+      page-break-inside: avoid;
+    }
+    .article__content a{
+      color: $grey_800;
+    }
+  }
+
+  .blog{
+    background-color: #fff;
+    article {
+      box-shadow: none;
+      border: none;
+      margin: 0;
+      header img{
+        display: none;
+      }
+    }
+    .blog-breadcrumb{
+      display: none;
+    }
+  }
+
+}
