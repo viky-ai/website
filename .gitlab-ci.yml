@@ -89,11 +89,11 @@ deploy_preprod_k8s:
   dependencies:
     - build_doc
   variables:
-    NAMESPACE: viky-beta
+    NAMESPACE: "viky-beta"
   script:
     - export KUBECONFIG=$KUBECONFIG
-    - echo "Init helm ..."
-    - helm init --client-only --wait
+    - echo "$KUBECONFIG"
+    - cat $KUBECONFIG
     - echo "Create namespace"
     - kubectl create namespace "${NAMESPACE}" || true
     - kubectl delete secret pertimm-registry --namespace "viky-${CI_ENVIRONMENT_SLUG}" || true
