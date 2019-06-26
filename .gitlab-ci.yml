@@ -90,6 +90,9 @@ deploy_preprod_k8s:
     - build_doc
   variables:
     NAMESPACE: "viky-beta"
+  environment:
+    name: beta-doc-kube
+    url: https://beta-doc-kube.viky.ai
   script:
     - export KUBECONFIG=$KUBECONFIG
     - echo "$KUBECONFIG"
