@@ -8,6 +8,8 @@ spec:
     matchLabels:
       app.kubernetes.io/name: "viky-doc"
   template:
+    imagePullSecrets: 
+      - name: "pertimm-registry"
     metadata:
       labels:
         app.kubernetes.io/name: "viky-doc"
