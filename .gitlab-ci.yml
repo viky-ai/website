@@ -101,8 +101,8 @@ deploy_preprod_k8s:
     - kubectl create secret docker-registry pertimm-registry --namespace "${NAMESPACE}" --docker-server="${PERTIMM_REGISTRY_URL}" --docker-username="${PERTIMM_REGISTRY_USERNAME}" --docker-password="${PERTIMM_REGISTRY_PASSWORD}" --docker-email="${PERTIMM_REGISTRY_EMAIL}" || true
     - echo "Deploy Doc to Viky Namespace"
     - cd deployment/kubernetes
-    - kubectl apply -f deployment.yaml
-    - kubectl apply -f service.yaml
+    - kubectl apply -f deployment.yaml --namespace "${NAMESPACE}"
+    - kubectl apply -f service.yaml --namespace "${NAMESPACE}"
 
 # remove environment
 delete_env:
