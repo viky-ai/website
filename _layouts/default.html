@@ -4,7 +4,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <title>{{ page.title }}</title>
-    <link rel="stylesheet" href="{{ "/site_assets/css/main.css" | relative_url }}?{{site.time | date: '%s'}}">
+    {% if jekyll.environment == 'production' %}
+      <link rel="stylesheet" href="{{ "/site_assets/css/main.css" | relative_url }}">
+    {% else %}
+      <link rel="stylesheet" href="{{ "/site_assets/css/main.css" | relative_url }}?{{site.time | date: '%s'}}">
+    {% endif %}
+
     {% include favicon.html %}
     {% seo %}
     {% feed_meta %}
@@ -15,6 +20,11 @@
     {{ content}}
 
     {% include mobile_nav.html %}
-    <script src="{{ "/site_assets/javascript/doc.js" | relative_url }}?{{site.time | date: '%s'}}"></script>
+
+    {% if jekyll.environment == 'production' %}
+      <script src="{{ "/site_assets/javascript/doc.js" | relative_url }}"></script>
+    {% else %}
+      <script src="{{ "/site_assets/javascript/doc.js" | relative_url }}?{{site.time | date: '%s'}}"></script>
+    {% endif %}
   </body>
 </html>
