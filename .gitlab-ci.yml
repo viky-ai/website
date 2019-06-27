@@ -52,7 +52,7 @@ deploy_dev:
     DOCKER_IMAGE_TAG: ${CI_COMMIT_REF_SLUG}
   script:
     - echo "Deploy ${DEPLOY_RANCHER_STACK} on ${RANCHER_URL}/dev ( ${CI_ENVIRONMENT_URL} )"
-    - cd deployment
+    - cd deployment/rancher
     - rancher --debug --environment dev up --stack ${DEPLOY_RANCHER_STACK} --file docker-compose.yml --file docker-compose-rancher.yml -d --batch-size 3 --pull --force-upgrade --confirm-upgrade --prune
 
 # Deploy master on rancher preprod
@@ -73,8 +73,39 @@ deploy_preprod:
     DOCKER_IMAGE_TAG: ${CI_COMMIT_REF_SLUG}
   script:
     - echo "Deploy ${DEPLOY_RANCHER_STACK} on ${RANCHER_URL}/preprod ( ${CI_ENVIRONMENT_URL} )"
-    - cd deployment
+    - cd deployment/rancher
     - rancher --debug --environment preprod up --stack ${DEPLOY_RANCHER_STACK} --file docker-compose.yml --file docker-compose-rancher.yml -d --batch-size 3 --pull --force-upgrade --confirm-upgrade --prune
+
+# Deploy master on kubernetes preprod
+deploy_preprod_k8s:
+  tags:
+    - kubernetes
+  stage: deploy
+  only:
+    - master
+  except:
+    - tags
+  image: dtzar/helm-kubectl:2.13.1
+  dependencies:
+    - build_doc
+  variables:
+    NAMESPACE: "viky-beta"
+  environment:
+    name: beta-doc-kube
+    url: https://beta-doc-kube.viky.ai
+  script:
+    - export KUBECONFIG=$KUBECONFIG
+    - echo "Create namespace"
+    - kubectl create namespace "${NAMESPACE}" || true
+    - kubectl delete secret pertimm-registry --namespace "viky-${CI_ENVIRONMENT_SLUG}" || true
+    - echo "Create Pertimm Registry Secret"
+    - kubectl create secret docker-registry pertimm-registry --namespace "${NAMESPACE}" --docker-server="${PERTIMM_REGISTRY_URL}" --docker-username="${PERTIMM_REGISTRY_USERNAME}" --docker-password="${PERTIMM_REGISTRY_PASSWORD}" --docker-email="${PERTIMM_REGISTRY_EMAIL}" || true
+    - echo "Deploy Doc to Viky Namespace"
+    - cd deployment/kubernetes
+    - kubectl delete -f deployment.yaml --namespace "${NAMESPACE}" || true
+    - kubectl delete -f service.yaml --namespace "${NAMESPACE}" || true
+    - kubectl apply -f deployment.yaml --namespace "${NAMESPACE}"
+    - kubectl apply -f service.yaml --namespace "${NAMESPACE}"
 
 # remove environment
 delete_env:

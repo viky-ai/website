@@ -18,11 +18,20 @@ feed:
   path: blog/atom.xml
 
 markdown: kramdown
+kramdown:
+  highlighter: rouge
+  syntax_highlighter_opts:
+    block:
+      line_numbers: true
+
 sass:
   sass_dir: site_assets/css
 
 exclude:
   - README.md
   - CONTRIBUTING.md
+  - Dockerfile
+  - deployment
+  - conf
 
 host: 0.0.0.0

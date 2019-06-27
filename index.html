@@ -1,49 +1,23 @@
 ---
 layout: default
-title: "Home"
+title: "NLP Platform - viky.ai"
 ---
+
 <div class="home">
   <header>
-    <div class="home__header">
-      <h1>Natural Language Processing platform</h1>
-      <p>
-        Extracting information from unstructured contents has never been easier
-      </p>
-    </div>
-      <div class="home__use-case home__use-case--1">
-        <div class="home__use-case__pointer"></div>
-        <div class="home__use-case__query">Great! Deliver me to 13 rue du commerce at 9 pm please</div>
-        <div class="home__use-case__anwser">
-<img src="/site_assets/img/home/viky-ai-logo-small.png" />
-<pre>
-{
-  "action": "delivery",
-  "where": "13 rue du commerce",
-  "when": "9pm"
-}</pre>
-        </div>
-      </div>
-      <div class="home__use-case home__use-case--2">
-        <div class="home__use-case__pointer"></div>
-        <div class="home__use-case__query">I want to reserve a hotel in bali with my wife to go diving</div>
-        <div class="home__use-case__anwser">
-<img src="/site_assets/img/home/viky-ai-logo-small.png" />
-<pre>
-{
-  "action": "book_hotel",
-  "where": "Bali",
-  "number_people": 2,
-  "activity": "diving"
-}</pre>
-        </div>
-      </div>
+    <h1>Natural Language Processing platform</h1>
+    <p>
+      Extracting information from unstructured contents has never been easier
+    </p>
   </header>
+
+  {% include home_use_cases.html %}
 
   <main>
     <section class="ui">
       <div class="wrapper">
         <div>
-          <img src="/site_assets/img/home/ui.png" />
+          <img src="/site_assets/img/home/ui.jpg" />
         </div>
         <div>
           <h2>Collaboratively build NLP agents</h2>
@@ -74,7 +48,7 @@ title: "Home"
           <div>{% include community.svg %}</div>
           <div>
             <h2>Open community</h2>
-            <p>Use public agents, made available for all, by the community.</p>
+            <p>Use public agents made available to all by the community.</p>
           </div>
         </div>
         <div>
@@ -97,7 +71,7 @@ title: "Home"
           <p>
             With viky.ai your unstructured contents will reveal the substance of what they hide. This will enrich your structured data and allow you to imagine new business cases.
           </p>
-          <p>You could use it at 2 phases of your data value chain:</p>
+          <p>You could use it in 2 phases of your data value chain:</p>
           <ul>
             <li>Upstream of the value chain to structure your contents and extract relevant data (to create metadata or enrich indexes for instance).</li>
             <li>Downstream of the value chain to send queries in natural language to find the right information. viky.ai even offers the possibility to create virtual assistants to converse with your data.</li>
@@ -105,7 +79,7 @@ title: "Home"
         </div>
 
         <div>
-          <h2>Last news</h2>
+          <h2>Latest news</h2>
           <ul class="posts">
             {% for post in site.posts limit:3 %}
               <li>

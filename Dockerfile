@@ -34,3 +34,5 @@ COPY ./conf/default.conf /etc/nginx/conf.d/default.conf
 
 COPY --from=build_docs /src/_site/ /usr/share/nginx/html/
 
+RUN nginx -t
+

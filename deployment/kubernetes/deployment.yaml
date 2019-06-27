@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: "viky-doc"
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: "viky-doc"
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: "viky-doc"
+    spec:
+      imagePullSecrets: 
+        - name: "pertimm-registry"
+      containers:
+        - name: "viky-doc"
+          image: "docker-registry.pertimm.net/viky.ai/doc"
+          imagePullPolicy: "Always"
+          tty: true
+          ports:
+            - containerPort: 80
+              name: "viky-doc-port"
+              protocol: TCP

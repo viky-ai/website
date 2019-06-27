@@ -242,18 +242,31 @@ article{
     background-color: darken(#002b36, 5%);
   }
 
-  .highlight{
+  div.highlight{
     border-radius: 4px;
     overflow: auto;
     margin: 1em 0;
-    pre.highlight{
-      padding: 1em 1em;
+    & > pre.highlight{
+      padding: 0 1em 0 .5em;
+      margin: 0;
       line-height: 1.4em;
       font-size: .85em;
-      margin: 0;
       code{
         font-family: 'Roboto Mono', monospace;
       }
+    }
+    table{
+      pre{
+        padding: 0;
+        margin: .4em .2em;
+      }
+    }
+    .lineno{
+      margin-left: .1em;
+      margin-right: .5em;
+      opacity: .5;
+      text-align: right;
+      font-size: .9em;
     }
   }
 
@@ -278,7 +291,7 @@ article{
     }
   }
 
-  table{
+  & > table{
     width: 100%;
     border-collapse : collapse;
     thead tr th{

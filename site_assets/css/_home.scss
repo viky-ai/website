@@ -1,247 +1,153 @@
-@keyframes query-appear {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+.home{
+  font-size: 1em;
+  header{
+    margin: 0 auto;
+    padding: 0 1em;
+    max-width: 37em;
+    text-align: center;
+    h1{
+      margin: 1.5em 0 0 0;
+      font-weight: 400;
+      font-size: 1.5em;
+      color: $grey_800;
+      line-height: 1.25em;
+    }
+    p{
+      line-height: 1.35em;
+      margin: 0.25em 0 0 0;
+      font-size: 1.1em;
+      color: $grey_500;
+    }
+    @media screen and (min-width: 600px) {
+      h1{
+        margin: 1.75em 0 0 0;
+        font-size: 2.1em;
+      }
+      p{
+        font-size: 1.4em;
+      }
+    }
   }
 }
-@keyframes anwser-appear {
-  from {
-    opacity: 0;
-    transform: translateX(-10px);
+
+.home__use-cases{
+  position: relative;
+  background-image: url('../img/home/sep.png'), url('../img/home/home.jpg');
+  background-position: left bottom, center bottom;
+  background-size:  100% 10vw, cover;
+  background-repeat: no-repeat, no-repeat;
+  height: 60vw;
+
+  @media screen and (min-width: 600px) {
+    height: 24em;
+    background-size:  100% 5em, cover;
   }
-  to {
-    opacity: 1;
-    transform: translateX(0);
+  @media screen and (min-width: 1200px) {
+    height: 26em;
+    background-size:  100% 5em, cover;
+  }
+
+  .use-case--first{
+    position: absolute;
+    display: none;
+
+    .interpretation--pink{
+      display: none;
+    }
+
+    @media screen and (min-width: 320px) {
+      font-size: .65em;
+      left: 1em;
+      bottom: 25vw;
+      display: block;
+    }
+
+    @media screen and (min-width: 340px) { font-size: .7em; }
+    @media screen and (min-width: 360px) { font-size: .75em; }
+    @media screen and (min-width: 390px) { font-size: .8em; }
+    @media screen and (min-width: 410px) { font-size: .85em; }
+    @media screen and (min-width: 430px) { font-size: .9em; }
+    @media screen and (min-width: 520px) {
+      .interpretation--pink{
+        display: inline-block;
+      }
+    }
+    @media screen and (min-width: 550px) {
+      left: 3em;
+    }
+    @media screen and (min-width: 600px) { font-size: .9em; }
+    @media screen and (min-width: 650px) { font-size: .95em; }
+    @media screen and (min-width: 700px) { font-size: .95em; left: 10vw; bottom: 10em;}
+    @media screen and (min-width: 1200px) { font-size: .9em; left: 9vw; bottom: 8em;}
+  }
+
+  .use-case--second{
+    position: absolute;
+    display: none;
+    @media screen and (min-width: 1200px) {
+      display: block;
+      left: 26em;
+      bottom: 16em;
+      font-size: .9em;
+    }
+    @media screen and (min-width: 1300px) { left: 35em; }
+    @media screen and (min-width: 1400px) { left: 40em; }
+    @media screen and (min-width: 1500px) { left: 45em; }
+    @media screen and (min-width: 1600px) { left: 50em; }
+    @media screen and (min-width: 1700px) { left: 55em; bottom: 17em; }
+    @media screen and (min-width: 1760px) { left: 50em; bottom: 16em; }
+    @media screen and (min-width: 1900px) { left: 50em; bottom: 17em; }
+    @media screen and (min-width: 2000px) { left: 55em; bottom: 18em; }
   }
 }
 
 
 .home{
-
-  header{
-    position: relative;
-    background-image: url('../img/home/sep.png'), url('../img/home/home.jpg');
-    background-position: left bottom, center bottom;
-    background-size:  100% 120px, cover;
-    background-repeat: no-repeat, no-repeat;
-
-    padding: 2em 0 80vw 0;
-
-    .home__use-case{
-      .home__use-case__pointer{
-        opacity: 0;
-      }
-      .home__use-case__query{
-        opacity: 0;
-      }
-      .home__use-case__anwser{
-        opacity: 0;
-      }
-      &.home__use-case--1{
-        .home__use-case__pointer,
-        .home__use-case__query{
-          animation: query-appear .25s ease-in .5s forwards;
-        }
-        .home__use-case__anwser{
-          animation: anwser-appear .25s ease-in .75s forwards;
-        }
-      }
-      &.home__use-case--2{
-        display: none;
-        .home__use-case__pointer,
-        .home__use-case__query{
-          animation: query-appear .25s ease-in 1s forwards;
-        }
-        .home__use-case__anwser{
-          animation: anwser-appear .25s ease-in 1.25s forwards;
-        }
-      }
-    }
-
-    .home__use-case{
-      position: absolute;
-      font-size: .9em;
-      line-height: 1.25em;
-      .home__use-case__pointer{
-        position: absolute;
-        width: 2px;
-        height: 160px;
-        background-color: rgba(#49d8fb, .9);
-        left: -1.5em;
-        top: 2em;
-        &:before{
-          position: absolute;
-          top: -8px;
-          left: -7px;
-          content: "";
-          width: 14px;
-          height: 14px;
-          background-color: #49d8fb;
-          border: 1px solid #30a9c8;
-          border-radius: 50%;
-        }
-      }
-      .home__use-case__query{
-        max-width: 17em;
-        padding: .5em .75em;
-        background-color: #fff;
-        border-radius: 3px;
-        box-shadow: 0 2px 3px rgba(#000, .15);
-        text-align: center;
-      }
-      .home__use-case__anwser{
-        margin: 2em 0 0 2em;
-        position: relative;
-        img{
-          position: absolute;
-          width: 20px;
-          left: -14px;
-          top: calc(50% - 12px);
-          background-color: #fff;
-          padding: 4px;
-          border-radius: 50%;
-        }
-        pre{
-          background-color: #fff;
-          padding: .5em;
-          font-size: .8em;
-          line-height: 1.25em;
-          font-family: 'Roboto Mono', monospace;
-          border-radius: 3px;
-          box-shadow: 0 2px 3px rgba(#000, .2);
-        }
-      }
-    }
-
-    .home__header{
-      margin: 0 auto;
-      padding: 0 1em;
-      max-width: 35em;
-      text-align: center;
-    }
-    h1{
-      margin: 0 0 .5em 0;
-      font-weight: 400;
-      font-size: 1.6em;
-      color: $grey_900;
-    }
-    p{
-      line-height: 1.35em;
-      margin: 0.25em 0;
-      font-size: 1.25em;
-      color: $grey_600;
-    }
-  }
-
-  header{
-    .home__use-case{
-      &.home__use-case--1{
-        bottom: 20vw;
-        left: 15vw;
-      }
-    }
-    @media screen and (min-width: 460px) {
-      padding: 2em 0 70vw 0;
-    }
-    @media screen and (min-width: 540px) {
-      padding: 2em 0 23em 0;
-      .home__use-case{
-        &.home__use-case--1{
-          bottom: 10em;
-        }
-      }
-    }
-    @media screen and (min-width: 900px) {
-      padding: 3em 0 37vw 0;
-      .home__use-case{
-        &.home__use-case--1{
-          bottom: 10vw;
-        }
-        &.home__use-case--2{
-          display: block;
-          bottom: 13vw;
-          right: 10vw;
-        }
-      }
-      h1{
-        font-size: 2em;
-      }
-      p{
-        font-size: 1.5em;
-      }
-    }
-    @media screen and (min-width: 1000px) {
-      padding-bottom: 33vw;
-    }
-    @media screen and (min-width: 1100px) {
-      padding-bottom: 32vw;
-    }
-    @media screen and (min-width: 1200px) {
-      padding-bottom: 30vw;
-    }
-    @media screen and (min-width: 1300px) {
-      padding-bottom: 29vw;
-    }
-    @media screen and (min-width: 1400px) {
-      padding-bottom: 28vw;
-      .home__use-case{
-        &.home__use-case--1{ left: 15vw; }
-        &.home__use-case--2{ right: 15vw; }
-      }
-    }
-    @media screen and (min-width: 1500px) {
-      padding-bottom: 27vw;
-    }
-    @media screen and (min-width: 1600px) {
-      padding-bottom: 24vw;
-      .home__use-case{
-        &.home__use-case--1{ left: 17vw; }
-        &.home__use-case--2{ right: 17vw; }
-      }
-    }
-    @media screen and (min-width: 1800px) {
-      padding-bottom: 22vw;
-    }
-  }
-
   main{
     section{
       padding: 1em 2em;
+      @media screen and (min-width: 1000px) {
+        padding: 1em 4em;
+
+      }
     }
     .wrapper{
       margin: 0 auto;
-      max-width: 82em;
+      max-width: 80em;
     }
 
     h2{
       font-weight: 400;
-      font-size: 1.75em;
+      font-size: 1.25em;
       color: $grey_800;
     }
-    p, ul{
-      font-size: 1.15em;
+    p, ul, li{
+      font-size: 1em;
     }
     li{
       margin: .5em 0;
     }
-    img{
-      max-width: 100%;
-      padding: 1em;
-    }
 
     .ui .wrapper{
       display: grid;
-      grid-template-columns: 1fr 2fr;
+      grid-template-columns: 1fr;
       grid-gap: 2em;
       align-items: center;
       padding: 2em 0;
+      @media screen and (min-width: 600px) {
+        grid-template-columns: 1fr 2fr;
+        padding: 3em 0;
+      }
       @media screen and (min-width: 1000px) {
         grid-template-columns: 1fr 1fr;
-        grid-gap: 5em;
+        grid-gap: 3em;
+        padding: 4em 0;
+      }
+      img{
+        display: block;
+        width: 100%;
+        max-width: 32em;
+        margin: 0 auto;
       }
     }
 
@@ -285,7 +191,7 @@
 
     .imagine-and-news{
       .wrapper{
-        margin: 2em auto;
+        margin: 3em auto;
         display: grid;
         grid-template-columns: 1fr;
         grid-gap: 2em;
