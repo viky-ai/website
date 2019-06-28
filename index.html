@@ -1,6 +1,7 @@
 ---
 layout: default
 title: "NLP Platform - viky.ai"
+description: "viky.ai is a Natural Language Processing SaaS platform. Extracting information from unstructured contents has never been easier."
 ---
 
 <div class="home">
@@ -17,7 +18,7 @@ title: "NLP Platform - viky.ai"
     <section class="ui">
       <div class="wrapper">
         <div>
-          <img src="/site_assets/img/home/ui.jpg" />
+          <img src="/site_assets/img/home/ui.jpg" alt="viky.ai web interface screenshot." />
         </div>
         <div>
           <h2>Collaboratively build NLP agents</h2>
@@ -31,7 +32,6 @@ title: "NLP Platform - viky.ai"
         </div>
       </div>
     </section>
-
 
     <section class="trio">
       <div class="wrapper">
@@ -63,7 +63,6 @@ title: "NLP Platform - viky.ai"
       </div>
     </section>
 
-
     <section class="imagine-and-news">
       <div class="wrapper">
         <div>
@@ -84,9 +83,7 @@ title: "NLP Platform - viky.ai"
             {% for post in site.posts limit:3 %}
               <li>
                 <a href="{{post.url}}">
-                  <h3>
-                    {{post.title}}
-                  </h3>
+                  <h3>{{post.title}}</h3>
                   <h4>
                     By <strong>{{post.author}}</strong> on {{post.date | date_to_long_string}}
                   </h4>
@@ -95,10 +92,8 @@ title: "NLP Platform - viky.ai"
             {% endfor %}
           </ul>
         </div>
-
       </div>
     </section>
-
 
     {% include footer.html %}
 

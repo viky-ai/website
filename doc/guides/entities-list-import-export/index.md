@@ -1,6 +1,6 @@
 ---
 layout: doc
-title: "Entities list import/export"
+title: "Entities list: Import/Export"
 description: "This document present you how to import and export entities list to and from viky.ai."
 order: 2
 ---
@@ -74,7 +74,7 @@ Select your agent, go to the entities list tab and open the list that will recei
 ![Import entities list button location screenshot](img/import_button.png "Import an entities list")
 
 Only plain CSV files are accepted. An import can either append the file content to the list or replace it entirely. The line order in the file is preserved in the final entities list. Empty lines are ignored.
- 
+
 The import process can accept files with a size up to 30 MB.
 
 ![Import modal window screenshot](img/import_modal.png "Import modal window")
