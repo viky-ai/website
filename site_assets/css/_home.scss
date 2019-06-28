@@ -32,11 +32,15 @@
 
 .home__use-cases{
   position: relative;
-  background-image: url('../img/home/sep.png'), url('../img/home/home.jpg');
+  background-image: url('../img/home/sep.png'), url('../img/home/home-small.jpg');
   background-position: left bottom, center bottom;
   background-size:  100% 10vw, cover;
   background-repeat: no-repeat, no-repeat;
   height: 60vw;
+
+  @media screen and (min-width: 800px) {
+    background-image: url('../img/home/sep.png'), url('../img/home/home-large.jpg');
+  }
 
   @media screen and (min-width: 600px) {
     height: 24em;
@@ -103,147 +107,142 @@
 
 
 .home{
-  main{
-    section{
-      padding: 1em 2em;
-      @media screen and (min-width: 1000px) {
-        padding: 1em 4em;
+  section{
+    padding: 1em 2em;
+    @media screen and (min-width: 1000px) {
+      padding: 1em 4em;
 
-      }
     }
-    .wrapper{
+  }
+  .wrapper{
+    margin: 0 auto;
+    max-width: 80em;
+  }
+
+  h2{
+    font-weight: 400;
+    font-size: 1.25em;
+    color: $grey_800;
+  }
+  p, ul, li{
+    font-size: 1em;
+  }
+  li{
+    margin: .5em 0;
+  }
+
+  .ui .wrapper{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 2em;
+    align-items: center;
+    padding: 2em 0;
+    @media screen and (min-width: 600px) {
+      grid-template-columns: 1fr 2fr;
+      padding: 3em 0;
+    }
+    @media screen and (min-width: 1000px) {
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 3em;
+      padding: 4em 0;
+    }
+    img{
+      display: block;
+      width: 100%;
+      max-width: 32em;
       margin: 0 auto;
-      max-width: 80em;
     }
+  }
 
+  .trio{
+    background-color: $grey_100;
     h2{
       font-weight: 400;
-      font-size: 1.25em;
+      font-size: 1.15em;
+      margin: 0 0 .5em 0;
       color: $grey_800;
     }
-    p, ul, li{
+    p{
       font-size: 1em;
+      margin: 0;
     }
-    li{
-      margin: .5em 0;
+    svg{
+      margin-left: 10%;
+      width: 80%;
+      height: auto;
     }
+    .wrapper{
+      padding: 0;
+      & > div{
+        margin: 2em 0;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-gap: 2em;
+        align-items: center;
+      }
+      @media screen and (min-width: 1000px) {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 3em;
+        svg{
+          margin-left: 0;
+          width: 100%;
+        }
+      }
+    }
+  }
 
-    .ui .wrapper{
+  .imagine-and-news{
+    .wrapper{
+      margin: 3em auto;
       display: grid;
       grid-template-columns: 1fr;
       grid-gap: 2em;
-      align-items: center;
-      padding: 2em 0;
-      @media screen and (min-width: 600px) {
-        grid-template-columns: 1fr 2fr;
-        padding: 3em 0;
-      }
       @media screen and (min-width: 1000px) {
+        grid-gap: 5em;
         grid-template-columns: 1fr 1fr;
-        grid-gap: 3em;
-        padding: 4em 0;
-      }
-      img{
-        display: block;
-        width: 100%;
-        max-width: 32em;
-        margin: 0 auto;
       }
     }
-
-    .trio{
-      background-color: $grey_100;
-      h2{
-        font-weight: 400;
-        font-size: 1.15em;
-        margin: 0 0 .5em 0;
-        color: $grey_800;
-      }
-      p{
-        font-size: 1em;
-        margin: 0;
-      }
-      svg{
-        margin-left: 10%;
-        width: 80%;
-        height: auto;
-      }
-      .wrapper{
-        padding: 0;
-        & > div{
-          margin: 2em 0;
-          display: grid;
-          grid-template-columns: 1fr 2fr;
-          grid-gap: 2em;
-          align-items: center;
-        }
-        @media screen and (min-width: 1000px) {
-          display: grid;
-          grid-template-columns: 1fr 1fr 1fr;
-          grid-gap: 3em;
-          svg{
-            margin-left: 0;
-            width: 100%;
-          }
-        }
-      }
-    }
-
-    .imagine-and-news{
-      .wrapper{
-        margin: 3em auto;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-gap: 2em;
-        @media screen and (min-width: 1000px) {
-          grid-gap: 5em;
-          grid-template-columns: 1fr 1fr;
-        }
-      }
-      svg{
-        max-width: 10em;
-        height: auto;
-      }
-      ul.posts{
-        list-style: none;
-        padding: 0;
-        li{
-          margin: 0 0 1em 0;
-          a{
-            display: block;
-            text-decoration: none;
-            color: $grey_800;
-            padding: .5em 1em;
-            box-shadow: 0 2px 3px rgba(#000, .1);
-            border-radius: 3px;
-            border-left: 2px solid $primary_color;
-            transition: all .1s;
-            h3{
-              font-weight: 300;
-              font-size: 1em;
-              margin: 0;
-            }
-            h4{
-              font-weight: 300;
-              font-size: .75em;
-              line-height: 1.5em;
-              margin: 0 0 .5em 0;
-              color: $grey_500;
-              strong{
-                font-weight: 300;
-                color: $grey_700;
-              }
-            }
-            &:hover{
-              box-shadow: 0 3px 6px rgba(#000, .15);
-              h3{
-                text-decoration: underline;
-              }
-            }
-          }
-        }
-      }
-    }
-
   }
+
+  ul.posts-list{
+    list-style: none;
+    padding: 0;
+    li{
+      margin: 0 0 1em 0;
+      a{
+        display: block;
+        text-decoration: none;
+        color: $grey_800;
+        padding: .5em 1em;
+        box-shadow: 0 2px 3px rgba(#000, .1);
+        border-radius: 3px;
+        border-left: 2px solid $primary_color;
+        transition: all .1s;
+        h3{
+          font-weight: 300;
+          font-size: 1em;
+          margin: 0;
+        }
+        h4{
+          font-weight: 300;
+          font-size: .75em;
+          line-height: 1.5em;
+          margin: 0 0 .5em 0;
+          color: $grey_500;
+          strong{
+            font-weight: 300;
+            color: $grey_700;
+          }
+        }
+        &:hover{
+          box-shadow: 0 3px 6px rgba(#000, .15);
+          h3{
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+
 }
