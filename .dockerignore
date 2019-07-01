@@ -4,7 +4,8 @@ CHANGELOG.md
 docker-compose.yml
 Dockerfile
 CONTRIBUTING.md
-deployment
+deployment/kubernetes
+deployment/rancher
 
 .dockerignore
 .git
