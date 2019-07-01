@@ -31,6 +31,7 @@ FROM nginx:stable AS run_doc
 
 COPY ./deployment/nginx/nginx.conf /etc/nginx/nginx.conf
 COPY ./deployment/nginx/default.conf /etc/nginx/conf.d/default.conf
+COPY ./deployment/nginx/h5bp/ /etc/nginx/h5bp/
 
 COPY --from=build_docs /src/_site/ /usr/share/nginx/html/
 
