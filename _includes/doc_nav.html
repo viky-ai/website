@@ -1,41 +1,41 @@
 <h2>Guides</h2>
 <ul>
-  {% assign pages = site.pages | sort: 'order' %}
+  {%- assign pages = site.pages | sort: 'order' -%}
   {% for p in pages %}
-    {% assign segments = p.dir | split: '/' %}
+    {%- assign segments = p.dir | split: '/' -%}
     {% if segments[1] == "doc" and segments[2] == "guides" %}
       <li>
-        {% if p.only_for_dev and jekyll.environment == 'production' %}
+        {% if p.only_for_dev and jekyll.environment == 'production' -%}
           {% continue %}
-        {% endif %}
-        {% if page.url == p.url %}
+        {%- endif -%}
+        {%- if page.url == p.url -%}
           <a href="{{p.url}}" class="current">
-        {% else %}
+        {%- else -%}
           <a href="{{p.url}}">
-        {% endif %}
+        {%- endif -%}
         {{p.title}}
-        {% if p.only_for_dev %}
+        {%- if p.only_for_dev -%}
           <span>dev only</span>
-        {% endif %}
+        {%- endif -%}
         </a>
       </li>
     {% endif %}
-  {% endfor %}
+  {%- endfor -%}
 </ul>
 
 <h2>API reference</h2>
 <ul>
-  {% for p in pages %}
-    {% assign segments = p.dir | split: '/' %}
-    {% if segments[1] == "doc" and segments[2] == "api" %}
+  {%- for p in pages -%}
+    {%- assign segments = p.dir | split: '/' -%}
+    {%- if segments[1] == "doc" and segments[2] == "api" -%}
       <li>
-        {% if page.url == p.url %}
+        {%- if page.url == p.url -%}
           <a href="{{p.url}}" class="current">{{p.title}}</a>
-        {% else %}
+        {%- else -%}
           <a href="{{p.url}}">{{p.title}}</a>
-        {% endif %}
+        {%- endif -%}
       </li>
-    {% endif %}
-  {% endfor %}
+    {%- endif -%}
+  {%- endfor -%}
 </ul>
 
