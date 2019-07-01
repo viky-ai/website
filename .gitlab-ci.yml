@@ -104,11 +104,10 @@ deploy_preprod_k8s:
     - kubectl delete secret pertimm-registry --namespace "viky-${CI_ENVIRONMENT_SLUG}" || true
     - echo "Create Pertimm Registry Secret"
     - kubectl create secret docker-registry pertimm-registry --namespace "${NAMESPACE}" --docker-server="${PERTIMM_REGISTRY_URL}" --docker-username="${PERTIMM_REGISTRY_USERNAME}" --docker-password="${PERTIMM_REGISTRY_PASSWORD}" --docker-email="${PERTIMM_REGISTRY_EMAIL}" || true
-    - echo "Deploy Doc to Viky Namespace"
-    - cat "docker-image-sha256"
+    # Load the docker image with the sha256 id to an Env variable then use it to edit the deployment.yaml
     - export DOC_IMAGE=$(head -n 1 docker-image-sha256)
     - cd deployment/kubernetes
-    - envsubst < deployment.yaml | echo
+    - echo "Deploy Doc to Viky Namespace"
     - envsubst < deployment.yaml | kubectl apply --namespace "${NAMESPACE}" -f -
     - kubectl apply -f service.yaml --namespace "${NAMESPACE}"
     
