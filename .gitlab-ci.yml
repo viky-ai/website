@@ -18,6 +18,11 @@ build_doc:
     - echo "${CI_REGISTRY_PASSWORD}" | docker login --username "${CI_REGISTRY_USER}" --password-stdin $CI_REGISTRY
     - docker build --pull -t ${DOCKER_IMAGE}:${CI_COMMIT_REF_SLUG} .
     - docker push ${DOCKER_IMAGE}:${CI_COMMIT_REF_SLUG}
+    - cd "$CI_PROJECT_DIR"
+    - echo "$(docker images -q ${DOCKER_IMAGE}:${CI_COMMIT_REF_SLUG})" > "docker-image-id"
+  artifacts:
+    paths: 
+      - "docker-image-id"
 
 # Tag docker image to lasted
 tag_demo:
@@ -25,18 +30,11 @@ tag_demo:
   image: docker:dind
   only:
     - master
-  variables:
-    GIT_STRATEGY: none
   script:
     - echo "${CI_REGISTRY_PASSWORD}" | docker login --username "${CI_REGISTRY_USER}" --password-stdin $CI_REGISTRY
     - docker pull ${DOCKER_IMAGE}:${CI_COMMIT_REF_SLUG}
     - docker tag ${DOCKER_IMAGE}:${CI_COMMIT_REF_SLUG} ${DOCKER_IMAGE}:latest
     - docker push ${DOCKER_IMAGE}:latest
-    - cd "$CI_PROJECT_DIR"
-    - echo "$(docker images -q ${DOCKER_IMAGE}:latest)" > "docker-image-id"
-  artifacts:
-    paths: 
-      - "docker-image-id"
 
 # Deploy any branches on rancher dev
 deploy_dev:
