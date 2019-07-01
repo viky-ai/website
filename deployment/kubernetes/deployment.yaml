@@ -16,7 +16,7 @@ spec:
         - name: "pertimm-registry"
       containers:
         - name: "viky-doc"
-          image: "docker-registry.pertimm.net/viky.ai/doc"
+          image: "$DOC_IMAGE"
           imagePullPolicy: "Always"
           tty: true
           ports:

@@ -19,10 +19,10 @@ build_doc:
     - docker build --pull -t ${DOCKER_IMAGE}:${CI_COMMIT_REF_SLUG} .
     - docker push ${DOCKER_IMAGE}:${CI_COMMIT_REF_SLUG}
     - cd "$CI_PROJECT_DIR"
-    - echo "$(docker images -q ${DOCKER_IMAGE}:${CI_COMMIT_REF_SLUG})" > "docker-image-id"
+    - echo "$(docker inspect --format='{{index .RepoDigests 0}}' ${DOCKER_IMAGE}:${CI_COMMIT_REF_SLUG})" > "docker-image-sha256"
   artifacts:
     paths: 
-      - "docker-image-id"
+      - "docker-image-sha256"
 
 # Tag docker image to lasted
 tag_demo:
@@ -103,12 +103,11 @@ deploy_preprod_k8s:
     - echo "Create Pertimm Registry Secret"
     - kubectl create secret docker-registry pertimm-registry --namespace "${NAMESPACE}" --docker-server="${PERTIMM_REGISTRY_URL}" --docker-username="${PERTIMM_REGISTRY_USERNAME}" --docker-password="${PERTIMM_REGISTRY_PASSWORD}" --docker-email="${PERTIMM_REGISTRY_EMAIL}" || true
     - echo "Deploy Doc to Viky Namespace"
-    - ls -l
-    - cd "$CI_PROJECT_DIR"
-    - ls -l
-    - cat "docker-image-id"
+    - cat "docker-image-sha256"
+    - export DOC_IMAGE=$(head -n 1 docker-image-sha256)
     - cd deployment/kubernetes
-    - kubectl apply -f deployment.yaml --namespace "${NAMESPACE}"
+    - envsubst < deployment.yaml | echo
+    - envsubst < deployment.yaml | kubectl apply --namespace "${NAMESPACE}" -f -
     - kubectl apply -f service.yaml --namespace "${NAMESPACE}"
     
 # remove environment
