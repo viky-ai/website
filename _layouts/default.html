@@ -11,6 +11,15 @@
 
     {% include favicon.html %}
     {% seo %}
+
+    {% assign segments = page.dir | split: '/' %}
+    {% if segments[2] == 'guides' or segments[2] == 'api' %}
+      <meta property="og:type" content="article" />
+    {% endif %}
+    {% if page.dir == '/' %}
+      <meta property="og:type" content="website" />
+    {% endif %}
+
     {% feed_meta %}
   </head>
   <body>
