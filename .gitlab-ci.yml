@@ -9,7 +9,6 @@ variables:
   GIT_SUBMODULE_STRATEGY: recursive
   DOCKER_DRIVER: overlay
   DOCKER_IMAGE: $CI_REGISTRY_IMAGE
-  DOCKER_IMAGE_ID_FILE_NAME: "docker-image-id" 
 
 # Build docker image
 build_doc:
@@ -34,9 +33,10 @@ tag_demo:
     - docker tag ${DOCKER_IMAGE}:${CI_COMMIT_REF_SLUG} ${DOCKER_IMAGE}:latest
     - docker push ${DOCKER_IMAGE}:latest
     - cd "$CI_PROJECT_DIR"
-    - echo "$(docker images -q ${DOCKER_IMAGE}:latest)" > $DOCKER_IMAGE_ID_FILE_NAME
+    - echo "$(docker images -q ${DOCKER_IMAGE}:latest)" > "docker-image-id"
   artifacts:
-    name: "$DOCKER_IMAGE_ID_FILE_NAME"
+    paths: 
+      - "docker-image-id"
 
 # Deploy any branches on rancher dev
 deploy_dev:
@@ -105,7 +105,7 @@ deploy_preprod_k8s:
     - echo "Create Pertimm Registry Secret"
     - kubectl create secret docker-registry pertimm-registry --namespace "${NAMESPACE}" --docker-server="${PERTIMM_REGISTRY_URL}" --docker-username="${PERTIMM_REGISTRY_USERNAME}" --docker-password="${PERTIMM_REGISTRY_PASSWORD}" --docker-email="${PERTIMM_REGISTRY_EMAIL}" || true
     - echo "Deploy Doc to Viky Namespace"
-    - cat $DOCKER_IMAGE_ID_FILE_NAME
+    - cat "docker-image-id"
     - cd deployment/kubernetes
     - kubectl apply -f deployment.yaml --namespace "${NAMESPACE}"
     - kubectl apply -f service.yaml --namespace "${NAMESPACE}"
