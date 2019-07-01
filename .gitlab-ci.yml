@@ -103,6 +103,8 @@ deploy_preprod_k8s:
     - echo "Deploy Doc to Viky Namespace"
     - cd deployment/kubernetes
     - kubectl apply -f deployment.yaml --namespace "${NAMESPACE}"
+    # kubectl patch will trigger and force the new image to be pulled and update the containers
+    - kubectl patch deployment viky-doc -p "{\"spec\":{\"template\":{\"metadata\":{\"labels\":{\"date\":\"`date +'%s'`\"}}}}}" --namespace "${NAMESPACE}"
     - kubectl apply -f service.yaml --namespace "${NAMESPACE}"
 
 # remove environment
