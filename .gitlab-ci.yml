@@ -97,7 +97,6 @@ deploy_preprod_k8s:
     url: https://beta-doc-kube.viky.ai
   before_script:
     - apk add --update gettext libintl
-    - mv /usr/bin/envsubst /usr/local/sbin/envsubst
   script:
     - export KUBECONFIG=$KUBECONFIG
     - echo "Create namespace"
