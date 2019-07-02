@@ -479,23 +479,9 @@ This page is build with HTML, CSS and JS code.
 *[JS]: JavaScript
 
 
-## Color reference
-
-### Grey (100-900)
-
-<div class="color color--grey-100"></div>
-<div class="color color--grey-200"></div>
-<div class="color color--grey-300"></div>
-<div class="color color--grey-400"></div>
-<div class="color color--grey-500"></div>
-<div class="color color--grey-600"></div>
-<div class="color color--grey-700"></div>
-<div class="color color--grey-800"></div>
-<div class="color color--grey-900"></div>
-
 ## Footnotes
 
-[kramdown](https://kramdown.gettalong.org/syntax.html#footnotes) provides a syntax to make footnotes.
+[kramdown](https://kramdown.gettalong.org/syntax.html#footnotes) also provides a syntax to make footnotes.
 
 __Code__
 
@@ -517,3 +503,18 @@ This is some text.[^1]. Other text[^2].
 [^2]: Another *crazy* footnote definition.
 
 Pretty cool! :beers:
+
+
+## Color reference
+
+### Grey (100-900)
+
+<div class="color color--grey-100"></div>
+<div class="color color--grey-200"></div>
+<div class="color color--grey-300"></div>
+<div class="color color--grey-400"></div>
+<div class="color color--grey-500"></div>
+<div class="color color--grey-600"></div>
+<div class="color color--grey-700"></div>
+<div class="color color--grey-800"></div>
+<div class="color color--grey-900"></div>
