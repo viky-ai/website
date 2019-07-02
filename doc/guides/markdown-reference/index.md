@@ -464,9 +464,9 @@ __Code__
 ```html
 This page is build with HTML, CSS and JS code.
 
-* [HTML]: HyperText Markup Language
-* [CSS]: Cascading Style Sheets
-* [JS]: JavaScript
+*[HTML]: HyperText Markup Language
+*[CSS]: Cascading Style Sheets
+*[JS]: JavaScript
 ```
 
 
