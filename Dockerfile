@@ -15,7 +15,7 @@ COPY Gemfile.lock /src/
 WORKDIR /src/
 
 # Production dependencies
-RUN bundle install --without development test --deployment --jobs=$(nproc)
+RUN bundle install --deployment --jobs=$(nproc)
 
 # Copy application code
 RUN mkdir -p /src/
@@ -26,7 +26,6 @@ RUN bundle exec jekyll build --verbose
 ########################################################
 ### SERVE THE WEBSITE
 ########################################################
-
 FROM nginx:stable AS run_doc
 
 COPY ./deployment/nginx/nginx.conf /etc/nginx/nginx.conf
