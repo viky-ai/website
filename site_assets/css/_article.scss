@@ -186,6 +186,10 @@ article{
     max-width: 100%;
   }
 
+  img.emoji{
+    vertical-align: text-bottom;
+  }
+
   figure{
     padding: 6px;
     background-color: $grey_100;
