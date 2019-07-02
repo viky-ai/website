@@ -50,7 +50,7 @@ ul.blog-index{
     @media screen and (min-width: $breakpoint_small) {
       margin: 3em 0 5em 0;
     }
-    padding: 2em;
+    padding: 3em 2em 2em 2em;
     background-color: #fff;
     border: 1px solid $grey_200;
     border-radius: 3px;
@@ -64,7 +64,7 @@ ul.blog-index{
         width: 74px;
         height: 74px;
         position: absolute;
-        top: -87px;
+        top: -107px;
         left: calc(50% - 37px);
         border: 2px solid #fff;
         box-shadow: 0 0 0 4px $grey_100;
