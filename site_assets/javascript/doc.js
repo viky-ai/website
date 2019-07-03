@@ -81,6 +81,12 @@ var App = {
     request.send();
   },
 
+  decorateFooter: function(){
+    var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    var d = new Date();
+    document.querySelector("#footer-day").innerHTML = days[d.getDay()];
+  },
+
   setup: function() {
     App.setupConnexionState();
     App.buildDocSummary();
@@ -88,6 +94,7 @@ var App = {
     App.decorateImages();
     App.setupMobileNav();
     App.setupScrollSpy();
+    App.decorateFooter();
   }
 };
 
