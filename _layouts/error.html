@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    {% if jekyll.environment == 'production' %}
+      <link rel="stylesheet" href="{{ "/site_assets/css/error.css" | relative_url }}">
+    {% else %}
+      <link rel="stylesheet" href="{{ "/site_assets/css/error.css" | relative_url }}?{{site.time | date: '%s'}}">
+    {% endif %}
+    {% include favicon.html %}
+  </head>
+  <body>
+    <div class="container">
+      <div class="message">
+        <div class="message__logo">
+          {% include svg/logo.svg %}
+        </div>
+        <div class="message__box">
+          {{ content }}
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

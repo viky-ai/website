@@ -186,6 +186,10 @@ article{
     max-width: 100%;
   }
 
+  img.emoji{
+    vertical-align: text-bottom;
+  }
+
   figure{
     padding: 6px;
     background-color: $grey_100;
@@ -374,6 +378,21 @@ article{
       code{
         background-color: darken(#f6fff5, 3%);
       }
+    }
+  }
+
+  .footnotes{
+    margin-top: 3em;
+    padding-top: 1em;
+    border-top: 1px solid $grey_200;
+    font-size: .9em;
+    color: $grey_600;
+    ol{
+      padding: 0 1em;
+      margin: 0;
+    }
+    p{
+      margin: 0;
     }
   }
 }

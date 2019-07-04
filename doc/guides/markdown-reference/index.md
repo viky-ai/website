@@ -438,6 +438,73 @@ __Becomes__
 </aside>
 
 
+## Emoji
+
+You can, if you wish, use emoji, rather cool, right? :smile:
+
+We use the GitHub-flavored emoji plugin for Jekyll. Please refer to the [Emoji cheat sheet](https://www.webfx.com/tools/emoji-cheat-sheet/). :tropical_drink:
+
+__Code__
+
+```html
+Some examples: :facepunch: :heart_eyes_cat: :tropical_drink: :panda_face:
+```
+
+__Becomes__
+
+Some examples: :facepunch: :heart_eyes_cat: :tropical_drink: :panda_face:
+
+
+## Abbreviations
+
+[kramdown](https://kramdown.gettalong.org/syntax.html#abbreviations) provides a syntax to assign the full phrase to an abbreviation. When writing the text, you don’t need to do anything special. However, once you add abbreviation definitions, the abbreviations in the text get marked up automatically. Abbreviations can consist of any character except a closing bracket.
+
+__Code__
+
+```html
+This page is build with HTML, CSS and JS code.
+
+*[HTML]: HyperText Markup Language
+*[CSS]: Cascading Style Sheets
+*[JS]: JavaScript
+```
+
+
+__Becomes__
+
+This page is build with HTML, CSS and JS code.
+
+*[HTML]: HyperText Markup Language
+*[CSS]: Cascading Style Sheets
+*[JS]: JavaScript
+
+
+## Footnotes
+
+[kramdown](https://kramdown.gettalong.org/syntax.html#footnotes) also provides a syntax to make footnotes.
+
+__Code__
+
+```html
+This is some text.[^1]. Other text[^2].
+
+[^1]: Some *crazy* footnote definition.
+[^2]: Another *crazy* footnote definition.
+
+Pretty cool! :beers:
+```
+
+__Becomes__
+
+
+This is some text.[^1]. Other text[^2].
+
+[^1]: Some *crazy* footnote definition.
+[^2]: Another *crazy* footnote definition.
+
+Pretty cool! :beers:
+
+
 ## Color reference
 
 ### Grey (100-900)

@@ -8,6 +8,8 @@ avatar: patrick-constant.jpg
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, ut natus facere in ipsa modi rem, est neque tempore? Dolorum quasi voluptatem fuga, tenetur sed, molestiae obcaecati magni error optio! Lorem ipsum dolor sit amet, consectetur adipisicing elit.
 
+<!--keep reading-->
+
 ## Lorem ipsum dolor sit amet
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores quas, ex harum iste in voluptates minima, numquam accusantium reprehenderit vero, hic mollitia architecto impedit eius eaque dolores dolor commodi reiciendis.

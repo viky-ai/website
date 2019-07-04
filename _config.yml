@@ -12,6 +12,8 @@ pagination:
   sort_field: 'date'
   sort_reverse: true
 
+excerpt_separator: <!--keep reading-->
+
 permalink: /blog/:year/:month/:day/:title
 
 feed:

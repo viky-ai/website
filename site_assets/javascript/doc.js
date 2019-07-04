@@ -34,18 +34,20 @@ var App = {
   decorateImages: function(){
     var images = document.querySelectorAll(".article__content img");
     Array.prototype.forEach.call(images, function(image, i){
-      var html = [];
-      var title = image.title;
-      image.title = "";
-      html.push("<figure>");
-      html.push(image.outerHTML);
-      if (title != ""){
-        html.push("<figcaption>");
-        html.push(title);
-        html.push("</figcaption>");
+      if (!(image.classList.length == 1 && image.classList[0] == "emoji")){
+        var html = [];
+        var title = image.title;
+        image.title = "";
+        html.push("<figure>");
+        html.push(image.outerHTML);
+        if (title != ""){
+          html.push("<figcaption>");
+          html.push(title);
+          html.push("</figcaption>");
+        }
+        html.push("</figure>");
+        image.outerHTML = html.join('');
       }
-      html.push("</figure>");
-      image.outerHTML = html.join('');
     });
   },
 
@@ -79,6 +81,12 @@ var App = {
     request.send();
   },
 
+  decorateFooter: function(){
+    var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    var d = new Date();
+    document.querySelector("#footer-day").innerHTML = days[d.getDay()];
+  },
+
   setup: function() {
     App.setupConnexionState();
     App.buildDocSummary();
@@ -86,6 +94,7 @@ var App = {
     App.decorateImages();
     App.setupMobileNav();
     App.setupScrollSpy();
+    App.decorateFooter();
   }
 };
 
