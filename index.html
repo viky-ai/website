@@ -2,6 +2,7 @@
 layout: default
 title: "NLP Platform - viky.ai"
 description: "viky.ai is a Natural Language Processing SaaS platform. Extracting information from unstructured contents has never been easier."
+image: social.jpg
 ---
 
 <div class="home">
@@ -15,78 +16,119 @@ description: "viky.ai is a Natural Language Processing SaaS platform. Extracting
   {% include home_use_cases.html %}
 
   <main>
-    <section class="ui">
-      <div class="wrapper">
+    <section class="home__section-ui">
+      <div class="home__section-wrapper">
         <div>
-          <img src="/site_assets/img/home/ui.jpg" alt="viky.ai web interface screenshot." />
+          <figure>
+            <img src="/site_assets/img/home/ui.jpg" alt="viky.ai web interface screenshot." />
+            <figcaption>viky.ai user interface listing available agents.</figcaption>
+          </figure>
         </div>
         <div>
-          <h2>Collaboratively build NLP agents</h2>
-          <p>
-            viky.ai provides you with a <strong>codeless user interface to create agents</strong> and APIs to integrate them into your system.
-          </p>
-          <p>
-            Agents are your <strong>multilingual assistants to find relevant data</strong>.
-          </p>
-          <p><strong>Collaborative creation of entities and interpretations</strong> has never been as simple!</p>
+          <h2>An <strong>innovative way</strong> to <strong>understand contents</strong></h2>
+          <ul class="home__check-list">
+            <li>
+              viky.ai provides you with a <strong>unique codeless user interface</strong>. This is a new way to create semantic modules, easy to integrate through API into your system.
+            </li>
+            <li>
+              Semantic bricks, named viky.ai’s agents, are your <strong>multilingual assistants to find relevant data</strong>.
+            </li>
+            <li>
+              The <strong>collaborative creation of entities and interpretations</strong> has never been as simple!
+            </li>
+          </ul>
         </div>
       </div>
     </section>
 
-    <section class="trio">
-      <div class="wrapper">
-        <div>
-          <div>{% include svg/dry.svg %}</div>
+    <section class="home__features">
+      <h2><strong>Key features</strong> of viky.ai NLP platform</h2>
+
+      <div class="home__section-wrapper">
+
+        <div class="home__features__item">
           <div>
-            <h2>Don't repeat yourself</h2>
+            <h3>Opened community</h3>
             <p>
-              viky.ai agent dependency system allows you to stay DRY.
+              It’s easy to start using viky.ai thanks to <strong>public agents available to everyone</strong>. Your participation will contribute to enriching viky’s market!
             </p>
           </div>
-        </div>
-        <div>
           <div>{% include svg/community.svg %}</div>
-          <div>
-            <h2>Open community</h2>
-            <p>Use public agents made available to all by the community.</p>
-          </div>
         </div>
-        <div>
-          <div>{% include svg/enterprise.svg %}</div>
+
+        <div class="home__features__item">
           <div>
-            <h2>Enterprise ready</h2>
+            <h3>Reusability</h3>
+            <p>viky.ai’s agents are like well-known play bricks. Use <strong>elementary agents to compose your own agents</strong>, no need to reinvent the wheel!</p>
+          </div>
+          <div>{% include svg/reusability.svg %}</div>
+        </div>
+
+        <div class="home__features__item">
+          <div>
+            <h3>Collaboration</h3>
             <p>
-              Work collaboratively in your space with the help of private agents.
+              Private agents in your space could be managed to <strong>work collaboratively</strong> within your organization.
             </p>
           </div>
+          <div>{% include svg/collaboration.svg %}</div>
         </div>
+
+        <div class="home__features__item">
+          <div>
+            <h3>Ready to use</h3>
+            <p>
+              Once created, viky.ai’s agents are directly operational for your use cases. Use API functions to play with them.
+            </p>
+          </div>
+          <div>{% include svg/ready.svg %}</div>
+        </div>
+
+        <div class="home__features__item">
+          <div>
+            <h3>Codeless</h3>
+            <p>
+              We have created a codeless platform, end-user-oriented: everyone in the organization can play with viky.ai!
+            </p>
+          </div>
+          <div>{% include svg/codeless.svg %}</div>
+        </div>
+
+        <div class="home__features__item">
+          <div>
+            <h3>Multilingual</h3>
+            <p>
+              Decline your agents in different languages at unique point.
+            </p>
+          </div>
+          <div>{% include svg/multilingual.svg %}</div>
+        </div>
+
       </div>
     </section>
 
-    <section class="imagine-and-news">
-      <div class="wrapper">
+    <section class="home__section-imagine-and-news">
+      <div class="home__section-wrapper">
         <div>
-          <h2>Imagine new business cases</h2>
+          <h2>Imagine <strong>new business cases</strong></h2>
           <p>
             With viky.ai your unstructured contents will reveal the substance of what they hide. This will enrich your structured data and allow you to imagine new business cases.
           </p>
           <p>You could use it in 2 phases of your data value chain:</p>
-          <ul>
+          <ul class="home__check-list">
             <li>Upstream of the value chain to structure your contents and extract relevant data (to create metadata or enrich indexes for instance).</li>
             <li>Downstream of the value chain to send queries in natural language to find the right information. viky.ai even offers the possibility to create virtual assistants to converse with your data.</li>
           </ul>
         </div>
 
         <div>
-          <h2>Latest news</h2>
-          <ul class="posts-list">
+          <h2>Latest <strong>news</strong></h2>
+          <ul class="home__posts-list">
             {% for post in site.posts limit:3 %}
               <li>
                 <a href="{{post.url}}">
                   <h3>{{post.title}}</h3>
-                  <h4>
-                    By <strong>{{post.author}}</strong> on {{post.date | date_to_long_string}}
-                  </h4>
+                  <p>By <strong>{{post.author}}</strong> on {{post.date | date_to_long_string}}</p>
                 </a>
               </li>
             {% endfor %}

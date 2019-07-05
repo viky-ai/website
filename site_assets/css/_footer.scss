@@ -3,14 +3,14 @@ footer{
   max-width: 42rem;
   border-top: 1px dotted $grey_200;
   text-align: center;
-  color: $grey_500;
+  color: $grey_600;
   padding: 2rem 0;
   font-size: .9em;
   p{
     margin: 0;
   }
   a{
-    color: $grey_500;
+    color: $grey_600;
     &:hover,
     &:focus{
       color: $primary_color;
