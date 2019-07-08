@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Welcome to viky.ai
-description: Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+description: The new open source (coming soon), multilingual and collaborative intelligent agent creation platform.
 author: Patrick Constant
 avatar: patrick-constant.jpg
 ---
