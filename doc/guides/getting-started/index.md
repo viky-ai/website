@@ -14,7 +14,7 @@ We will guide you to create your first agent to structure information from conte
 
 We will demonstrate different capabilities of viky.ai through a very simple use case:
 
-- You have some contents where you want to retrieve the postal address to create some metadata for instance to classify the information.
+- You have some contents where you want to retrieve the postal address to create some metadata, for instance to classify the information.
 - Furthermore, you have customers who want to query these contents by searching with a postal address. Queries should be in natural language to facilitate the interactions.
 
 In practice, you will create an agent allowing you to send a text to the [viky.ai Agents API](../../api/agents/) and it will extract the French postal addresses in a structured way.
@@ -66,7 +66,7 @@ We will create a module (named *Agents* in viky.ai's world) able to identify eac
 
 ## Create an agent
 
-Login to viky.ai. You will then see an interface listing the available agents. Then click on the **New Agent** button.
+Login to viky.ai. You will see an interface listing the available agents. Click on the **New Agent** button.
 
 ![Application screenshot](img/01_new_agent.png "UI listing the available agents")
 
