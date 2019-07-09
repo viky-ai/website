@@ -9,7 +9,7 @@ image: site_assets/img/social.jpg
 
 Hello, dear community!
 
-We also propose to share some relevant articles of watch and acculturation to textual analysis.
+I would like to share some relevant articles to watch in order to familiarize you with textual analysis.
 To start, let's see what NLP means...
 
 <!--keep reading-->
@@ -32,9 +32,9 @@ To synthesize these concepts, I encourage you to read these two very interesting
 
 ## What about the use cases?
 
-Of course, it is mandatory to wonder how these technologies and solutions can bring you added-value. What are the use cases that can be exploited thanks to textual analysis?
+Of course, it is natural to wonder how these technologies and solutions can bring you added-value. What are the use cases that can be exploited thanks to textual analysis?
 
-* Forbes published [an article](https://www.forbes.com/sites/bernardmarr/2019/06/03/5-amazing-examples-of-natural-language-processing-nlp-in-practice/#1d361fa21b30) last June about potential applications.
+* Forbes has published [an article](https://www.forbes.com/sites/bernardmarr/2019/06/03/5-amazing-examples-of-natural-language-processing-nlp-in-practice/#1d361fa21b30) last June about potential applications.
 * Other articles present the overview of [possible applications](https://www.promptcloud.com/blog/9-best-examples-of-text-mining-analysis/)  (and there are many!).
 
 So that's already enough to start your semantic culture :smile:
