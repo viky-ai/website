@@ -2,6 +2,7 @@
 layout: doc
 title: "Entities list: Import/Export"
 description: "This document present you how to import and export entities list to and from viky.ai."
+image: site_assets/img/social.jpg
 order: 2
 ---
 

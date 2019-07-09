@@ -4,6 +4,7 @@ title: Welcome to viky.ai
 description: The new open source (coming soon), multilingual and collaborative intelligent agent creation platform.
 author: Patrick Constant
 avatar: patrick-constant.jpg
+image: site_assets/img/social.jpg
 ---
 
 Welcome to viky.ai, the new open source _(coming soon)_, multilingual and collaborative intelligent agent creation platform.

@@ -4,6 +4,7 @@ title: Did you say NLP?
 description: An introduction to the concepts of textual analysis.
 author: Mathilde Wiss-Thebault
 avatar: mathilde-wiss-thebault.jpg
+image: site_assets/img/social.jpg
 ---
 
 Hello, dear community!

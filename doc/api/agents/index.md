@@ -2,6 +2,7 @@
 layout: doc
 title: Agents API
 description: "API technical documentation from viky.ai"
+image: site_assets/img/social.jpg
 order: 1
 ---
 
