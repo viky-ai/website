@@ -2,6 +2,7 @@
 layout: doc
 title: "Markdown reference"
 description: "This guide introduces you to the elements that can be used to write documentation or blog articles."
+image: site_assets/img/social.jpg
 only_for_dev: true
 order: 99
 ---
