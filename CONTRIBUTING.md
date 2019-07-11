@@ -7,7 +7,7 @@ Commit your contributions, then:
 1. Ask a content review.
 2. Ask a technical & design review.
 
-When your merge request is accepted, your contribution is merged to branch master. Then the generated static website will be automatically deployed.
+When your merge request is accepted, your contribution is merged to branch develop. Then the generated static website will be automatically deployed on development environnement. Finalize by mergin the branch develop into master in order to deploy automatically to production environment.
 
 
 ### Guides & API reference
@@ -24,6 +24,7 @@ API docs are located in `doc/api` directory.
 layout: doc
 title: The title of the document
 description: A short description of the page's content
+image: site_assets/img/social.jpg
 order: 1
 ---
 
@@ -48,6 +49,7 @@ title: The title of the blog post
 description: A short description of the page's content
 author: Your Name
 avatar: your-name.jpg
+image: site_assets/img/social.jpg
 ---
 
 Your markdown content goes here.
