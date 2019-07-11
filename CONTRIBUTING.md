@@ -1,13 +1,13 @@
 ## How to propose new content
 
-To add a new documentation or a new blog post, start by creating a new git branch. Then create a related merge request in Gitlab.
+To add a new documentation or a new blog post, start by creating a new git branch from branch develop. Then create a related merge request in Gitlab.
 
 Commit your contributions, then:
 
 1. Ask a content review.
 2. Ask a technical & design review.
 
-When your merge request is accepted, your contribution is merged to branch develop. Then the generated static website will be automatically deployed on development environnement. Finalize by mergin the branch develop into master in order to deploy automatically to production environment.
+When your merge request is accepted, your contribution is merged to branch develop. Then the generated static website will be automatically deployed on development environnement. Finalize by merging the branch develop into master in order to deploy automatically to production environment.
 
 
 ### Guides & API reference
