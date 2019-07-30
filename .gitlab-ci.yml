@@ -122,7 +122,7 @@ delete_env:
     url: https://${CI_ENVIRONMENT_SLUG}-platform-dev.viky.ai
     action: stop
   variables:
-    DEPLOY_RANCHER_STACK: ${CI_ENVIRONMENT_SLUG}-platform-dev
+    DEPLOY_RANCHER_STACK: doc-${CI_ENVIRONMENT_SLUG}-platform-dev
     DOCKER_IMAGE_TAG: ${CI_COMMIT_REF_SLUG}
   script:
     - echo "Remove ${DEPLOY_RANCHER_STACK} on ${RANCHER_URL}/dev ( ${CI_ENVIRONMENT_URL} )"
