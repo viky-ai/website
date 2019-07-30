@@ -1,3 +1,4 @@
+
 viky.ai is a framework enabling to easily develop NLP agents through a graphical interface.
 
 # Registering to viky.ai
@@ -10,14 +11,14 @@ The user's profile page displays the agents available for the user and the avata
 
 ## Displaying the user's profile
 
-The user's profile page can be displayed by logging, and, in the Agents page, clicking on the user's avatar on the top right of the page <picture here>
+The user's profile page can be displayed by logging, and, in the Agents page, clicking on the user's avatar on the top right of the page (picture here)
 
-## Updating the user's profile
+## Updating the user's profile
 
-To update the profile, click on ***edit your profile*** button <picture here>
+To update the profile, click on ***edit your profile*** button (picture here)
 This page allows the user to update his personnal informations such as Hame, Username, a little biography, and also set, update or remove an avatar or modifying the credentials.
 
-## Deleting the user's profile
+## Deleting the user's profile
 
 To delete the user's profile, all the agents have to be either deleted or transferred.
 To transfer an agent's ownership, see the sub-chapter ***Transferring ownership*** of the chapter ***updating an agent*** of this documentation (link here)
@@ -27,33 +28,78 @@ To delete an agent, see the sub-chapter ***Delete an agent*** of the chapter ***
 
 The Agents page displays the agents available for the user, as well for use as for update.
 
-## Accessing the Agent's page
+## Accessing the Agent's page
 
-The Agents page can be accessed from the main page by logging on viky.ai <picture here>, or, if the user is already logged, by clicking on ***manage agents*** <picture here>
+The Agents page can be accessed from the main page by logging on viky.ai (picture here), or, if the user is already logged, by clicking on ***manage agents*** (picture here)
 
 ## Agents list
 
 The Agents page presents the list of all the agents available for the user.
 These agents are presented as tiles, with some informations displayed :
+(picture here)
 
 - The background is a picture representative of the Agent's purpose
-- On the top right of the tile, the user's rights
-
+- At the top right of the tile, the user's rights are displayed
+- At the top left, if the agent is public, a ***PUBLIC*** banner is displayed
+- At the center right there is the agent owner's avatar
+- At the center left, the name and the agent id are displayed
+- At the bottom left, there is the list of the avatars of the users having access rights to this agent (either read or edit), and the date of the agent's last update
+- At the bottom right, if the agent has edition rights, there are 3 dots, opening a menu for agent operation. See the sub-chapter ***Agent operation*** below (link here)
 
 ## Agent search
+
+The Agents page provides a search tool to easily find an agent
+(picture here)
+
+The search bar allows to search by agent's name. This search can be partial, which means, for example, that the agent ***Numbers*** can be found by typing ***Num*** in this search bar.
+The result list can also be filtered in 2 different ways :
+
+A first radio buttons group allow to filter either by displaying only the user's agents, displaying only the user's favorite or displaying all the agents
+To know how to define an agent as favorite, see the ***Set as favorite*** sub-chapter in the ***Agent*** chapter (link here)
+
+A second radio buttons group allow to filter either by displaying the private agents, the public agents or all the agents.
+More informations about the agents visibility are given in the sub-chapter ***Agent visibility*** of the ***Agent*** chapter (link here)
+
+Results can be sort either by the alphabetical order of the agent's names, or by the date of last update
+
 ## Agent operation
-    - configure
 
-    - share
+These operations are displayed by clicking on the 3 dots on the bottom right of the agent's tile.
+These 3 dots are only available if the user has edition rights on the agent.
 
-    - delete
+- configure
+
+This allow to open the ***Configure*** agent's page.
+This is described in the ***Configure*** sub-chapter of the ***Agent*** chapter (link here)
+
+- share
+
+This operation is only available for the agent's owner.
+This allow to share the agent with other users
+This is described in the ***Agent sharing*** sub chapter of the ***Agent*** chapter (link here)
+
+- delete
+
+This operation is only available for the agent's owner and if the agent is not shared with anyone.
+This allow to delete the agent from viky.ai
+This is described in the ***Agent sharing*** sub chapter of the ***Agent*** chapter (link here)
+
 ## Enter an agent
-## Create an agent
 
-## Delete an agent
+To enter an agent, just click on the agent tile on the agents list
+The description of the agent's content is done in the ***Agent*** chapter (link here)
+
+## Create an agent
+
+To create an agent, in the Agents list page, click on the ***New agent*** button.
+This will open the configuration page.
+This configuration page is described in the ***Configure*** sub-chapter of the ***Agent*** chapter (link here).
+Once this configuration page is filled, click on the ***Create*** button and the newly created agent's page will open.
+
+## Delete an agent
 
 An agent can be deleted only by its owner, and cannot be deleted if it has charings.
-To delete an agent, go in the ***Agents list*** page, filter the agent list in order to display it, click on the 3 dots in the bottom right corner of the agent's tile and click on ***Delete*** <picture here>
+To delete an agent, go in the ***Agents list*** page, filter the agent list in order to display it, click on the 3 dots in the bottom right corner of the agent's tile and click on ***Delete*** (picture here)
 If the agent does not belong to you or if there are sharings on the agent, the ***Delete*** button won't be displayed
 
 # Agent
@@ -70,39 +116,34 @@ The api use is described in the *api* documentation (link here)
 
 ## Agent presentation
 
-###main panel
+### Main panel
 
-The main panel is the panel on the top of the page <picture here>
+The main panel is the panel on the top of the page (picture here)
 It contains a picture of the agent, the agent's name, its owner and a short description.
-It also contains, in the ***duplicate*** and the ***Add favorite*** button <picture here>
+It also contains, in the ***duplicate*** and the ***Add favorite*** button (picture here)
 
 The ***Duplicate*** button creates a copy of the agent, belonging to the user asking for duplication, and named of the named of the agent followed by ***\[COPY\]***
 
 The ***Add favorite*** button marks the agent as favorite, in order for the user to find it back quickly in the Agents list page
 
-For the owner of the agent only, a ***Configure*** button is also present, allowing to open the agent configuration page <picture here>
-
-###Agent configuration page
-
-The ***Configure*** button opens the Agent's configuration page.
-the Agent configuration is described in the sub-chapter ***Configure*** of this chapter. (link here)
+For the users having edition rights on the agent, a ***Configure*** button is also present, allowing to open the agent configuration page (picture here)
+The Agent configuration is described in the sub-chapter ***Configure*** of this chapter. (link here)
 
 The main panel is always present on the top of the page when you are developping or testing your agent through the test interface.
 
 There are also 3 tabs displayed in the main panel, opening 3 pages :
 
-###Overview
+### Overview
 
 The Overview page gives a main view of the agent
 
-At the top of this page, right below the main panel, on the right, are displayed only for the owner the ***Share*** and the ***Transfer ownership*** <picture here>
+At the top of this page, right below the main panel, on the right, are displayed only for the owner the ***Share*** and the ***Transfer ownership*** (picture here)
 
 The ***Share*** button is used to share the agent with one or more other user.
 The Agent Sharing is described in the sub-chapter ***Agent Sharing*** of this chapter. (link here)
 
 The ***Transger Ownership*** button is used to transfer the ownership of the agent to another user.
 The ownership transfer is described in the sub-chapter ***Transger Ownership*** of the ***Updating an agent*** chapter in this documentation. (link here)
-
 
 The ***Sharing overview*** displays all the people allowed to use or work on the agent.
 
@@ -112,17 +153,17 @@ The agent dependencies are described in the ***dependencies*** chapter (link her
 Then, a README allows to write a few documentation on the agent
 See the ***Best practices*** (link here) to know how to fill the readme
 
-###Interpretations
+### Interpretations
 
 The Interpretations page displays the list of the interpretations existing in the agent.
 Interpretations are described in the chapter ***Interpretations*** (link here)
 
-###Entities
+### Entities
 
 The Entities page page displays the list of the entities existing in the agent.
 Entities are described in the chapter ***Entities*** (link here)
 
-##Agent sharing
+## Agent sharing
 
 An agent belongs to an owner, who can use and edit it.
 The agent can be shared with a specific user or more, either with read or edit rights.
@@ -132,20 +173,20 @@ The owner is the only person able to share the agent or to remove a sharing
 
 There are 2 ways to do so :
 
-- In the Overview tab, click on ***Share*** <picture here>
-- In the Agents list, filter on the agent in order to display it, click on the 3 dots in the bottom right corner of the agent's tile and click on ***Share*** <picture here>
+- In the Overview tab, click on ***Share*** (picture here)
+- In the Agents list, filter on the agent in order to display it, click on the 3 dots in the bottom right corner of the agent's tile and click on ***Share*** (picture here)
 
-The opening popup displays the list of already allowed users and the corresponding rights <picture here>
+The opening popup displays the list of already allowed users and the corresponding rights (picture here)
 
-    - Adding a user
+- Adding a user
 
-To add a user, in the ***Invite collaborators***, type the e-mail adress of the person to invite, set the rights to ***Can show*** or ***Can edit*** then click on ***Invite*** <picture here>
+To add a user, in the ***Invite collaborators***, type the e-mail adress of the person to invite, set the rights to ***Can show*** or ***Can edit*** then click on ***Invite*** (picture here)
 
-    - Updating right
+- Updating right
 
 To update an user right, in the ***Sharing overview***, click on the drop down button on the right of the person to update, select the desired right
 
-    - Removing a sharing
+- Removing a sharing
 
 To remove an user right, in the ***Sharing overview***, click on the drop down button on the right of the person to update, and select ***Delete***.
 A popup opens to ask for conformation, click on ***Delete***
@@ -157,35 +198,39 @@ A private agent can be only seen by users with whom he was shared.
 A public agent can be seen by all users, but only in read mode, except for the users with whom he was shared with edit mode.
 
 Only the agent's owner can change its visibility.
-To do it, go inthe Overview page, click on the configure button and set the visibility to what is needed. <picture here>
+To do it, go inthe Overview page, click on the configure button and set the visibility to what is needed. (picture here)
 
-## Agent duplication
+## Agent duplication
 
 An agent can be easily duplicated, and any user can duplicate an agent to whom he has access.
 Duplicating an agent creates another agent with exactly the same functionnality of the duplicated agent.
 This newly created agent belongs to the user that requested the duplication and his name is the same as the original one, followed by [copy].
 
-To do so, go in the ***Overview*** page of the agent and click on the ***Duplicate*** button. <picture here>
+To do so, go in the ***Overview*** page of the agent and click on the ***Duplicate*** button. (picture here)
 
-## Set as favorite
+## Set as favorite
 
 An user can set one or more agents as favorite.
 The user can set as favorite each agent to whom he sas access in read or edition.
-This will allow him to find them easily in the Agents list page, by filterinf on ***Favorite*** <picture here>
+This will allow him to find them easily in the Agents list page, by filterinf on ***Favorite*** (picture here)
 
-To do so, go in the ***Overview*** page of the agent and click on the ***Favorite*** button. <picture here>
+To do so, go in the ***Overview*** page of the agent and click on the ***Favorite*** button. (picture here)
 
-## Configure
+## Configure
 
-Only the agent's owner can configure it
+Only the users having edition access on the agent can configure it
+
 There are 2 ways to access to the configuration page of an agent :
-- In the Overview tab, click on ***Configure*** <picture here>
-- In the Agents list, filter on the agent in order to display it, click on the 3 dots in the bottom right corner of the agent's tile and click on ***Configure*** <picture here>
+
+- In the Overview tab, click on ***Configure*** (picture here)
+
+- In the Agents list, filter on the agent in order to display it, click on the 3 dots in the bottom right corner of the agent's tile and click on ***Configure*** (picture here)
 
 The agent configuration page allows to setup a set parameters on the agents :
-<picture here>
+(picture here)
 
 - The API token
+
 The api token is the token used as an authentication for using the agent through the API. The api use is described in the *api* documentation (link here)
 
 - The name of the Agent
@@ -206,45 +251,76 @@ The background is the picture displayed as a tile in the agents list, which is t
 
 # Interpretation
 
-## languages
+## languages
 
 
 # Expression
 
 # Alias
+
 # Entities lists
+
 # Entity
 
 
 # Keep order
+
 # List
+
 # Regex
+
 # Languages
+
 # Solution
+
 ## Auto solution
+
 ## Javascript editor
+
 ## Moment.js
+
 ## Solution variables
-    - raw_text
-    - request_raw_text
-    - start_position
-    - end_position
+
+- raw_text
+
+- request_raw_text
+
+- start_position
+
+- end_position
+
 # Dependency
+
 # Updating an agent
+
 ## Moving interpretation/entities list to another agent
+
 ## Transfer ownership
+
 # Test an agent
-## Execution tab
+
+## Execution tab
+
 ## Automated tests
+
 # Select agents (agent's playground)
+
 # Tips and tricks
+
 ## Navigate in an agent
+
 ## Drag & drop interpretation from private to public or vice versa
+
 ## Add languages from interpretations or agent's configuration
+
 ## Used by
+
 ## Verbose
+
 ## Now
+
 ## Customizing agent's picture
+
 ## Customizing user profile
 
 
