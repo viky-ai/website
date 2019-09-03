@@ -666,18 +666,55 @@ Those rights can be removed afterwards (see the ***[Agent sharing](#agent-sharin
 
 # Viky.ai answer <a id="viky_answer"></a>
 
+The viky.ai api is a REST api, the answer is a JSON.
+The api use is described in the ***[api](https://viky-beta.viky.ai/doc/api/agents/)*** documentation
+The answer is an hash containing an element tagged ***interpretations***, and a valut that is an array of interpretations.
+See the ***[Interpretations](#viky_answer-interpretations)*** chapter below for more details.
+
 ## Interpretations <a id="viky_answer-interpretations"></a>
 
+In the answer, an interpretation is the result of the understanding of a sentence by a viky.ai agent.
+As a sentence can be understood in several ways, there can be several interpretations for a same sentence.
+These interpretations are presented in an array, and are ordered by relevance, thanks to a score (see the ***[Score](#viky_answer-score)*** chapter below for more details)
+
+The interpretation is also composed of
+
+- the package, which is an UUID representative of the agent,
+- the ID which is an UUID of the agent's interpretation that matched,
+- the slug, which is a unique name url compliant to define the agent's interpretation that matched,
+- the start_position is the position of the first character matched by the agent's interpretation
+- the end_position is the position of the last character matched by the agent's interpretation
+- the solution is the way that the sentence has been understood by the agent. see the **[Solution](#solution)*** chapter for more details
 
 ## Score <a id="viky_answer-score"></a>
 
+The score is a value between 0 and 1, representing the relevancy of the interpretation, 1 being an exact match and 0 being a "no match".
+The score is decomposed in several sub-scores. these scores can be seen by activating the verbose mode (see the ***[Verbose](#tips_trick-verbose)*** chapter for more details)
 
+The different sub-scores are :
+- The coverage score, which is the ratio between the number of matched words and the total number of words in the sentence
+- The locale score, which is set to 1 if the detected language matches the given language for the query, 0.1 if not. if the language is auto detected, this score is always 1. If several languages are detected in the sentence, the locale score is the average value of the local scores for each matched word
+- The spelling score is 1 if no spellchecking has been performed, and is degraded if some spellchacking has been performed. The degrading rule is very complex and depends on the number of letter of the word to be corrected, the number of letters updated, the nature of the change (missing letter, adding letter, double letter, etc...). The most important the correction is, the lowest the score will be.
+- The overlap score : this score is not used anymore and is always set to 1 as no overlapping is allowed in viky.ai
+- The any score is degraded when a match with an any statement is performed (see the ***[any](#alias-any)*** chapter for more details on the any alias). The score is degraded by 20% any time a match on an any statement is performed.
+- The tcx score is the context score. It is not used and is always set to 1
+- The scope score is degraded when the matched interpretation does not belong to the requested agent but to a dependency of this agent. This can not be the case and this score is always set to 1
+
+(picture here)
 
 # Test an agent <a id="tests"></a>
+
+
 
 ## Execution tab <a id="tests-execution_tab"></a>
 
 ## Automated tests <a id="tests-automated"></a>
+
+### add a test
+
+### remove a test
+
+### update a test
 
 ## Use the API <a id="tests_API"></a>
 
@@ -693,7 +730,7 @@ Those rights can be removed afterwards (see the ***[Agent sharing](#agent-sharin
 
 ## Used by <a id="tips_tricks-used_by"></a>
 
-## Verbose <a id="tips_trick-verboses"></a>
+## Verbose <a id="tips_trick-verbose"></a>
 
 ## Now <a id="tips_tricks-now"></a>
 
