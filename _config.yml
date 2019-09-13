@@ -12,6 +12,9 @@ pagination:
   sort_field: 'date'
   sort_reverse: true
 
+features:
+  user_registration_disabled: false
+
 excerpt_separator: <!--keep reading-->
 
 permalink: /blog/:year/:month/:day/:title
