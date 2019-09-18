@@ -1,7 +1,7 @@
 ########################################################
 ### BUILD WEBSITE
 ########################################################
-FROM ruby:2.4 AS build_docs
+FROM ruby:2.6-slim-buster AS build_docs
 
 ENV JEKYLL_ENV=production
 
