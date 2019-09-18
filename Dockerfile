@@ -7,6 +7,9 @@ ENV JEKYLL_ENV=production
 
 WORKDIR /
 
+# Get correct bundler version
+RUN gem install bundler -v 2.0.2
+
 # Firstly bundle install (faster build)
 RUN mkdir -p /src/
 COPY Gemfile /src/
