@@ -295,7 +295,7 @@ Clicking on an interpretation opend the interpretation detail (see the sub-chapt
 ## Visibility <a id="interpretation-visibility"></a>
 
 An interpretation can be either public or private (picture here)
-A private interpretation is used as an internal mechanics, in order to obtain the good result, ans can't be seen in the agent's returned solution or in other agents, even if the urrent agent is shared or public.
+A private interpretation is used as an internal mechanics, in order to obtain the good result, and can't be seen in the agent's returned solution or in other agents, even if the urrent agent is shared or public.
 A public interpretation can be retrieved as a result or used as an alias in another agen't interpretation if the other agent has reading rights on this agent.
 (more details about the alias are given in the ***[Alias](#alias)*** chapter)
 The interpretation's visibility is set at the interpretation's creation (see the sub-chapter ***[Creating an interpretation](#interpretation-create)***), and can be updated by opening the interpretation configuration
@@ -704,19 +704,40 @@ The different sub-scores are :
 
 # Test an agent <a id="tests"></a>
 
-
+There are several ways to test an agent.
+The easyest way is to use the execution tab, while developping the agent. See the ***[Execution tab](#tests-execution_tab)*** chapter for more details.
+Automated rests can also be set up, in order to have some non-regression tests. See the ***[Automated tests](#tests-automated)*** chapter for more details.
+The agent can be tested or used through the api. To use the api, check the ***(API)[https://viky-beta.viky.ai/doc/api/agents/]*** documentation.
 
 ## Execution tab <a id="tests-execution_tab"></a>
 
+The execution tab is on the right part of the screen when developping an agent
+(screenshot here)
+This is a very simple way to test an agent. Just enter a sentence in the text field and click on the arrow to run the agent on this sentence.
+The answer's solution is displayed below and the score is displayed on the left
+(screenshot here)
+
+Several options are available :
+- The language : it allows to select the language in which the sentence will be understood. By default this language is in auto detection
+- The spellchecking level : it allows to perform spellchecking with different level : **Inactive**, **Low**, **Medium** and **High**. The highest the spellchecking will be, the more the sentence will match, but the less the match will be accurate.
+- The verbose mode : it allows to have some debug information in order to understand how the match is performed (see the ***[Verbose](#tips_trick-verbose)*** chapter for more details)
+- Now : It allows to set the current date and time as desired (see the ***[Now](#tips_tricks-now)*** chapter for more details)
+(screenshot here)
+
+There is also a possibility to add an automated test on the current test.
+(screenshot here)
+See the chapter below for more details
+
 ## Automated tests <a id="tests-automated"></a>
+
+Automated tests are used for non regression. It is very useful to detect the impact of a change on a generic agent used by several other agents.
+
 
 ### add a test
 
 ### remove a test
 
 ### update a test
-
-## Use the API <a id="tests_API"></a>
 
 # Select agents (agent's playground) <a id="playground"></a>
 
