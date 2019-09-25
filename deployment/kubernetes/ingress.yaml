@@ -1,0 +1,12 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: viky-doc-ingress
+spec:
+  rules:
+  - host: viky-beta-doc-kube.viky.ai
+    http:
+      paths:
+      - backend:
+          serviceName: viky-doc-service
+          servicePort: 80

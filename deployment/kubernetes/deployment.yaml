@@ -12,8 +12,8 @@ spec:
       labels:
         app.kubernetes.io/name: "viky-doc"
     spec:
-      imagePullSecrets: 
-        - name: "pertimm-registry"
+      imagePullSecrets:
+        - name: "gitlab-registry"
       containers:
         - name: "viky-doc"
           image: "$DOC_IMAGE"
