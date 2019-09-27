@@ -88,12 +88,10 @@ Let us test some other expressions with building information, floor numbers, etc
 
 ![successful_tests](img/list/other_tests_additional_info.png "Successful recognition of other sentences") 
 
-Your agent can now recognize the additional information in an address.
-
+Your agent can now recognize addresses with multiple additional information.
 
 
 ## Any
-
 
 ## Keep order
 
@@ -101,7 +99,18 @@ Your agent can now recognize the additional information in an address.
 
 ## Case sensitive/Accent sensitive
 
-## Duplicate agent
+## Duplicate an agent
+
+There are many public agents in viky.ai. These agents can be explored and tested by everyone in the platform. What if you find an agent that you would like to work with but you do not have the required access rights to it? Yes, you can create your own that has the same structure and behave the same. But it would be very tedious to do so for a complex agent.
+
+Viky.ai allows you to duplicate any agent that is visible to you. When you view an agent, you can find a `Duplicate` button at the top.
+
+![duplicate_button](img/duplicate/duplicate_button.png "Duplicate button")
+
+Click on the `Duplicate` button. Voila!, you have your very own agent that behaves exactly the same with just a click of a button. You can now edit and change the agent as per your requirements.
+
+![duplicated_agent](img/duplicate/duplicated_agent.png "You have your very own Hello agent")
+
 
 ## Drag and drop
 
