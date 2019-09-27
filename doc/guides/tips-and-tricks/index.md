@@ -60,7 +60,7 @@ Let us first create a few components that will recognize the additional informat
 <span class="tag tag--primary">Step 2</span> Create a private interpretation `supplementary_address` to recognize the additional information in an address. Add the following expressions in the interpretation:
 * Add "Apt 1" as your first expression. 
   * Highlight "Apt" and create an alias to the `building_components` entities list you created earlier.
-  * Highlight "1" and create an alias to `Regex` type. Enter "[A-Za-z0-9]+" in the text box for regular expression.
+  * Highlight "1" and create an alias to `Regex` type. Enter "[A-Za-z0-9\S]+" in the text box for regular expression.
 
 ![first supplementary_address expressions](img/list/supplementary_address_1.png "First expression for supplementary address")
 
@@ -103,7 +103,7 @@ Your agent can now recognize addresses with multiple additional information.
 
 There are many public agents in viky.ai. These agents can be explored and tested by everyone in the platform. What if you find an agent that you would like to work with but you do not have the required access rights to it? Yes, you can create your own that has the same structure and behave the same. But it would be very tedious to do so for a complex agent.
 
-Viky.ai allows you to duplicate any agent that is visible to you. When you view an agent, you can find a `Duplicate` button at the top.
+Viky.ai allows you to duplicate any agent that is visible to you. When you view an agent, you can find a `Duplicate` button at the top of the `Overview` tab.
 
 ![duplicate_button](img/duplicate/duplicate_button.png "Duplicate button")
 
@@ -111,7 +111,7 @@ Click on the `Duplicate` button. Voila!, you have your very own agent that behav
 
 ![duplicated_agent](img/duplicate/duplicated_agent.png "You have your very own Hello agent")
 
+## Drag and drop/ Move to
 
-## Drag and drop
 
 ## Now in tests
