@@ -77,6 +77,10 @@ The viky.ai API uses the following error codes:
       <td><code>500</code></td>
       <td>Internal Server Error: We had a problem with our server. Try again later.</td>
     </tr>
+    <tr>
+      <td><code>503</code></td>
+      <td>Service Unavailable: We had a problem with our NLP server. Try again later.</td>
+    </tr>
   </tbody>
 </table>
 
