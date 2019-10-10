@@ -22,6 +22,13 @@
     <a href="/blog/" {% if page.categories.first == 'blog' or page.dir == '/blog/' %}class="current"{% endif %}>
       Blog
     </a>
-    <span class="login"><a href="/users/sign_in">Login &rarr;</a></span>
+    <div class="login">
+      {% if site.features.user_registration_disabled %}
+        <a href="/users/sign_in">Log in</a>
+      {% else %}
+        <a href="/users/sign_up">Sign up</a>
+        <a href="/users/sign_in">Log in</a>
+      {% endif %}
+    </div>
   </div>
 </div>
