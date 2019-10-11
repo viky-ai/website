@@ -1,11 +1,14 @@
 ########################################################
 ### BUILD WEBSITE
 ########################################################
-FROM ruby:2.4 AS build_docs
+FROM ruby:2.6-buster AS build_docs
 
 ENV JEKYLL_ENV=production
 
 WORKDIR /
+
+# Get correct bundler version
+RUN gem install bundler -v 2.0.2
 
 # Firstly bundle install (faster build)
 RUN mkdir -p /src/
