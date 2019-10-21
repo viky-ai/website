@@ -10,9 +10,9 @@ This section will show you some tips and tricks in the platform.
 
 ## Recognizing a pattern
 
-Sentences can most often times contain phrases that follow a certain pattern. Agents in viky.ai can be easily configured to understand such patterns. 
+Sentences can most often times contain phrases that follow a certain pattern. Agents in viky.ai can be easily configured to understand such patterns.
 
-Let us again take the `Address Tutorial` agent that we created in the [Getting started](/doc/guides/getting-started/) section. 
+Let us again take the `Address Tutorial` agent that we created in the [Getting started](/doc/guides/getting-started/) section.
 
 In our expression for the **address** interpretation, we had created an alias to `viky/numbers/interpretations/number` for the postal code. However, if we check the French postal code system, they are always of 5 digits. But, our agent recognizes any length of number as postal code. Let us correct that.
 
@@ -34,7 +34,7 @@ Highlight "**75019**". This time select `Regex` from the list. You will be promp
 
 ![Enter regular expression](img/regex/add_regex.png "Enter a regular expression for postal code")
 
-Now your agent recognizes the postal code correctly. 
+Now your agent recognizes the postal code correctly.
 
 You can similarly make your agents recognize patterns such as telephone numbers, emails and so on using `Regex`.
 
@@ -58,7 +58,7 @@ Let us first create a few components that will recognize the additional informat
 ![building_components entities list](img/list/building_components.png "Entities list for the building components")
 
 <span class="tag tag--primary">Step 2</span> Create a private interpretation `supplementary_address` to recognize the additional information in an address. Add the following expressions in the interpretation:
-* Add "Apt 1" as your first expression. 
+* Add "Apt 1" as your first expression.
   * Highlight "Apt" and create an alias to the `building_components` entities list you created earlier.
   * Highlight "1" and create an alias to `Regex` type. Enter "[A-Za-z0-9\S]+" in the text box for regular expression.
 
@@ -73,7 +73,7 @@ Let us first create a few components that will recognize the additional informat
 Now that we have an interpretation to recognize the additional information in an address, let us create an expression for addresses with additional information.
 
 Add an expression "Apt 2 12 avenue de Flandres 75019 Paris" in the **address** interpretation. Create highlights as follows:
-1. Highlight "Apt 2" and create an alias to the `supplementary_address` interpretation you created in the previous step. Select the option `List`. 
+1. Highlight "Apt 2" and create an alias to the `supplementary_address` interpretation you created in the previous step. Select the option `List`.
 2. Highlight other part of the address like before.
 
 ![address expression with additional info](img/list/additional_info_address.png "Expression with additional address information")
@@ -82,16 +82,56 @@ Test the expression "Apt 2 12 avenue de Flandres 75019 Paris" in the console.
 
 ![test_expression](img/list/test_expression.png "Test your new expression")
 
-You can see that the solution for the additional information is structured in an array. The `List` option that you selected for alias to the `supplementary_address` interpretation tells the NLP that it can contain more than one number of such interpretation. That is why the solution is structured in an array. 
+You can see that the solution for the additional information is structured in an array. The `List` option that you selected for alias to the `supplementary_address` interpretation tells the NLP that it can contain more than one number of such interpretation. That is why the solution is structured in an array.
 
-Let us test some other expressions with building information, floor numbers, etc. 
+Let us test some other expressions with building information, floor numbers, etc.
 
-![successful_tests](img/list/other_tests_additional_info.png "Successful recognition of other sentences") 
+![successful_tests](img/list/other_tests_additional_info.png "Successful recognition of other sentences")
 
 Your agent can now recognize addresses with multiple additional information.
 
 
 ## Any
+
+In some cases, it can be very interesting to match a word that is not known from the system thanks to the sentense structure around.
+For example, in the sentence "I want to go to Cucuron for next summer"
+Actually, Cururon is a small french town but very few people know it and your agent may not know it. But it can be recognized thanks to the sentence structure, knowing that what's following the words "I vant to go to" must be a place.
+To do so, the word to be understood has to be annotated as "any"
+
+### Basic Example
+
+Let's create an agent **test_any**
+Let's create in this agent a private entities list named **cities** containing only 3 french cities : **Paris**, **Lyon** and **Marseille**
+Let's create in this agent a private entities list named **want_go** containing only 1 sentence : "I want to go to"
+Let's create a public interpretation named **destination**organized as below
+
+![Any not set](img/list/any_not_set.png "Interpretation without any")
+
+If, in the console, the sentence "I want to go to Paris" is typed, the returned city is "Paris"
+If, in the console, the sentence "I want to go to Cucuron" is typed, the sentence is not recognized
+
+![Word not recognized](img/list/cucuron_not_recognized.png "The unknown word is not recognized by the agent")
+
+To be able to recognize this unknown town, simply set the **any** statement on, as below
+
+![Any set](img/list/any_set.png "Interpretation with any")
+
+Then, you can retry the sentence "I want to go to Cucuron", the sentence is correctly recognized.
+
+![Word recognized](img/list/cucuron_recognized.png "The unknown word is recognized by the agent")
+
+
+### Restrictions
+
+The use of the **any** annotation is very powerful, but it can also be dangerous because it can create false positive matches.
+To avoid this, 2 controls have been integrated in viky.ai
+
+The first one : an any annotation cannot be added when no other annotation is set in the formulation
+
+![Any not available](img/list/any_not_available.png "Any not available when no other annotation is made")
+
+The second one : Only 3 any can be taken into account for a sentence matching. With more than 3 any, the match will be considered as random, as it will introduce too much noise.
+
 
 ## Keep order
 
