@@ -105,20 +105,20 @@ Let's create in this agent a private entities list named **cities** containing o
 Let's create in this agent a private entities list named **want_go** containing only 1 sentence : "I want to go to"
 Let's create a public interpretation named **destination**organized as below
 
-![Any not set](img/list/any_not_set.png "Interpretation without any")
+![Any not set](img/any/any_not_set.png "Interpretation without any")
 
 If, in the console, the sentence "I want to go to Paris" is typed, the returned city is "Paris"
 If, in the console, the sentence "I want to go to Cucuron" is typed, the sentence is not recognized
 
-![Word not recognized](img/list/cucuron_not_recognized.png "The unknown word is not recognized by the agent")
+![Word not recognized](img/any/cucuron_not_recognized.png "The unknown word is not recognized by the agent")
 
-To be able to recognize this unknown town, simply set the **any** statement on, as below
+To be able to recognize this unknown town, simply set the **any** annotation on, as below
 
-![Any set](img/list/any_set.png "Interpretation with any")
+![Any set](img/any/any_set.png "Interpretation with any")
 
 Then, you can retry the sentence "I want to go to Cucuron", the sentence is correctly recognized.
 
-![Word recognized](img/list/cucuron_recognized.png "The unknown word is recognized by the agent")
+![Word recognized](img/any/cucuron_recognized.png "The unknown word is recognized by the agent")
 
 
 ### Restrictions
@@ -128,12 +128,43 @@ To avoid this, 2 controls have been integrated in viky.ai
 
 The first one : an any annotation cannot be added when no other annotation is set in the formulation
 
-![Any not available](img/list/any_not_available.png "Any not available when no other annotation is made")
+![Any not available](img/any/any_not_available.png "Any not available when no other annotation is made")
 
 The second one : Only 3 any can be taken into account for a sentence matching. With more than 3 any, the match will be considered as random, as it will introduce too much noise.
 
 
 ## Keep order
+
+It is possible to match an expression by respecting the order or not.
+This can be interesting when the structure of the sentence is important, to match precisely, or, on the opposite, to have a very flexible match.
+
+For example, for the numbers, the order is very important : hundred two is very different from two hundred, and in this case, the order must be kept.
+On the opposite, when registering a reservation, the options can be given in an undefined order : "I want an hotel with a spa for christmas" is the very same thing as "I want an hotel for christmas with a spa"
+
+This can be handled with the **keep order** annotation
+This annotation has to be set by formulation and is covering a whole formulation
+
+example :
+
+Let's create an agent names **test keep order**
+add a public interpretation called **new-york**
+In this interpretation, create a formulation for **new york**
+By default this formulation has the **keep order** annotation activated
+
+![keep order set](img/keep_order/basic.png "Interpretation with keep order")
+
+If, in the console, you enter **new york**, it will match, but if you enter **york new** it will not
+
+![order not matched](img/keep_order/york_new_no_match.png "Interpretation with any")
+
+To accept it, uncheck the **keep order** annotation in the formulation
+
+![Any set](img/keep_order/without_keep_order.png "Interpretation with any")
+
+then retry the sentence, it works
+
+![Any set](img/keep_order/york_new_match.png "Interpretation with any")
+
 
 ## Proximity
 
