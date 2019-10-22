@@ -130,7 +130,7 @@ The first one : an any annotation cannot be added when no other annotation is se
 
 ![Any not available](img/any/any_not_available.png "Any not available when no other annotation is made")
 
-The second one : Only 3 any can be taken into account for a sentence matching. With more than 3 any, the match will be considered as random, as it will introduce too much noise.
+The second one : Only 2 any can be taken into account for a sentence matching. With more than 2 any, the match will be considered as random, as it will introduce too much noise.
 
 
 ## Keep order
@@ -167,6 +167,42 @@ then retry the sentence, it works
 
 
 ## Proximity
+
+It can be very convenient to accept a few extra words in a formulation, as it can be very powerful to be very strict on the definition of what is accepted or not
+
+For example : the sentences "I want cofee", "I want **a** cofee" and "I want **some** cofee" are exactly the same whereas no word must be accepted between "new" and "york" in the name of the "new york" city.
+
+To illustrate it, let's create an agent named **test proximity**
+create a public interpretation named **want_cofee**
+in this interpretation, create a formulation containing "I want cofee"
+
+By default, the proximity is set to **close**
+
+![Proximity default value](img/proximity/proximity_close.png "Proximity default value")
+
+the possible values are :
+* **glued**: no ewtra word is allowed
+* **glued + punc**: only punctuation is allowed between 2 consecutive matched words
+* **very close**: approximatively 1 word (8 letters) is allowed between 2 consecutive matched words
+* **close**: approximatively 3 words (20 letters) are allowed between 2 consecutive matched words
+* **far**: approximatively 8 words (50 letters) are allowed between 2 consecutive matched words
+
+![Proximity possible values](img/proximity/proximity_values.png "Proximity possible values")
+
+set the value to **glued**
+
+in the console, type the sentence "I want cofee", it matches
+
+![Match on glued](img/proximity/want_cofee.png "The agent matches on glued formulation")
+
+but the sentence "I want a cofee" does not match
+
+![No match on glued](img/proximity/want_a_cofee_no_match.png "The agent does not match on glued formulation")
+
+If the proximity is set to **very close**, "I want a cofee" will match, but "I want some good cofee" will not
+and if the proximity is set to **close**, "I want some good cofee" will match too
+
+
 
 ## Case sensitive/Accent sensitive
 
