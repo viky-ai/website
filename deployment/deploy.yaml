@@ -1,0 +1,53 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: "viky-doc"
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: "viky-doc"
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: "viky-doc"
+    spec:
+      imagePullSecrets:
+        - name: "gitlab-registry"
+      containers:
+        - name: "viky-doc"
+          image: "${DOCKER_IMAGE_DOC}"
+          imagePullPolicy: "Always"
+          tty: true
+          ports:
+            - containerPort: 80
+              protocol: TCP
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: "viky-doc-service"
+spec:
+  selector:
+    app.kubernetes.io/name: "viky-doc"
+  ports:
+    - port: 80
+      protocol: TCP
+      targetPort: 80
+  sessionAffinity: None
+  type: ClusterIP
+
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: viky-doc-ingress
+spec:
+  rules:
+  - host: "${DOC_URL}"
+    http:
+      paths:
+      - backend:
+          serviceName: viky-doc-service
+          servicePort: 80
