@@ -41,13 +41,13 @@ deploy:
   stage: deploy
   environment:
     name: ${CI_COMMIT_REF_NAME}
-    url: https://viky-dev-${CI_COMMIT_REF_SLUG}-kube.viky.ai
+    url: https://viky-dev-doc-${CI_COMMIT_REF_SLUG}-kube.viky.ai
     on_stop: delete_env
   script:
     # update image fo the doc
     - kube_setup
     - cd deployment
-    - export DOC_DOMAIN="viky-dev-${CI_COMMIT_REF_SLUG}-kube.viky.ai"
+    - export DOC_DOMAIN="viky-dev-doc-${CI_COMMIT_REF_SLUG}-kube.viky.ai"
     - envsubst < deploy.yaml | kubectl apply -f -
 
 # Remove
@@ -56,7 +56,6 @@ delete_env:
   stage: admin
   environment:
     name: ${CI_COMMIT_REF_NAME}
-    url: https://${CI_ENVIRONMENT_SLUG}-platform-dev.viky.ai
     action: stop
   script:
     - kube_setup
