@@ -45,7 +45,7 @@ metadata:
   name: viky-doc-ingress
 spec:
   rules:
-  - host: "${DOC_URL}"
+  - host: "${DOC_DOMAIN}"
     http:
       paths:
       - backend:

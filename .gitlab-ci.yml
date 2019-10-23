@@ -46,7 +46,7 @@ deploy:
     # update image fo the doc
     - kube_setup
     - cd deployment
-    - export DOC_URL=${CI_ENVIRONMENT_URL}
+    - export DOC_DOMAIN="viky-dev-${CI_COMMIT_REF_SLUG}-kube.viky.ai"
     - envsubst < deploy.yaml | kubectl apply -f -
 
 # Remove
