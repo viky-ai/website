@@ -28,6 +28,7 @@ build_doc:
 
 # Tag docker image to latest
 tag_doc:
+  extends: .kubernetes_runner
   stage: docker_tag
   only:
     - master
