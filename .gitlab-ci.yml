@@ -4,125 +4,62 @@ stages:
   - deploy
   - admin
 
+  # generic setup
+image: vikyai/tools-gitlab-auto-deploy-image:latest
+before_script:
+  # load auto-deploy if exits (not in test)
+  - if [ -f /auto-deploy.sh ]; then . /auto-deploy.sh ; fi
+
 variables:
-  GIT_SUBMODULE_STRATEGY: recursive
-  DOCKER_DRIVER: overlay
-  DOCKER_IMAGE: $CI_REGISTRY_IMAGE
-  TILLER_NAMESPACE: ${KUBE_NAMESPACE}
-  HELM_HOST: "localhost:44134"
+  DOCKER_IMAGE_DOC: ${CI_REGISTRY_IMAGE}
+
+.kubernetes_runner:
+  tags:
+    - kubernetes
+  variables:
+    CI_SERVICE_HOST: "127.0.0.1"
 
 # Build docker image
 build_doc:
+  extends: .kubernetes_runner
   stage: build
-  image: docker:dind
   script:
-    - echo "${CI_REGISTRY_PASSWORD}" | docker login --username "${CI_REGISTRY_USER}" --password-stdin $CI_REGISTRY
-    - docker build --pull -t ${DOCKER_IMAGE}:${CI_COMMIT_REF_SLUG} .
-    - docker push ${DOCKER_IMAGE}:${CI_COMMIT_REF_SLUG}
-    - cd "$CI_PROJECT_DIR"
-    - echo "$(docker inspect --format='{{index .RepoDigests 0}}' ${DOCKER_IMAGE}:${CI_COMMIT_REF_SLUG})" > "docker-image-sha256"
-  artifacts:
-    paths:
-      - "docker-image-sha256"
+    - docker_build ${DOCKER_IMAGE_DOC} .
 
-# Tag docker image to lasted
-tag_demo:
+# Tag docker image to latest
+tag_doc:
   stage: docker_tag
-  image: docker:dind
   only:
     - master
   script:
-    - echo "${CI_REGISTRY_PASSWORD}" | docker login --username "${CI_REGISTRY_USER}" --password-stdin $CI_REGISTRY
-    - docker pull ${DOCKER_IMAGE}:${CI_COMMIT_REF_SLUG}
-    - docker tag ${DOCKER_IMAGE}:${CI_COMMIT_REF_SLUG} ${DOCKER_IMAGE}:latest
-    - docker push ${DOCKER_IMAGE}:latest
+    - docker_tag_latest ${DOCKER_IMAGE_DOC}
 
-# Deploy any branches on rancher dev
-deploy_dev:
+# Deploy
+deploy:
+  extends: .kubernetes_runner
   stage: deploy
-  except:
-    - master
-    - tags
-  image: docker-registry.pertimm.net/tools/docker-rancher-cli:latest
-  dependencies:
-    - build_doc
   environment:
     name: ${CI_COMMIT_REF_NAME}
-    url: https://doc-${CI_ENVIRONMENT_SLUG}-platform-dev.viky.ai
+    url: https://viky-dev-${CI_COMMIT_REF_SLUG}-kube.viky.ai
     on_stop: delete_env
-  variables:
-    DEPLOY_RANCHER_STACK: doc-${CI_ENVIRONMENT_SLUG}-platform-dev
-    DOCKER_IMAGE_TAG: ${CI_COMMIT_REF_SLUG}
   script:
-    - echo "Deploy ${DEPLOY_RANCHER_STACK} on ${RANCHER_URL}/dev ( ${CI_ENVIRONMENT_URL} )"
-    - cd deployment/rancher
-    - rancher --debug --environment dev up --stack ${DEPLOY_RANCHER_STACK} --file docker-compose.yml --file docker-compose-rancher.yml -d --batch-size 3 --pull --force-upgrade --confirm-upgrade --prune
+    # update image fo the doc
+    - kube_setup
+    - cd deployment
+    - export DOC_DOMAIN="viky-dev-${CI_COMMIT_REF_SLUG}-kube.viky.ai"
+    - envsubst < deploy.yaml | kubectl apply -f -
 
-# Deploy master on rancher preprod
-deploy_preprod:
-  stage: deploy
-  only:
-    - master
-  except:
-    - tags
-  image: docker-registry.pertimm.net/tools/docker-rancher-cli:latest
-  dependencies:
-    - build_doc
-  environment:
-    name: viky-beta-doc
-    url: https://viky-beta-doc.viky.ai
-  variables:
-    DEPLOY_RANCHER_STACK: viky-beta-doc
-    DOCKER_IMAGE_TAG: ${CI_COMMIT_REF_SLUG}
-  script:
-    - echo "Deploy ${DEPLOY_RANCHER_STACK} on ${RANCHER_URL}/preprod ( ${CI_ENVIRONMENT_URL} )"
-    - cd deployment/rancher
-    - rancher --debug --environment preprod up --stack ${DEPLOY_RANCHER_STACK} --file docker-compose.yml --file docker-compose-rancher.yml -d --batch-size 3 --pull --force-upgrade --confirm-upgrade --prune
-
-# Deploy master on kubernetes preprod
-deploy_preprod_k8s:
-  tags:
-    - kubernetes
-  stage: deploy
-  only:
-    - master
-  except:
-    - tags
-  image: "registry.gitlab.com/gitlab-org/cluster-integration/auto-deploy-image:v0.1.0"
-  dependencies:
-    - build_doc
-  environment:
-    name: viky-beta-doc-kube
-    url: https://viky-beta-doc-kube.viky.ai
-  before_script:
-    - apk add --update gettext libintl
-    # Load the docker image with the sha256 id to an Env variable then use it to edit the deployment.yaml
-    - export DOC_IMAGE=$(head -n 1 docker-image-sha256)
-    - auto-deploy ensure_namespace
-    - auto-deploy create_secret
-  script:
-    # Deploy Doc to Viky Namespace"
-    - cd deployment/kubernetes
-    - envsubst < deployment.yaml | kubectl apply --namespace "${KUBE_NAMESPACE}" -f -
-    - kubectl apply -f service.yaml --namespace "${KUBE_NAMESPACE}"
-    - kubectl apply -f ingress.yaml --namespace "${KUBE_NAMESPACE}"
-
-# remove environment
+# Remove
 delete_env:
+  extends: .kubernetes_runner
   stage: admin
-  except:
-    - master
-    - tags
-  image: docker-registry.pertimm.net/tools/docker-rancher-cli:latest
   environment:
     name: ${CI_COMMIT_REF_NAME}
     url: https://${CI_ENVIRONMENT_SLUG}-platform-dev.viky.ai
     action: stop
-  variables:
-    DEPLOY_RANCHER_STACK: doc-${CI_ENVIRONMENT_SLUG}-platform-dev
-    DOCKER_IMAGE_TAG: ${CI_COMMIT_REF_SLUG}
   script:
-    - echo "Remove ${DEPLOY_RANCHER_STACK} on ${RANCHER_URL}/dev ( ${CI_ENVIRONMENT_URL} )"
-    - rancher --debug --environment dev rm --stop --type stack ${DEPLOY_RANCHER_STACK}
+    - kube_setup
+    - kubectl get all
+    - kube_cleanup
   when: manual
   allow_failure: true
