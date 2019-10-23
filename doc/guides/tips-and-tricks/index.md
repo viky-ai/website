@@ -144,10 +144,10 @@ On the opposite, when registering a reservation, the options can be given in an 
 This can be handled with the **keep order** annotation
 This annotation has to be set by formulation and is covering a whole formulation
 
-example :
+Example :
 
 Let's create an agent names **test keep order**
-add a public interpretation called **new-york**
+Add a public interpretation called **new-york**
 In this interpretation, create a formulation for **new york**
 By default this formulation has the **keep order** annotation activated
 
@@ -161,7 +161,7 @@ To accept it, uncheck the **keep order** annotation in the formulation
 
 ![Any set](img/keep_order/without_keep_order.png "Interpretation with any")
 
-then retry the sentence, it works
+Then retry the sentence, it works
 
 ![Any set](img/keep_order/york_new_match.png "Interpretation with any")
 
@@ -173,8 +173,8 @@ It can be very convenient to accept a few extra words in a formulation, as it ca
 For example : the sentences "I want cofee", "I want **a** cofee" and "I want **some** cofee" are exactly the same whereas no word must be accepted between "new" and "york" in the name of the "new york" city.
 
 To illustrate it, let's create an agent named **test proximity**
-create a public interpretation named **want_cofee**
-in this interpretation, create a formulation containing "I want cofee"
+Create a public interpretation named **want_cofee**
+In this interpretation, create a formulation containing "I want cofee"
 
 By default, the proximity is set to **close**
 
@@ -189,22 +189,30 @@ the possible values are :
 
 ![Proximity possible values](img/proximity/proximity_values.png "Proximity possible values")
 
-set the value to **glued**
+Set the value to **glued**
 
-in the console, type the sentence "I want cofee", it matches
+In the console, type the sentence "I want cofee", it matches
 
 ![Match on glued](img/proximity/want_cofee.png "The agent matches on glued formulation")
 
-but the sentence "I want a cofee" does not match
+But the sentence "I want a cofee" does not match
 
 ![No match on glued](img/proximity/want_a_cofee_no_match.png "The agent does not match on glued formulation")
 
 If the proximity is set to **very close**, "I want a cofee" will match, but "I want some good cofee" will not
-and if the proximity is set to **close**, "I want some good cofee" will match too
-
+And if the proximity is set to **close**, "I want some good cofee" will match too
 
 
 ## Case sensitive/Accent sensitive
+
+When matching cities names, for example, it can be interesting to match with case and accent.
+For example, **Bar** is a town in france and **bar** is the french word for pub. Being case sensitive can make the difference between the 2 words here.
+
+This can be handled in the entities lists. each entity can be set as **Case sensitive**  or **Accent sensitive**
+
+screenshot
+
+
 
 ## Duplicate an agent
 
