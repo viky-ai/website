@@ -210,8 +210,18 @@ For example, **Bar** is a town in france and **bar** is the french word for pub.
 
 This can be handled in the entities lists. each entity can be set as **Case sensitive**  or **Accent sensitive**
 
-screenshot
+![sensitivity on entity detail](img/case_accent_sensitive/entity_detail.png "sensitivity on entity detail")
 
+When options **Case sensitive** or **Accent sensitiv** are set on, a label is displayed in front of the collapsed entity
+
+![sensitivity on entities](img/case_accent_sensitive/global_entities.png "sensitivity on entities")
+
+These options can be set on csv import
+the csv import file format is :
+
+```
+  Terms,Auto solution,Solution,Case sensitive,Accent sensitive
+```
 
 
 ## Duplicate an agent
@@ -220,13 +230,37 @@ There are many public agents in viky.ai. These agents can be explored and tested
 
 Viky.ai allows you to duplicate any agent that is visible to you. When you view an agent, you can find a `Duplicate` button at the top of the `Overview` tab.
 
-![duplicate_button](img/duplicate/duplicate_button.png "Duplicate button")
+![duplicate button](img/duplicate/duplicate_button.png "Duplicate button")
 
 Click on the `Duplicate` button. Voila!, you have your very own agent that behaves exactly the same with just a click of a button. You can now edit and change the agent as per your requirements.
 
-![duplicated_agent](img/duplicate/duplicated_agent.png "You have your very own Hello agent")
+![duplicated agent](img/duplicate/duplicated_agent.png "You have your very own Hello agent")
+
 
 ## Drag and drop/ Move to
 
+Moving an interpretation from public to private or from private to public can be done by clicking on the configuration button
+
+![Configuration button](img/drag_drop/configure_button.png "Configuration button")
+
+and setting the visibility
+
+![Configuration detail](img/drag_drop/configure_detail.png "Configuration detail")
+
+But this is quite annoying and takes time
+There is another way to do it, simply by dragging and dropping it.
+To do so, click on the dashed zone on the left part of the interpretation, then drag and drop it to the desired place
+
+![Drag and drop](img/drag_drop/drag_drop.png "Drag and drop an interpretation")
+
 
 ## Now in tests
+
+defining tests using time can be a problem : the sentence "in 2 days" will change answer every day and the test will fail.
+
+![Without now](img/now/need_now.png "Without now")
+
+A solution for it is to set the "now" to a given value in order for these result not to change anymore
+It also allows you to set the "now" to special dates in order to check special configurations (leap year, for example)
+
+![Special date use](img/now/special_date.png "Special date use")
