@@ -45,7 +45,7 @@ push_dockerhub:
   only:
     - master
   script:
-    - docker_push_gitlab_to_dockerhub "${DOCKER_IMAGE_DOC}" "vikyai/doc:latest"
+    - docker_push_gitlab_to_dockerhub "${DOCKER_IMAGE_DOC}:latest" "vikyai/doc:latest"
 
 # Deploy
 deploy:
@@ -59,6 +59,7 @@ deploy:
     # update image fo the doc
     - kube_setup
     - cd deployment
+    - export DOCKER_IMAGE_DOC=$(docker_digest_tag "${DOCKER_IMAGE_DOC}:${CI_COMMIT_REF_SLUG}")
     - export DOC_DOMAIN="viky-dev-doc-${CI_COMMIT_REF_SLUG}-kube.viky.ai"
     - envsubst < deploy.yaml | kubectl apply -f -
 
