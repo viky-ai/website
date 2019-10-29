@@ -16,7 +16,7 @@ spec:
         - name: "gitlab-registry"
       containers:
         - name: "viky-doc"
-          image: "${DOCKER_IMAGE_DOC}"
+          image: "${DOCKER_IMAGE_DOC}:${DOCKER_IMAGE_DOC_TAG}"
           imagePullPolicy: "Always"
           tty: true
           ports:

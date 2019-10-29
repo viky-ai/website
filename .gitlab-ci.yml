@@ -59,7 +59,7 @@ deploy:
     # update image fo the doc
     - kube_setup
     - cd deployment
-    - export DOCKER_IMAGE_DOC=$(docker_digest_tag "${DOCKER_IMAGE_DOC}:${CI_COMMIT_REF_SLUG}")
+    - export DOCKER_IMAGE_DOC_TAG=$(docker_digest_tag "${DOCKER_IMAGE_DOC}:${CI_COMMIT_REF_SLUG}")
     - export DOC_DOMAIN="viky-dev-doc-${CI_COMMIT_REF_SLUG}-kube.viky.ai"
     - envsubst < deploy.yaml | kubectl apply -f -
 
