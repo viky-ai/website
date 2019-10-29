@@ -1,6 +1,7 @@
 stages:
   - build
   - docker_tag
+  - push_dockerhub
   - deploy
   - admin
 
@@ -35,6 +36,17 @@ tag_doc:
   script:
     - docker_tag_latest ${DOCKER_IMAGE_DOC}
 
+# Push Docker image to Dockerhub only when on Master and it's a Tag
+push_dockerhub:
+  extends: .kubernetes_runner
+  stage: push_dockerhub
+  needs:
+    - "tag_doc"
+  only:
+    - master
+  script:
+    - docker_push_gitlab_to_dockerhub "${DOCKER_IMAGE_DOC}:latest" "vikyai/doc:latest"
+
 # Deploy
 deploy:
   extends: .kubernetes_runner
@@ -47,6 +59,7 @@ deploy:
     # update image fo the doc
     - kube_setup
     - cd deployment
+    - export DOCKER_IMAGE_DOC_TAG=$(docker_digest_tag "${DOCKER_IMAGE_DOC}:${CI_COMMIT_REF_SLUG}")
     - export DOC_DOMAIN="viky-dev-doc-${CI_COMMIT_REF_SLUG}-kube.viky.ai"
     - envsubst < deploy.yaml | kubectl apply -f -
 
