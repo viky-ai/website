@@ -91,7 +91,7 @@ Let us test some other expressions with building information, floor numbers, etc
 Your agent can now recognize addresses with multiple additional information.
 
 
-## Any
+## Manage an open entiyties list (any)
 
 In some cases, it can be very interesting to match a word that is not known from the system thanks to the sentense structure around.
 For example, in the sentence "I want to go to Cucuron for next summer"
@@ -133,7 +133,7 @@ The first one : an any annotation cannot be added when no other annotation is se
 The second one : Only 2 any can be taken into account for a sentence matching. With more than 2 any, the match will be considered as random, as it will introduce too much noise.
 
 
-## Keep order
+## Match on "New york", but not on "York New" (Keep order)
 
 It is possible to match an expression by respecting the order or not.
 This can be interesting when the structure of the sentence is important, to match precisely, or, on the opposite, to have a very flexible match.
@@ -166,7 +166,7 @@ Then retry the sentence, it works
 ![Any set](img/keep_order/york_new_match.png "Interpretation with any")
 
 
-## Proximity
+## Match on "I want cofee" and "I want a cofee" with the same interpretation (Proximity)
 
 It can be very convenient to accept a few extra words in a formulation, as it can be very powerful to be very strict on the definition of what is accepted or not
 
@@ -264,3 +264,4 @@ A solution for it is to set the "now" to a given value in order for these result
 It also allows you to set the "now" to special dates in order to check special configurations (leap year, for example)
 
 ![Special date use](img/now/special_date.png "Special date use")
+
