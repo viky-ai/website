@@ -3,7 +3,7 @@ layout: doc
 title: "Global view"
 description: "This guide will introduce you to the viky.ai platform."
 image: site_assets/img/social.jpg
-order: 4
+order: -2
 ---
 
 ## What is viky.ai?
