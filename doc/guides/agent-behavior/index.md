@@ -6,11 +6,36 @@ image: site_assets/img/social.jpg
 order: 5
 ---
 
-## Understanding how a sentence is interpreted
+viky.ai allows you to easily try how an agent behave on specific sentences to ensure it will fit your use case.
 
-The console panel allows you to test your agent by sending interpret requests. It responds with matched interpretations as well as the solution for the sentence. The console panel's functionality is not just limited to that. It allows you to explore in detail how your agent interprets each word in your requested sentence. 
+## Understanding a sentence
 
-Let us see how an agent dedicated for currencies in viky.ai interprets the sentence "100 euros". 
+When opening an agent, the console panel on the right allows you to test your agent by sending sentences to interpret. It responds with matched interpretations as well as the corresponding solution.
+
+Here you can type a sentence and apply the same options that you can find on the public API. Those options are:
+- `language`: it allows to select the language in which the sentence will be understood. By default this language is in auto detection.
+- `spellchecking`: it allows to perform spellchecking with different level such as **Inactive**, **Low**, **Medium** or **High**. The highest the spellchecking will be, the more aggressively the NLP will try to match words even if they are not spelled right.
+- `verbose mode`: it allows to have some debug information in order to understand how the match is performed by the NLP.
+- `now`: it allows to set a fixed current date and time as desired.
+
+As an example, open the agent dedicated to date and time and try the sentence "Book a table for the day after tomorrow".
+
+<aside class="note">
+  <h3>Note</h3>
+  <p>
+    This agent understand only the date part of this sentence. You could easily add it as a dependency if you want to create an agent understanding booking queries.
+  </p>
+</aside>
+
+You can see in the `Explain` tab that the agent understood the expression "the day after tomorrow" in the sentence and has respond the interpretation "datetime". We can deduce that this agent is able to find time reference in a sentence and translate them in a normalized ISO 8601 format as its interpretation's solution.
+
+In the sentence, "tomorrow" refers to the current date and time. By switching the `now` option to `manual` we can change this current time reference. If you set the `now` option to "2019-02-27T15:00:00+01:00" (_February 27, 2019_) the solution will be two days later "2019-03-01T15:00:00+01:00" (_March 1st, 2019_) but if you set it to "2020-02-27T15:00:00+01:00" (_February 27, 2020_) the solution will be also two days later "2020-02-29T15:00:00+01:00" (_February 29, 2020_) but still in February since it is a leap year.
+
+## How a sentence is interpreted
+
+The console panel's functionality is not just limited to that. It allows you to explore in detail how your agent interprets each word in your requested sentence. 
+
+Let see how an agent dedicated for currencies in viky.ai interprets the sentence "100 euros". 
 
 To explore, turn the `Verbose` mode `ON` and send the request. The `Explain` tab will now have three sections for each of the interpretations matching the sentence.
 
