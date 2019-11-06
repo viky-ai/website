@@ -1,9 +1,59 @@
-<h2>Guides</h2>
+<h2>Getting started</h2>
 <ul>
   {%- assign pages = site.pages | sort: 'order' -%}
   {% for p in pages %}
     {%- assign segments = p.dir | split: '/' -%}
-    {% if segments[1] == "doc" and segments[2] == "guides" %}
+    {% if segments[1] == "doc" and segments[2] == "intro" %}
+      <li>
+        {%- if page.url == p.url -%}
+          <a href="{{p.url}}" class="current">{{p.title}}</a>
+        {%- else -%}
+          <a href="{{p.url}}">{{p.title}}</a>
+        {%- endif -%}
+      </li>
+    {% endif %}
+  {%- endfor -%}
+</ul>
+
+<h2>Topics guides</h2>
+<ul>
+  {%- assign pages = site.pages | sort: 'order' -%}
+  {% for p in pages %}
+    {%- assign segments = p.dir | split: '/' -%}
+    {% if segments[1] == "doc" and segments[2] == "topics" %}
+      <li>
+        {%- if page.url == p.url -%}
+          <a href="{{p.url}}" class="current">{{p.title}}</a>
+        {%- else -%}
+          <a href="{{p.url}}">{{p.title}}</a>
+        {%- endif -%}
+      </li>
+    {% endif %}
+  {%- endfor -%}
+</ul>
+
+<h2>How-to guides</h2>
+<ul>
+  {%- assign pages = site.pages | sort: 'order' -%}
+  {% for p in pages %}
+    {%- assign segments = p.dir | split: '/' -%}
+    {% if segments[1] == "doc" and segments[2] == "how-to" %}
+      <li>
+        {%- if page.url == p.url -%}
+          <a href="{{p.url}}" class="current">{{p.title}}</a>
+        {%- else -%}
+          <a href="{{p.url}}">{{p.title}}</a>
+        {%- endif -%}
+      </li>
+    {% endif %}
+  {%- endfor -%}
+</ul>
+
+<h2>Reference</h2>
+<ul>
+  {%- for p in pages -%}
+    {%- assign segments = p.dir | split: '/' -%}
+    {%- if segments[1] == "doc" and segments[2] == "reference" -%}
       <li>
         {% if p.only_for_dev and jekyll.environment == 'production' -%}
           {% continue %}
@@ -18,22 +68,6 @@
           <span>dev only</span>
         {%- endif -%}
         </a>
-      </li>
-    {% endif %}
-  {%- endfor -%}
-</ul>
-
-<h2>API reference</h2>
-<ul>
-  {%- for p in pages -%}
-    {%- assign segments = p.dir | split: '/' -%}
-    {%- if segments[1] == "doc" and segments[2] == "api" -%}
-      <li>
-        {%- if page.url == p.url -%}
-          <a href="{{p.url}}" class="current">{{p.title}}</a>
-        {%- else -%}
-          <a href="{{p.url}}">{{p.title}}</a>
-        {%- endif -%}
       </li>
     {%- endif -%}
   {%- endfor -%}
