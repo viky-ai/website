@@ -33,29 +33,25 @@ In the sentence, "tomorrow" refers to the current date and time. By switching th
 
 ## How a sentence is interpreted
 
-The console panel's functionality is not just limited to that. It allows you to explore in detail how your agent interprets each word in your requested sentence. 
+Sometimes an agent will not understand a sentence as you expected. In such case, the console panel's functionality allows you to explore in detail how your agent interprets each word.
 
-Let see how an agent dedicated for currencies in viky.ai interprets the sentence "100 euros". 
+Let see how an agent dedicated for currencies in viky.ai interprets the sentence "It costs between 10 and 15 canadian dollars". 
 
-To explore, turn the `Verbose` mode `ON` and send the request. The `Explain` tab will now have three sections for each of the interpretations matching the sentence.
-
-1. `Scores` section shows how the score was calculated.
-2. `Highlight` section shows which words of the sentence were matched by the interpretation.
-3. `Solution` section gives the corresponding solution for the sentence.
+To explore, switch the `verbose` mode to `ON` and send your sentence. In the `Explain` tab each interpretations will have a new section `Highlight` showing which words of the sentence matched by the interpretation.
 
 ![Explain with Verbose ON](img/verbose_on.png "Verbose mode ON")
 
-The `Highlight` section further allows you to see how the NLP matched each word with the interpretations and entities lists of the agent. Just click on one of the highlighted words. Let us click on "euros". 
+This section further allows you to see how the NLP matched each word with the interpretations and entities lists of the agent. Just click on one of the highlighted words. Let us click on "dollars". 
 
 ![Highlight list](img/highlight_list.png "List of matching interpretations for a word")
 
-You will see a list of interpretations and entities lists matched for "euros". If you watch closely, the first item in the list is the minimal interpretation matching the word. The interpretations and entities lists in the list are arranged in a tree fashion with the last one being the one that incorporates all the interpretations and entities lists above it.
+You will see a list of potentials interpretations and entities lists match for "dollars". If you watch closely, the list is sorted so that the top correspond to the more precise match and going down to the less precise, ending with the whole sentence.  
 
-You can even navigate to interpretations or entities lists from that list. Click on the first item in the list, in our case the `money_entity` entities list and the platform takes you to the exact expression within the clicked entities list that matched the word, "euros".
+You can even navigate to interpretations or entities lists from that section. Click on the first item in the list, in our case the `money_entity` and the platform takes you to the exact entity within the clicked entities list that matched the word "dollars".
 
 ![Click on an item](img/highlight_click.png "Navigate from within the highlight list")
 
-This gives you an exact idea how NLP breaks down your sentence to match the interpretations of the agent.
+This gives you an idea how the agent breaks down your sentence and how to improve your formulations and entities lists if something is not behaving as you expect.
 
 ## Regression tests for your agent
 
