@@ -14,7 +14,7 @@
       Home
     </a>
     {% assign segments = page.dir | split: '/' %}
-    <a href="/doc/" {% if segments[2] == 'guides' or segments[2] == 'api' %}class="current"{% endif %}>
+    <a href="/doc/" {% if segments[1] == 'doc' %}class="current"{% endif %}>
       Documentation
     </a>
     <a href="/blog/" {% if page.categories.first == 'blog' or segments[1] == 'blog' %}class="current"{% endif %}>
@@ -30,5 +30,4 @@
       <a href="/users/sign_in">Log in</a>
     {% endif %}
   </div>
-
 </div>
