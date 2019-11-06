@@ -133,13 +133,13 @@ A modal box with the form “Create a new interpretation” opens.
 
 ![Interpretation form screenshot](img/05_form_interpretation.png "Creating address interpretation")
 
-### Create your first expression
+### Create your first formulation
 
 Your first interpretation is created. Now click on it and select the **fr** tab. Type "12 avenue de Flandres 75019 Paris" in the text area, then click on **Add**.
 
 Keep the default options (_keep order_, _close_, _auto solution_) as is. We will come back to them later.
 
-![Expression form screenshot](img/06_first_expression.png "Adding an expression")
+![Formulation form screenshot](img/06_first_formulation.png "Adding a formulation")
 
 ### Testing the agent
 
@@ -149,7 +149,7 @@ You can see the returned solution in the **Explain** tab (opened by default). Th
 
 ![Console screenshot](img/07_first_console.png "Manual test in console")
 
-The returned value is the interpretation you just created and the score is the match confidence level: 0 means no match, and 1 means an exact match. Here the score is 1 because the sentence typed in the console exactly matches the expression you just created.
+The returned value is the interpretation you just created and the score is the match confidence level: 0 means no match, and 1 means an exact match. Here the score is 1 because the sentence typed in the console exactly matches the formulation you just created.
 
 <aside class="primary">
   <p>
@@ -210,15 +210,15 @@ Click on the entities list you just created to open it and enter route types nam
 
 Go back to the **Interpretations** tab, click on the **address** public interpretation.
 
-<span class="tag tag--primary">Step 1</span> <strong>Edit the current expression in address interpretation</strong>
+<span class="tag tag--primary">Step 1</span> <strong>Edit the current formulation in address interpretation</strong>
 
-Click on the expression "12 avenue de Flandres 75019 Paris" in order to edit it.
+Click on the formulation "12 avenue de Flandres 75019 Paris" in order to edit it.
 
-![UI screenshot](img/11_edit_expression.png 'Edit an expression by clicking on it')
+![UI screenshot](img/11_edit_formulation.png 'Edit a formulation by clicking on it')
 
 <span class="tag tag--primary">Step 2</span> <strong>Link avenue with route_types entities list</strong>
 
-1. Highlight **avenue** in expression "12 avenue de Flandres 75019 Paris".
+1. Highlight **avenue** in "12 avenue de Flandres 75019 Paris".
 2. A drop-down list appears displaying the different interpretations and entities lists available.
 3. Choose the **route_types** entities list (it should be labeled like `yourname/youragent/entities_lists/route_types`).
 4. Click on **Update**
@@ -265,9 +265,9 @@ To do this, return to the agent **Overview** tab.
 
 ![Populated dependencies section screenshot](img/17_second_dependency.png "Numbers agent is here now")
 
-<span class="tag tag--primary">Step 4</span> Let's add other dependency. Click on **Add new dependency**, search and choose the **VillesFR** public agent.
+<span class="tag tag--primary">Step 4</span> Let's add other dependency. Click on **Add new dependency**, search and choose the **Cities French All** public agent.
 
-![Search dependencies screenshot](img/18_choose_villesfr_agent.png "Choose VillesFR agent")
+![Search dependencies screenshot](img/18_choose_cities_agent.png "Choose Cities French All agent")
 
 <span class="tag tag--primary">Done</span>  Now, both dependencies are in place.
 
@@ -276,25 +276,25 @@ To do this, return to the agent **Overview** tab.
 
 ### Edit address interpretation
 
-In order to make the agent understand the street number, postal code and locality, go to the **Interpretations** tab. Then go to the **address** interpretation and edit the "12 avenue de Flandres 75019 Paris" expression.
+In order to make the agent understand the street number, postal code and locality, go to the **Interpretations** tab. Then go to the **address** interpretation and edit the "12 avenue de Flandres 75019 Paris" formulation.
 
 Let's start making highlights:
 
 1. Highlight "**12**" and create an alias to the `viky/numbers/interpretations/number` interpretation.
 2. Highlight "**75019**" and create an alias to the `viky/numbers/interpretations/number` interpretation.
-3. Highlight "**Paris**" and create an alias to the `viky/villesfr/interpretations/cityfr_entities` interpretation.
+3. Highlight "**Paris**" and create an alias to the `viky/cities-fr-all/interpretations/city` interpretation.
 
 Don't highlight the route name for the moment, we will come back to it later.
 
 ![Interpretation form screenshot](img/20_highlight.png "Highlight route number, postal code & locality")
 
-If you try to update the expression, an error will be displayed because the parameter name `number` is used twice.
+If you try to update the formulation, an error will be displayed because the parameter name `number` is used twice.
 
 In parameter name column:
 1. Replace the first `number` value by `street_number`.
 2. Replace `route_types` value by `route_type`.
 3. Replace the second `number` value by `postal_code`.
-4. Replace `cityfr_entities` by `locality`.
+4. Replace `city` by `locality`.
 
 ![Interpretation form screenshot](img/21_parameter_names.png "Adjust parameter names")
 
@@ -313,7 +313,7 @@ We will now customize the output in order to make it simpler to read.
 
 ### Improve solution output
 
-Open the expression and uncheck **Auto solution**. A textarea is now open at the bottom of the form.
+Open the formulation and uncheck **Auto solution**. A textarea is now open at the bottom of the form.
 
 ![Solution textarea screenshot](img/22_uncheck_auto_solution.png "Uncheck the Auto solution option")
 
@@ -345,7 +345,7 @@ Replace the current solution with:
   "street_number": street_number.number,
   "route_type": route_type,
   "postal_code": postal_code.number,
-  "locality": locality.name
+  "locality": locality.nom_commune
 }
 ```
 
@@ -370,7 +370,7 @@ Fill it with some common route names such as **Champs Elysées**, **Rivoli**, et
 
 ### Edit address interpretation
 
-Go back in the **Address** interpretation, edit the expression as:
+Go back in the **Address** interpretation, edit the formulation, then:
 
 1. Highlight **de Flandres**.
 2. Create an alias to the entities list **route_names**.
