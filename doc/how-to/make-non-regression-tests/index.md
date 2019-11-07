@@ -6,7 +6,9 @@ image: site_assets/img/social.jpg
 order: 5
 ---
 
-Your agent can go through many changes. So you need to make sure that with every change your agent still behaves the way you want it to. Viky.ai has the notion of regression tests to help you do so.
+Your agent can go through many changes. So you need to make sure that with every change your agent still behaves the way you want it to. viky.ai has the notion of regression tests to help you do so.
+
+## Adding a regression test
 
 Let us see how we can create a regression tests suite for the `Address Tutorial` agent that we created in the [Getting started](/doc/guides/getting-started/) section.
 
@@ -26,10 +28,12 @@ Clicking on the test will show you its details:
 
 * `Query` i.e. the sentence for the test
 * Different options chosen during the interpret request: `Spellchecking`, `Language` and `Now`
-* `Slug` of the first interpretation found for the sentence and
+* `Slug` of the first interpretation found for the sentence
 * `Solution` for the sentence
 
 ![Test details](img/test_details.png "Test details")
+
+## Updating an existing test
 
 Till now you can see that the `Tests Suite` is green which means all the tests have passed. The test details shows us that the expected and got values for the slug and the solution match.
 
@@ -63,21 +67,14 @@ Hence, you saw that with every change in your agent, your tests suite will run a
 
 Another aspect of the regression tests can be when you explore other agents in viky.ai. You can check out their tests suite and understand what kind of sentences the agent is able to understand without having to go through the interpretations and entities lists.
 
-## Now in tests
+## Testing a sentence with a time reference
 
-defining tests using time can be a problem : the sentence "in 2 days" will change answer every day and the test will fail.
+Testing an agent using time reference can be difficult. For instance if the agent is able to understand "Book a table for the day after tomorrow" and translate the expression "the day after tomorrow" in a normalized ISO 8601 format as its interpretation's solution, the corresponding date will change every day.
 
 ![Without now](img/now/need_now.png "Without now")
 
-A solution for it is to set the "now" to a given value in order for these result not to change anymore
-It also allows you to set the "now" to special dates in order to check special configurations (leap year, for example)
+For that situation, you can use the `now` option in the console by switching it to `manual`. It allows you to freeze the current time used to interpret the sentence.
+
+If you set the `now` option to "2019-02-27T15:00:00+01:00" (_February 27, 2019_) the solution will be two days later "2019-03-01T15:00:00+01:00" (_March 1st, 2019_) but if you set it to "2020-02-27T15:00:00+01:00" (_February 27, 2020_) the solution will also be two days later "2020-02-29T15:00:00+01:00" (_February 29, 2020_) but still in February since it is a leap year.
 
 ![Special date use](img/now/special_date.png "Special date use")
-
-
-
-
-You can see in the `Explain` tab that the agent understood the expression "the day after tomorrow" in the sentence and has respond the interpretation "datetime". We can deduce that this agent is able to find time reference in a sentence and translate them in a normalized ISO 8601 format as its interpretation's solution.
-
-In the sentence, "tomorrow" refers to the current date and time. By switching the `now` option to `manual` we can change this current time reference. If you set the `now` option to "2019-02-27T15:00:00+01:00" (_February 27, 2019_) the solution will be two days later "2019-03-01T15:00:00+01:00" (_March 1st, 2019_) but if you set it to "2020-02-27T15:00:00+01:00" (_February 27, 2020_) the solution will be also two days later "2020-02-29T15:00:00+01:00" (_February 29, 2020_) but still in February since it is a leap year.
-
