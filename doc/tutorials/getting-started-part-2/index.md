@@ -1,7 +1,7 @@
 ---
 layout: doc
 title: "Getting started - Part 2"
-description: "This guide teaches you how to extract a French postal addresses from a text in a structured way with viky.ai."
+description: "This guide teaches you how to extract a French postal addresses from a text in a structured way with viky.ai - Part 2"
 image: site_assets/img/social.jpg
 order: 2
 ---
@@ -35,7 +35,7 @@ A modal box with the form “Create a new interpretation” opens.
 
 ### Create your first formulation
 
-Your first interpretation is created. Now click on it and select the **fr** tab. Type "12 avenue de Flandres 75019 Paris" in the text area, then click on **Add**.
+Your first interpretation is created. Now click on it and select the **fr** tab. Type "12 avenue de Flandres 75019 Paris" in the text field, then click on **Add**.
 
 Keep the default options (_keep order_, _close_, _auto solution_) as is. We will come back to them later.
 

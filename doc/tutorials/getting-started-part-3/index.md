@@ -1,7 +1,7 @@
 ---
 layout: doc
 title: "Getting started - Part 3"
-description: "This guide teaches you how to extract a French postal addresses from a text in a structured way with viky.ai."
+description: "This guide teaches you how to extract a French postal addresses from a text in a structured way with viky.ai - Part 3"
 image: site_assets/img/social.jpg
 order: 3
 ---
@@ -48,9 +48,9 @@ In order to make the agent understand the street number, postal code and localit
 
 Let's start making highlights:
 
-1. Highlight "**12**" and create an alias to the `viky/numbers/interpretations/number` interpretation.
-2. Highlight "**75019**" and create an alias to the `viky/numbers/interpretations/number` interpretation.
-3. Highlight "**Paris**" and create an alias to the `viky/cities-fr-all/interpretations/city` interpretation.
+1. Highlight "**12**" and link it to the `viky/numbers/interpretations/number` interpretation.
+2. Highlight "**75019**" and link it to the `viky/numbers/interpretations/number` interpretation.
+3. Highlight "**Paris**" and link it to the `viky/cities-fr-all/interpretations/city` interpretation.
 
 Don't highlight the route name for the moment, we will come back to it later.
 

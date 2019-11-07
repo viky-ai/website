@@ -1,7 +1,7 @@
 ---
 layout: doc
 title: "Getting started - Part 1"
-description: "This guide teaches you how to extract a French postal addresses from a text in a structured way with viky.ai."
+description: "This guide teaches you how to extract a French postal addresses from a text in a structured way with viky.ai - Part 1"
 image: site_assets/img/social.jpg
 order: 1
 ---
@@ -15,7 +15,7 @@ We will demonstrate different capabilities of viky.ai through a very simple use 
 - You have some contents where you want to retrieve the postal address to create some metadata, for instance to classify the information.
 - Furthermore, you have customers who want to query these contents by searching with a postal address. Queries should be in natural language to facilitate the interactions.
 
-In practice, you will create an agent allowing you to send a text to the [viky.ai Agents API](../../api/agents/) and it will extract the French postal addresses in a structured way.
+In practice, you will create an agent allowing you to send a text to the [viky.ai Agents API](../../reference/agents-api/) and it will extract the French postal addresses in a structured way.
 
 ![Extraction example schema](img/principle.png "Send text and retrieve structured French postal address")
 
