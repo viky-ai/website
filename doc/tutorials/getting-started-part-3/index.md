@@ -152,7 +152,7 @@ Go back in the **Address** interpretation, edit the formulation, then:
   "street_number": street_number.number,
   "route": route_type + " " + route_name,
   "postal_code": postal_code.number,
-  "locality": locality.name,
+  "locality": locality.nom_commune
 }
 ```
 
