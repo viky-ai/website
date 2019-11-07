@@ -3,7 +3,7 @@ layout: doc
 title: "Make non regression tests"
 description: "Present how to test what sentences an agent can understand and how to guarantee this behavior over time."
 image: site_assets/img/social.jpg
-order: 5
+order: 304
 ---
 
 Your agent can go through many changes. So you need to make sure that with every change your agent still behaves the way you want it to. viky.ai has the notion of regression tests to help you do so.

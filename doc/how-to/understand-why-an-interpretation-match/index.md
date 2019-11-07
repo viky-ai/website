@@ -3,7 +3,7 @@ layout: doc
 title: Understand why an interpretation match
 description: "How to see why an agent analyze a sentence this way."
 image: site_assets/img/social.jpg
-order: 7
+order: 305
 ---
 
 Sometimes an agent will not understand a sentence as you expected. In such case, the console panel's functionality allows you to explore in detail how your agent interprets each word.

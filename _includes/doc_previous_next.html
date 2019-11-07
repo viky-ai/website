@@ -1,0 +1,38 @@
+{% assign doc_pages = site.pages | where: 'layout','doc' | sort: 'order' %}
+{% assign prev_doc = nil %}
+{% assign next_doc = nil %}
+{% for p in doc_pages %}
+  {% if p.url == page.url %}
+    {% assign next_index = forloop.index0 | plus: 1 %}
+    {% assign prev_index = forloop.index0 | minus: 1 %}
+    {% if prev_index >= 0 %}
+      {% assign prev_doc = doc_pages[prev_index] %}
+    {% endif %}
+    {% assign next_doc = doc_pages[next_index] %}
+  {% endif %}
+{% endfor %}
+
+<div class="doc__main__pagination">
+  {% if prev_doc %}
+    <a href="{{ prev_doc.url}}" class="previous">
+      <div>
+        {% include svg/navigate_before.svg %}
+      </div>
+      <div>
+        <small>Previous</small>
+        <span>{{ prev_doc.title }}</span>
+      </div>
+    </a>
+  {% endif %}
+  {% if next_doc %}
+    <a href="{{ next_doc.url}}" class="next">
+      <div>
+        <small>Next</small>
+        <span>{{ next_doc.title }}</span>
+      </div>
+      <div>
+        {% include svg/navigate_next.svg %}
+      </div>
+    </a>
+  {% endif %}
+</div>

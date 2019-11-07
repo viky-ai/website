@@ -3,7 +3,7 @@ layout: doc
 title: "Discover and try agents"
 description: "Present how to test what sentences an agent can understand and how to guarantee this behavior over time."
 image: site_assets/img/social.jpg
-order: 1
+order: 300
 ---
 
 ## Using the **Play** interface

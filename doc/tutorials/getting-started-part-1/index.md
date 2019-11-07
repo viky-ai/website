@@ -3,7 +3,7 @@ layout: doc
 title: "Getting started - Part 1"
 description: "This guide teaches you how to extract a French postal addresses from a text in a structured way with viky.ai - Part 1"
 image: site_assets/img/social.jpg
-order: 1
+order: 100
 ---
 
 ## Purpose

@@ -110,3 +110,61 @@
   }
 }
 
+
+.doc__main__pagination{
+  margin: 5em 0 2em 0;
+  display: grid;
+  grid-template-areas: "previous next";
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 3em;
+  align-items: center;
+  .previous{
+    grid-area: previous;
+    text-align: right;
+    display: grid;
+    grid-template-columns: 2em auto;
+    align-items: center;
+  }
+  .next{
+    grid-area: next;
+    text-align: left;
+    display: grid;
+    grid-template-columns: auto 2em;
+    align-items: center;
+  }
+
+  a{
+    display: block;
+    padding: 1.3em 1em 1em 1em;
+    border: 1px solid $grey_200;
+    border-radius: 3px;
+    text-decoration: none;
+    box-shadow: 0 2px 4px rgba(#000, .075);
+    svg{
+      fill: $grey_400;
+      width: 2em;
+      height: 2em;
+    }
+    small{
+      display: block;
+      color: $grey_500;
+      line-height: 1.2em;
+    }
+    span{
+      display: block;
+      color: $grey_800;
+      font-weight: 400;
+    }
+    &:hover,
+    &:focus{
+      border-color: $primary_color;
+      svg{
+        fill: $primary_color;
+      }
+      span{
+        color: darken($primary_color, 10%);
+      }
+    }
+  }
+
+}

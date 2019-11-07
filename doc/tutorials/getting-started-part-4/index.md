@@ -3,7 +3,7 @@ layout: doc
 title: "Getting started - Part 4"
 description: "This guide teaches you how to extract a French postal addresses from a text in a structured way with viky.ai - Part 4"
 image: site_assets/img/social.jpg
-order: 4
+order: 103
 ---
 
 
@@ -98,6 +98,6 @@ Now that we have a private interpretation to recognize additional information, l
 
 ![Interpretation form screenshot](img/06_integration.png "New interpretation which recognize additional info")
 
-You can now validate your work by checking the agent's behavior using the console.
+You can now validate your work by checking the agent's behavior using the console. :tada:
 
 ![test_expression](img/07_done.png "Well done!")
