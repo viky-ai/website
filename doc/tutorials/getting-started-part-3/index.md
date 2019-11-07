@@ -17,7 +17,7 @@ Let's continue with the detection of street number, postal code and locality.
 In order not to reinvent the wheel, you will add 2 agent dependencies as seen above:
 
 - **Numbers** agent will allow you to understand ordinal and cardinal numbers written in digits or in letters. This seems appropriate to recognize street number and postal code.
-- **VillesFR** agent will allow you to recognize French cities and give you their geographical coordinates. This seems appropriate to recognize locality.
+- **Cities French All** agent will allow you to recognize French cities and give you their geographical coordinates. This seems appropriate to recognize locality.
 
 To do this, return to the agent **Overview** tab.
 
