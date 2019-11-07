@@ -1,9 +1,9 @@
-<h2>Getting started</h2>
+<h2>Tutorials</h2>
 <ul>
   {%- assign pages = site.pages | sort: 'order' -%}
   {% for p in pages %}
     {%- assign segments = p.dir | split: '/' -%}
-    {% if segments[1] == "doc" and segments[2] == "intro" %}
+    {% if segments[1] == "doc" and segments[2] == "tutorials" %}
       <li>
         {%- if page.url == p.url -%}
           <a href="{{p.url}}" class="current">{{p.title}}</a>
@@ -49,7 +49,7 @@
   {%- endfor -%}
 </ul>
 
-<h2>Reference</h2>
+<h2>Reference guides</h2>
 <ul>
   {%- for p in pages -%}
     {%- assign segments = p.dir | split: '/' -%}
