@@ -13,4 +13,4 @@ Welcome to viky.ai, the new open source _(coming soon)_, multilingual and collab
 
 With viky.ai you can develop natural language processing agents without a single line of code. In fact, viky.ai already contains a large number of agents prepared by us. To build your own agents, tap into existing agents and add your own descriptions.
 
-To learn more, check out our [getting started guide](/doc/guides/getting-started/) and get into the adventure.
+To learn more, check out our [getting started guide](/doc/tutorials/getting-started-part-1/) and get into the adventure.
