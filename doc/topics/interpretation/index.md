@@ -1,10 +1,17 @@
 ---
 layout: doc
 title: "Interpretation"
-description: "This section will introduce the interpretation concepts."
+description: "This section will introduce the interpretation concept."
 image: site_assets/img/social.jpg
-order: 203
+order: 202
 ---
+
+
+<span class="tag tag--warning">TODO</span>
+
+Ci-dessous, quelques textes sur le sujet à revoir, garder ou non.
+
+
 
 ## What's an interpretation
 

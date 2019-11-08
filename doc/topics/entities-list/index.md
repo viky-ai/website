@@ -1,7 +1,10 @@
 ---
 layout: doc
 title: "Entities list"
-description: "This section will introduce the entities list concepts."
+description: "This section will introduce the entities list concept."
 image: site_assets/img/social.jpg
-order: 202
+order: 203
 ---
+
+
+<span class="tag tag--warning">TODO</span>
