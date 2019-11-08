@@ -6,7 +6,9 @@ image: site_assets/img/social.jpg
 order: 300
 ---
 
-## Using the **Play** interface
+The number of publicly available agents can be overwhelming when you try to find an existing agent that could fit your needs. To explore how multiple agents behaves against a certain text use Play.
+
+## Using the Play interface
 
 The Play interface is a tool applying selected agents to a text and having a visual rendering of the text coverage agent by agent
 

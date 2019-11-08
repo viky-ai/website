@@ -71,10 +71,12 @@ Another aspect of the regression tests can be when you explore other agents in v
 
 Testing an agent using time reference can be difficult. For instance if the agent is able to understand "Book a table for the day after tomorrow" and translate the expression "the day after tomorrow" in a normalized ISO 8601 format as its interpretation's solution, the corresponding date will change every day.
 
-![Without now](img/now/need_now.png "Without now")
-
 For that situation, you can use the `now` option in the console by switching it to `manual`. It allows you to freeze the current time used to interpret the sentence.
 
-If you set the `now` option to "2019-02-27T15:00:00+01:00" (_February 27, 2019_) the solution will be two days later "2019-03-01T15:00:00+01:00" (_March 1st, 2019_) but if you set it to "2020-02-27T15:00:00+01:00" (_February 27, 2020_) the solution will also be two days later "2020-02-29T15:00:00+01:00" (_February 29, 2020_) but still in February since it is a leap year.
+If you set the `now` option to "2019-02-27T15:00:00+01:00" (_February 27, 2019_) the solution will be two days later "2019-03-01T15:00:00+01:00" (_March 1st, 2019_).
 
-![Special date use](img/now/special_date.png "Special date use")
+![Now in 2019](../../screenshot-placeholder.gif "Interpret's solution is March 1st, 2019")
+
+If you set it to "2020-02-27T15:00:00+01:00" (_February 27, 2020_) the solution will also be two days later "2020-02-29T15:00:00+01:00" (_February 29, 2020_) but still in February since it is a leap year.
+
+![Now in 2020](../../screenshot-placeholder.gif "Interpret's solution is February 29, 2020")

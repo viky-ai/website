@@ -18,7 +18,11 @@ First remove the `Any` option of the "route_names" annotation if it is already s
 
 Try the sentence "12 avenue de Rivoli 75019 Paris" in the console. Note the matching interpretation score. Since it is a perfect match so we have a perfect score of `1.0`.
 
+![Console perfect match](../../screenshot-placeholder.gif "Perfect match on an expected sentence")
+
 Change de road name to something that is not part of the entities list such as "12 avenue Louise Weiss 75019 Paris". Try again in the console. Nothing match.
+
+![Console nothing match](../../screenshot-placeholder.gif "Nothing match because of unexpected road name")
 
 <aside class="note">
   <h3>Note</h3>
@@ -28,7 +32,13 @@ Change de road name to something that is not part of the entities list such as "
 </aside>
 
 Now reenable the `Any` option on the "route_names". Retry your previous sentence with the unknown road name, in this example "12 avenue Louise Weiss 75019 Paris".
-The interpretation match because even if a part of the sentence is still missing the NLP is now forced to fill the blank. Note that the score is lower because of this option. If you type the road name with the known road name, here "12 avenue de Rivoli 75019 Paris" the score is `1.0` again even with the `Any` option still present.
+The interpretation match because even if a part of the sentence is still missing the NLP is now forced to fill the blank. Note that the score is lower because of this option.
+
+![Console any match](../../screenshot-placeholder.gif "One match thanks to the 'any' option despite unexpected road name")
+
+If you type the road name with the known road name, here "12 avenue de Rivoli 75019 Paris" the score is `1.0` again even with the `Any` option still present.
+
+![Console any perfect match](../../screenshot-placeholder.gif "Perfect match on expected road name even with the 'any' option")
 
 What happen is that the annotated interpretation or entities list will be used in the first place but if nothing match then the `Any` option will serve as a fallback and will gather the corresponding text anyway. In that case the associated score will be decreased compare to not triggering the `Any` option.
 

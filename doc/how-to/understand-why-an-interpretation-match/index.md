@@ -14,11 +14,11 @@ Let us see how an agent dedicated for currencies in viky.ai interprets the sente
 
 To explore, switch the `verbose` mode to `ON` and send your sentence. In the `Explain` tab each interpretations will have a new section `Highlight` showing which words of the sentence matched by the interpretation.
 
-![Explain with Verbose ON](img/verbose_on.png "Verbose mode ON")
+![Console highlight section](../../screenshot-placeholder.gif "With option 'verbose' a new section appears")
 
 This section further allows you to see how the NLP matched each word with the interpretations and entities lists of the agent. Just click on one of the highlighted words. Let us click on "dollars".
 
-![Highlight list](img/highlight_list.png "List of matching interpretations for a word")
+![Console highlight detail](../../screenshot-placeholder.gif "Matching candidates for a word")
 
 You will see a list of potentials interpretations and entities lists match for "dollars". If you watch closely, the list is sorted so that the top correspond to the more precise match and going down to the less precise, ending with the whole sentence.
 
@@ -26,6 +26,6 @@ You will see a list of potentials interpretations and entities lists match for "
 
 You can even navigate to interpretations or entities lists from that section. Click on the first item in the list, in our case the `money_entity` and the platform takes you to the exact entity within the clicked entities list that matched the word "dollars".
 
-![Click on an item](img/highlight_click.png "Navigate from within the highlight list")
+![Navifate from highlight](../../screenshot-placeholder.gif "Navigate from the highlight list")
 
 This gives you an idea how the agent breaks down your sentence and how to improve your formulations and entities lists if something is not behaving as you expect.
