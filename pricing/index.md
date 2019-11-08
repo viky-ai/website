@@ -1,9 +1,8 @@
 ---
-layout: doc
+layout: default
 title: "Pricing"
-description: "This section describes the pricing model."
+description: "This section describes viky.ai pricing model."
 image: site_assets/img/social.jpg
-order: 1
 ---
 
 ## Our pricing philosophy

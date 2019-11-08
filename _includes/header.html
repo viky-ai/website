@@ -13,6 +13,12 @@
     <a href="/" {% if page.dir == '/' %}class="current"{% endif %}>
       Home
     </a>
+    <a href="/pricing/" {% if page.dir == '/pricing/' %}class="current"{% endif %}>
+      Pricing
+    </a>
+    <a href="/open-source/" {% if page.dir == '/open-source/' %}class="current"{% endif %}>
+      Open&nbsp;Source
+    </a>
     {% assign segments = page.dir | split: '/' %}
     <a href="/doc/" {% if segments[1] == 'doc' %}class="current"{% endif %}>
       Documentation
