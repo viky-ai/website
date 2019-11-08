@@ -36,7 +36,7 @@ We named those houses, walls and bricks **agents**. Agents can be very simple (b
 
 Here is an overview of how the documentation is organized to help you navigate through it:
 
-* __Getting started guides__ take you by the hand through a series of steps to create a first agent. Start here if you're new to viky.ai.
+* __Tutorials__ take you by the hand through a series of steps to create a first agent. Start here if you're new to viky.ai.
 * __Topic guides__ discuss key topics and concepts at a fairly high level and provide useful background information and explanation.
 * __How-to guides__ are recipes. They guide you through the steps involved in addressing key problems and use-cases. They are more advanced than tutorials and assume some knowledge of how viky.ai works.
 * __Reference guides__ contain technical reference for APIs. They describe how it works and how to use it but assume that you have a basic understanding of key concepts.

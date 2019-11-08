@@ -2,7 +2,10 @@
   padding: 0;
   background-color: #fff;
   border-top: 3px solid $primary_color;
-  border-bottom: 1px solid $grey_200;
+  border-bottom: 1px solid $light-grey-800;
+
+  box-shadow: 0 2px 2px rgba(#000, .04);
+  position: relative;
 
   .header__logo,
   .header__hamburger{

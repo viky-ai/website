@@ -6,8 +6,6 @@ image: site_assets/img/social.jpg
 order: 100
 ---
 
-## Purpose
-
 This guide will help you get started with viky.ai. We will guide you to create your first agent to structure information from contents and to retrieve relevant information in these contents by interacting with your data in natural language.
 
 We will demonstrate different capabilities of viky.ai through a very simple use case:
