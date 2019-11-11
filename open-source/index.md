@@ -32,7 +32,7 @@ This platform is then populated by agents.
 
 So in our mind, when we speak of the Open Source part of viky.ai we speak about the platform without its content (the agents). And when we speak about Open Data, we speak about the agents.
 
-Agents have associated information, which are not vital for them to run, but which are nice to have :
+Agents have associated information, which are not vital for them to run, but which are nice to have:
 
 * The readme part of the agent, which is the description,
 * All documentations associated with the agent,
