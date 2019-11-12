@@ -105,37 +105,6 @@
   }
 }
 
-
-.home{
-  section{
-    padding: 1em 2em;
-    @media screen and (min-width: 1000px) {
-      padding: 1em 4em;
-    }
-  }
-  .home__section-wrapper{
-    margin: 0 auto;
-    max-width: 80em;
-  }
-  h2{
-    font-weight: 400;
-    font-size: 1.6em;
-    color: $grey_800;
-    font-weight: 300;
-    margin-bottom: 1.25em;
-    strong{
-      font-weight: 400;
-      color: $grey_900;
-    }
-  }
-  p, ul, li{
-    font-size: 1em;
-  }
-  li{
-    margin: .5em 0;
-  }
-}
-
 ul.home__check-list{
   list-style: none;
   padding: 0;
@@ -148,7 +117,7 @@ ul.home__check-list{
 }
 
 section.home__section-ui{
-  .home__section-wrapper{
+  .page__section-wrapper{
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 2em;
@@ -206,7 +175,7 @@ section.home__features{
     }
   }
 
-  .home__section-wrapper{
+  .page__section-wrapper{
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 2em;
@@ -268,7 +237,7 @@ section.home__features{
 }
 
 section.home__section-imagine-and-news{
-  .home__section-wrapper{
+  .page__section-wrapper{
     margin: 3em auto;
     display: grid;
     grid-template-columns: 1fr;

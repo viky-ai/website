@@ -13,7 +13,7 @@ pagination:
   sort_reverse: true
 
 features:
-  user_registration_disabled: true
+  user_registration_disabled: false
 
 excerpt_separator: <!--keep reading-->
 

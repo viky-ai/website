@@ -1,0 +1,43 @@
+.page{
+  section{
+    padding: 1em 2em;
+    @media screen and (min-width: 1000px) {
+      padding: 1em 4em;
+    }
+  }
+
+  section.wave-down{
+    background-image: url('../img/home/sep-down.png');
+    background-position: left bottom;
+    background-size:  100% 3em;
+    background-repeat: no-repeat;
+    padding-bottom: 5em;
+  }
+
+  .page__section-wrapper{
+    margin: 0 auto;
+    max-width: 80em;
+  }
+
+  h2{
+    font-weight: 400;
+    font-size: 1.6em;
+    color: $grey_800;
+    font-weight: 300;
+    margin-bottom: 1.25em;
+    strong{
+      font-weight: 400;
+      color: $grey_900;
+    }
+  }
+  p, ul, li{
+    font-size: 1em;
+  }
+  a{
+    color: darken($primary_color, 5%);
+    &:hover,
+    &:focus{
+      color: darken($primary_color, 15%);
+    }
+  }
+}
