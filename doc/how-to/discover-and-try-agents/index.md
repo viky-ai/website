@@ -34,9 +34,25 @@ You can sort them by name, by last update or by popularity which is the number o
 From here we assume that agents `Coutries`, `Date`, `Datetime`, `Money`, `Numbers` and `Persons` could be useful. Trying each one of them individually would be time consuming and to explore how multiple agents behaves against a certain text we can use the Play user interface.
 
 ## Using Play
-To explore how multiple agents behaves against a certain text use the Play user interface.
+When you narrowed down a set of potentially useful agents for your use case, you can try them in Play. This tools allows you to submit large texts to a selection of agents and asses how they perform against that text.
 
-When you have narrowed down which agents can by useful for your use case, you can try them in Play. It allows you to submit large text to a set of selected agents and asset how they perform.
+Go to Play from the navigation bar and select the previous set of agents: `Coutries`, `Date`, `Datetime`, `Money`, `Numbers` and `Persons`.
+
+![Agents selection](../../screenshot-placeholder.gif "Select a set of agents to asses")
+
+Paste the text and click on `Interpret`.
+
+![Interpret the text](../../screenshot-placeholder.gif "Interpret the text with the agents selection")
+
+When the interpretation is done the analyzed result appears below. Every interpretations found is underlined with a different color for each agents. Click on an interpretation to display the details of the match, especially the corresponding solution.
+
+![Intent detail](../../screenshot-placeholder.gif "Display an intent detail")
+
+If several interpretations from different agents match the same expression, only the one with the wider coverage is shown. We can temporarily disable an agent with the right switch. This trigger a new processing without the agent even if it is still present in the selection.
+
+We can see that interesting information are found by every agents. If we look closely, the `Datetime` agent does not add much because it only match one date in the text. If we disable it the `Date` agent is able to match the remaining date and so we can reduce the number of agents in our selection.
+
+![Disable agent](../../screenshot-placeholder.gif "Disable an agent to exclude it from the interpretation")
 
 ## Console
 Each agent expose individually a console allowing you to test it by sending sentences to interpret. It responds with matched interpretations as well as the corresponding solution.
@@ -46,7 +62,6 @@ Here you can type a sentence and apply the same options that you can by found on
 - `spellchecking`: it allows to perform spellchecking with different level such as **Inactive**, **Low**, **Medium** or **High**. The highest the spellchecking will be, the more aggressively the NLP will try to match words even if they are not spelled right.
 - `verbose mode`: it allows to have some debug information in order to understand how the match is performed by the NLP.
 - `now`: it allows to set a fixed current date and time as desired.
-
 
 ## Misc
 An other way to asset what an agent can do is to read its read me section on the agent overview. It is a great way for the agent owner to explain how the agent is supposed to work and in what context.
