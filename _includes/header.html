@@ -10,22 +10,11 @@
   </a>
 
   <nav class="header__nav">
-    <a href="/" {% if page.dir == '/' %}class="current"{% endif %}>
-      Home
-    </a>
-    <a href="/pricing/" {% if page.dir == '/pricing/' %}class="current"{% endif %}>
-      Pricing
-    </a>
-    <a href="/open-source/" {% if page.dir == '/open-source/' %}class="current"{% endif %}>
-      Open&nbsp;Source
-    </a>
-    {% assign segments = page.dir | split: '/' %}
-    <a href="/doc/" {% if segments[1] == 'doc' %}class="current"{% endif %}>
-      Documentation
-    </a>
-    <a href="/blog/" {% if page.categories.first == 'blog' or segments[1] == 'blog' %}class="current"{% endif %}>
-      Blog
-    </a>
+    {% include nav/home.html %}
+    {% include nav/pricing.html %}
+    {% include nav/open_source.html %}
+    {% include nav/doc.html %}
+    {% include nav/blog.html %}
   </nav>
 
   <div class="header__login">

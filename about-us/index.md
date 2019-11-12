@@ -1,9 +1,8 @@
 ---
-layout: doc
-title: "Who we are?"
+layout: default
+title: "About us"
 description: "This section describes who we are."
 image: site_assets/img/social.jpg
-order: 1
 ---
 
 ## Team

@@ -1,8 +1,42 @@
-<footer>
-  <p>Copyright ©2019 viky.ai. All rights reserved.</p>
-  <p>Contact us by email at &#099;&#111;&#110;&#116;&#097;&#099;&#116;&#064;&#118;&#105;&#107;&#121;&#046;&#097;&#105;.</p>
-  <p>
-    Made by <a href="https://www.pertimm.com/">Pertimm</a>.
-    Enjoy the rest of your <span id="footer-day">day</span>!
-  </p>
+<footer class="footer {% if page.categories.first == 'blog' or segments[1] == 'blog' %}footer--without-wave{% endif %}">
+  <div class="footer__inner">
+
+    <div class="footer__inc">
+      <a href="/">
+        {% include svg/logo.svg %}
+      </a>
+      <p>{% include footer/copyright.html %}</p>
+      <p>{% include footer/rights.html %}</p>
+    </div>
+
+    <div class="footer__product">
+      <strong>Platform</strong>
+      <a href="/" {% if page.dir == '/' %}class="current"{% endif %}>
+        Overview</a><br />
+      {% include nav/pricing.html %}<br />
+      {% include nav/open_source.html %}
+    </div>
+
+    <div class="footer__compagny">
+      <strong>Compagny</strong>
+      {% include nav/about_us.html %}<br />
+      {% include nav/blog.html %}
+    </div>
+
+    <div class="footer__contact">
+      <strong>Assistance</strong>
+      <p>
+        Read the <a href="/doc/" {% if segments[1] == 'doc' %}class="current"{% endif %}>documentation</a>
+      </p>
+      {% include footer/slack.html %}
+      {% include footer/email.html %}
+    </div>
+
+    <div class="footer__follow">
+      <strong>Follow us</strong>
+      <a href="https://twitter.com/viky_ai">{% include svg/twitter.svg %}</a>
+    </div>
+  </div>
+
+  {% include footer/enjoy.html %}
 </footer>
