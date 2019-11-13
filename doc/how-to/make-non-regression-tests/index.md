@@ -75,8 +75,8 @@ For that situation, you can use the `now` option in the console by switching it 
 
 If you set the `now` option to "2019-02-27T15:00:00+01:00" (_February 27, 2019_) the solution will be two days later "2019-03-01T15:00:00+01:00" (_March 1st, 2019_).
 
-![Now in 2019](../../screenshot-placeholder.gif "Interpret's solution is March 1st, 2019")
+![Now in 2019](./img/now_in_2019.png "Interpret's solution is March 1st, 2019")
 
 If you set it to "2020-02-27T15:00:00+01:00" (_February 27, 2020_) the solution will also be two days later "2020-02-29T15:00:00+01:00" (_February 29, 2020_) but still in February since it is a leap year.
 
-![Now in 2020](../../screenshot-placeholder.gif "Interpret's solution is February 29, 2020")
+![Now in 2020](./img/now_in_2020.png "Interpret's solution is February 29, 2020")
