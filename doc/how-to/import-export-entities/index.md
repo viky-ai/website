@@ -78,7 +78,7 @@ In this example, every solution is a JSON object enclosed inside double quotes. 
 
 ## Import entities
 
-Select your agent, go to the entities list tab and open the list that will receive your data.
+Select your agent, go to the entities list tab and open the list that will receive your data. Then click the "CSV Export" button in order to display the entities import form.
 
 ![Import entities list button location screenshot](img/import_button.png "Import an entities list")
 
@@ -98,7 +98,7 @@ When the import is finished, the interface will be automatically refreshed.
 
 ## Export entities
 
-Select your agent, go to the entities list tab, and open the list you want to export. On the list header, press the **Export** button.
+Select your agent, go to the entities list tab, and open the list you want to export. On the list header, click the "CSV Export" button.
 
 ![Export entities list button location screenshot](img/export_button.png "Export an entities list")
 

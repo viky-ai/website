@@ -62,7 +62,7 @@ We will create a module (named *Agents* in viky.ai's world) able to identify eac
 
 ## Create an agent
 
-Login to viky.ai. You will see an interface listing the available agents. Click on the **New Agent** button.
+Login to viky.ai. You will see an interface listing the available agents. Click on the "New Agent" button.
 
 ![Application screenshot](img/01_new_agent.png "UI listing the available agents")
 
@@ -80,7 +80,7 @@ A modal box with the form "Create a new agent" opens.
 3. Fill the `ID` field with "address-tutorial".
 4. Check the following options for languages: `No language`, `fr (french)` and uncheck `en (english)`.
 5. Choose a background color or upload an image.
-6. Submit the form with the **Create** button.
+6. Submit the form with the "Create" button.
 
 ![Agent creation form screenshot](img/02_create_agent.png "Agent creation form filled in with the specified information.")
 

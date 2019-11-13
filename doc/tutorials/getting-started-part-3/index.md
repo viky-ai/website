@@ -16,24 +16,24 @@ Let's continue with the detection of street number, postal code and locality.
 
 In order not to reinvent the wheel, you will add 2 agent dependencies as seen above:
 
-- **Numbers** agent will allow you to understand ordinal and cardinal numbers written in digits or in letters. This seems appropriate to recognize street number and postal code.
-- **Cities French All** agent will allow you to recognize French cities and give you their geographical coordinates. This seems appropriate to recognize locality.
+- **"Numbers"** agent will allow you to understand ordinal and cardinal numbers written in digits or in letters. This seems appropriate to recognize street number and postal code.
+- **"Cities French All"** agent will allow you to recognize French cities and give you their geographical coordinates. This seems appropriate to recognize locality.
 
-To do this, return to the agent **Overview** tab.
+To do this, return to the agent "Overview" tab.
 
-<span class="tag tag--primary">Step 1</span> Click on **Add new dependency**.
+<span class="tag tag--primary">Step 1</span> Click on **"Add new dependency"** button.
 
 ![Add dependency screenshot](img/15_first_dependency.png "Access to dependency chooser")
 
-<span class="tag tag--primary">Step 2</span> Search and choose the **Numbers** public agent.
+<span class="tag tag--primary">Step 2</span> Search and choose the **"Numbers"** public agent.
 
 ![Search dependencies screenshot](img/16_choose_numbers_agent.png "Choose Numbers agent")
 
-<span class="tag tag--primary">Step 3</span> The **Numbers** agent is now in your dependencies.
+<span class="tag tag--primary">Step 3</span> The **"Numbers"** agent is now in your dependencies.
 
 ![Populated dependencies section screenshot](img/17_second_dependency.png "Numbers agent is here now")
 
-<span class="tag tag--primary">Step 4</span> Let's add other dependency. Click on **Add new dependency**, search and choose the **Cities French All** public agent.
+<span class="tag tag--primary">Step 4</span> Let's add other dependency. Click on **"Add new dependency"** button, search and choose the **"Cities French All"** public agent.
 
 ![Search dependencies screenshot](img/18_choose_cities_agent.png "Choose Cities French All agent")
 
@@ -44,7 +44,7 @@ To do this, return to the agent **Overview** tab.
 
 ### Edit address interpretation
 
-In order to make the agent understand the street number, postal code and locality, go to the **Interpretations** tab. Then go to the **address** interpretation and edit the "12 avenue de Flandres 75019 Paris" formulation.
+In order to make the agent understand the street number, postal code and locality, go to the "Interpretations" tab. Then go to the "address" interpretation and edit the "12 avenue de Flandres 75019 Paris" formulation.
 
 Let's start making highlights:
 
@@ -66,7 +66,7 @@ In parameter name column:
 
 ![Interpretation form screenshot](img/21_parameter_names.png "Adjust parameter names")
 
-Click on **Update** in order to save these modifications.
+Click on **"Update"** button in order to save these modifications.
 
 ### Validate in the console
 
@@ -81,11 +81,11 @@ We will now customize the output in order to make it simpler to read.
 
 ### Improve solution output
 
-Open the formulation and uncheck **Auto solution**. A textarea is now open at the bottom of the form.
+Open the formulation and uncheck "Auto solution". A textarea is now open at the bottom of the form.
 
 ![Solution textarea screenshot](img/22_uncheck_auto_solution.png "Uncheck the Auto solution option")
 
-This textarea allows you to customize the solution. The solution is a json map, and you can use all the variables listed in the **Parameter name** column.
+This textarea allows you to customize the solution. The solution is a json map, and you can use all the variables listed in the "Parameter name" column.
 
 Update the solution in order to have a solution like this:
 
@@ -104,7 +104,7 @@ The solution now becomes:
 
 ![Improved but too complex solution screenshot](img/24_solution_improved.png "Solution improved but still too complex. We can do better!")
 
-This is much more readable, but it is still not completely OK. Let's remove the extra **number** and only keep the locality name for the moment.
+This is much more readable, but it is still not completely OK. Let's remove the extra "number" and only keep the locality name for the moment.
 
 Replace the current solution with:
 
@@ -129,23 +129,23 @@ We will now try to understand the route names.
 
 There are too many route names to import them all in viky.ai. Instead we will try to make the agent understand unknown route names.
 
-First create a new private entities list **route_names**.
+First create a new private entities list named "route_names".
 
-Fill it with some common route names such as **Champs Elysées**, **Rivoli**, etc...
+Fill it with some common route names such as "Champs Elysées", "Rivoli", etc...
 
-![Entities list route_names screenshot](img/26_entities_list_route_names.png)
+![Entities list route_names screenshot](img/26_entities_list_route_names.png "Fill some route names")
 
 
 ### Edit address interpretation
 
-Go back in the **Address** interpretation, edit the formulation, then:
+Go back in the "**Address**" interpretation, edit the formulation, then:
 
-1. Highlight **de Flandres**.
-2. Create an alias to the entities list **route_names**.
-3. Select **any** for this alias.
+1. Highlight "**de Flandres**".
+2. Create an alias to the entities list "**route_names**".
+3. Select "**any**"" for this alias.
 4. Replace parameter name `route_names` value by `route_name`.
 5. Update solution with the code below.
-6. Click on Update button.
+6. Click on "Update" button.
 
 ```javascript
 {
@@ -156,7 +156,7 @@ Go back in the **Address** interpretation, edit the formulation, then:
 }
 ```
 
-![Street names with any screenshot](img/27_route_names_any.png)
+![Street names with any screenshot](img/27_route_names_any.png "Update formulation")
 
 In the console, test the sentence "12 avenue de Flandres 75019 Paris" now. Every part is understood correctly, even the route name.
 
