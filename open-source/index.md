@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Open Source"
+title: "Open Source - viky.ai"
 description: "This is the page describing why we are open source"
 image: site_assets/img/social.jpg
 ---
