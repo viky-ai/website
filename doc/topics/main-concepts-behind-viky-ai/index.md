@@ -1,7 +1,7 @@
 ---
 layout: doc
 title: "Main concepts behind viky.ai"
-description: "We discuss here the main concepts behind viky.ai : NLP, Semantic solution, Agent, interpretation, ..."
+description: "Main concepts behind viky.ai: NLP, Semantic solution, Agent, interpretation..."
 image: site_assets/img/social.jpg
 order: 200
 ---
@@ -10,25 +10,25 @@ We discuss here the main concepts behind viky.ai. If the terms "NLP", "Semantic 
 
 ## NLP
 
-NLP means Natural Language Processing. You can look it up [dedicated Wikipedia page](https://en.wikipedia.org/wiki/Natural_language_processing).
+NLP means Natural Language Processing. You can look up this dedicated [Wikipedia page](https://en.wikipedia.org/wiki/Natural_language_processing).
 
-viky.ai is indeed a Natural Language Processing platform as it helps you analyse natural langage texts.
+viky.ai is indeed a Natural Language Processing platform as it helps you analyse natural language texts.
 
-But what does exactly "natural langage texts" mean in essence?
+But what does exactly "natural language texts" mean in essence?
 
-A natural language text is in a text written in English, German, French, or any human language, as opposed to artificial languages, such as programming languages.
+A natural language text is a text written in English, German, French, or any human language, as opposed to artificial languages, such as programming languages.
 
 
 ## Text analysis and semantic solution
 
-What do we want to get when we analyse a text?
+What do we want when we analyse a text?
 
-Well, it depends really on what is our goal. For example, with the following text:
+Well, it depends really on what is our goal. For example, with the following sentence:
 
-> In november 2019, Google bought Fitbit for $2.1 billion
+> In november 2019, Google bought Fitbit for $2.1 billion.
 
 * we might want to extracts only dates or money amounts,
-* or we might want to extract company names,
+* or we might want to extract companies names,
 * or we might want to get information about companies buying other companies.
 
 The result of the analysis will then be very different. This is what we call a **semantic solution**.
@@ -42,75 +42,68 @@ We call such text analysis processes an **agent**.
 
 **Agents** are processes that analyse a text and provide you with a **semantic solution** for this text (or several **semantic solutions** in some cases).
 
-Let us take a simple example : with the text "twenty three", we would like the agent to get the number 23. In essence you have transformed a text into a data that can be further processed by a computer.
+Let's take a simple example: with the expression "twenty-three", we would like the agent to get the number 23. In essence you have transformed a text into a value that can be further processed by a computer.
 
-On this example, you can achieve independance from the natural language, as you can get the same result with "vingt trois" (French), or any other naturel language expression of a number.
+In this example, you can achieve independence from the natural language, as you can get the same result with "vingt-trois" (French), or any other natural language expression of a number.
 
-Now we will further description the concepts used to build **agents**.
+Now we will further describe the concepts used to build **agents**.
 
 
 ## Interpretations and formulations
 
-**Interpretations** are the building blocks of **agents**, they can be combined together, and the resulting combination is also an **interpretation**.
+**Interpretations** are the building blocks of **agents**. They can be combined and nested resulting in a new **interpretation**.
 
-An **agent** is a set of **interpretations** that can be combined together.
+An **agent** is a set of at least one or more **interpretations** that can be combined together.
 
 An **interpretation** is defined as a list of **formulations**, those **formulations** are the different ways of expressing the **interpretation**.
 
-For example, we can build an **interpretation** that will represent the different ways of expressing the verb "be" (here, only a sample):
+For example, we can build an **interpretation** that will represent different ways of expressing the verb "to be" (here, only a sample):
 
 * am
 * is
 * was
 * be
 
-In that case, the "be" **interpretation** is made of the "am", "is", "was" and "be" **formulations**.
+In that case, the `be` **interpretation** is made of the "am", "is", "was" and "be" **formulations**.
 
-An agent can contain only one **interpretation**. But contrary to an **interpretation**, an **agent** is the process that can be called by any other processes within viky.ai or outside viky.ai.
-
-Let us say that we have created an **agent** "to be" that contains the "be" **interpretation**, then we are able to call this agent from any computer program.
-
-So, if we submit the text "the cat is white" to the "to_be" **agent**, this agent will return the "be" **interpretation**. In that case, it will have recognized only the word "is" in the sentence.
+So, if we submit the text "the cat is white" to a `to_be` **agent**, it will return the `be` **interpretation**. In that case, it will have recognized only the word "is" in the sentence.
 
 
 ## Formulations and semantic solutions
 
-Most of the time, we want to get more information out of the analysis of the **agent**: we know which interpretation has been found by the agent, but we want to know more.
+Most of the time, we want to normalize the analysis of the **agent**: we know which interpretation the agent found, but we want to translate it into a processable format.
 
-For example, if we have an agent "colours" that recognizes colours, we would like to get the RGB version of the colour, and not only the fact that it is a colour.
+For example, if we have an agent "colors" that recognizes colors, we would like to get the RGB version of the color, and not only the fact that it is a color.
 
-For this, we can create an **interpretation** for each color and create a **formulation** for each way this color is expressed. Let's say we create the "yellow" **interpretation**, it will have a "yellow" **formulation** and a "jaune" **formulation** (French for yellow), and we will attach the semantic solution `#FFFF00`which is the RBG encoding of this colour.
+For this, we can create an **interpretation** for each color and create a **formulation** for each way this color is expressed. Let's say we create the "yellow" **interpretation**, it will have a "yellow" **formulation** and a "jaune" **formulation** (French for yellow), and we will attach the semantic solution `#FFFF00` which is the RBG encoding of this color.
 
-Thus if the text is "the cup is yellow", the colour agent will return the following **semantic solution**: `#FFFF00`.
+Thus if the text is "the cup is yellow", the color agent will return the following **semantic solution**: `#FFFF00`.
 
 <aside class="primary">
   <p>
-    In the viky.ai framework, we often abbreviate <strong>semantic solution</strong> into
-    <strong>solution</strong>.
+    In viky.ai we often abbreviate <strong>semantic solution</strong> into <strong>solution</strong>.
   </p>
 </aside>
 
 
 ## Entities
 
-**Entities**, which are also called **named entities**, are words that have some information attached to them. For example "Emmmanuel Macron" can have the information "French president" attached to it.
+**Entities**, which are also called **named entities**, are real-world objects that can be identified by their name. In the context of a sentence, **entities** defines what this sentence is about without ambiguity.
 
-You can see that somehow "Emmmanuel Macron" can be a **formulation** and "French president" can be a **semantic solution**, but in most cases, we want to massively import **entities**, with their specific solutions.
+For instance, in the context of a political article, "Emmanuel Macron" refers to the french president. You can see that somehow the name "Emmanuel Macron" can be a **formulation** and "French president" can be a **semantic solution**. Those specific **interpretations** are called **entities** because they describe mostly a word and not the sentence's structure.
 
-Entities list, are usually large lists of words or expressions with some information attached to them.
-
-This why those specific **interpretations** are called **entities**.
+Entities list, are usually large lists of words or expressions with **semantics solutions** attached to them. Those lists could contains thousands of items, so in most cases we want to massively import **entities** with their corresponding solutions from an external source reference.
 
 
 ## Combining interpretations
 
-**Interpretations** can be combined together. This combination mechanism is the cement of the bricks which are the **agents**.
+**Interpretations** can be combined together. This combination mechanism is the cement that joins the bricks which are the **agents**. It creates a tree of dependencies between them allowing to reuse **interpretations** commonly found in natural language. 
 
-The combinations are based upon the text which the **interpretation** will analyse. Let us say we have an **entities list** containing a list of kitchen objects such as a "cup" and an **interpretation** that represents all the colors.
+Those combinations are closely tied to the structure of the text which the **interpretation** will analyse. Let's say we have an agent with an **entities list** containing a list of kitchen objects such as a "cup", "knife", "plate", "fork", etc. and an other agent exposing an **interpretation** matching every color.
 
-If we want to analyse "a red cup", we would create an **interpretation** with a **formulation** "red cup" and we would say that "red" is represented by the color **interpretation** and "cup" is represented by the kitchen objects **entities list**. Then this **interpretation** will be able to understand all the combination between a color and a kitchen object, such as "black fork", etc.
+If we want to analyse the sentence "a red cup", we would create an **interpretation** with a **formulation** shaping the sentence's structure of a "color" followed by an "object". We would say that "red" match the **interpretation** of the color agent and "cup" match our **entities list** of kitchen objects. This **interpretation**'s structure being universal we will be able to understand all the combination between a color and a kitchen object, such as "black fork", etc.
 
-Thus we can see that with one single combination, we can achieve the analysis of many possible sentences. This combinatory power is the reflexion of the combinatory nature of the human language.
+Thus we can see that with one single combination, we can achieve the analysis of many possible sentences. This combinatorial power is the reflection of the combinatorial nature of the human language.
 
 <aside class="primary">
   <p>
@@ -126,20 +119,16 @@ Thus we can see that with one single combination, we can achieve the analysis of
 
 **Agents** have two types of **interpretations**:
 
-* **public interpretations**, which can be used by any other **agents** (or any program outside of viky.ai)
-* **private interpretations**, which are used only within the **agent**
+* **public interpretations**, which can be used by any other **agents** just like an interface with the rest of the world
+* **private interpretations**, which are used only within the **agent** to keep things organized internally
 
 Thus, to combine two **agents** together, it is only necessary to combine a **public interpretation** of an agent within any interpretation of the other **agent** whether private or public.
 
 
 ## Independence from the natural languages
 
-A good property that we want to achieve is that the semantic solution does not contain information that is dependant upon the natural languages. It is not mandatory, and in some case, it can even be good to have words from the text into the solution, but it is still a good property to achieve.
+A good property we want to achieve is that the semantic solution does not contain information depending on natural languages. It is not mandatory, and in some case, it can even be good to have words from the text into the solution, but usually this independence is still a good property to achieve.
 
-In our example with the text "twenty three", we obviously obtain that property when the solution is the number "23".
+In our example with the text "twenty-three", we obviously obtain that property when the solution is the number "23".
 
-In other cases such as the kitchen objects, we could attach to each object a string that is independant from the language and that represents the object. For example "tasse" (French) and "cup" (English) will both have a solution "#cup" for example, that will represent the concept of a cup.
-
-
-
-
+In other cases such as the kitchen objects, we could attach to each object a string that is independent from the language and that represents the object. For example "tasse" (French) and "cup" (English) will both have a solution "#cup" for example, that will represent the concept of a cup.
