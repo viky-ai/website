@@ -57,13 +57,17 @@ We can see that interesting information are found by every agents. If we look cl
 ## Console
 Each agent expose individually a console allowing you to test it by sending sentences to interpret. It responds with matched interpretations as well as the corresponding solution.
 
-Here you can type a sentence and apply the same options that you can by found on the public API. Those options are:
+Here you can type a sentence and apply the same options as the [public API](../../reference/agents-api/). Those options are:
 - `language`: it allows to select the language in which the sentence will be understood. By default this language is in auto detection.
-- `spellchecking`: it allows to perform spellchecking with different level such as **Inactive**, **Low**, **Medium** or **High**. The highest the spellchecking will be, the more aggressively the NLP will try to match words even if they are not spelled right.
+- `spellchecking`: it allows to perform spellchecking with different level such as `Inactive`, `Low`, `Medium` or `High`. The highest the spellchecking will be, the more aggressively the NLP will try to match words even if they are not spelled right.
 - `verbose mode`: it allows to have some debug information in order to understand how the match is performed by the NLP.
 - `now`: it allows to set a fixed current date and time as desired.
 
-## Misc
+Go to one agent of our list, `Date` for instance. In the console try a few sentences to really grasp how this agent works.
+
+![Console](../../screenshot-placeholder.gif "Try a sentence in the console")
+
+## Other places
 An other way to asset what an agent can do is to read its read me section on the agent overview. It is a great way for the agent owner to explain how the agent is supposed to work and in what context.
 
 When available regressions tests are also an interesting source to understand what kind of sentence are expected and have an example of edge cases.
