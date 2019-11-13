@@ -1,6 +1,6 @@
 ---
 layout: doc
-title: "Deals with internationalization"
+title: "Work with internationalization"
 description: "..."
 image: site_assets/img/social.jpg
 order: 302
