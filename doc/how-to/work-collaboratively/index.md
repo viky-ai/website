@@ -6,107 +6,73 @@ image: site_assets/img/social.jpg
 order: 301
 ---
 
-There are two ways to work collaboratively:
+viky.ai allows you to work collaboratively with agents and thus benefit from the contributions of your collaborators. Here we explain how to proceed.
 
-* working in private
-* working in public
+## Owner status
 
-When you work with a public agent, you will have to apply some behaviors and rules in order for you agent to be most successful. This is what we describe here.
+Let's start from the example treated in the ["Getting started" tutorial](../getting-started-part-1/) where we created a new agent called "Address Tutorial". The user who has created an agent is the automatic owner of the agent.
 
+You can check this by consulting the "Overview" tab of the agents, in the "Sharing overview" section.
 
-## Working collaboratively in private
+![Agent overview screenshot, focus on Share overview section](img/01_sharing_overview.png "Jean-Marie is owner of Address Tutorial agent.")
 
-When you create an agent, you alone can see and modify your agent: you are the owner of the agent. However, you can share your agent with somebody else by clicking on the "share button" [TODO: image écran du bouton share].
+The status of owner on an agent allows you to see, modify, delete it but also to invite people to collaborate with you on this agent. We'll look at it in detail now.
 
-Then you can choose if the person can only view or modify the agent [TODO: image écran sur ce choix]. If you choose for the person to be able to modify the agent, then you are beginning to work collaboratively with this person. You can repeat this operation with as many persons as you want.
+## Invite collaborators
 
-Only the persons with whom you have shared your agent can view and modify your agent. But nobody else can: your agent is still private.
-
-If you want your agent to become public, you can do so by clicking on the "configure" button and change the visibility of your agent from private to public. If you do so, everybody will see your agent. They will also be able to copy it. However, they will not be able to change it (except if you invite them to do so).
+Go to the "overview" page of an agent you own.
 
 
-## Working collaboratively in public
+![Agent overview screenshot, focus on Share button](img/02_share_btn.png "Access collaborators management using the "Share" button")
 
-Working in public is the same as working in private, except that you are working on a public agent. If you want to modify a public agent, you can do so
+Here, you can share your agent with somebody else by clicking on the "Share" button, then:
 
-We distinguish two kind of public agents:
+<aside class="note">
+  <h3>Note</h3>
+  <p>A person must have an account on the platform to be invited.</p>
+</aside>
 
-* your public agent
-* the public agent of others
+1. Click on the "Invite collaborators" tab in the modal window.
+2. You can now invite someone to collaborate with you. Enter his username or email address to send your invitation.
+3. Also select whether this person is allowed to only consult the agent or also to modify it.
+4. Confirm by clicking on the "Invite" button.
 
-### Working collaboratively with your public agent
+The invited person will now receive an email indicating that they can collaborate on your agent.
 
-If you are the owner of your public agent, you do exactly the same things you did when you agent was private.
+![Agent collaborator invite screenshot](img/03_invite.png "Define Olivier as collaborator with edit rights.")
 
-However, when you have decided to make public you agent, please read carefully section 'The public agent philosophy', to make sure you handle your public agent properly.
+The invited person now appears in the "Sharing overview" tab of the modal window. Here you can modify or revoke the access rights of collaborators (edit or show).
 
+![Agent sharing overview screenshot](img/04_sharing_overview.png "Olivier is now a collaborator!")
 
-### Working collaboratively with a public agent which is not yours
+You can repeat this operation with as many persons as you want.
 
-If you want to modify a public agent (for example, to add a new language), you will first need to talk to the public agent's owner (see section 'Communicating with an agent's owner'). Then, if the agent's owner agrees, you will be able to work on the public agent in collaboration with the owner.
-
-
-## A word on viky.ai's public agent
-
-
-viky.ai's public agent are simply public agent that have been created and that are managed by the Viky team. They are in no way different from any other public agents.
-
-However, the Viky team has taken a great care in creating them, and making them useful for as many people as possible. We are confident enough in the fact that those agents (and many more in the future) will become referents for the tasks they have been created for.
-
-If you still want to improve such an agent, for example to add the same function but using a different language, please contact us at support@viky.ai.
-
-
-
-## The public agent rule of conduct
-
-As the agent has been made public, and as some other people are starting using it, you have to apply some rule of conduct, specifically if you want to change it, improve it, and still have other people use it.
-
-First of all, you can see how many people are using your agent by looking at the "Dependencies (n) - Dependents (m)" section in the Overview tag of you agent [TODO : screenshot]. The 'm' number will tells you how many agents are using your agent. The more agents are using your agent, the more careful you need to be when you do some changes to your agent.
-
-If you click on this number, you will be able to see which agents are using your agent.
-
-When your public agent starts to be used by other agents, here are some safety rules that you can use:
-
-* You can safely change the name of your public interpretations,
-* Do not ever remove a public interpretation from your agent, as many users will be badly impacted,
-* Never change the structure of semantic solutions of your agent, whether directly or from some changes in the private interpretation's semantic solutions of your agent,
-* You can add new public interpretation without any problem,
-* You can also change some behavior within your private interpretation, like having new interpretations, but be careful with the structure of the public semantic solutions.
-
-At some point, you may come to a point, where you need to make more profound modifications on your public agent. In that case, we propose the following protocol:
-
-* First, duplicate your agent to get your own private copy of your public agent,
-* Second make all the modifications you want in the duplicated agent. Remember that it would still be much better to follow the above rules because your users will be able to adopt much more easily your new version of your agent.
-* Third, when you are satisfied with your modifications, you can make you agent public.
-
-To make your new version of your agent public, we recommand the following actions :
-
-* rename your old agent 'foo' to 'foo-old',
-* publish you new as foo and advertize this new agent.
-
-Please note that, all the people using your old agent will simply see that the agent has been renamed 'foo-old', but will still use the old agent. They will need to change the links to your new agent themselves to use your new agent. This is necessary, because there is no garanty that your new agent is compatible with the old agent. This is why is it better for you to keep the new version of your agent compatible with the old version.
-
-Note: There is no way for the moment, to change globally a sub-agent's use in a given agent from one version of this sub-agent to another version of this sub-agent. You will have to do it manually, by changing all the 'calls' (alias) of the sub-agent in your agent. However, we intend to implement such mechanism in a near future.
-
-## The public agent's philosophy
-
-We encourage you to create as many agent as you want, we also encourage you to duplicate public agent whenever you need to do it.
-
-However, when you publish your agent in public, it should have most of those properties so that other want to use it:
-
-* The agent should cover properly the natural langage function that it is supposed to cover. For example, if the agent "Number" covers numbers from "one" to "ninety nine", it may not be enough or will not be very useful.
-* The agent should be a simple copy of an already existing public agent.
-* Same thing if the agent is slightly improved copy of an already existing public agent: please submit your improvements to the owner of the orignal public agent, or keep it private for your own use.
-
-Our goal for public agents is to have well defined and well documentation public agents for a given natural language function and avoid unecessary duplications.
-
-Also, we are aware our current agent work on a limited number of languages, thus we are willing to help people that want to implement those agents in more languages.
+<aside class="primary">
+  <p>
+    When an agent has a public visibility, defining collaborators with only show rights is not interesting. Indeed, public visibility gives reading access to all users of the platform.
+  </p>
+</aside>
 
 
-## Communicating with an agent's owner.
+## Transfert your agent ownership
 
-It is not currently possible to communication directly with an agent's owner. We want to simplify that communication by creating this possibility within the viky.ai platform, but it is not done yet. For the moment, you will need to go through viky.ai's team to do so, by using the support@viky.ai mail. Thank you for you patience.
+An agent can have only one owner. However, as an owner you can transfer your agent ownership at any time. To do this, access the dedicated form by clicking on the "Transfer ownership" button.
 
+![Agent overview screenshot, focus on Transfert ownership button](img/05_transfert_btn.png "Access to the dedicated form by clicking on the "Transfer ownership" button")
 
+Then enter the email address of the person who will define the owner of the agent. Confirm by clicking on the "Transfer ownership now" button.
 
+![Tranfert ownership form screenshot, focus on Transfert ownership button](img/06_transfert_form.png "Transfer ownership form")
+
+There you go! :sparkles: You are no longer the owner of the agent, but you remain a collaborator with edit rights.
+
+![Tranfert ownership done screenshot](img/07_transfert_done.png "Transfer ownership done!")
+
+The new owner now has the choice of whether or not to keep you as a collaborator. :blush:
+
+<aside class="warning">
+  <p>
+    In case you no longer wish to use viky.ai and some of your agents are used by others, please make ownership transfers rather than delete your agents.  This is in order not to disrupt the agents using yours.
+  </p>
+</aside>
 
