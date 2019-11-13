@@ -1,7 +1,7 @@
 ---
 layout: doc
 title: "Import, export entities"
-description: "This document present you how to import and export entities list to and from viky.ai."
+description: "This how-to guide present you how to import and export entities."
 image: site_assets/img/social.jpg
 order: 303
 ---
@@ -12,6 +12,7 @@ When your agent becomes more complex it will need lots of entities grouped withi
 As such, it becomes easier to process those lists in an external tool and then import them into viky.ai.
 
 ## File format
+
 ### Overview
 
 The file format is CSV (Comma-Separated Values) UTF-8 encoded. Both entities import and export use this format. It is composed of  3 comma-separated columns, where each line represents a complete entity.
@@ -40,9 +41,10 @@ rue|street:en,true,rue,false,false
 ```
 
 It will import two entities:
-  - line 1 is the mandatory CSV header.
-  - line 2 has only one term: `avenue` without any language. Since the `auto solution` is enabled, the `solution` column is ignored and it will automatically get the first term as a JSON string (in this case `avenue`). The term is neither case sensitive nor accent sensitive so both columns have the value false.
-  - line 3 has two terms: `rue` without any language and `street` with the english language. Again, since the `auto solution` is enabled the `solution` column is ignored even if there is a value and it will automatically get the first term as a JSON string (in this case `rue`). The terms are neither case sensitive nor accent sensitive so both columns have the value false.
+
+* line 1 is the mandatory CSV header.
+* line 2 has only one term: `avenue` without any language. Since the `auto solution` is enabled, the `solution` column is ignored and it will automatically get the first term as a JSON string (in this case `avenue`). The term is neither case sensitive nor accent sensitive so both columns have the value false.
+* line 3 has two terms: `rue` without any language and `street` with the english language. Again, since the `auto solution` is enabled the `solution` column is ignored even if there is a value and it will automatically get the first term as a JSON string (in this case `rue`). The terms are neither case sensitive nor accent sensitive so both columns have the value false.
 
 The example below demonstrate a complex import:
 
@@ -60,20 +62,21 @@ London:en|Londres:fr,false,"{""city"": ""london"", ""lat"": 51.514125, ""long"":
 </aside>
 
 It will import three entities:
-  - line 1 is the mandatory CSV header.
-  - line 2 has only one term: `Paris` without any language. Since the `auto solution` is disabled, the `solution` column is used. The term is neither case sensitive nor accent sensitive so both columns have the value false.
-  - line 3 has two terms: `London` with the english language and `Londres` with the french language. Since the `auto solution` is disabled, the `solution` column is used. The terms are neither case sensitive nor accent sensitive so both columns have the value false.
-  - line 4 has three terms: `北京市` with the chinese language, `Beijing` without any language and `Pékin` with the french language. Since the `auto solution` is disabled, the `solution` column is used. The terms are not case sensitive so the `Case Sensitive` column has the value false but the terms are accent sensitive, so the `Accent Sensitive` column has the value true.
+
+* line 1 is the mandatory CSV header.
+* line 2 has only one term: `Paris` without any language. Since the `auto solution` is disabled, the `solution` column is used. The term is neither case sensitive nor accent sensitive so both columns have the value false.
+* line 3 has two terms: `London` with the english language and `Londres` with the french language. Since the `auto solution` is disabled, the `solution` column is used. The terms are neither case sensitive nor accent sensitive so both columns have the value false.
+* line 4 has three terms: `北京市` with the chinese language, `Beijing` without any language and `Pékin` with the french language. Since the `auto solution` is disabled, the `solution` column is used. The terms are not case sensitive so the `Case Sensitive` column has the value false but the terms are accent sensitive, so the `Accent Sensitive` column has the value true.
 
 In this example, every solution is a JSON object enclosed inside double quotes. It is composed of three fields, a city which describe what the term is about and additional information in the form of GPS latitude and longitude.
 
 <aside class="warning">
   <p>
-Even though it is possible to customize every <code>solution</code> object within a list, it is strongly adviced to keep the same JSON format on every entity within that list. It will make the integration with third party systems easier when it comes to processing the interpretation's solution.
+    Even though it is possible to customize every <code>solution</code> object within a list, it is strongly adviced to keep the same JSON format on every entity within that list. It will make the integration with third party systems easier when it comes to processing the interpretation's solution.
   </p>
 </aside>
 
-## Import an entities list
+## Import entities
 
 Select your agent, go to the entities list tab and open the list that will receive your data.
 
@@ -93,7 +96,7 @@ When the import is finished, the interface will be automatically refreshed.
 
 ![Import finished message screenshot](img/import_done.png "Import done")
 
-## Export an entities list
+## Export entities
 
 Select your agent, go to the entities list tab, and open the list you want to export. On the list header, press the **Export** button.
 
