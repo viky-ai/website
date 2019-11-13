@@ -1,6 +1,6 @@
 .blog{
   background-color: $grey_100;
-  min-height: calc(100% - 9em);
+  min-height: calc(100vh - 25em);
   padding: 1em .5em;
 
   @media screen and (min-width: $breakpoint_small) {
