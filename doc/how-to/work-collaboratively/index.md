@@ -10,7 +10,7 @@ viky.ai allows you to work collaboratively with agents and thus benefit from the
 
 ## Owner status
 
-Let's start from the example treated in the ["Getting started" tutorial](../getting-started-part-1/) where we created a new agent called "Address Tutorial". The user who has created an agent is the automatic owner of the agent.
+Let's start from the example treated in the ["Getting started" tutorial](../../tutorials/getting-started-part-1/) where we created a new agent called "Address Tutorial". The user who has created an agent is the automatic owner of the agent.
 
 You can check this by consulting the "Overview" tab of the agents, in the "Sharing overview" section.
 
