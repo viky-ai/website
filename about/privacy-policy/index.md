@@ -5,7 +5,7 @@ description: "Privacy Policy of viky.ai platform"
 image: site_assets/img/social.jpg
 ---
 
-# viky.ai privacy policy
+# Privacy policy
 
 <p class="legal-last-update">Last updated: November 14, 2019</p>
 
