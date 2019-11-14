@@ -9,7 +9,7 @@ image: site_assets/img/social.jpg
 
 <p class="legal-last-update">Last updated: November 14, 2019</p>
 
-## <small>Article no. 1:</small> PRESENTATION OF THE TOU
+## <small>Article no. 1</small> PRESENTATION OF THE TOU
 
 __1.1__ These Terms of Use (hereinafter the "TOU" or the "Agreement") set forth the terms of use under which you are provided access to services by Pertimm Developpement, registered with the Nanterre Area Companies and Commerce Register (RCS) under number 793 499 104, (hereinafter the “Company”, “Pertimm” or “We”/“Us”).
 
@@ -20,7 +20,7 @@ __1.3__ When you use our Services, We may ask you to provide personal informatio
 __1.4__ As such, the TOU determine the framework of contractual relations between the Service user (hereinafter "you") and Pertimm.
 
 
-## <small>Article no. 2:</small> ACCEPTANCE OF THE TOU
+## <small>Article no. 2</small> ACCEPTANCE OF THE TOU
 
 __2.1__ You acknowledge that you are an individual who has reached the age of majority in your country of habitual residence or, if you are a minor and the law of your country of habitual residence so requires, you have obtained permission from your legal representative (parent or guardian) to create an Account and/or access the Services. You also acknowledge that you are capable of entering into a valid agreement in accordance with the law, case law or customs of your country of habitual residence.
 
@@ -29,14 +29,14 @@ __2.2__ Any use of the Services which is not in accordance with the TOU is prohi
 __2.3__ Acceptance of the TOU is established by your creation of an account in the www.viky.ai website.
 
 
-## <small>Article no. 3:</small> ACCESS
+## <small>Article no. 3</small> ACCESS
 
 __3.1__ As the Service is offered on the Internet, you must have an Internet connection to access it. All costs of telephone connections and Internet access are at your expense. Pertimm shall bear no liability for damage you may suffer as a result of using an Internet connection or as a result of malware being installed on your computer.
 
 __3.2__ To access the Services and/or all of the Services' functionalities, the Company may ask you to create a Viky account (hereinafter the "Account"). You can create an Account from the sections provided for this purpose on www.viky.ai  (hereinafter the "Website”).
 
 
-## <small>Article no. 4:</small> ACCOUNT CREATION
+## <small>Article no. 4</small> ACCOUNT CREATION
 
 ### <small>4.1</small> Characteristics
 
@@ -106,12 +106,12 @@ __4.3.2.3__ You also acknowledge that you are presumed to be the user of your Ac
 __4.3.2.4__ You acknowledge that you, and not the Company, are responsible for all electronic communications and content sent from your computer, and that you must only use the Services in compliance with the law and the TOU.
 
 
-## <small>Article no. 5:</small> SANCTIONS
+## <small>Article no. 5</small> SANCTIONS
 
 In the event that one or more of the provisions of the TOU or of any other document incorporated herein by reference is violated, Pertimm reserves the right to terminate or limit, without prior notice and at its sole discretion, your use and access to the Services, to your Account.
 
 
-## <small>Article no. 6:</small> SUPPORT
+## <small>Article no. 6</small> SUPPORT
 
 __6.1__ The Support email address support@viky.ai is the preferred means of access to the Company's customer service department (hereinafter the "Support") for the Services.
 
@@ -123,7 +123,7 @@ __6.4__ In the event of identity theft and/or falsification of documents and/or 
 
 __6.5__ In the event that you suspect any breach of security, including loss, theft or unauthorized use of your login details, or any other problem related to the security of your Account, you will immediately notify the Company via its Support team. Subject to proving your identity, the Company will then reset your password or your secret answer and offer solutions to improve the security of your Account. The Company may also block access to the Account in question, for the time needed to investigate. Following the investigation, Support will settle the dispute at its sole discretion.
 
-## <small>Article no. 7:</small> LIABILITY AND WARRANTY
+## <small>Article no. 7</small> LIABILITY AND WARRANTY
 
 __7.1__ Pertimm will do everything possible to ensure the proper operation of its Services and provide you with the Services 24 hours a day, 7 days a week.
 
@@ -151,7 +151,7 @@ __7.8__ Some countries do not allow the exclusion or limitation of liability. Li
 __7.9__ subject to the preceding stipulations, should the company's liability be engaged in the framework of your use of services, the amount of any damages awarded to you is limited to the amount of the sums you have paid in the framework of access to the services over the course of the twelve (12) months preceding your claim.
 
 
-## <small>Article no. 8:</small> GENERAL PROVISIONS
+## <small>Article no. 8</small> GENERAL PROVISIONS
 
 __8.1__ Divisibility: If any provision or term of this Agreement is determined to be illegal, invalid, or unenforceable, that provision or term will be deleted without affecting the application of the other provisions.
 

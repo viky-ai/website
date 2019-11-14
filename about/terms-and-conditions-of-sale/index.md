@@ -10,7 +10,7 @@ image: site_assets/img/social.jpg
 <p class="legal-last-update">Last updated: November 14, 2019</p>
 
 
-## <small>Article no. 1:</small> INTRODUCTION
+## <small>Article no. 1</small> INTRODUCTION
 
 These Terms and Conditions of Sale (hereinafter the "TCS" or the "Contract") apply to all purchases of digital content not provided on a tangible medium (hereinafter the "Digital Content") between you (hereinafter "you" or the "User") and Pertimm Developpement, registered with the Nanterre Area Companies and Commerce Register (RCS) under number 793 499 104, (hereinafter the "Company", "Pertimm" or "We"/"Us").
 
@@ -27,19 +27,19 @@ Unless proven otherwise, data recorded by Pertimm constitutes proof of all trans
 PLEASE NOTE: When you purchase Digital Content, you expressly agree that the Digital Content will be made available to you immediately, and you therefore expressly waive your right of withdrawal.
 
 
-## <small>Article no. 2:</small> USER ACCOUNT
+## <small>Article no. 2</small> USER ACCOUNT
 
 To purchase Digital Content, you must be the account holder of a Viky account (hereinafter the "Account").
 
 For more information on Account creation rules, please refer to Pertimm's [Terms of Use](../terms-of-use/).
 
 
-## <small>Article no. 3:</small> AVAILABILITY
+## <small>Article no. 3</small> AVAILABILITY
 
 Our offers of Digital Content are valid while visible on the Website. They may be withdrawn or modified at any time.
 
 
-## <small>Article no. 4:</small> PRICE AND PAYMENT
+## <small>Article no. 4</small> PRICE AND PAYMENT
 
 __4.1__ You may purchase Digital Content using any of the payment methods offered by the Company. The available payment methods depend on the Digital Content you would like to purchase and your country of residence. Similarly, the price of an item of Digital Content may vary depending on the payment method selected and your country of residence. The Company shall not be held liable if one of the normally available payment methods for the Digital Content concerned is not available at the time of your order.
 
@@ -58,7 +58,7 @@ __4.5__ You acknowledge and accept that the Company is in no way liable for paym
 Also, if you have provided your login details to a third party who then makes a fraudulent payment, Pertimm may impose the same sanctions against you.
 
 
-## <small>Article no. 5:</small> PURCHASE METHOD AND ORDER CONFIRMATION
+## <small>Article no. 5</small> PURCHASE METHOD AND ORDER CONFIRMATION
 
 __5.1__ For orders on our Website:
 
@@ -71,7 +71,7 @@ You will receive e-mail confirmation that your order has been successfully place
 __5.2__ Your order is accepted and a contract is formed once we have enabled access to the Digital Content. The Digital Content is sold to you on a prepayment basis and, consequently, payment is due at the same time as the order.
 
 
-## <small>Article no. 6:</small> DIGITAL CONTENT
+## <small>Article no. 6</small> DIGITAL CONTENT
 
 __6.1__ Subscription to the www.viky.ai platform.
 
@@ -92,7 +92,7 @@ __6.1.4__ Excluding special cases, the duration of a Subscription is calculated 
 __6.1.5__ The Subscription ends upon expiry of the subscription period selected by the User, unless Account Closure occurs before this date.
 
 
-## <small>Article no. 7:</small> REFUNDS – WITHDRAWAL
+## <small>Article no. 7</small> REFUNDS – WITHDRAWAL
 
 __7.1__ Refunds
 
@@ -103,17 +103,17 @@ __7.2__ Withdrawal
 In accordance with applicable law, when you purchase Digital Content, you expressly agree that the Digital Content will be made available to you immediately. As a consequence, you expressly waive the right to exercise your right of withdrawal with regard to the purchase of Digital Content.
 
 
-## <small>Article no. 8:</small> PERSONAL DATA
+## <small>Article no. 8</small> PERSONAL DATA
 
 When you place an order on our Website, you may be required to provide us with personal information. For full information on how we handle this information, please read our [Privacy Policy](../privacy-policy/) carefully.
 
 
-## <small>Article no. 9:</small> CUSTOMER SUPPORT
+## <small>Article no. 9</small> CUSTOMER SUPPORT
 
 The Support mail address support@viky.ai is the preferred means of access to customer support (hereinafter the "Support").
 
 
-## <small>Article no. 10:</small> LIABILITY AND WARRANTY
+## <small>Article no. 10</small> LIABILITY AND WARRANTY
 
 __10.1__ digital content is used under the entire responsibility and at the sole risk of the user.
 
@@ -135,7 +135,7 @@ __10.9__ Some countries do not authorize liability limitations or exclusions. Th
 
 __10.10__ Subject to the aforementioned provisions, if Pertimm is deemed liable regarding your use of Digital Content, the amount of indemnity you may claim is restricted to the amount you expressly paid for the Digital Content.
 
-## <small>Article no. 11:</small> GENERAL PROVISIONS
+## <small>Article no. 11</small> GENERAL PROVISIONS
 
 __11.1__ Applicable law: The TCS are subject to French law.
 

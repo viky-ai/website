@@ -23,6 +23,10 @@
   h2{
     margin: 2em 0 1em 0;
     font-size: 1.9em;
+    small{
+      color: $grey_500;
+      display: block;
+    }
   }
   h3{
     font-size: 1.5em;
