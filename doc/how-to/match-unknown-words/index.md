@@ -14,15 +14,15 @@ When annotating a formulation, a special option `Any` is available. It allows th
 
 You already saw how an agent can match an unexpected road name for the `Address Tutorial` agent that we created in the [Getting started](/doc/tutorials/getting-started-part-3/#route-name) section. Let's dig a little deeper this example.
 
-First remove the `Any` option of the "route_names" annotation if it is already set. The associated entities list should only contains two entities: "Champs Elysées" and  "Rivoli".
+First remove the `Any` option of the "route_names" annotation if it is already set. Do so on every formulations in the "address" interpretation. The associated entities list should only contains two entities: "Champs Elysées" and  "Rivoli".
 
-Try the sentence "12 avenue de Rivoli 75019 Paris" in the console. Note the matching interpretation score. Since it is a perfect match so we have a perfect score of `1.0`.
+Try the sentence "12 avenue Rivoli 75019 Paris" in the console. Note the matching interpretation score. Since it is a perfect match so we have a perfect score of `1.0`.
 
-![Console perfect match](../../screenshot-placeholder.gif "Perfect match on an expected sentence")
+![Console perfect match](img/01_no_any_perfect_match.png "Perfect match on an expected sentence")
 
 Change de road name to something that is not part of the entities list such as "12 avenue Louise Weiss 75019 Paris". Try again in the console. Nothing match.
 
-![Console nothing match](../../screenshot-placeholder.gif "Nothing match because of unexpected road name")
+![Console nothing match](img/02_no_any_no_match.png "Nothing match because of unexpected road name")
 
 <aside class="note">
   <h3>Note</h3>
@@ -34,11 +34,11 @@ Change de road name to something that is not part of the entities list such as "
 Now reenable the `Any` option on the "route_names". Retry your previous sentence with the unknown road name, in this example "12 avenue Louise Weiss 75019 Paris".
 The interpretation match because even if a part of the sentence is still missing the NLP is now forced to fill the blank. Note that the score is lower because of this option.
 
-![Console any match](../../screenshot-placeholder.gif "One match thanks to the 'any' option despite unexpected road name")
+![Console any match](img/03_any_partial_match.png "One match thanks to the 'any' option despite unexpected road name")
 
-If you type the road name with the known road name, here "12 avenue de Rivoli 75019 Paris" the score is `1.0` again even with the `Any` option still present.
+If you type the road name with the known road name, here "12 avenue Rivoli 75019 Paris" the score is `1.0` again even with the `Any` option still present.
 
-![Console any perfect match](../../screenshot-placeholder.gif "Perfect match on expected road name even with the 'any' option")
+![Console any perfect match](img/04_any_perfect_match.png "Perfect match on expected road name even with the 'any' option")
 
 What happen is that the annotated interpretation or entities list will be used in the first place but if nothing match then the `Any` option will serve as a fallback and will gather the corresponding text anyway. In that case the associated score will be decreased compare to not triggering the `Any` option.
 
