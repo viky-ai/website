@@ -109,9 +109,6 @@ Thus we can see that with one single combination, we can achieve the analysis of
   <p>
     When we have thus created a combination, there is another mechanism that can also combine the solutions coming from the two <strong>sub-interpretations</strong> into another more complex semantic solution.
   </p>
-  <p>
-    When two interpretations are combined together, they cannot overlap on the text.
-  </p>
 </aside>
 
 
