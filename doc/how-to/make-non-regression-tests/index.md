@@ -10,7 +10,7 @@ Your agent can go through many changes. So you need to make sure that with every
 
 ## Adding a non regression test
 
-Let us see how we can create a non regression tests suite for the `Address Tutorial` agent that we created in the "[Getting started](/doc/tutorials/getting-started-part-1/)" tutorial.
+Let us see how we can create a non regression tests suite for the "Address Tutorial" agent that we created in the "[Getting started](/doc/tutorials/getting-started-part-1/)" tutorial.
 
 Every time you ask your agent to interpret a sentence, you will be given an option to add the sentence to the test suite. Type "12 avenue de Flandres 75019 Paris" in the text field of the console and send the request. You will see a "Add to tests suite" button on the bottom right corner of the "Explain" tab.
 
