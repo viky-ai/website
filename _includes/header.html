@@ -19,10 +19,10 @@
 
   <div class="header__login">
     {% if site.features.user_registration_disabled %}
-      <a href="/users/sign_in">Log in</a>
+      {% include nav/sign_in.html %}
     {% else %}
-      <a href="/users/sign_up">Sign up</a>
-      <a href="/users/sign_in">Log in</a>
+      {% include nav/sign_up.html %}
+      {% include nav/sign_in.html %}
     {% endif %}
   </div>
 </div>
