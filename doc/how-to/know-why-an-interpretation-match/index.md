@@ -1,6 +1,6 @@
 ---
 layout: doc
-title: Understand why an interpretation match
+title: Know why an interpretation match
 description: "How to see why an agent analyze a sentence this way."
 image: site_assets/img/social.jpg
 order: 305
