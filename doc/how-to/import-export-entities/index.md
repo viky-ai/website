@@ -11,6 +11,7 @@ order: 303
 When your agent becomes more complex it will need lots of entities grouped within lists.
 As such, it becomes easier to process those lists in an external tool and then import them into viky.ai.
 
+
 ## File format
 
 ### Overview
@@ -29,6 +30,7 @@ The third column is the corresponding solution. If the `Auto solution` column co
 The fourth column indicates if the terms are case sensitive. This column **must** contain either `true` if the term's case should be respected or `false` otherwise.
 
 The last column indicates if the terms are accent sensitive. This column **must** contain either `true` if the term's accent should be respected or `false` otherwise.
+
 
 ### Examples
 
@@ -76,30 +78,32 @@ In this example, every solution is a JSON object enclosed inside double quotes. 
   </p>
 </aside>
 
+
 ## Import entities
 
 Select your agent, go to the entities list tab and open the list that will receive your data. Then click the "CSV Export" button in order to display the entities import form.
 
-![Import entities list button location screenshot](img/import_button.png "Import an entities list")
+![Import entities list button location screenshot](img/01_import_button.png "Import an entities list")
 
 Only plain CSV files are accepted. An import can either append the file content to the list or replace it entirely. The line order in the file is preserved in the final entities list. Empty lines are ignored.
 
 The import process can accept files with a size up to 30 MB.
 
-![Import modal window screenshot](img/import_modal.png "Import modal window")
+![Import modal window screenshot](img/02_import_modal.png "Import modal window")
 
 There can be only one ongoing import at a time on a given entities list. A message will inform you that the import process is running. During this operation, manual updates are disabled.
 
-![Import progress message screenshot](img/import_in_progress.png "Import in progress")
+![Import progress message screenshot](img/03_import_in_progress.png "Import in progress")
 
 When the import is finished, the interface will be automatically refreshed.
 
-![Import finished message screenshot](img/import_done.png "Import done")
+![Import finished message screenshot](img/04_import_done.png "Import done")
+
 
 ## Export entities
 
 Select your agent, go to the entities list tab, and open the list you want to export. On the list header, click the "CSV Export" button.
 
-![Export entities list button location screenshot](img/export_button.png "Export an entities list")
+![Export entities list button location screenshot](img/05_export_button.png "Export an entities list")
 
 viky.ai will offer you to download the corresponding CSV file. Its name has the following convention: `<username>_<agentname>_<entities_list_name>_<current_date>.csv`
