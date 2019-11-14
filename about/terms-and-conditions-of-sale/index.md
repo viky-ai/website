@@ -149,4 +149,4 @@ The User is informed that, in the event of a dispute, he/she may resort to conve
 
 For consumers in the European Union: The European Commission provides an [online dispute resolution platform](http://ec.europa.eu/consumers/odr/).
 
-BEFORE PLACING A SUBSCRIPTION, YOU ACKNOWLEDGE THAT YOU HAVE READ AND ACCEPTED THESE TERMS AND CONDITIONS OF SALE, AS WELL AS OUR [PRIVACY POLICY](../privacy-policy/).
+BEFORE PLACING A SUBSCRIPTION, YOU ACKNOWLEDGE THAT YOU HAVE READ AND ACCEPTED THESE TERMS AND CONDITIONS OF SALE, AS WELL AS OUR [PRIVACY POLICY](../privacy-policy/) AND OUR [TERMS OF USE](../terms-of-use/).
