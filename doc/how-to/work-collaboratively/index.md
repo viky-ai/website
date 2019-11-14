@@ -8,9 +8,10 @@ order: 301
 
 viky.ai allows you to work collaboratively with agents and thus benefit from the contributions of your collaborators. Here we explain how to proceed.
 
+
 ## Owner status
 
-Let's start from the example treated in the ["Getting started" tutorial](../../tutorials/getting-started-part-1/) where we created a new agent called "Address Tutorial". The user who has created an agent is the automatic owner of the agent.
+Let's start from the example treated in the "[Getting started](../../tutorials/getting-started-part-1/)" tutorial where we created a new agent called "Address Tutorial". The user who has created an agent is the automatic owner of the agent.
 
 You can check this by consulting the "Overview" tab of the agents, in the "Sharing overview" section.
 
@@ -18,12 +19,12 @@ You can check this by consulting the "Overview" tab of the agents, in the "Shari
 
 The status of owner on an agent allows you to see, modify, delete it but also to invite people to collaborate with you on this agent. We'll look at it in detail now.
 
+
 ## Invite collaborators
 
 Go to the "overview" page of an agent you own.
 
-
-![Agent overview screenshot, focus on Share button](img/02_share_btn.png "Access collaborators management using the "Share" button")
+![Agent overview screenshot, focus on share button](img/02_share_btn.png "Access collaborators management using the "Share" button")
 
 Here, you can share your agent with somebody else by clicking on the "Share" button, then:
 
@@ -75,4 +76,3 @@ The new owner now has the choice of whether or not to keep you as a collaborator
     In case you no longer wish to use viky.ai and some of your agents are used by others, please make ownership transfers rather than delete your agents.  This is in order not to disrupt the agents using yours.
   </p>
 </aside>
-
