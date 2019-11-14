@@ -32,14 +32,14 @@
 
 .home__use-cases{
   position: relative;
-  background-image: url('../img/home/sep-down.png'), url('../img/home/home-small.jpg');
+  background-image: url('../img/sep-down.png'), url('../img/home/home-small.jpg');
   background-position: left bottom, center bottom;
   background-size:  100% 10vw, cover;
   background-repeat: no-repeat, no-repeat;
   height: 60vw;
 
   @media screen and (min-width: 800px) {
-    background-image: url('../img/home/sep-down.png'), url('../img/home/home-large.jpg');
+    background-image: url('../img/sep-down.png'), url('../img/home/home-large.jpg');
   }
 
   @media screen and (min-width: 600px) {
@@ -151,9 +151,9 @@ section.home__section-ui{
 
 section.home__features{
   background-image:
-    url('../img/home/sep-up.png'),
-    url('../img/home/sep-down.png'),
-    linear-gradient(to bottom, rgba($grey_100, 1), rgba($grey_200, .9));
+    url('../img/sep-up.png'),
+    url('../img/sep-down.png'),
+    linear-gradient(to bottom, $light-grey-300, $light-grey-400);
   background-position: left top, left bottom, center bottom;
   background-size:  100% 3em, 100% 3em, cover;
   background-repeat: no-repeat, no-repeat;

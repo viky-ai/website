@@ -1,0 +1,37 @@
+a.btn{
+  display: inline-block;
+  text-decoration: none;
+  padding: .5em 1em;
+  font-weight: 400;
+  border-radius: 3px;
+  font-size: 1.1em;
+  box-shadow: 0 2px 2px rgba(#000, .075);
+  background: linear-gradient(to top, darken($primary_color, 5%), $primary_color);
+  color: #fff;
+
+  &:hover{
+    color: #fff;
+    box-shadow: 0 2px 3px rgba(#000, .1);
+    background: linear-gradient(to top, darken($primary_color, 10%), darken($primary_color, 5%));
+  }
+  &:focus{
+    color: #fff;
+    box-shadow: 0 0 0 3px rgba($primary_color, .35), 0 5px 2px rgba(#000, .075);
+  }
+}
+
+a.btn.btn--inverted{
+  background: linear-gradient(to top, $light-grey-100, $light-grey-500);
+  color: $dark-grey-400;
+  &:hover{
+    background: linear-gradient(to top, #fff, $light-grey-100);
+    color: $dark-grey-600;
+  }
+}
+
+.btn-note{
+  font-size: .8em;
+  margin-top: .25em;
+  display: block;
+  color: $dark-grey-200;
+}

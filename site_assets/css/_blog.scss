@@ -1,7 +1,7 @@
 .blog{
-  background-color: $grey_100;
-  min-height: calc(100vh - 25em);
   padding: 1em .5em;
+
+  background-color: $light-grey-300;
 
   @media screen and (min-width: $breakpoint_small) {
     padding: 2em;
@@ -13,9 +13,10 @@
 }
 
 .blog-breadcrumb{
-  color: $grey_500;
+  margin: 1em 0;
+  color: $dark-grey-400;
   a{
-    color: $grey_500;
+    color: $dark-grey-400;
     &:focus,
     &:hover{
       color: $primary_color;
@@ -52,7 +53,7 @@ ul.blog-index{
     }
     padding: 3em 2em 2em 2em;
     background-color: #fff;
-    border: 1px solid $grey_200;
+    border: 1px solid $light-grey-800;
     border-radius: 3px;
     box-shadow: 0 3px 4px rgba(#000, .015);
 
@@ -68,7 +69,7 @@ ul.blog-index{
         top: -107px;
         left: calc(50% - 37px);
         border: 2px solid #fff;
-        box-shadow: 0 0 0 4px $grey_100;
+        box-shadow: 0 0 0 4px $light-grey-300;
       }
       h1{
         font-weight: 300;

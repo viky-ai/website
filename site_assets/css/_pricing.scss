@@ -1,5 +1,5 @@
 .pricing{
-  background-color: $grey_100;
+  background-color: $light-grey-300;
   h1{
     text-align: center;
     margin: 1em;
@@ -69,41 +69,12 @@ ul.pricing__features{
 
 .pricing__call_to_action{
   margin: 3em 0 2em 0;
-  a{
-    display: inline-block;
-    text-decoration: none;
-    padding: .5em 1em;
-    font-weight: 400;
-    border-radius: 3px;
-    font-size: 1.1em;
-    box-shadow: 0 2px 2px rgba(#000, .075);
-    &:hover{
-      box-shadow: 0 2px 3px rgba(#000, .1);
-    }
-    &:focus{
-      box-shadow: 0 0 0 3px rgba($primary_color, .35), 0 5px 2px rgba(#000, .075);
-    }
-  }
 }
 
 .pricing__plans__freemium{
   background-color: #fff;
   h3{
     color: $dark-grey-300;
-  }
-  .pricing__call_to_action{
-    a{
-      background: linear-gradient(to top, darken($primary_color, 5%), $primary_color);
-      color: #fff;
-      &:hover{
-        background: linear-gradient(to top, darken($primary_color, 10%), darken($primary_color, 5%));
-      }
-    }
-    small{
-      margin-top: .25em;
-      display: block;
-      color: $dark-grey-200;
-    }
   }
   .pricing__notes{
     border-top: 1px solid $light-grey-500;
@@ -137,23 +108,11 @@ ul.pricing__features{
       background-image: url('../icons/outline-check-primary.svg');
     }
   }
-  .pricing__call_to_action{
-    a{
-      background: linear-gradient(to top, $light-grey-100, $light-grey-500);
-      color: $dark-grey-400;
-      &:hover{
-        background: linear-gradient(to top, #fff, $light-grey-100);
-        color: $dark-grey-600;
-      }
-    }
-  }
   strong{
     color: #fff;
     font-weight: 700;
   }
 }
-
-
 
 section.pricing__faq{
   background-color: #fff;
@@ -177,6 +136,3 @@ section.pricing__faq{
     grid-gap: 4em;
   }
 }
-
-
-

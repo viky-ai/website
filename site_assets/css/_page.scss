@@ -7,7 +7,7 @@
   }
 
   section.wave-down{
-    background-image: url('../img/home/sep-down.png');
+    background-image: url('../img/sep-down.png');
     background-position: left bottom;
     background-size:  100% 3em;
     background-repeat: no-repeat;
@@ -32,12 +32,5 @@
   }
   p, ul, li{
     font-size: 1em;
-  }
-  a{
-    color: darken($primary_color, 5%);
-    &:hover,
-    &:focus{
-      color: darken($primary_color, 15%);
-    }
   }
 }

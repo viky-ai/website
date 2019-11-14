@@ -6,54 +6,58 @@ pagination:
   enabled: true
 ---
 
-<div class="blog">
-  <div class="blog__container">
-    <div class="blog-breadcrumb">Blog</div>
-    <ul class="blog-index">
-      {% for post in paginator.posts %}
-        <li>
-          <article>
-            <header>
-              <img src="/site_assets/img/authors/{{post.avatar}}" />
-              <h1>
-                <a href="{{post.url}}">
-                  {{post.title}}
-                </a>
-              </h1>
-              <p>
-                <strong>{{post.author}}</strong> on {{post.date | date_to_long_string}}
-                &mdash;
-                {% include reading_time.html content=post.content %}
-              </p>
-            </header>
-            <div class="article__content">
-              {{ post.excerpt }}
-              <p><a href="{{post.url}}">Keep reading</a></p>
-            </div>
-          </article>
-        </li>
-      {% endfor %}
-    </ul>
+<div class="page">
 
-    <div class="blog-pagination">
-      {% if paginator.total_pages > 1 %}
-        {% if paginator.previous_page %}
-          <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">
-            &larr; Newer Posts
-          </a>
-        {% else %}
-          <span></span>
+  <section class="blog wave-down">
+    <div class="blog__container">
+      <div class="blog-breadcrumb">Blog</div>
+      <ul class="blog-index">
+        {% for post in paginator.posts %}
+          <li>
+            <article>
+              <header>
+                <img src="/site_assets/img/authors/{{post.avatar}}" />
+                <h1>
+                  <a href="{{post.url}}">
+                    {{post.title}}
+                  </a>
+                </h1>
+                <p>
+                  <strong>{{post.author}}</strong> on {{post.date | date_to_long_string}}
+                  &mdash;
+                  {% include reading_time.html content=post.content %}
+                </p>
+              </header>
+              <div class="article__content">
+                {{ post.excerpt }}
+                <p><a href="{{post.url}}">Keep reading</a></p>
+              </div>
+            </article>
+          </li>
+        {% endfor %}
+      </ul>
+
+      <div class="blog-pagination">
+        {% if paginator.total_pages > 1 %}
+          {% if paginator.previous_page %}
+            <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">
+              &larr; Newer Posts
+            </a>
+          {% else %}
+            <span></span>
+          {% endif %}
+          {% if paginator.next_page %}
+            <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">
+              Older Posts &rarr;
+            </a>
+          {% else %}
+            <span></span>
+          {% endif %}
         {% endif %}
-        {% if paginator.next_page %}
-          <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">
-            Older Posts &rarr;
-          </a>
-        {% else %}
-          <span></span>
-        {% endif %}
-      {% endif %}
+      </div>
     </div>
-  </div>
+  </section>
+
+  {% include call_to_action.html %}
+
 </div>
-
-
