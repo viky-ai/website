@@ -6,7 +6,7 @@ image: site_assets/img/social.jpg
 order: 300
 ---
 
-The number of publicly available agents can be overwhelming when you are looking for an existing one that could fits your requirements. Several tools can help you find the best agent for your use case.
+The number of publicly available agents can be overwhelming when you are looking for an existing one that could fit your requirements. Several tools can help you find the best agent for your use case.
 
 In this example we want to analyze texts such as this one:
 
@@ -39,7 +39,7 @@ From here we assume that agents [Countries](https://www.viky.ai/agents/viky/coun
 
 ## Using Play
 
-When you narrowed down a set of potentially useful agents for your use case, you can try them in Play. This tools allows you to submit large texts to a selection of agents and asses how they perform against that text.
+When you narrowed down a set of potentially useful agents for your use case, you can try them in Play. This tool allows you to submit large texts to a selection of agents and asses how they perform against that text.
 
 Go to Play from the navigation bar and select the previous set of agents: [Countries](https://www.viky.ai/agents/viky/countries), [Date](https://www.viky.ai/agents/viky/date), [Datetime](https://www.viky.ai/agents/viky/date), [Moneys](https://www.viky.ai/agents/viky/moneys), [Numbers](https://www.viky.ai/agents/viky/numbers) and [Persons](https://www.viky.ai/agents/viky/persons).
 
@@ -53,9 +53,9 @@ When the interpretation is done the analyzed result appears below. Every interpr
 
 ![Play screenshot, focus on interpretation detail](./img/05_interpretation_detail.png "Display an interpretation detail")
 
-If several interpretations from different agents match the same expression, only the one with the wider coverage is shown. We can temporarily disable an agent with the right switch. This trigger a new processing without the agent even if it is still present in the selection.
+If several interpretations from different agents match the same expression, only the one with the wider coverage is shown.
 
-We can see that interesting information are found by every agents. If we look closely, the [Datetime](https://www.viky.ai/agents/viky/date) agent does not add much because it only match one date in the text. If we disable it the [Date](https://www.viky.ai/agents/viky/date) agent is able to match the remaining date and so we can reduce the number of agents in our selection.
+We can temporarily disable an agent with the right switch. This trigger a new processing of the text without the agent even if still present in the selection. We can see that interesting information are found by every agents. If we look closely, the [Datetime](https://www.viky.ai/agents/viky/date) agent does not add much because it only match one date in the text. If we disable it, the [Date](https://www.viky.ai/agents/viky/date) agent is able to match the remaining date expression and so we can reduce the number of agents in our selection.
 
 ![Play screenshot, focus on disabled agent](./img/06_disable_agent.png "Disable an agent to exclude it from the interpretation")
 
@@ -77,6 +77,6 @@ Go to one agent of our list, [Date](https://www.viky.ai/agents/viky/date) for in
 
 ## Other places
 
-An other way to asset what an agent can do is to read its read me section on the agent overview. It is a great way for the agent owner to explain how the agent is supposed to work and in what context.
+An other way to asses what an agent can do is to read its "Readme" section on the agent overview. It is a great way for the agent's owner to explain how the agent is supposed to work and in what context.
 
-When available regressions tests are also an interesting source to understand what kind of sentence are expected and have an example of edge cases.
+When available non regressions tests are also an interesting source to understand what kinds of sentences are expected and have an example of edge cases.
