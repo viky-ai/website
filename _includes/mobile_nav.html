@@ -12,12 +12,7 @@
     {% include nav/home.html %}
     {% include nav/pricing.html %}
     {% include nav/open_source.html %}
-    {% include nav/doc.html %}
-    <div class="mobile-nav__main__doc">
-      {% include doc_nav.html %}
-    </div>
     {% include nav/blog.html %}
-
     <div class="login">
       {% if site.features.user_registration_disabled %}
         {% include nav/sign_in.html %}
@@ -25,6 +20,10 @@
         {% include nav/sign_up.html %}
         {% include nav/sign_in.html %}
       {% endif %}
+    </div>
+    {% include nav/doc.html %}
+    <div class="mobile-nav__main__doc">
+      {% include doc_nav.html %}
     </div>
   </div>
 </div>
