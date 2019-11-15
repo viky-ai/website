@@ -73,6 +73,6 @@ The new owner now has the choice of whether or not to keep you as a collaborator
 
 <aside class="warning">
   <p>
-    In case you no longer wish to use viky.ai and some of your agents are used by others, please make ownership transfers rather than delete your agents.  This is in order not to disrupt the agents using yours.
+    In case you no longer wish to use viky.ai and some of your agents are used by others, please transfers ownership rather than delete your agents.  This is in order not to disrupt the agents using yours.
   </p>
 </aside>
