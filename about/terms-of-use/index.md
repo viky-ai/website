@@ -1,6 +1,6 @@
 ---
 layout: legal
-title: "viky.ai terms of use"
+title: "Terms of use - viky.ai"
 description: "Terms of use of viky.ai platform"
 image: site_assets/img/social.jpg
 ---

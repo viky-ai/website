@@ -1,6 +1,6 @@
 ---
 layout: legal
-title: "viky.ai privacy policy"
+title: "Privacy policy - viky.ai"
 description: "Privacy Policy of viky.ai platform"
 image: site_assets/img/social.jpg
 ---

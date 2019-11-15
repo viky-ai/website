@@ -1,6 +1,6 @@
 ---
 layout: doc
-title: "viky.ai documentation"
+title: "Documentation - viky.ai"
 description: "Documentation of viky.ai platform."
 image: site_assets/img/social.jpg
 ---

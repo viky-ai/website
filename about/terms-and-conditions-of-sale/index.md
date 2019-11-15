@@ -1,6 +1,6 @@
 ---
 layout: legal
-title: "viky.ai terms and conditions of sale"
+title: "Terms and conditions of sale - viky.ai"
 description: "Terms and conditions of sale of viky.ai platform"
 image: site_assets/img/social.jpg
 ---
