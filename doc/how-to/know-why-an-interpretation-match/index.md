@@ -10,7 +10,7 @@ Sometimes an agent will not understand a sentence as you expected. In such case,
 
 ## Display the interpret plan
 
-Let us see how an agent dedicated for currencies in viky.ai interprets the sentence "It costs between 10 and 15 canadian dollars".
+Let us see how an [agent dedicated for currencies](https://www.viky.ai/agents/viky/moneys) in viky.ai interprets the sentence "It costs between 10 and 15 canadian dollars".
 
 To explore, switch the "verbose" mode to `ON` and send your sentence. In the "Explain" tab each interpretations will have a new section "Highlight" showing which words of the sentence matched by the interpretation.
 
