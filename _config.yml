@@ -1,6 +1,6 @@
 title: ""
 baseurl: ""
-url: "https://viky-beta.viky.ai"
+url: "https://www.viky.ai"
 logo: /site_assets/img/viky-ai-logo.png
 
 pagination:
@@ -21,6 +21,23 @@ permalink: /blog/:year/:month/:day/:title
 
 feed:
   path: blog/atom.xml
+
+defaults:
+  -
+    scope:
+      path:            "404.html"
+    values:
+      sitemap:         false
+  -
+    scope:
+      path:            "50x.html"
+    values:
+      sitemap:         false
+  -
+    scope:
+      path:            "doc/guides/markdown-reference/index.md"
+    values:
+      sitemap:         false
 
 markdown: kramdown
 kramdown:
