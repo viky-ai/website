@@ -6,7 +6,7 @@ image: site_assets/img/social.jpg
 order: 201
 ---
 
-If you didn't read "main concepts behind viky.ai", you should do it before you read this article. You will understand how agents fit in the viky.ai platform, and have a first idea of what is an agent.
+If you didn't read [Main concepts behind viky.ai](/doc/topics/main-concepts-behind-viky-ai/), you should do it before you read this article. You will understand how agents fit in the viky.ai platform, and have a first idea of what is an agent.
 
 In this article, we want to describe in details:
 
