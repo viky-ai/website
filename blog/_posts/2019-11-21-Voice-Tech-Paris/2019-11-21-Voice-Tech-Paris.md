@@ -9,8 +9,6 @@ image: site_assets/img/social.jpg
 
 Voice Recognition, NLP / NLU: state of the art and latest advanced research on these technologies
 
-Title: Speech recognition, NLP/NLU: state of the art and latest research developments on these technologies
-
 I will present the main parts that make up the NLP/NLU, and I will show the recent innovations on these different parts, why they work or not depending on their uses.
 The machine learning is discussed and I will show where it works, where it doesn't, and why.
 
