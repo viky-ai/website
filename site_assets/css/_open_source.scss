@@ -1,19 +1,5 @@
 .open-source{
   background-color: $light-grey-300;
-  h1{
-    text-align: center;
-    margin: 1em 0 .25em 0;
-    font-weight: 300;
-    font-size: 2.75em;
-    color: $dark-grey-600;
-    line-height: 1.1em;
-  }
-  h2{
-    text-align: center;
-    margin: 0 0 2.5em 0;
-    color: $dark-grey-300;
-    line-height: 1.3em;
-  }
 
   .open-source__main{
     display: grid;
