@@ -25,7 +25,7 @@ In essence only your imagination can limit the scope of your agents.
 
 So we would say that an agent is a process that can analyse a piece of information that is written as a text, and this analysis can take any shape or form you like. This freedom of description is mimicking the freedom of thought you have.
 
-And we can add the corrolary descriptions:
+And we can add the corollary descriptions:
 
 * Your description of the agent is done within the viky.ai platform, and this description is then run (processed) by the platform.
 * The analysis or the form that you want is the semantic structure that you will decide your agent will create.
@@ -44,7 +44,7 @@ A readme gives you the possibility to describe you agent any way you want. We su
 
 Another very interesting part that will help you document your agent but also check if your agent is always doing what you have designed it to do is the tests suite. Please refer to [Make non regression tests](/doc/how-to/make-non-regression-tests/), for detailed information on this feature.
 
-We recommand you do not give too many examples in your Readme, but use the tests suite instead.
+We recommend you do not give too many examples in your Readme, but use the tests suite instead.
 
 Describing your agent and documenting it is a good way to start if your want other people to use it. However you agent must have some good properties, just like when you express your ideas, this expression must have some good properties.
 
@@ -52,7 +52,7 @@ Amoung the agent's good properties, we can cite:
 
 * **Completeness**: if your agent is to cover some ideas in texts, it must do so as extensively as possible. For example, if you want to do agent that is expressing numbers in English, it must handle as many numbers as possible (and all if possible).
 * **Consistency**: your agent's semantic solution must have a structure that coherently and consistently represent your thoughts about the texts it analyses.
-* **Independant from natural language**: as the semantic solution of your agent really represent an idea, it should be normal to have that idea expressed the same way for any language this agent is analizing.
+* **independent from natural language**: as the semantic solution of your agent really represent an idea, it should be normal to have that idea expressed the same way for any language this agent is analyzing.
 * **Multilingual**: as you are representing ideas taken from text, your agent should normally be multilingual. And, even if, at first, it is monolingual, it should not be too difficult to add another language to your agent to express the same idea.
 
 
@@ -62,12 +62,12 @@ Agents can be organized together as ideas can be organized together. When you cr
 
 Thus it is important to know which agent already exist. You have different ways to find which agent can be of use for create your own agent:
 
-* first of all, you can go through all public agent and look at their readme, but also their tests suite, to know if they can be of use.
+* first of all, you can go through all public agent and look at their readme, but also their tests suite, to know if they can be of use
 * then you can choose the one you selected and test them in the Play interface (check this page [Discover and try agents](/doc/how-to/discover-and-try-agents/) for more information on how to use the Play interface)
 
 If an agent is doing exactly what you want to do (or close), you might want to simply use it or contribute to it.
 
-Usually some agents can do part of the job that you have in mind, which means that those agents can handle part of the text that you want to handle with your agent. A simple example can be taken from already existing public agents : let's say we want to handle amounts of money, like "14 millions of euros". You can find the "Numbers" agent which can handle "14 millions of", then you discover that another agent call "Money Unit" which handles all the moneys including "euros". So you could create an agent which is the combination of numbers and money units. In fact, in that case there is already an agent called measures that is doing exactly this, but in an even more general way. Please look at this agent to see how it is done.
+Usually some agents can do part of the job that you have in mind, which means that those agents can handle part of the text that you want to handle with your agent. A simple example can be taken from already existing public agents: let's say we want to handle amounts of money, like "14 millions of euros". You can find the "Numbers" agent which can handle "14 millions of", then you discover that another agent call "Money Unit" which handles all the moneys including "euros". So you could create an agent which is the combination of numbers and money units. In fact, in that case there is already an agent called measures that is doing exactly this, but in an even more general way. Please look at this agent to see how it is done.
 
 Of course you might not find exactly what you need, then in this case, your agent will be a combination of some existing agents and your own ideas of an agent that will exactly fit your needs.
 
@@ -75,12 +75,8 @@ Of course you might not find exactly what you need, then in this case, your agen
 
 In the last paragraph, we have seen how to take advantage of already existing agents. But we have also seen that you will want to create your own agent that will use some of your ideas and existing agents.
 
-In some case you will want to divide your idea into smaller ideas, each of those ideas can be represented by a smaller agent that you will want to create. This happens when those smaller ideas have some kind of independant life from your main idea.
+In some case you will want to divide your idea into smaller ideas, each of those ideas can be represented by a smaller agent that you will want to create. This happens when those smaller ideas have some kind of independent life from your main idea.
 
-This is how we have created public agents: they represent independant smaller ideas.
+This is how we have created public agents: they represent independent smaller ideas.
 
-We believe that using that kind of modus operandi, will create a lot of independant agents that will represent and take part in bigger and bigger ideas.
-
-
-
-
+We believe that using that kind of modus operandi, will create a lot of independent agents that will represent and take part in bigger and bigger ideas.
