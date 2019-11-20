@@ -7,7 +7,9 @@ avatar: patrick-constant.jpg
 image: site_assets/img/social.jpg
 ---
 
-Dear all, I will be at the Voice Tech Paris on November, 26th 2019 to present a key note on Voice Recognition and NLP.
+Dear all,
+
+I will be at the Voice Tech Paris on November, 26th 2019 to present a key note on Voice Recognition and NLP.
 
 I will talk about the state of the art and latest advanced research on these technologies.
 
