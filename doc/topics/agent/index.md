@@ -39,18 +39,18 @@ This strategy of composition is at the heart of viky.ai and we are going to expl
 
 ## How to organize agents together ?
 
-Agents can be organized together as ideas can be organized together. When you create agents, you want to know if there are already agents that can do part or all of the work that you have set your mind to do.
+Agents are the fundamental elements of text understanding. You can shape them to interpret from mundane ideas to abstract concepts.
+You may be tempted at first to include every sentences you need into one single big agent. This is usually a bad idea. Including too many subjects of focus in the same agent blur the scope outline of what the agent is supposed to understand.
 
-Thus it is important to know which agent already exist. You have different ways to find which agent can be of use for create your own agent:
+The proper way to handle such case is to split your big agent into many smaller ones. Each small agent should focus on a specific subject, it should be short and to the point. A general rule of thumbs is to follow the single responsibility principle stating that an agent should have only one reason to change. Basically an agent about the weather should only be updated if you want to match new sentences about the weather forecast and not for sentences about flights booking for instance.
 
-* first of all, you can go through all public agent and look at their readme, but also their tests suite, to know if they can be of use
-* then you can choose the one you selected and test them in the Play interface (check this page [Discover and try agents](/doc/how-to/discover-and-try-agents/) for more information on how to use the Play interface)
+Only small agents won't get you very far to solve real life business issues. Here comes the composition. An agent is able to include an arbitrary number of other agents and exploit their results to produce a new outcome. This form a tree of dependencies between agents without limit of depth nor width.
 
-If an agent is doing exactly what you want to do (or close), you might want to simply use it or contribute to it.
+There is two ways to use this dependencies tree. The first one is by depth. At the bottom we have agents for practical ideas like numbers, date, length units, cities, etc. On top of that comes agents for slightly more elaborated concepts. For instance with numbers and cities we can create a new agent "postal address" that depends on the first two for those details and tie them with the missing concept of address. Again, we can add a third higher level where the postal address become a dependency of a "package delivery" agent. We can repeat this process as much as we want. In the end, the root agent in this tree is the entry point for the text analysing process and it describes the most abstract level of understanding.
 
-Usually some agents can do part of the job that you have in mind, which means that those agents can handle part of the text that you want to handle with your agent. A simple example can be taken from already existing public agents: let's say we want to handle amounts of money, like "14 millions of euros". You can find the "Numbers" agent which can handle "14 millions of", then you discover that another agent call "Money Unit" which handles all the moneys including "euros". So you could create an agent which is the combination of numbers and money units. In fact, in that case there is already an agent called measures that is doing exactly this, but in an even more general way. Please look at this agent to see how it is done.
+The other way to exploit the dependencies tree is by width. Agents can be assembled when they are about subjects that complements each other. For instance if we need to understand the order "I want to watch a spy movie." we just need two agents. One to understand orders in the form of "I want to watch" and a second to understand movies categories, here "a spy movie". Those two dependencies are siblings in the dependency tree.
 
-Of course you might not find exactly what you need, then in this case, your agent will be a combination of some existing agents and your own ideas of an agent that will exactly fit your needs.
+Even by reusing agents, fully covering your use case can require some effort and a lot of time. A core feature of viky.ai is the ability to collaborate between users at building agents. Let's see how it works.
 
 
 ## How agents participate in the collaborative view ?
@@ -79,7 +79,19 @@ Amoung the agent's good properties, we can cite:
 * **Multilingual**: as you are representing ideas taken from text, your agent should normally be multilingual. And, even if, at first, it is monolingual, it should not be too difficult to add another language to your agent to express the same idea.
 
 
-## When to do an agent, and when not to do an agent
+When you create agents, you want to know if there are already agents that can do part or all of the work that you have set your mind to do.
+
+Usually some agents can do part of the job that you have in mind, which means that those agents can handle part of the text that you want to handle with your agent.
+
+Of course you might not find exactly what you need, then in this case, your agent will be a combination of some existing agents and your own ideas of an agent that will exactly fit your needs.
+
+Thus it is important to know which agent already exist. You have different ways to find which agent can be of use for create your own agent:
+
+* first of all, you can go through all public agent and look at their readme, but also their tests suite, to know if they can be of use
+* then you can choose the one you selected and test them in the Play interface (check this page [Discover and try agents](/doc/how-to/discover-and-try-agents/) for more information on how to use the Play interface)
+
+
+## Make it public
 
 We have seen how to take advantage of already existing agents. But we have also seen that you will want to create your own agent that will use some of your ideas and existing agents.
 
