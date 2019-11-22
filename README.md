@@ -1,31 +1,44 @@
-# viky.ai presentation page, documentation & blog
-
-Static web site generator build with [Jekyll](https://jekyllrb.com/) used to generate viky.ai presentation page, documentation and blog
+# Welcome to viky.ai documentation
 
 
-## Installation & run
+## What's viky.ai documentation
 
-Make sure to have `ruby` & `bundler` installed on your device, then run:
 
-```
-bundle install
-bundle exec jekyll serve -w -l
-```
+viky.ai documentation is a static web site generator build with [Jekyll](https://jekyllrb.com/) used to generate viky.ai presentation pages, documentation and blog, which you can find on [www.viky.ai](https://www.viky.ai/).
+
+
+## Getting Started
+
+### Requirements
+
+viky.ai documentation local install used for development relies on the following dependencies.
+
+* Ruby 2.6+
+* Bundler 2.0+
+
+### Setup and run
+
+1. Clone the repository using the following command:
+   ```
+   git clone https://github.com/viky-ai/doc.git
+   ```
+
+2. Within doc directory, use the following commands:
+   ```
+   cd doc/
+   bundle install
+   bundle exec jekyll serve -w -l
+   ```
 
 Site is now available on `http://localhost:4000/` with auto-generation & live reload.
 
 
-## Build for production environment
+## Contributing
 
-```
-JEKYLL_ENV=production bundle exec jekyll build
-```
+We encourage you to contribute to viky.ai! Please check out the [Contributing to viky.ai doc guide](CONTRIBUTING.md).
 
-Static site is generated in `_site` directory ready to be deployed.
+Everyone interacting in viky.ai and its codebases, issue trackers, chat rooms, and mailing lists is expected to follow this [code of conduct](CODE_OF_CONDUCT.md).
 
-The coupling between the doc and the webapp is done automatically during automated unfolding processes.
+## License
 
-
-## Manage content
-
-Please consult the CONTRIBUTING.md file.
+viky.ai is released under the [MIT License](LICENCE.txt).

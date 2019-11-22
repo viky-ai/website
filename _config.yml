@@ -52,6 +52,8 @@ sass:
 exclude:
   - README.md
   - CONTRIBUTING.md
+  - CODE_OF_CONDUCT.md
+  - LICENCE.txt
   - Dockerfile
   - deployment
   - conf
