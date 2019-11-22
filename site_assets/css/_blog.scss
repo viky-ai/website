@@ -48,10 +48,11 @@ ul.blog-index{
 .blog{
   article{
     margin: 3em 0 3.5em 0;
+    padding: 3em 1em 2em 1em;
     @media screen and (min-width: $breakpoint_small) {
       margin: 3em 0 5em 0;
+      padding: 3em 2em 2em 2em;
     }
-    padding: 3em 2em 2em 2em;
     background-color: #fff;
     border: 1px solid $light-grey-800;
     border-radius: 3px;
