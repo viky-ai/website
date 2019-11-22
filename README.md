@@ -30,12 +30,12 @@ viky.ai documentation local install used for development relies on the following
    bundle exec jekyll serve -w -l
    ```
 
-Site is now available on `http://localhost:4000/` with auto-generation & live reload.
+Site is now available on `http://localhost:4000/` with auto-generation and live reload.
 
 
 ## Contributing
 
-We encourage you to contribute to viky.ai! Please check out the [Contributing to viky.ai doc guide](CONTRIBUTING.md).
+We encourage you to contribute to viky.ai documentation! Please check out the [Contributing to viky.ai doc guide](CONTRIBUTING.md).
 
 Everyone interacting in viky.ai and its codebases, issue trackers, chat rooms, and mailing lists is expected to follow this [code of conduct](CODE_OF_CONDUCT.md).
 
