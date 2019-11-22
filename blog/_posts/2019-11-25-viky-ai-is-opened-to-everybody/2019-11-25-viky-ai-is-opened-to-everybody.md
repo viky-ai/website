@@ -23,7 +23,7 @@ We have tested this platform with a lot of beta users, and we believe that it is
 
 Isnt't that nice?
 
-In any case, we provide you with a documentation. **The best way to start is to follow our [Getting Started](/doc/guides/getting-started/) tutorial**.
+In any case, we provide you with a documentation. **The best way to start is to follow our [Getting Started](/doc/tutorials/getting-started-part-1/) tutorial**.
 
 There are also a lot of public agents that you can use anyway you like. Please browse through all of it, and use viky.ai the way you want!
 
