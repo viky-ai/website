@@ -69,20 +69,21 @@ One great way to collaborate is to contribute back to the viky.ai community by g
 
 ## Make it public
 
-We have seen how to take advantage of already existing agents. But we have also seen that you will want to create your own agent that will use some of your ideas and existing agents.
+When looking for agents to add as dependencies you may notice that you have access to a lot of existing ones from other users. Beside those for which you are a collaborator, they all have in common to be identified as "public".
 
-In some case you will want to divide your idea into smaller ideas, each of those ideas can be represented by a smaller agent that you will want to create. This happens when those smaller ideas have some kind of independent life from your main idea.
+By default everything you do in your viky.ai account is private and only visible to you. Still, each agent has a visibility setting allowing you to make it available to everyone on the platform as a read-only access.
 
-This is how we have created public agents: they represent independent smaller ideas.
+Sometimes when working on your agent you may find useful to factorize a sub-part in its own dedicated agent about a small area of understanding. While doing such split you may evaluate that this new small agent could be useful to other users too. This is where you may choose to contribute to the viky.ai community by giving away your agent and publishing it as public.
 
-We believe that using that kind of modus operandi, will create a lot of independent agents that will represent and take part in bigger and bigger ideas.
-
+Ideally a public agent should be as generic and universal as possible on its area of expertise. Any agents, especially those public, should follows some good practices that we are going de explain in the next section.
 
 ## Conclusion
 
-You agent must have some good properties. Among the agent's good properties, we can cite:
+Now you know everything about agents, what it is, how to use it and in which way. But you may still wonder how can I create a useful agent? Am I implementing a lasting design?
 
-* **Completeness**: if your agent is to cover some ideas in texts, it must do so as extensively as possible. For example, if you want to do agent that is expressing numbers in English, it must handle as many numbers as possible (and all if possible).
-* **Consistency**: your agent's semantic solution must have a structure that coherently and consistently represent your thoughts about the texts it analyses.
-* **independent from natural language**: as the semantic solution of your agent really represent an idea, it should be normal to have that idea expressed the same way for any language this agent is analyzing.
-* **Multilingual**: as you are representing ideas taken from text, your agent should normally be multilingual. And, even if, at first, it is monolingual, it should not be too difficult to add another language to your agent to express the same idea.
+To help you, as general guidelines, your agents should have those properties:
+
+* **Completeness**: your agent should cover its area of understanding as extensively as possible.
+* **Consistency**: your agent's semantic solutions must have a structure that consistently represents the result of the text analysis.
+* **Descriptive**: as the semantic solution of your agent really represent an idea, it should describe it the same way for any language.
+* **Multilingual**: as you are representing ideas taken from text, your agent should normally be multilingual. Even if at first it is monolingual, it should not be difficult to add another language to your agent to express the same idea.
