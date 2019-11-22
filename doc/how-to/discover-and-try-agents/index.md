@@ -77,6 +77,9 @@ Go to one agent of our list, [Date](https://www.viky.ai/agents/viky/date) for in
 
 ## Other places
 
-An other way to asses what an agent can do is to read its "Readme" section on the agent overview. It is a great way for the agent's owner to explain how the agent is supposed to work and in what context.
+An other way to assess what an agent can do is to read its "Readme" section in the agent overview. It is a great way for the agent's owner to explain how the agent is supposed to work and in what context.
 
-When available non regressions tests are also an interesting source to understand what kinds of sentences are expected and have an example of edge cases.
+When available, non regression tests are also an interesting source of understanding what kind of sentence the agent is able to process. Non regression tests are located in the lower part of the console and is called "Tests Suite".
+
+
+

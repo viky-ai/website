@@ -6,7 +6,8 @@ image: site_assets/img/social.jpg
 order: 304
 ---
 
-Your agent can go through many changes. So you need to make sure that with every change your agent still behaves the way you want it to. viky.ai has the notion of regression tests to help you do so.
+Your agent can undergo many changes. So you need to make sure that with each change, your agent always behaves the way you want. viky.ai has the concept of regression testing to help you do this.
+
 
 ## Adding a non regression test
 
@@ -65,15 +66,15 @@ The console also indicates that the test for this sentence is in failed state. C
 
 ![Green tests suite screenshot](img/08_test_pass.png "Green updated test with the new solution")
 
-Hence, you saw that with every change in your agent, your tests suite will run and tell you if the tests you added passed or failed with your new changes. You can add multiple tests for different types of sentences that your agent can interpret. You can now be sure that your agent behaves as expected whenever you make any changes.
+Thus, you have seen that with each change in your agent, your test suite will run and tell you if the tests you added were successful or failed with your new changes. You can add several tests for different types of sentences that your agent can interpret. You can now be sure that your agent behaves as expected every time you make changes.
 
-Another aspect of the non regression tests can be when you explore other agents in viky.ai. You can check out their tests suite and understand what kind of sentences the agent is able to understand without having to go through the interpretations and entities lists.
+Another way to use non-regression tests when exploring other agents in viky.ai is to consult their test suite and understand the type of sentences that the agent is able to understand without having to review interpretations and entity lists.
 
 ## Testing a sentence with a time reference
 
 Testing an agent using time reference can be difficult. For instance if the agent is able to understand "Book a table for the day after tomorrow" and translate the expression "the day after tomorrow" in a normalized ISO 8601 format as its interpretation's solution, the corresponding date will change every day.
 
-For that situation, you can use the "now" option in the console by switching it to `manual`. It allows you to freeze the current time used to interpret the sentence.
+To do this, you can use the "now" option in the console by switching it to `manual`. It allows you to freeze the current time used to interpret the sentence.
 
 If you set the "now" option to `2019-02-27T15:00:00+01:00` ( _February 27, 2019_ ) the solution will be two days later `2019-03-01T15:00:00+01:00` ( _March 1st, 2019_ ).
 

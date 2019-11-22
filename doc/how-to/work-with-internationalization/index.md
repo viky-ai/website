@@ -6,7 +6,7 @@ image: site_assets/img/social.jpg
 order: 302
 ---
 
-When analyzing sentences in different languages it is often possible to find common patterns on how the idea is expressed. In viky.ai, agents are multi-lingual allowing you to leverage the power of factorising together those common patterns.
+When analyzing sentences in different languages it is often possible to find common patterns on how the idea is expressed. In viky.ai, agents are multi-lingual. It allows you to harness the power to factor these common models together.
 
 
 ##  Configure your agent
@@ -36,7 +36,7 @@ Start by adding two formulations `Pour the flour` under the English tab and `Ver
 
 Of course they perfectly match! The annoying part is that everything is duplicated for every language. We can do better! As you build more agents, you will see that the language dependent part can be quite limited. It is possible to factorize together the common syntactic pattern and leave language specifics words in dedicated entities lists. We are going to do exactly that.
 
-Create two entities lists, one called `food` and the second called `instructions`. In "food" add this entity: 
+Create two entities lists, one called `food` and the second called `instructions`. In "food" add this entity:
 ```
 flour
 farine
@@ -64,7 +64,7 @@ Cassez
   </p>
 </aside>
 
-Now annotate both formulations with entities lists. Notice that in English and in French those two annotations uses the same pattern, namely an instruction followed by a food. It does not depend on any natural language anymore. In order to avoid this duplication we can recreate such formulation in the "No language" tab and delete the English and French formulations. This tab is the place to put formulations describing the common patterns between languages.
+Now, annotate both formulations with entities lists. Notice that in English and in French those two annotations uses the same pattern, namely an instruction followed by a food. It does not depend on any natural language anymore. In order to avoid this duplication we can recreate such formulation in the "No language" tab and delete the English and French formulations. This tab is the place to put formulations describing the common patterns between languages.
 
 ![Formulation factorised pattern screenshot](./img/06_formulation_factorized_pattern.png "Formulation factorised pattern")
 

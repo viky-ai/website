@@ -8,17 +8,16 @@ order: 303
 
 ## Purpose
 
-When your agent becomes more complex it will need lots of entities grouped within lists.
-As such, it becomes easier to process those lists in an external tool and then import them into viky.ai.
+As your agent becomes more complex, it will need a large number of entities grouped into lists. In that case, it is easier to process these lists in an external tool and import them into viky.ai.
 
 
 ## File format
 
 ### Overview
 
-The file format is CSV (Comma-Separated Values) UTF-8 encoded. Both entities import and export use this format. It is composed of  3 comma-separated columns, where each line represents a complete entity.
+The file format is CSV (Comma-Separated Values) UTF-8 encoded. Both entities import and export use this format. It is composed of 5 comma-separated columns, where each line represents a complete entity.
 
-The very first line of the file is the CSV header. It is mandatory and **have to** be:\
+The very first line of the file is the CSV header. It is mandatory and **has to** be:\
 `Terms,Auto solution,Solution,Case Sensitive,Accent Sensitive`.
 
 The first column contains terms grouped by meaning. A pipe character (`|`) is used to separate them.  The language for each term can be specified after a colon character (`:`). If this information is missing, the language for the term is considered as `no language`. At least **one** term is **required**.
@@ -46,7 +45,7 @@ It will import two entities:
 
 * line 1 is the mandatory CSV header.
 * line 2 has only one term: `avenue` without any language. Since the `auto solution` is enabled, the `solution` column is ignored and it will automatically get the first term as a JSON string (in this case `avenue`). The term is neither case sensitive nor accent sensitive so both columns have the value false.
-* line 3 has two terms: `rue` without any language and `street` with the english language. Again, since the `auto solution` is enabled the `solution` column is ignored even if there is a value and it will automatically get the first term as a JSON string (in this case `rue`). The terms are neither case sensitive nor accent sensitive so both columns have the value false.
+* line 3 has two terms: `rue` without any language and `street` with the English language. Again, since the `auto solution` is enabled the `solution` column is ignored even if there is a value and it will automatically get the first term as a JSON string (in this case `rue`). The terms are neither case sensitive nor accent sensitive so both columns have the value false.
 
 The example below demonstrate a complex import:
 
@@ -67,8 +66,8 @@ It will import three entities:
 
 * line 1 is the mandatory CSV header.
 * line 2 has only one term: `Paris` without any language. Since the `auto solution` is disabled, the `solution` column is used. The term is neither case sensitive nor accent sensitive so both columns have the value false.
-* line 3 has two terms: `London` with the english language and `Londres` with the french language. Since the `auto solution` is disabled, the `solution` column is used. The terms are neither case sensitive nor accent sensitive so both columns have the value false.
-* line 4 has three terms: `北京市` with the chinese language, `Beijing` without any language and `Pékin` with the french language. Since the `auto solution` is disabled, the `solution` column is used. The terms are not case sensitive so the `Case Sensitive` column has the value false but the terms are accent sensitive, so the `Accent Sensitive` column has the value true.
+* line 3 has two terms: `London` with the English language and `Londres` with the French language. Since the `auto solution` is disabled, the `solution` column is used. The terms are neither case sensitive nor accent sensitive so both columns have the value false.
+* line 4 has three terms: `北京市` with the chinese language, `Beijing` without any language and `Pékin` with the French language. Since the `auto solution` is disabled, the `solution` column is used. The terms are not case sensitive so the `Case Sensitive` column has the value false but the terms are accent sensitive, so the `Accent Sensitive` column has the value true.
 
 In this example, every solution is a JSON object enclosed inside double quotes. It is composed of three fields, a city which describe what the term is about and additional information in the form of GPS latitude and longitude.
 
@@ -87,11 +86,11 @@ Select your agent, go to the entities list tab and open the list that will recei
 
 Only plain CSV files are accepted. An import can either append the file content to the list or replace it entirely. The line order in the file is preserved in the final entities list. Empty lines are ignored.
 
-The import process can accept files with a size up to 30 MB.
+The import process can accept files up to 30 MB in size.
 
 ![Import modal window screenshot](img/02_import_modal.png "Import modal window")
 
-There can be only one ongoing import at a time on a given entities list. A message will inform you that the import process is running. During this operation, manual updates are disabled.
+There can only be one import in progress at a time on a given list of entities. A message will inform you that the import process is running. During this operation, manual updates are disabled.
 
 ![Import progress message screenshot](img/03_import_in_progress.png "Import in progress")
 

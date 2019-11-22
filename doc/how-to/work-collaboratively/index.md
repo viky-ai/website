@@ -11,13 +11,13 @@ viky.ai allows you to work collaboratively with agents and thus benefit from the
 
 ## Owner status
 
-Let's start from the example treated in the "[Getting started](../../tutorials/getting-started-part-1/)" tutorial where we created a new agent called "Address Tutorial". The user who has created an agent is the automatic owner of the agent.
+Let's start from the example described in the "[Getting started](../../tutorials/getting-started-part-1/)" tutorial when we created a new agent called "Address Tutorial". The user who has created an agent is the automatic owner of the agent.
 
 You can check this by consulting the "Overview" tab of the agents, in the "Sharing overview" section.
 
 ![Agent overview screenshot, focus on Share overview section](img/01_sharing_overview.png "Jean-Marie is owner of Address Tutorial agent.")
 
-The status of owner on an agent allows you to see, modify, delete it but also to invite people to collaborate with you on this agent. We'll look at it in detail now.
+The status of owner of an agent allows you to see, modify, delete it but also to invite people to collaborate with you on this agent. We look at it in details now.
 
 
 ## Invite collaborators
@@ -50,14 +50,14 @@ You can repeat this operation with as many persons as you want.
 
 <aside class="primary">
   <p>
-    When an agent has a public visibility, defining collaborators with only show rights is not interesting. Indeed, public visibility gives reading access to all users of the platform.
+    When an agent has a public visibility, defining collaborators with only "show" rights is not interesting. Indeed, public visibility gives reading access to all users of the platform.
   </p>
 </aside>
 
 
 ## Transfert your agent ownership
 
-An agent can have only one owner. However, as an owner you can transfer your agent ownership at any time. To do this, access the dedicated form by clicking on the "Transfer ownership" button.
+An agent can have only one owner. However, as an owner, you can transfer your agent ownership at any time. To do this, access the dedicated form by clicking on the "Transfer ownership" button.
 
 ![Agent overview screenshot, focus on Transfert ownership button](img/05_transfert_btn.png "Access to the dedicated form by clicking on the "Transfer ownership" button")
 
@@ -73,6 +73,6 @@ The new owner now has the choice of whether or not to keep you as a collaborator
 
 <aside class="warning">
   <p>
-    In case you no longer wish to use viky.ai and some of your agents are used by others, please transfers ownership rather than delete your agents.  This is in order not to disrupt the agents using yours.
+    In case you no longer wish to use viky.ai and some of your agents are used by others, please transfers ownership rather than delete your agents.  This is to avoid disturbing the agents who use yours.
   </p>
 </aside>
