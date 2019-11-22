@@ -9,7 +9,7 @@ image: site_assets/img/social.jpg
 
 ### What is viky.ai?
 
-viky.ai is an open source platform where you can __use, create and share bricks that help you analyse texts in any languages__. Text analysis can be quite difficult and it is our purpose to simplify that task as much as possible.
+viky.ai is an open source platform where you can __use, create and share bricks that help you analyze texts in any languages__. Text analysis can be quite difficult and it is our purpose to simplify that task as much as possible.
 
 To do that, let's say that we want to build a house. For this, we want to use walls. And to build walls, we will need bricks.
 

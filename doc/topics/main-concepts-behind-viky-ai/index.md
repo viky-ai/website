@@ -6,13 +6,13 @@ image: site_assets/img/social.jpg
 order: 200
 ---
 
-We discuss here the main concepts behind viky.ai. If the terms "NLP", "Semantic solution", "agent", "interpretation", "formulation", "Entity" do not tell you anything, it is completely normal. We hope that reading this documentation will help you to clarify these terms, in order to understand viky.ai.
+We discuss here the main concepts behind viky.ai. If the terms "NLP", "semantic solution", "agent", "interpretation", "formulation", "entity" do not tell you anything, it is completely normal. We hope that reading this documentation will help you clarify these terms, in order to understand viky.ai.
 
 ## NLP
 
 NLP means Natural Language Processing. You can look up this dedicated [Wikipedia page](https://en.wikipedia.org/wiki/Natural_language_processing).
 
-viky.ai is indeed a Natural Language Processing platform as it helps you analyse natural language texts.
+viky.ai is indeed a Natural Language Processing platform as it helps you analyze natural language texts.
 
 But what does exactly "natural language texts" mean in essence?
 
@@ -21,14 +21,14 @@ A natural language text is a text written in English, German, French, or any hum
 
 ## Text analysis and semantic solution
 
-What do we want when we analyse a text?
+What do we want when we analyze a text?
 
 Well, it depends really on what is our goal. For example, with the following sentence:
 
 > In november 2019, Google bought Fitbit for $2.1 billion.
 
-* we might want to extracts only dates or money amounts,
-* or we might want to extract companies names,
+* we might want to extract only dates or money amounts,
+* or we might want to extract company names,
 * or we might want to get information about companies buying other companies.
 
 The result of the analysis will then be very different. This is what we call a **semantic solution**.
@@ -40,7 +40,7 @@ We call such text analysis processes an **agent**.
 
 ## Agents
 
-**Agents** are processes that analyse a text and provide you with a **semantic solution** for this text (or several **semantic solutions** in some cases).
+**Agents** are processes that analyze a text and provide you with a **semantic solution** for this text (or several **semantic solutions** in some cases).
 
 Let's take a simple example: with the expression "twenty-three", we would like the agent to get the number 23. In essence you have transformed a text into a value that can be further processed by a computer.
 
@@ -71,7 +71,7 @@ So, if we submit the text "the cat is white" to a `to_be` **agent**, it will ret
 
 ## Formulations and semantic solutions
 
-Most of the time, we want to normalize the analysis of the **agent**: we know which interpretation the agent found, but we want to translate it into a processable format.
+Most of the time, we want to standardize the **agent**'s analysis: we know which interpretation the agent has found, but we want to translate it into a processable format.
 
 For example, if we have an agent "colors" that recognizes colors, we would like to get the RGB version of the color, and not only the fact that it is a color.
 
@@ -97,11 +97,11 @@ Entities list, are usually large lists of words or expressions with **semantics 
 
 ## Combining interpretations
 
-**Interpretations** can be combined together. This combination mechanism is the cement that joins the bricks which are the **agents**. It creates a tree of dependencies between them allowing to reuse **interpretations** commonly found in natural language. 
+**Interpretations** can be combined together. This combination mechanism is the cement that joins the bricks which are the **agents**. It creates a tree of dependencies between them allowing to reuse **interpretations** commonly found in natural language.
 
-Those combinations are closely tied to the structure of the text which the **interpretation** will analyse. Let's say we have an agent with an **entities list** containing a list of kitchen objects such as a "cup", "knife", "plate", "fork", etc. and an other agent exposing an **interpretation** matching every color.
+Those combinations are closely tied to the structure of the text which the **interpretation** will analyze. Let's say we have an agent with an **entities list** containing a list of kitchen objects such as a "cup", "knife", "plate", "fork", etc. and an other agent exposing an **interpretation** matching every color.
 
-If we want to analyse the sentence "a red cup", we would create an **interpretation** with a **formulation** shaping the sentence's structure of a "color" followed by an "object". We would say that "red" match the **interpretation** of the color agent and "cup" match our **entities list** of kitchen objects. This **interpretation**'s structure being universal we will be able to understand all the combination between a color and a kitchen object, such as "black fork", etc.
+If we want to analyze the sentence "a red cup", we would create an **interpretation** with a **formulation** shaping the sentence's structure of a "color" followed by an "object". We would say that "red" match the **interpretation** of the color agent and "cup" match our **entities list** of kitchen objects. This **interpretation**'s structure being universal we will be able to understand all the combination between a color and a kitchen object, such as "black fork", etc.
 
 Thus we can see that with one single combination, we can achieve the analysis of many possible sentences. This combinatorial power is the reflection of the combinatorial nature of the human language.
 
