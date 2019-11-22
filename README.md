@@ -41,4 +41,4 @@ Everyone interacting in viky.ai and its codebases, issue trackers, chat rooms, a
 
 ## License
 
-viky.ai is released under the [MIT License](LICENCE.txt).
+viky.ai documentation is released under the [MIT License](LICENCE.txt).
