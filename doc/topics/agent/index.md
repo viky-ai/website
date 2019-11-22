@@ -73,7 +73,7 @@ When looking for dependencies you may notice that you have access to a lot of ex
 
 By default everything you do in your viky.ai account is private and only visible to you. Still, each agent has a visibility setting allowing you to make it available as a read-only to everyone on the platform.
 
-Sometimes when working on your agent you may find useful to factorize a sub-part in its own dedicated agent about a small area of understanding. While doing such split you may evaluate that this new small agent could be useful to other users too. This is where you may choose to contribute to the viky.ai community by giving away your agent and publishing it as public.
+Sometimes when working on your agent you may find useful to factorize a sub-part in its own dedicated agent about a small area of understanding. While doing such split you may evaluate that this new small agent could be useful to other users too. This is where you may choose to contribute to the viky.ai community by giving away your agent and publishing it as public. Imagine you are working on a chatbot to help your customer buy clothes with a color criteria. Splitting your agent between the "buy cloth" and the "color" recognition is good idea. Since finding colors in sentences is pretty common it is a good candidate to release it as public.
 
 Ideally a public agent should be as generic and universal as possible on its area of expertise. Any agents, especially those public, should follow some good practices that we explain in the next section.
 
