@@ -12,7 +12,7 @@ One major difficulty is the subtext people introduce in their daily communicatio
 A computer on the other hand is completely oblivious to such context. As a consequence, a good solution is to delimit a clear scope which define what and how sentences are analyzed. In viky.ai this is called an **agent**.
 
 
-## What is an agent ?
+## What is an agent?
 
 When we define a set of sentences that we want to understand, they usually imply some business requirements that create an implicit context. This means several sentences refers to a common subjects or are related in one way or another.
 
@@ -37,7 +37,7 @@ Such flexibility is the key to help you structure your agent. Chances are you wi
 This strategy of composition is at the heart of viky.ai and we are going to explore it in more details in the next section. 
 
 
-## How to organize agents together ?
+## Organize agents together
 
 Agents are the fundamental elements of text understanding. You can shape them to interpret from mundane ideas to abstract concepts.
 You may be tempted at first to include every sentences you need into one single big agent. This is usually a bad idea. Including too many subjects of focus in the same agent blur the scope outline of what the agent is supposed to understand.
@@ -53,7 +53,7 @@ The other way to exploit the dependencies tree is by width. Agents can be assemb
 Even by reusing agents, fully covering your use case can require some effort and a lot of time. A core feature of viky.ai is the ability to collaborate between users at building agents. Let's see how it works.
 
 
-## How agents participate in the collaborative view ?
+## Collaborate to an agent
 
 When you tackle a large project covering a wide variety of sentences with convoluted syntax, it involves a lot of work even when reusing dependencies. In this case viky.ai allows you to invite users to collaborate at creating the agent.
 
@@ -77,7 +77,8 @@ Sometimes when working on your agent you may find useful to factorize a sub-part
 
 Ideally a public agent should be as generic and universal as possible on its area of expertise. Any agents, especially those public, should follows some good practices that we are going de explain in the next section.
 
-## Conclusion
+
+## Last advices
 
 Now you know everything about agents, what it is, how to use it and in which way. But you may still wonder how can I create a useful agent? Am I implementing a lasting design?
 
