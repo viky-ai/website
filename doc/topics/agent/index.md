@@ -55,40 +55,16 @@ Even by reusing agents, fully covering your use case can require some effort and
 
 ## How agents participate in the collaborative view ?
 
-Agents are really an expression of your thoughts, thus, you can really collaborate the same way you collaborate in real life by sharing your thoughts, exchanging ideas, and also keeping your ideas private if you want to.
+When you tackle a large project covering a wide variety of sentences with convoluted syntax, it involves a lot of work even when reusing dependencies. In this case viky.ai allows you to invite users to collaborate at creating the agent.
 
-If you want to keep your idea private, please do so, but at some point, you will want to discuss ideas, share ideas, collaborate. Let us describe how you can do it with agents.
+Collaboration is configured by user and by agent, meaning you have total control of who sees what in your workspace.
 
-Let us view an agent as an expression of your thoughts in a given subject. You will need to first describe what you want to achieve with this agent. The Overview of the agent is a good place to do that:
+Once you found a potential collaborator viky.ai sends a notification to inform the person of his new status. Depending on the access rights you have setup, the collaborator can either just navigate through or also edit the agent.
+The navigation is useful when asking feedback to someone about your current work. It is also a convenient way to authorize particular users to integrate your agent in his own project.
+Giving an edition access is similar to the navigation with the added right to update the agent content.
+Non the less, you stay the agent's owner meaning you are the only one able to change the agent configuration and you are the only one that can manage access rights (including revocation) at anytime.
 
-A readme gives you the possibility to describe you agent any way you want. We suggest the following sections:
-* **Purpose**: describe what you wanted to achieve with the agent, its goal,
-* **Available interpretations**: describe in detail what the agent is able to understand, by giving examples and the associated solution.
-
-Another very interesting part that will help you document your agent but also check if your agent is always doing what you have designed it to do is the tests suite. Please refer to [Make non regression tests](/doc/how-to/make-non-regression-tests/), for detailed information on this feature.
-
-We recommend you do not give too many examples in your Readme, but use the tests suite instead.
-
-Describing your agent and documenting it is a good way to start if your want other people to use it. However you agent must have some good properties, just like when you express your ideas, this expression must have some good properties.
-
-Amoung the agent's good properties, we can cite:
-
-* **Completeness**: if your agent is to cover some ideas in texts, it must do so as extensively as possible. For example, if you want to do agent that is expressing numbers in English, it must handle as many numbers as possible (and all if possible).
-* **Consistency**: your agent's semantic solution must have a structure that coherently and consistently represent your thoughts about the texts it analyses.
-* **independent from natural language**: as the semantic solution of your agent really represent an idea, it should be normal to have that idea expressed the same way for any language this agent is analyzing.
-* **Multilingual**: as you are representing ideas taken from text, your agent should normally be multilingual. And, even if, at first, it is monolingual, it should not be too difficult to add another language to your agent to express the same idea.
-
-
-When you create agents, you want to know if there are already agents that can do part or all of the work that you have set your mind to do.
-
-Usually some agents can do part of the job that you have in mind, which means that those agents can handle part of the text that you want to handle with your agent.
-
-Of course you might not find exactly what you need, then in this case, your agent will be a combination of some existing agents and your own ideas of an agent that will exactly fit your needs.
-
-Thus it is important to know which agent already exist. You have different ways to find which agent can be of use for create your own agent:
-
-* first of all, you can go through all public agent and look at their readme, but also their tests suite, to know if they can be of use
-* then you can choose the one you selected and test them in the Play interface (check this page [Discover and try agents](/doc/how-to/discover-and-try-agents/) for more information on how to use the Play interface)
+One great way to collaborate is to contribute back to the viky.ai community by giving away freely part of your work. For this, make your agent public.
 
 
 ## Make it public
@@ -100,3 +76,13 @@ In some case you will want to divide your idea into smaller ideas, each of those
 This is how we have created public agents: they represent independent smaller ideas.
 
 We believe that using that kind of modus operandi, will create a lot of independent agents that will represent and take part in bigger and bigger ideas.
+
+
+## Conclusion
+
+You agent must have some good properties. Among the agent's good properties, we can cite:
+
+* **Completeness**: if your agent is to cover some ideas in texts, it must do so as extensively as possible. For example, if you want to do agent that is expressing numbers in English, it must handle as many numbers as possible (and all if possible).
+* **Consistency**: your agent's semantic solution must have a structure that coherently and consistently represent your thoughts about the texts it analyses.
+* **independent from natural language**: as the semantic solution of your agent really represent an idea, it should be normal to have that idea expressed the same way for any language this agent is analyzing.
+* **Multilingual**: as you are representing ideas taken from text, your agent should normally be multilingual. And, even if, at first, it is monolingual, it should not be too difficult to add another language to your agent to express the same idea.
