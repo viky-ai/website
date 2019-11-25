@@ -1,0 +1,79 @@
+.about-us{
+  h1{
+    margin: 1em 0 0.5em 0;
+    font-weight: 300;
+    font-size: 2.75em;
+    color: $dark-grey-600;
+    line-height: 1.1em;
+  }
+}
+
+.about-us__content{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-column-gap: 2em;
+  grid-row-gap: 1em;
+  grid-template-areas:
+    "title"
+    "team-content"
+    "team-illustration"
+    "project-content"
+    "project-illustration"
+    "company-content"
+    "company-illustration";
+
+  h2{
+  }
+  svg, img{
+    max-width: 12em;
+    height: auto;
+    margin: 0 0 2em 0;
+  }
+
+
+  @media screen and (min-width: 42em) {
+    grid-template-columns: auto 12em 22em auto;
+    grid-row-gap: 3em;
+    grid-template-areas:
+      ". . title ."
+      ". team-illustration team-content ."
+      ". project-illustration project-content ."
+      ". company-illustration company-content .";
+    svg, img{
+      width: 80%;
+    }
+    .about-us__team__illustration{
+      margin: 3em 0 0 0;
+    }
+    .about-us__project__illustration{
+      margin: 2em 0 0 0;
+    }
+    .about-us__company__illustration{
+      margin: 2em 0 0 0;
+    }
+  }
+}
+h1{
+  grid-area: title;
+}
+
+.about-us__team__illustration{
+  grid-area: team-illustration;
+}
+.about-us__team__content{
+  grid-area: team-content;
+}
+.about-us__project__illustration{
+  grid-area: project-illustration;
+  padding: 1em;
+}
+.about-us__project__content{
+  grid-area: project-content;
+}
+.about-us__company__illustration{
+  grid-area: company-illustration;
+  padding: 1em;
+}
+.about-us__company__content{
+  grid-area: company-content;
+}

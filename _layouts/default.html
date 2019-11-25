@@ -25,8 +25,12 @@
 
     {{ content}}
 
-    {% include mobile_nav.html %}
+    {% assign segments = page.dir | split: '/' %}
+    {% if segments[1] != 'doc' %}
+      {% include footer.html %}
+    {% endif %}
 
+    {% include mobile_nav.html %}
     <script src="{{ "/site_assets/javascript/doc.js" | relative_url }}?{{site.time | date: '%s'}}"></script>
   </body>
 </html>

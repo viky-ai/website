@@ -10,25 +10,19 @@
   </a>
 
   <nav class="header__nav">
-    <a href="/" {% if page.dir == '/' %}class="current"{% endif %}>
-      Home
-    </a>
-    {% assign segments = page.dir | split: '/' %}
-    <a href="/doc/guides/getting-started/" {% if segments[2] == 'guides' or segments[2] == 'api' %}class="current"{% endif %}>
-      Documentation
-    </a>
-    <a href="/blog/" {% if page.categories.first == 'blog' or segments[1] == 'blog' %}class="current"{% endif %}>
-      Blog
-    </a>
+    {% include nav/home.html %}
+    {% include nav/pricing.html %}
+    {% include nav/open_source.html %}
+    {% include nav/blog.html %}
+    {% include nav/doc.html %}
   </nav>
 
   <div class="header__login">
     {% if site.features.user_registration_disabled %}
-      <a href="/users/sign_in">Log in</a>
+      {% include nav/sign_in.html %}
     {% else %}
-      <a href="/users/sign_up">Sign up</a>
-      <a href="/users/sign_in">Log in</a>
+      {% include nav/sign_up.html %}
+      {% include nav/sign_in.html %}
     {% endif %}
   </div>
-
 </div>

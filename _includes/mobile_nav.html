@@ -9,26 +9,21 @@
     </a>
   </div>
   <div class="mobile-nav__main">
-    <a href="/" {% if page.dir == '/' %}class="current"{% endif %}>
-      Home
-    </a>
-    {% assign segments = page.dir | split: '/' %}
-    <a href="/doc/guides/getting-started/" {% if segments[1] == 'doc' %}class="current"{% endif %}>
-      Documentation
-    </a>
-    <div class="mobile-nav__main__doc">
-      {% include doc_nav.html %}
-    </div>
-    <a href="/blog/" {% if page.categories.first == 'blog' or page.dir == '/blog/' %}class="current"{% endif %}>
-      Blog
-    </a>
+    {% include nav/home.html %}
+    {% include nav/pricing.html %}
+    {% include nav/open_source.html %}
+    {% include nav/blog.html %}
     <div class="login">
       {% if site.features.user_registration_disabled %}
-        <a href="/users/sign_in">Log in</a>
+        {% include nav/sign_in.html %}
       {% else %}
-        <a href="/users/sign_up">Sign up</a>
-        <a href="/users/sign_in">Log in</a>
+        {% include nav/sign_up.html %}
+        {% include nav/sign_in.html %}
       {% endif %}
+    </div>
+    {% include nav/doc.html %}
+    <div class="mobile-nav__main__doc">
+      {% include doc_nav.html %}
     </div>
   </div>
 </div>
