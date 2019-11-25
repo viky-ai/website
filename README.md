@@ -1,31 +1,44 @@
-# viky.ai presentation page, documentation & blog
-
-Static web site generator build with [Jekyll](https://jekyllrb.com/) used to generate viky.ai presentation page, documentation and blog
+# Welcome to viky.ai documentation
 
 
-## Installation & run
-
-Make sure to have `ruby` & `bundler` installed on your device, then run:
-
-```
-bundle install
-bundle exec jekyll serve -w -l
-```
-
-Site is now available on `http://localhost:4000/` with auto-generation & live reload.
+## What's viky.ai documentation
 
 
-## Build for production environment
-
-```
-JEKYLL_ENV=production bundle exec jekyll build
-```
-
-Static site is generated in `_site` directory ready to be deployed.
-
-The coupling between the doc and the webapp is done automatically during automated unfolding processes.
+viky.ai documentation is a static web site generator build with [Jekyll](https://jekyllrb.com/) used to generate viky.ai presentation pages, documentation and blog, which you can find on [www.viky.ai](https://www.viky.ai/).
 
 
-## Manage content
+## Getting Started
 
-Please consult the CONTRIBUTING.md file.
+### Requirements
+
+viky.ai documentation local install used for development relies on the following dependencies.
+
+* Ruby 2.6+
+* Bundler 2.0+
+
+### Setup and run
+
+1. Clone the repository using the following command:
+   ```
+   git clone https://github.com/viky-ai/doc.git
+   ```
+
+2. Within doc directory, use the following commands:
+   ```
+   cd doc/
+   bundle install
+   bundle exec jekyll serve -w -l
+   ```
+
+Site is now available on `http://localhost:4000/` with auto-generation and live reload.
+
+
+## Contributing
+
+We encourage you to contribute to viky.ai documentation! Please check out the [Contributing to viky.ai doc guide](CONTRIBUTING.md).
+
+Everyone interacting in viky.ai and its codebases, issue trackers, chat rooms, and mailing lists is expected to follow this [code of conduct](CODE_OF_CONDUCT.md).
+
+## License
+
+viky.ai documentation is released under the [MIT License](LICENCE.txt).

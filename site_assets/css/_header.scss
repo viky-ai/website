@@ -2,7 +2,10 @@
   padding: 0;
   background-color: #fff;
   border-top: 3px solid $primary_color;
-  border-bottom: 1px solid $grey_200;
+  border-bottom: 1px solid $light-grey-800;
+
+  box-shadow: 0 2px 2px rgba(#000, .04);
+  position: relative;
 
   .header__logo,
   .header__hamburger{
@@ -58,7 +61,11 @@
       text-decoration: none;
       color: $grey_700;
       font-weight: 400;
-      font-size: .95em;
+      font-size: .85em;
+
+      @media screen and (min-width: 64em) {
+        font-size: .9em;
+      }
 
       border-bottom: 2px solid #fff;
       &:hover,
@@ -68,7 +75,7 @@
         border-bottom: 2px solid $grey_300;
       }
       &.current{
-        color: darken($primary_color, 10%);
+        color: darken($primary_color, 12%);
         border-bottom: 2px solid #3bb8d7;
       }
     }

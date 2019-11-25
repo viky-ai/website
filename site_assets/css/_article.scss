@@ -1,5 +1,7 @@
 article{
   header{
+    border-bottom: 2px solid $light-grey-500;
+    margin: 0 0 2em 0;
     h1{
       font-weight: 300;
       font-size: 2.6em;
@@ -11,70 +13,58 @@ article{
     }
     p{
       color: $grey_500;
-      margin: .5em 0 2em 0;
+      margin: .5em 0 1.5em 0;
+      font-size: .9em;
     }
   }
 }
 
 .article__summary{
   margin: 2em 0 3em 0;
-
+  border-left: 1px solid $light-grey-700;
   h2{
     text-transform: uppercase;
-    font-size: .8em;
+    font-size: .7em;
     font-weight: 400;
-    color: $grey_500;
-    margin: 0 0 1em 0;
+    color: $dark-grey-600;
+    margin: 0 0 .5em 0;
+    padding-left: 1.3em;
   }
   ul{
     padding: 0;
     margin: 0;
     list-style: none;
-    li{
-      border-bottom : 1px solid $grey_200;
-    }
     a{
-      position: relative;
       display: block;
-      padding: .25em 0;
-      font-size: .9em;
+      padding: .25em 0 .3em 1em;
+      font-size: .825em;
       text-decoration: none;
-      color: $grey_300;
       transition: transform .2s ease-in-out;
-      padding: .6em 2em .5em 0;
-      line-height: 1.25em;
-      em{
-        color: $grey_700;
-        font-style: normal;
-        color: hsl(192, 30, 50);
-      }
+      line-height: 1.35em;
+      margin-left: 1px;
+      color: $dark-grey-400;
+      font-style: normal;
       code{
         font-family: 'Roboto Mono', monospace;
         word-wrap: break-word;
-        font-size: .9em;
-      }
-      svg{
-        position: absolute;
-        top: .75em;
-        right: .5em;
-        fill: $grey_300;
-        width: 14px;
-        height: 14px;
+        font-size: .85em;
       }
       &:hover,
       &:focus{
-        transform: translateX(.5em);
-        em{
-          color: darken($primary_color, 5%);
-        }
-        svg{
-          fill: $primary_color;
-        }
+        color: darken($primary_color, 5%);
+        font-weight: 400;
       }
     }
-    li.active a{
+    li.active > a{
+      margin-left: -2px;
       font-weight: 400;
-      color: $grey_500;
+      color: $dark-grey-500;
+      border-left: 3px solid $primary_color;
+    }
+
+    ul > li > a{
+      padding-left: 2em;
+      opacity: .9;
     }
   }
 }
@@ -191,8 +181,8 @@ article{
   }
 
   figure{
-    padding: 6px;
-    background-color: $grey_100;
+    padding: 5px;
+    background-color: $light-grey-100;
     border-radius: 4px;
     margin: 1.5em 0;
     img{
@@ -204,7 +194,7 @@ article{
     figcaption{
       padding: 7px 0 2px 0;
       text-align: center;
-      color: $grey_500;
+      color: $dark-grey-400;
       font-size: .9em;
     }
   }
@@ -339,7 +329,6 @@ article{
       color: $grey_900;
       z-index: 2;
       @media screen and (min-width: 32em) {
-        position: relative;
         float: right;
         max-width: 15em;
         margin-left: 2em;

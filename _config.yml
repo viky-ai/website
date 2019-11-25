@@ -13,7 +13,7 @@ pagination:
   sort_reverse: true
 
 features:
-  user_registration_disabled: true
+  user_registration_disabled: false
 
 excerpt_separator: <!--keep reading-->
 
@@ -52,6 +52,8 @@ sass:
 exclude:
   - README.md
   - CONTRIBUTING.md
+  - CODE_OF_CONDUCT.md
+  - LICENCE.txt
   - Dockerfile
   - deployment
   - conf

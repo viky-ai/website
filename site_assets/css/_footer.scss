@@ -1,16 +1,107 @@
-footer{
+.footer{
+  margin-top: 3em;
+  padding: 1em 2em;
+
+  background-color: $light-grey-400;
+  color: $dark-grey-400;
+  border-bottom: 3px solid $primary_color;
+
+  background-image: url('../img/sep-up.png');
+  background-position: left top;
+  background-size:  100% 3em;
+  background-repeat: no-repeat;
+  padding-top: 5em;
+  font-size: .9em;
+
+  @media screen and (min-width: 1000px) {
+    padding: 7em 4em 3em 4em;
+  }
+  p{
+    margin: 0;
+    color: $dark-grey-300;
+  }
+  a{
+    &.current{
+      font-weight: 400;
+      color: $dark-grey-400;
+      text-decoration: none;
+    }
+    color: $dark-grey-300;
+    &:hover,
+    &:focus{
+      color: $primary_color;
+    }
+  }
+
+  .footer__inner{
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(150px, 1fr) );
+    grid-gap: 2em;
+
+    @media screen and (min-width: 1200px) {
+      max-width: 80rem;
+      grid-template-columns: repeat(5, auto);
+    }
+    strong{
+      display: block;
+      text-transform: uppercase;
+      font-size: .8em;
+    }
+  }
+
+  .footer__inc{
+    align-self: center;
+    font-size: .9em;
+    line-height: 1.5em;
+    svg{
+      height: 20px;
+      width: auto;
+      margin-bottom: 1em;
+    }
+  }
+
+  .footer__follow{
+    a{
+      display: inline-block;
+      margin-top: .5em;
+      svg{
+        height: 24px;
+        width: auto;
+        fill: $dark-grey-200;
+      }
+    }
+    a:hover, a:focus{
+      svg{
+        fill: $primary_color;
+      }
+    }
+  }
+
+  & > p{
+    text-align: center;
+    margin-top: 2em;
+    color: $dark-grey-100;
+  }
+}
+
+
+
+
+
+.doc-footer{
   margin: 2rem auto 0 auto;
   max-width: 42rem;
-  border-top: 1px dotted $grey_200;
+  border-top: 1px dotted $light-grey-900;
   text-align: center;
-  color: $grey_600;
+  color: $dark-grey-300;
   padding: 2rem 0;
   font-size: .9em;
   p{
     margin: 0;
   }
   a{
-    color: $grey_600;
+    color: $dark-grey-400;
     &:hover,
     &:focus{
       color: $primary_color;

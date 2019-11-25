@@ -1,65 +1,26 @@
-## How to propose new content
+# Contributing to viky.ai documentation
 
-To add a new documentation or a new blog post, start by creating a new git branch from branch develop. Then create a related merge request in Gitlab.
+This guide covers ways in which you can become a part of the ongoing development of viky.ai documentation.
 
-Commit your contributions, then:
-
-1. Ask a content review.
-2. Ask a technical & design review.
-
-When your merge request is accepted, your contribution is merged to branch develop. Then the generated static website will be automatically deployed on development environnement. Finalize by merging the branch develop into master in order to deploy automatically to production environment.
+As mentioned in [README](README.md), everyone interacting in viky.ai codebases, issue trackers, chat rooms, and mailing lists is expected to follow this [code of conduct](CODE_OF_CONDUCT.md).
 
 
-### Guides & API reference
+## Reporting an Issue
 
-Guides content are located in `doc/guides` directory.
-API docs are located in `doc/api` directory.
+viky.ai documentation uses [GitHub Issue Tracking](https://github.com/viky-ai/doc/issues) to track issues. If you've found a bug, this is the place to start. You'll need to create a GitHub account in order to submit an issue, to comment on them, or to create pull requests.
 
-1. Create a new directory in the directory `doc/guides`or `doc/api`. The name of the directory will be found in the URL of the document (use "simple" characters in lowercase and replace spaces by hyphens `-`).
-2. In this directory, create a file named `index.md`.
-3. Start with the following content:
-
-```
----
-layout: doc
-title: The title of the document
-description: A short description of the page's content
-image: site_assets/img/social.jpg
-order: 1
----
-
-Your markdown content goes here.
-```
-
-### Blog posts
-
-Blog posts are located in `blog/_posts` directory.
-
-To add a post:
-
-1. Create a new directory in the directory `blog/_posts`. Use that convention for the directory name: `YYYY-MM-DD-post-title`.
-2. In this directory, create a file named with the same above convention, i.e. `YYYY-MM-DD-post-title.md`
-3. Start with the following content:
+If you've found a problem in viky.ai documentation do a search on GitHub under [Issues](https://github.com/viky-ai/doc/issues) in case it has already been reported. If you are unable to find any open issues addressing the problem you found, your next step will be to [open a new one](https://github.com/viky-ai/doc/issues/new).
 
 
-```
----
-layout: post
-title: The title of the blog post
-description: A short description of the page's content
-author: Your Name
-avatar: your-name.jpg
-image: site_assets/img/social.jpg
----
+## How to propose new content or some improvements
 
-Your markdown content goes here.
-```
+To add a new documentation, a new blog post or purpose to improve existing content, start by creating a fork from branch develop. Then create a related Pull request in Github.
 
-### Manage images
+
+## Manage images
 
 In order to support retina display and to ensure consistency in the display, please follow these instructions:
 
-* Take screenshot with a viewport width of 1320px in viky.ai with a minimal pixel density of 2 (if possible).
-* In any case, resize screenshot to 1320px width.
+* Take screenshot with a minimum viewport width of 1320px and a pixel density of 2.
 * Use a tool like [ImageOptim](https://imageoptim.com) or [Trimage image compressor](https://trimage.org/) in order to make images load faster.
 * Favor PNG format for UI screenshots.

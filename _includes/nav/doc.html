@@ -1,0 +1,2 @@
+{% assign segments = page.dir | split: '/' %}
+<a href="/doc/" {% if segments[1] == 'doc' %}class="current"{% endif %}>Documentation</a>

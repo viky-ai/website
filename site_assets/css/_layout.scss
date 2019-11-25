@@ -11,7 +11,7 @@ html, body{
   }
   @media screen and (min-width: $breakpoint_medium) {
     display: grid;
-    grid-template-columns: 20em 1fr 1fr;
+    grid-template-columns: 19em 1fr 1fr;
 
     justify-content: flex-start;
     a.header__hamburger{
@@ -42,8 +42,8 @@ html, body{
   }
   @media screen and (min-width: $breakpoint_medium) {
     display: grid;
-    grid-column-gap: 3em;
-    grid-template-columns: 20em minmax(36em, 42em) auto;
+    grid-column-gap: 4em;
+    grid-template-columns: 18em minmax(36em, 42em) auto;
     grid-template-rows: min-content auto;
     grid-template-areas: "sidebar main nav";
     justify-items: stretch;
@@ -56,9 +56,10 @@ html, body{
     }
   }
   @media screen and (min-width: $breakpoint_large) {
-    background: linear-gradient(to right, $grey_100 0%, $grey_100 20%, #fff 20%, #fff 100%);
+    background: linear-gradient(to right, $light-grey-100 0%, $light-grey-100 20%, #fff 20%, #fff 100%);
     justify-content: center;
-    grid-template-columns: 20em 42em 20em;
+    grid-column-gap: 5em;
+    grid-template-columns: 18em 42em 18em;
     .doc__main{
       .article__summary{
         display: none;
@@ -69,11 +70,9 @@ html, body{
       grid-area: nav;
       padding: 1em 0;
       .article__summary{
-        margin: 0;
-        padding: 1em 1em 0 0;
         position: -webkit-sticky;
         position: sticky;
-        top: 1em;
+        top: 2em;
       }
     }
   }

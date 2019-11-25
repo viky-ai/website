@@ -9,20 +9,27 @@
 }
 
 .doc__sidebar{
+  background-color: $light-grey-100;
+  border-right: 1px solid $light-grey-400;
+  padding: 0 .75em;
+
   & > div{
     position: -webkit-sticky;
     position: sticky;
-    top: 2em;
+    top: 0;
+    padding-top: 2em;
+    padding-bottom: 2em;
+  }
+  &.doc__sidebar--sticky > div{
+    height: calc(100vh - 4.25em);
+    overflow: auto;
   }
 
-  background-color: $grey_100;
-  border-right: 1px solid $grey_200;
-  padding: 0 0 1em 1em;
   h2{
-    margin: 2em 0 .5em 0.75em;
-    font-size: .8em;
+    margin: 1.25em 0 0 calc(.75em + 5px);
+    font-size: .75em;
     text-transform: uppercase;
-    color: $grey_500;
+    color: $dark-grey-800;
     font-weight: 700;
     letter-spacing: .1em;
   }
@@ -32,29 +39,32 @@
     list-style: none;
     a{
       display: block;
-      padding: .25em .75em;
+      padding: .05em .75em;
       text-decoration: none;
-      color: $grey_700;
+      color: $dark-grey-400;
       font-weight: 400;
-      font-size: .9em;
-      border: 1px solid $grey_100;
-      border-right: none;
-      border-top-left-radius: 3px;
-      border-bottom-left-radius: 3px;
+      font-size: .825em;
+      line-height: 2em;
+      border-radius: 2px;
+      border-left: 5px solid transparent;
       &:hover,
       &:focus{
-        background-color: $grey_200;
-        border-color: $grey_200;
+        background-color: $light-grey-600;
+        border-color: $light-grey-900;
+        color: $dark-grey-500;
       }
       &.current{
-        color: $primary_color;
-        background-color: #fff;
-        border-color: $grey_200;
+        background-color: $dark-grey-400;
+        color: #fff;
+        border-color: $primary_color;
+        span{
+          color: $light-grey-100;
+        }
       }
       span{
         text-transform: uppercase;
-        border: 1px solid $grey_300;
-        color: $grey_500;
+        border: 1px solid $dark-grey-100;
+        color: $dark-grey-200;
         font-size: .7em;
         padding: .1em .25em;
         border-radius: 2px;
@@ -63,50 +73,71 @@
   }
 }
 
+.doc__main__pagination{
+  margin: 3em 0 2em 0;
 
-.doc .article__content{
-  & > h2 {
-    counter-increment: h2counter;
-    counter-reset: h3counter;
+  display: grid;
+  grid-template-areas:
+    "previous"
+    "next";
+  grid-gap: 1em;
+
+  @media screen and (min-width: 700px) {
+    display: grid;
+    grid-template-areas: "previous next";
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 3em;
+    align-items: center;
   }
-  & > h3 {
-    counter-increment: h3counter;
-    counter-reset: h4counter;
+  .previous{
+    grid-area: previous;
+    text-align: right;
+    display: grid;
+    grid-template-columns: 2em auto;
+    align-items: center;
+    padding-left: 0.5em;
   }
-  & > h4 {
-    counter-increment: h4counter;
-    counter-reset: h5counter;
+  .next{
+    grid-area: next;
+    text-align: left;
+    display: grid;
+    grid-template-columns: auto 2em;
+    align-items: center;
+    padding-right: 0.5em;
   }
-  & > h5 {
-    counter-increment: h5counter;
-    counter-reset: h6counter;
-  }
-  & > h6 {
-    counter-increment: h6counter;
-  }
-  & > h2:before,
-  & > h3:before,
-  & > h4:before,
-  & > h5:before,
-  & > h6:before{
-    color: $grey_500;
-    font-size: .8em;
-    font-weight: 300;
-  }
-  & > h2:before {
-    content: counter(h2counter) ".\0000a0";
-  }
-  & > h3:before {
-    content: counter(h2counter) "." counter(h3counter) ".\0000a0";
-  }
-  & > h4:before {
-    content: counter(h2counter) "." counter(h3counter) "." counter(h4counter) ".\0000a0";
-  }
-  & > h5:before {
-    content: counter(h2counter) "." counter(h3counter) "." counter(h4counter) "." counter(h5counter) ".\0000a0";
-  }
-  & > h6:before {
-    content: counter(h2counter) "." counter(h3counter) "." counter(h4counter) "." counter(h5counter) "." counter(h6counter) ".\0000a0";
+
+  a{
+    display: block;
+    padding: 1.3em 1em 1em 1em;
+    border: 1px solid $light-grey-600;
+    border-radius: 3px;
+    text-decoration: none;
+    box-shadow: 0 2px 4px rgba(#000, .075);
+    transition: all .1s ease-in-out;
+    svg{
+      fill: $light-grey-900;
+      width: 2em;
+      height: 2em;
+    }
+    small{
+      display: block;
+      color: $dark-grey-200;
+      line-height: 1.2em;
+    }
+    span{
+      display: block;
+      color: $dark-grey-600;
+      font-weight: 400;
+    }
+    &:hover,
+    &:focus{
+      border-color: $primary_color;
+      svg{
+        fill: $primary_color;
+      }
+      span{
+        color: $dark-grey-900;
+      }
+    }
   }
 }
-
