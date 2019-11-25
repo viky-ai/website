@@ -1,0 +1,21 @@
+User-agent: *
+
+Disallow: /about/privacy-policy/
+Noindex: /about/privacy-policy/
+
+Disallow: /about/terms-of-use/
+Noindex: /about/terms-of-use/
+
+Disallow: /about/terms-and-conditions-of-sale/
+Noindex: /about/terms-and-conditions-of-sale/
+
+Disallow: /users/password/new
+Noindex: /users/password/new
+
+Disallow: /users/confirmation/new
+Noindex: /users/confirmation/new
+
+Disallow: /users/unlock/new
+Noindex: /users/unlock/new
+
+Sitemap: https://www.viky.ai/sitemap.xml
