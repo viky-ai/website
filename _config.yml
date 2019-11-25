@@ -35,6 +35,21 @@ defaults:
       sitemap:         false
   -
     scope:
+      path:            "about/privacy-policy/index.md"
+    values:
+      sitemap:         false
+  -
+    scope:
+      path:            "about/terms-of-use/index.md"
+    values:
+      sitemap:         false
+  -
+    scope:
+      path:            "about/terms-and-conditions-of-sale/index.md"
+    values:
+      sitemap:         false
+  -
+    scope:
       path:            "doc/guides/markdown-reference/index.md"
     values:
       sitemap:         false
