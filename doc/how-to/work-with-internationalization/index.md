@@ -9,7 +9,7 @@ order: 302
 When analyzing sentences in different languages it is often possible to find common patterns on how the idea is expressed. In viky.ai, agents are multi-lingual. It allows you to harness the power to factor these common models together.
 
 
-##  Configure your agent
+## Configure your agent
 
 The agent will be able to interpret sentences like "Pour the flour" or "Break the eggs" in English and French.
 
@@ -27,6 +27,7 @@ First we need to create the agent. In the settings panel you can choose which la
 Create a public interpretation named `recipe_step` and open it. Notice three tabs at the top, one for "No language", another for the English language and the last one with a "+" sign. Click on it to show the "Add language" menu, then click on "fr (French)" to add this language to the agent.
 
 ![Add french language screenshot](./img/02_add_french_language.png "Agent's language settings")
+
 
 ## Multilingual agent
 
@@ -117,7 +118,8 @@ If we try again the previous sentence "Pouring the flour" now it match even if w
 
 ![Matching variation screenshot](./img/09_matching_variation.png "Matching variation")
 
-##  NLP request and language
+
+## NLP request and language
 
 Most of the time we do not need to specify what is the expected language. It is left to the NLP to match the submitted sentence against the most likely interpretation.
 
