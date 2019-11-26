@@ -5,7 +5,7 @@
 .pricing__plans{
   margin: 0 auto 2em auto;
   & > div{
-    margin: 0 -1em 2em -1em;
+    margin: 0 -.5em 2em -.5em;
     padding: .5em 1.5em;
     box-shadow: 0 2px 3px rgba(#000, .075);
     border-radius: 3px;
@@ -39,9 +39,11 @@
   }
   h3{
     font-size: 1.15em;
-    min-height: 3em;
     font-weight: 300;
     margin: .75em 0 0 0;
+    @media screen and (min-width: 900px) {
+      min-height: 3em;
+    }
   }
 }
 

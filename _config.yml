@@ -17,7 +17,7 @@ features:
 
 excerpt_separator: <!--keep reading-->
 
-permalink: /blog/:year/:month/:day/:title
+permalink: pretty
 
 feed:
   path: blog/atom.xml
