@@ -4,7 +4,7 @@ title: viky.ai is opened to everybody
 description: The viky.ai plateform is opened to everybody on November, 25th 2019.
 author: Patrick Constant
 avatar: patrick-constant.jpg
-image: blog/2019/11/25/social.jpg
+image: blog/2019/11/25/viky-ai-is-opened-to-everybody/social.jpg
 ---
 
 **Today is a great day**, the viky.ai platform is now opened to everybody!

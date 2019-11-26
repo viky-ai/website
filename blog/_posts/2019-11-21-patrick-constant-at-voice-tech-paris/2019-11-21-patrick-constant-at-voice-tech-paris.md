@@ -4,7 +4,7 @@ title: Voice Tech Paris keynote
 description: Patrick Constant will propose a keynote on NLP at Voice Tech Paris on November, 26th 2019.
 author: Patrick Constant
 avatar: patrick-constant.jpg
-image: blog/2019/11/21/patrick-constant-at-voice-tech-paris.jpg
+image: blog/2019/11/21/patrick-constant-at-voice-tech-paris/patrick-constant-at-voice-tech-paris.jpg
 ---
 
 Dear all, I will be at the Voice Tech Paris on November, 26th 2019 to present a keynote on Voice Recognition and <acronym title="Natural Language Processing">NLP</acronym>.
