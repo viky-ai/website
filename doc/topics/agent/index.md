@@ -1,7 +1,7 @@
 ---
 layout: doc
 title: "Agent"
-description: "This section will introduce the concept of agent."
+description: "This section introduce the agent concept."
 image: site_assets/img/social.jpg
 order: 201
 ---

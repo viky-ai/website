@@ -1,7 +1,7 @@
 ---
 layout: doc
 title: "Interpretation"
-description: "This section will introduce the interpretation concept."
+description: "This section introduce the interpretation concept."
 image: site_assets/img/social.jpg
 order: 202
 ---
