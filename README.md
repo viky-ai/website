@@ -1,10 +1,10 @@
 # Welcome to viky.ai documentation
 
 
-## What's viky.ai documentation
+## What's viky.ai website
 
 
-viky.ai documentation is a static web site generator build with [Jekyll](https://jekyllrb.com/) used to generate viky.ai presentation pages, documentation and blog, which you can find on [www.viky.ai](https://www.viky.ai/).
+viky.ai website is a static web site build with [Jekyll](https://jekyllrb.com/) used to generate viky.ai presentation pages, documentation and blog, which you can find on [www.viky.ai](https://www.viky.ai/).
 
 
 ## Getting Started
@@ -20,12 +20,12 @@ viky.ai documentation local install used for development relies on the following
 
 1. Clone the repository using the following command:
    ```
-   git clone https://github.com/viky-ai/doc.git
+   git clone https://github.com/viky-ai/website.git
    ```
 
-2. Within doc directory, use the following commands:
+2. Within website directory, use the following commands:
    ```
-   cd doc/
+   cd website/
    bundle install
    bundle exec jekyll serve -w -l
    ```
