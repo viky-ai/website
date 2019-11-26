@@ -7,6 +7,7 @@ order: 201
 ---
 
 Understanding unstructured texts expressed in natural language is a complex topic and has been for years an active field of research and development.
+
 One major difficulty is the subtext people introduce in their daily communications such as idiomatic expressions, humor (irony, sarcasm...) or metaphor to name a few. This create ambiguity that only a human being is able to understand thanks to the conversation context.
 
 A computer on the other hand is completely oblivious to such context. As a consequence, a good solution is to delimit a clear scope which define what and how sentences are analyzed. In viky.ai this is called an agent.
@@ -19,11 +20,12 @@ When we define a set of sentences that we want to understand, they usually imply
 For instance, in the context of movies, sentences like "What film won the best picture Oscar in 2010?", "I want to watch a spy movie." or "Who directed Pulp Fiction?" all convey the idea to find movies based on different criteria. Even if they do not express exactly the same intention we can still group them.
 
 This is where the agent come into play. It is the entry point for you to build and manage the analyzing process. It provides many features:
-* define a set of rules to analyses sentences
-* submit new sentences to interpret
-* reuse other agents as dependencies 
-* maintain a consistent interpretation quality over time
-* manage access rights between collaborators
+
+* Define a set of rules to analyses sentences.
+* Submit new sentences to interpret.
+* Reuse other agents as dependencies.
+* Maintain a consistent interpretation quality over time.
+* Manage access rights between collaborators.
 
 And we can add the corollary descriptions:
 
@@ -34,7 +36,7 @@ Agent's rules are so flexible that you can analyze texts of any subjects. In fac
 
 Such flexibility is the key to help you structure your agent. Chances are you will end up with a collection of agents, each one dedicated to a specific task. It is easy to layer them from a narrow use case at the bottom to wider and more abstract at the top. For instance with three agents you can have a first agent dedicated to find numbers, use it in a second one to find references to money and which is used in a third one to understand sentences about financial data.
 
-This strategy of composition is at the heart of viky.ai and we are going to detail it in the next section. 
+This strategy of composition is at the heart of viky.ai and we are going to detail it in the next section.
 
 
 ## Organize agents together
@@ -46,7 +48,9 @@ The proper way to handle such case is to split your big agent into several small
 
 Relying solely on small agents won't get you very far to solve real life business issues. This is where you need composition. An agent is able to include an arbitrary number of other agents and exploit their results to produce a new outcome. This form a tree of dependencies between agents without limit of depth nor width.
 
-There is two ways to use this dependencies tree. The first one is by depth. At the bottom we have agents for practical ideas like numbers, date, length units, cities, etc. On top of that comes agents for slightly more elaborated concepts. For instance with numbers and cities we can create a new agent "postal address" that depends on the first two for those details and tie them with the missing concept of address. Again, we can add a third higher level where the postal address become a dependency of a "package delivery" agent. We can repeat this process as much as we want. In the end, the root agent in this tree is the entry point for the text analyzing process and it describes the most abstract level of understanding.
+There is two ways to use this dependencies tree. The first one is by depth. At the bottom we have agents for practical ideas like numbers, date, length units, cities, etc. On top of that comes agents for slightly more elaborated concepts. For instance with "Numbers" and "Cities" we can create a new agent "Postal address" that depends on the first two for those details and tie them with the missing concept of address. Again, we can add a third higher level where the Postal address become a dependency of a "Package delivery" agent. We can repeat this process as much as we want. In the end, the root agent in this tree is the entry point for the text analyzing process and it describes the most abstract level of understanding.
+
+![Dependencies tree schema](img/dependencies.png "Package delivery uses Postal address witch uses Numbers and Cities")
 
 The other way to exploit the dependencies tree is by width. Agents can be assembled when they are about subjects that complements each other. For instance if we need to understand the order "I want to watch a spy movie." we just need two agents. One to understand orders in the form of "I want to watch" and a second to understand movies categories, here "a spy movie". Those two dependencies are siblings in the dependency tree.
 
