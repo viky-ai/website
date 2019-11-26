@@ -6,63 +6,52 @@ image: site_assets/img/social.jpg
 order: 203
 ---
 
-## What are entities list exactly?
+Beside its structure, the sentence carries another kind of information in the form of entities. They defines what the sentence is about without ambiguity.
 
-Entities list are in fact simply interpretations. They have exactly the same properties as interpretations. However, they are proposed in the viky.ai platform in a different interface as they are used in a different way.
 
-But first of all, let us define entities list as list of entities, or more exactly lists of named entities.
+## What is an entity?
 
-[Named entities](https://en.wikipedia.org/wiki/Named_entity) are a well known concept in the NLP world. They are texts representing a real-world object, such as persons, locations, organizations, products, etc.
+[Named entities](https://en.wikipedia.org/wiki/Named_entity) are a well known concept in the NLP world. They are texts representing a real-world object, such as persons, locations, organizations, products, etc. If we view an interpretation as the tree structure of the sentence, then entities are leaves in this tree.
 
-We hope this reminds you of something: a text representing an idea? So, yes, named entities are precisely interpretations.
-
-Can we match an idea to a real-world object? Yes, because we just have to have an idea of this real-world object! And since idea are quite arbitrary, we can use *any* representation of this real-world object, and this is a semantic solution.
-
-For example, we can represent the "Paris" town as:
+Once an entity is detected, the goal is to associate it with a meaning in the form of an arbitrary semantic solution. For example, we can represent the town "London" as the following solution:
 
 ```json
 {
-  "geonameId": "2988507",
-  "name": "Paris",
-  "asciiName": "Paris",
-  "latitude": "48.85341",
-  "longitude": "2.3488",
-  "countryCode": "FR",
-  "population": "2138551",
-  "timeZone": "Europe/Paris"
+  "name": "London",
+  "latitude": "51.50853",
+  "longitude": "-0.12574",
+  "countryCode": "GB",
+  "timeZone": "Europe/London"
 }
 ```
 
-And you can see that most of this information is quite arbitrary:
-* **geonameId**: does not mean anything appart from the GeoNames repository.
-* **name**: well ok...
-* **asciiName**: for Americans...
-* **latitude** and **longitude**: where in Paris exactly ?
+We can see that most of this information is quite arbitrary:
+
+* **name**: it is the normalized name of the city. In this example we will use it to grasp the core meaning of the entity.
+* **latitude** and **longitude**: locates where London is exactly.
 * **countryCode**: this is the Alpha-2 code of the ISO 3166-1 ISO norm, thus perfectly arbitrary, as all norms are.
-* **population**: this gives an idea, but nothing more.
 * **timeZone**: another arbitrary norm.
 
-But we don't mind arbitrary as this is a normal characteristic of an idea!
+Once we have a normalized way to describe the entity, we can now associate every synonymous expressions with this representation. For instance, when we read the French translation "Londres" or if we say "capital of the UK" we are still talking about the same city. Thus we are able to link all of them with the core idea identified by the semantic solution. 
 
-Another difference is that an entities list cannot combine with interpretations. If we view an interpretation as a tree of interpretations, Entities list can only be leaves in this tree.
-
-Then you might ask this simple question:
+In viky.ai, it is not just about detecting the presence of an entity but also to give a structured meaning helping you process it further down your own business use case.
 
 
-## Why do we have Entities list exactly?
+## Why a list?
 
-Well Entities list have two interesting properties that can be used to simplify editing interpretations:
+Now that we understand what an entity is in viky.ai, why are they grouped into list?
 
-* it is possible to massively import/export entities, please read [Import, export entities](/doc/how-to/import-export-entities/) to know more about this property.
-* it is possible to add several texts in different languages at the same place, and link them with the same solution.
+Even if an entity can live on its own once it is attached to a semantic solution, we often have to deal with many of the same kind. For instance if we have sentences stating something about colors, money or brands we usually need to understand not just one but several variations of them. Thus it is easier to manage an entities list that embody a common theme or at least bind entities in a meaningful way for your use case.
 
-for example you can add the following texts at the same time:
+When using standardize concepts such as cities, countries, etc. you will often find external third-party knowledge bases. To help you, viky.ai provides tools to massively import or export those lists.
 
-```
-kilogramme:fr
-kilogram:en
-kg
-```
+Inside an entities list each item is present with a possible translation and with a corresponding solution. When building a list, the amount of data you can put can be huge but if you are not careful this has some downsides.
 
-and link all of those texts to the same solution, for example "kg".
 
+## KISS
+
+Although an entities list may contains millions of items, we advise not to do so. Creating a huge list including every entities you could ever need is a tempting approach but it comes at a cost. A general rule of thumb is to follow the KISS principle meaning Keep It Simple Stupid.
+
+Why "simple"? Dealing with large lists will introduce a lot of noise when matching new sentences. For instance you could create a list with every cities in the world but using that list you will see there is always a city name that match an unexpected word in your sentence.
+
+Why "stupid"? When building semantics solutions, only put descriptive data to identify your concept. The proper and more convenient way is to do your formatting in the parent interpretation. 
