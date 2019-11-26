@@ -20,4 +20,5 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
           snapshot: "true"
+          # Cache docker build
           cache: ${{ github.event_name != 'schedule' }}
