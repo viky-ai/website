@@ -17,3 +17,4 @@ jobs:
           name: vikyai/doc
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
+          snapshot: "true"
