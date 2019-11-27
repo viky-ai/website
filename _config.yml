@@ -17,7 +17,7 @@ features:
 
 excerpt_separator: <!--keep reading-->
 
-permalink: /blog/:year/:month/:day/:title
+permalink: pretty
 
 feed:
   path: blog/atom.xml
@@ -31,6 +31,21 @@ defaults:
   -
     scope:
       path:            "50x.html"
+    values:
+      sitemap:         false
+  -
+    scope:
+      path:            "about/privacy-policy/index.md"
+    values:
+      sitemap:         false
+  -
+    scope:
+      path:            "about/terms-of-use/index.md"
+    values:
+      sitemap:         false
+  -
+    scope:
+      path:            "about/terms-and-conditions-of-sale/index.md"
     values:
       sitemap:         false
   -
