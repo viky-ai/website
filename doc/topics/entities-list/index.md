@@ -20,8 +20,8 @@ Once an entity is detected, the goal is to associate it with a meaning in the fo
   "name": "London",
   "latitude": "51.50853",
   "longitude": "-0.12574",
-  "countryCode": "GB",
-  "timeZone": "Europe/London"
+  "country_code": "GB",
+  "time_zone": "Europe/London"
 }
 ```
 
@@ -29,10 +29,10 @@ We can see that most of this information is quite arbitrary:
 
 * **name**: it is the normalized name of the city. In this example we will use it to grasp the core meaning of the entity.
 * **latitude** and **longitude**: locates where London is exactly.
-* **countryCode**: this is the Alpha-2 code of the ISO 3166-1 ISO norm, thus perfectly arbitrary, as all norms are.
-* **timeZone**: another arbitrary norm.
+* **country_code**: this is the Alpha-2 code of the ISO 3166-1 ISO norm, thus perfectly arbitrary, as all norms are.
+* **time_zone**: another arbitrary norm.
 
-Once we have a normalized way to describe the entity, we can now associate every synonymous expressions with this representation. For instance, when we read the French translation "Londres" or if we say "capital of the UK" we are still talking about the same city. Thus we are able to link all of them with the core idea identified by the semantic solution. 
+Once we have a normalized way to describe the entity, we can now associate every synonymous expressions with this representation. For instance, when we read the French translation "Londres" or if we say "capital of the UK" we are still talking about the same city. Thus we are able to link all of them with the core idea identified by the semantic solution.
 
 In viky.ai, it is not just about detecting the presence of an entity but also to give a structured meaning helping you process it further down your own business use case.
 
@@ -54,4 +54,4 @@ Although an entities list may contains millions of items, we advise not to do so
 
 Why "simple"? Dealing with large lists will introduce a lot of noise when matching new sentences. For instance you could create a list with every cities in the world but using that list you will see there is always a city name that match an unexpected word in your sentence.
 
-Why "stupid"? When building semantics solutions, only put descriptive data to identify your concept. The proper and more convenient way is to do your formatting in the parent interpretation. 
+Why "stupid"? When building semantics solutions, only put descriptive data to identify your concept. The proper and more convenient way is to do your formatting in the parent interpretation.
