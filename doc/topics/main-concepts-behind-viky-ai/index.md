@@ -8,6 +8,7 @@ order: 200
 
 We discuss here the main concepts behind viky.ai. If the terms "NLP", "semantic solution", "agent", "interpretation", "formulation", "entity" do not tell you anything, it is completely normal. We hope that reading this documentation will help you clarify these terms, in order to understand viky.ai.
 
+
 ## NLP
 
 NLP means Natural Language Processing. You can look up this dedicated [Wikipedia page](https://en.wikipedia.org/wiki/Natural_language_processing). viky.ai is indeed a Natural Language Processing platform as it helps you analyze natural language texts. But what does exactly "natural language texts" mean in essence?
@@ -27,6 +28,8 @@ What do we want when we analyze a text? Well, it depends really on what is our g
 
 **The result of the analysis** will then be very different. This **is what we call a semantic solution**.
 
+![Text analysis schema](img/text-analysis.png "An agent analize text and return a semantic solution")
+
 viky.ai's goal is to help you create text analysis processes that will provide you with semantic solutions. We call such text analysis processes an agent.
 
 
@@ -37,6 +40,8 @@ viky.ai's goal is to help you create text analysis processes that will provide y
 Let's take a simple example: with the expression "twenty-three", we would like the agent to get the number 23. In essence you have transformed a text into a value that can be further processed by a computer.
 
 In this example, you can achieve independence from the natural language, as you can get the same result with "vingt-trois" (French), or any other natural language expression of a number.
+
+![Numbers agent schema](img/numbers-agent.png "Numbers agent analyse text and produces a semantic solution")
 
 Now we will further describe the concepts used to build agents.
 
@@ -58,18 +63,22 @@ For example, we can build an interpretation that will represent different ways o
 
 In that case, the `be` interpretation is made of the "am", "is", "was" and "be" formulations.
 
-So, if we submit the text "the cat is white" to a "to_be" agent, it will return the `be` interpretation. In that case, it will have recognized only the word "is" in the sentence.
+So, if we submit the text "the cat is white" to a "To be" agent, it will return the `be` interpretation. In that case, it will have recognized only the word "is" in the sentence.
+
+![To be agent schema](img/to-be-agent.png "To be agent recognized be interpretation")
 
 
 ## Formulations and semantic solutions
 
 Most of the time, **we want to standardize the agent's analysis**: we know which interpretation the agent has found, but we want to translate it **into a processable format**.
 
-For example, if we have an agent "colors" that recognizes colors, we would like to get the RGB code of the color, and not only the fact that it is a color.
+For example, if we have an agent "Colors" that recognizes colors, we would like to get the RGB code of the color, and not only the fact that it is a color.
 
 For this, we can create an interpretation for each color and create a formulation for each way this color is expressed. Let's say we create the "yellow" interpretation, it will have a "yellow" formulation and a "jaune" formulation (French for yellow), and we will attach the semantic solution `rgb(255, 255, 0)` which is the RBG code of this color.
 
-Thus if the text is "the cup is yellow", the color agent will return the following **semantic solution**: `rgb(255, 255, 0)`.
+Thus if the text is "the cup is yellow", the Colors agent will return the following **semantic solution**: `rgb(255, 255, 0)`.
+
+![Colors agent schema](img/colors-agent.png "Colors agent recognized and nomalize yellow color by providing a solution")
 
 <aside class="primary">
   <p>
@@ -93,7 +102,9 @@ Entities list, are usually large lists of words or expressions with semantics so
 
 Those combinations are closely tied to the structure of the text which the interpretation will analyze. Let's say we have an agent with an entities list containing a list of kitchen objects such as a "cup", "knife", "plate", "fork", etc. and an other agent exposing an interpretation matching every color.
 
-If we want to analyze the sentence "a red cup", we would create an interpretation with a formulation shaping the sentence's structure of a "color" followed by an "object". We would say that "red" match the interpretation of the color agent and "cup" match our entities list of kitchen objects. This interpretation's structure being universal we will be able to understand all the combination between a color and a kitchen object, such as "black fork", etc.
+If we want to analyze the sentence "a red cup", we would create an interpretation with a formulation shaping the sentence's structure of a "color" followed by an "object". We would say that "red" match the interpretation of the Colors agent and "cup" match our entities list of kitchen objects. This interpretation's structure being universal we will be able to understand all the combination between a color and a kitchen object, such as "black fork", etc.
+
+![Colorfull kitchen agent schema](img/colorfull-kitchen-agent.png "Combining interpretations")
 
 Thus we can see that with one single combination, we can achieve the analysis of many possible sentences. This combinatorial power is the reflection of the combinatorial nature of the human language.
 
@@ -112,6 +123,8 @@ Agents have two types of interpretations:
 * **private interpretations**, which are used only within the **agent** to keep things organized internally
 
 Thus, to combine two agents together, it is only necessary to combine a public interpretation of an agent within any interpretation of the other agent whether private or public.
+
+![Combining agents schema](img/combining-agents.png "Combining agents: agent A uses a public interpretation from agent B")
 
 
 ## Independence from the natural languages
