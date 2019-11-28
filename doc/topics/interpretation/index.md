@@ -6,6 +6,9 @@ image: site_assets/img/social.jpg
 order: 202
 ---
 
+What makes a sentence different from a simple group of words? It is mainly the structure that links words around certain rules to give meaning. In linguistics, this is called grammar. In viky.ai, we use this structure to match sentences to the idea they express. This mechanism is implemented through **interpretations**.
+
+
 ## What is an interpretation?
 
 Interpretations are the building blocks of agents. As a matter of fact, an agent can be made of only one interpretation. Thus everything we have said about an agent can be said about an interpretation. However, creating an agent using only one interpretation is very limited as it would not use the main property of an interpretation: its ability to combine and be combined with other interpretations.
