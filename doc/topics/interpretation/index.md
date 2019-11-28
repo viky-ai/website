@@ -94,38 +94,40 @@ This is a horizontal combination: several expressions are combined together in a
 Now we are able to interpret commands to change the temperature of a room. The semantic solution we obtain is the central piece to exploit this interpretation. We will see how to customize it according to our needs.
 
 
-### Solutions
+### Semantic solutions
 
-In the last paragraph, we have shown how interpretations can be combined together, and this is a very powerful mechanism.
+In the last section, we have shown how interpretations can be combined, which is a very powerful mechanism.
 
-But maybe you have seen in the last example, that the solution has created itself automatically. This can be very good in many cases, but in some cases, you want to change the solution you get to fit your own need.
+But perhaps you saw in the last example that the semantic solution was created automatically. This may be sufficient in many cases, but in some cases you want to change it to meet your specific needs.
 
-This is very important, because we need to mimic the human capacity to understand thing and to mold his understanding to his immediate need.
+This is very important, because we need to imitate the human capacity to understand things and adapt its understanding to its immediate needs.
 
-Thus when we combine interpretations together we are confronted with two different realities:
+Thus, when we combine interpretations, we are confronted with two different realities:
 
-* first reality: the solution that are given to us in the sub-interpretation cannot be changed in some occasion. In our case, we could change the "EUR" solution, because it is an interpretation that belong to us, but we cannot change the solution coming from the Numbers agent, as it is a public agent.
-* second reality: we have each our own need to interpret thing the way we want, and from your viewpoint this is what you want, but from an outside viewpoint, it is completely arbitrary. So we need to be able to be totally arbitrary in the way we build solution.
+1. the semantic solution obtained in the sub-interpretation cannot be changed in some cases. In our example, we could change the solution from "rooms", because it belongs to us, but we cannot change the solution from the agent Numbers, because it is a public agent belonging to another user.
+2. we all have our own ways of interpreting things in a way that is consistent with our representation of the world, but from an external point of view it is completely arbitrary. We must therefore be able to be totally arbitrary in the way we build the solution.
 
-So we demonstrate those two points in that simple example:
+We demonstrate these two points in the following example. First of all, we know that:
 
-First of all we know that:
-
-* the solution from the 'euro' interpretation is "EUR"
-* the solution from the 'number' interpretation is:
+* the solution from the "rooms" entities list is the semantic solution of the corresponding entity
+* the solution from the "number" interpretation is the object:
 
 ```json
 {
   "number": 20
 }
 ```
-Let us say we want to have the following solution: "20 EUR", then we would need to write some code to do this. Fortunately, it is possible to use the Javascript language to do such thing. In that very simple case, here is what the solution can look like:
+
+Let's say we want to convert the temperature into a normalized fahrenheit unit, so we need to write code to do it. Fortunately, it is possible to use Javascript for this purpose. In this very simple case, here is what the solution may look like:
 
 ```javascript
-number.number + " " + euro
+{
+  "rooms": "garage",
+  "temperature": (temperature.number * 9/5) + 32
+}
 ```
 
-Of course anything can be done here, thus demonstrating the possibilities of being arbitrary with regards to solutions.
+Of course, everything can be done here, demonstrating the potential for arbitrary solutions.
 
 
 ## The properties of a formulation
