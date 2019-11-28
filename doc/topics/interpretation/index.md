@@ -24,23 +24,23 @@ Let's first look at the formulations.
 
 ## What is a formulation?
 
-In its simplest form, a formulation is a piece of text associated with a **semantic solution** (or more simply a **solution**). In essence, you are associating a text with your idea of it.
+In its simplest form, a formulation is a sentence associated with a **semantic solution** (or more simply a **solution**). Essentially, you associate a text with your idea of it.
 
-Your idea can be a very conceptual one, for example you can associate the string "one" to the number '1'.
+Your idea can be very conceptual, for example you can associate the string "one" with the number "1". Or it can be very special or funny if you associate the solution "42" with the text "the answer to everything"!
 
-Or it can be very peculiar or funny if you associate the '42' solution to the text "ultimate answer"!
+Usually, an idea can be expressed in many textual representations, so we can have several formulations to express this idea. In this case, we will have to group these formulations in the same interpretation.
 
-Usually, however, an idea can be expressed by many pieces of text, thus we can have several formulations to express the same idea. In that case we will need to put those formulations into the same interpretation. Even though an interpretation can  express different ideas from different formulations, it is a good practice that an interpretation expresses only one idea, and thus has a single semantic solution structure.
+There is nothing to prevent you from putting formulations related to different ideas in the same interpretation. However, it is a good practice that an interpretation expresses only one idea and therefore has only one semantic solution structure.
 
-But let us take a very simple example with the idea of Euro (the money). As an arbitrary decision, we say that it is represented as "EUR". In our case, we use four different formulations to express this:
-* "EUR" -> "EUR"
-* "€" -> "EUR"
-* "euro" -> "EUR"
-* "euros" -> "EUR"
+Let's take a very simple example with the idea of controlling a thermostat. As an arbitrary decision, we say that it is represented by a semantic solution in the form of `change_temperature`. In our case, we use three different formulations to express this:
 
-You can easily create those four formulations, by adding the same solution to each of those formulations.
+* "Increases the temperature in the living room to nineteen degrees." -> `change_temperature`
+* "Lower the temperature in the bedroom to 18 degrees." -> `change_temperature`
+* "I want 20 degrees in the bathroom." -> `change_temperature`
 
-We will now see how we can combine interpretation in this simple example, to simplify our work, as well as to organize our ideas (as they are indeed interpretations).
+You can easily create these three formulations by adding the same solution to each of them. We can associate these three sentences with the idea of changing the room temperature.
+
+Now let's see how we can combine this example with other interpretations to organize our ideas.
 
 
 ## Combining interpretations using formulations
