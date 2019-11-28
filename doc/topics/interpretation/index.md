@@ -11,15 +11,15 @@ What makes a sentence different from a simple group of words? It is mainly the s
 
 ## What is an interpretation?
 
-Interpretations are the building blocks of agents. As a matter of fact, an agent can be made of only one interpretation. Thus everything we have said about an agent can be said about an interpretation. However, creating an agent using only one interpretation is very limited as it would not use the main property of an interpretation: its ability to combine and be combined with other interpretations.
+Interpretations are the building blocks of agents. In fact, an agent can be made of a single interpretation. However, the creation of such an agent is very limited because it would not use its main property: the ability to combine and be combined with others.
 
-But in order to describe this ability to combine with other interpretation, we must first introduce and describe **formulations** as interpretations are simply a list of formulations, and thus the whole mechanism of combining interpretations is done within formulations.
+But to describe this capacity, it is first necessary to introduce and describe the **formulations**. Interpretations are only a simple list of formulations, and therefore the entire mechanism for combining interpretations is done within the formulations.
 
-You can view an interpretation as the description of an idea, and formulations as the different formulations of this idea.
+You can see an interpretation as the identification of an idea, and formulations as the different descriptions of that idea.
 
-Of course, since an interpretation can be a combination of other interpretation, the idea can be as complex as you want. We will see later how this combination is done.
+Of course, since an interpretation can be a combination of other interpretations, this idea can be as complex as you want. We will see later how this combination works.
 
-Let us first examine formulations.
+Let's first look at the formulations.
 
 
 ## What is a formulation?
