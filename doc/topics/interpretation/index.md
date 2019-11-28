@@ -45,49 +45,54 @@ Now let's see how we can combine this example with other interpretations to orga
 
 ## Combining interpretations using formulations
 
-In our EUR example, we have seen that we needed to add four times the same solutions (one for each formulation). Now is the time to do a combination.
+In our example, we have associated three different sentences with the same semantic solution. While identifying the idea as we wanted, this has two disadvantages. First, we can only understand exactly these three sentences. If we say instead, "I want _21_ degrees in the bathroom." it won't work. Secondly, the semantic solution is correct but devoid of real interest because we understand the idea but not the details that are essential to know what to do in practice.
 
-For this, we simply create an interpretation called 'vocabulary_euro' (the name can be anything) and we add the four formulations to this interpretation without solution (autosolution checked). We thus simply get:
-* "EUR"
-* "€"
-* "euro"
-* "euros"
+Let's improve our interpretation by detecting the corresponding room. Let's start by creating an entities list called "rooms" containing these entities:
 
-This 'vocabulary_euro' interpretation represents the idea of "euro" as it is expressed, but we have not yet committed to an expression of this idea (we have not yet added a semantic solution).
+* living room
+* garage
+* bathroom
+* bedroom
+* kitchen
 
-Now, we create a new interpretation that we will call 'euro' and we add a formulation with a text such as "euro" (any text is possible, as it serves only to link to the 'vocabulary_euro') and connect it to the 'vocabulary_euro'. Then we add the "EUR" solution in this formulation.
+Now, in each formulation, we annotate the location of the room in the sentence with this entities list. We obtain the following formulations:
 
-Now, the euro idea is committed to the "EUR" solution, in one single addition.
+* "Increases the temperature in the `@{rooms}` to nineteen degrees."
+* "Lower the temperature in the `@{rooms}` to 18 degrees."
+* "I want 20 degrees in the `@{rooms}`."
 
-In this example we have seen how to join several formulations into one single addition of a solution using two interpretations.
+It acts as a kind of placeholder in each formulation. In practice, this does two things:
 
-In that case we have made a vertical combination: several expressions leading to the same solution.
+* it extracts in the semantic solution the room requested in the sentence
+* it allows to place any room of the entities list at this location in the sentence
 
-Now we want to create an horizontal combination: two of more expressions combined together to create a new semantic solution. For this we will use the Numbers agent, so first, in the Overview tab, we click on "Add new dependency", and select the Numbers agent.
+We are now able to interpret a new sentence like "I want 20 degrees in the _kitchen_", whose solution is "`kitchen`".
 
-Here we have just declared that our agent will be using the Numbers agent as a sub-agent.
+In this case, we made a vertical combination: one expression is linked to another to exploit its solution.
 
-Let us then create a new interpretation called N_euros which will be able to understand:
-* a number
-* followed by the euro idea
+We still have the limitation of having fixed temperatures in our formulations. Let's improve our example by being more flexible in temperature detection.
 
-We just need to create a formulation containing the text "12 euros" and link the "12" to the Numbers agent (in fact its public interpretation called 'number'), and "euros" to the 'euro' interpretation that you have previously created.
+We have seen in the [Agent](/doc/topics/agent/) topic guide that we can create dependencies to reuse interpretations. That's exactly what we're going to do with the agent [Numbers](https://www.viky.ai/agents/viky/numbers). Once added as a dependency, this agent exposes an interpretation to detect any number expression in the sentence.
 
-And now, your interpretation is able to understand any number followed by the euro idea.
+In each formulation, we replace the characters expressing a number with a reference to the interpretation of the agent Numbers. We obtain the following formulations:
+                                                                                                                          
+* "Increases the temperature in the `@{rooms}` to `@{number:temperature}` degrees."
+* "Lower the temperature in the `@{rooms}` to `@{number:temperature}` degrees."
+* "I want `@{number:temperature}` degrees in the `@{rooms}`."
 
-You can try it with the following texts:
-* twenty €
-* 12 millions euros
+We are now able to understand a new sentence like "Lower the temperature in the _garage_ to _16_ degrees.", whose solution is:
 
-The first text will be interpreted as:
-
-```json
+```javascript
 {
-  "number": 20,
-  "euro": "EUR"
+  "rooms": "garage",
+  "temperature": "16"
 }
 ```
-We let you discover what the second text will look like.
+
+This is a horizontal combination: several expressions are combined together in a formulation to create a new semantic solution.
+
+Now we are able to interpret commands to change the temperature of a room. The semantic solution we obtain is the central piece to exploit this interpretation. We will see how to customize it according to our needs.
+
 
 ### Solutions
 
@@ -98,6 +103,7 @@ But maybe you have seen in the last example, that the solution has created itsel
 This is very important, because we need to mimic the human capacity to understand thing and to mold his understanding to his immediate need.
 
 Thus when we combine interpretations together we are confronted with two different realities:
+
 * first reality: the solution that are given to us in the sub-interpretation cannot be changed in some occasion. In our case, we could change the "EUR" solution, because it is an interpretation that belong to us, but we cannot change the solution coming from the Numbers agent, as it is a public agent.
 * second reality: we have each our own need to interpret thing the way we want, and from your viewpoint this is what you want, but from an outside viewpoint, it is completely arbitrary. So we need to be able to be totally arbitrary in the way we build solution.
 
@@ -122,7 +128,7 @@ number.number + " " + euro
 Of course anything can be done here, thus demonstrating the possibilities of being arbitrary with regards to solutions.
 
 
-## The different characteristics of a formulation
+## The properties of a formulation
 
 There are two mechanisms to control exactly what text a formulation is matching. Those two mechanisms are very powerful:
 
