@@ -1,12 +1,12 @@
 ---
 layout: doc
 title: Know why an interpretation match
-description: "How to see why an agent analyze a sentence this way."
+description: "How to see why an agent analyzes a sentence in this way."
 image: site_assets/img/social.jpg
 order: 305
 ---
 
-Sometimes an agent will not understand a sentence as you would expect. In this case, the functionality of the console panel allows you to explore in detail how your agent interprets each word.
+Sometimes an agent will not understand a sentence as you might expect. In this case, the console's functionality allows you to explore in detail how your agent interprets each word.
 
 ## Display the interpret plan
 

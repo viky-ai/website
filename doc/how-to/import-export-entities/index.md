@@ -1,14 +1,14 @@
 ---
 layout: doc
 title: "Import, export entities"
-description: "This how-to guide present you how to import and export entities."
+description: "How to import and export entities."
 image: site_assets/img/social.jpg
 order: 303
 ---
 
 ## Purpose
 
-As your agent becomes more complex, it will need a large number of entities grouped into lists. In that case, it is easier to process these lists in an external tool and import them into viky.ai.
+As your agent becomes more complex, it will need a large number of entities grouped into lists. In this case, it is easier to process these lists in an external tool and import them into viky.ai.
 
 
 ## File format
