@@ -130,33 +130,31 @@ Let's say we want to convert the temperature into a normalized fahrenheit unit, 
 Of course, everything can be done here, demonstrating the potential for arbitrary solutions.
 
 
-## The properties of a formulation
+## Options of a formulation
 
-There are two mechanisms to control exactly what text a formulation is matching. Those two mechanisms are very powerful:
+There are two mechanisms to control exactly which text a formulation matches. These two mechanisms are very powerful:
 
 * **keep order**: to match the text in the same order
-* **proximity**: to accept or deny some unknown words between the words of the formulation text.
+* **proximity**: to accept or reject certain unknown words between the words of the formulation text.
 
 ### Keep order
 
-It is possible to match an expression by respecting the order or not.
-This can be interesting when the order of the words in the sentence is important, to match precisely, or, on the opposite, to have a very flexible match.
+It is possible to match an expression with or without word order.
+This can be interesting when the order in the sentence is important, for accurate correspondence, or on the contrary, to have a more flexible correspondence.
 
-For example, for the numbers, the order is very important: hundred two is very different from two hundred, and in this case, the order must be kept.
-On the opposite, when registering a reservation, the options can be given in an undefined order: "I want an hotel with a spa for christmas" is the very same thing as "I want an hotel for christmas with a spa"
-
-This can be handled with the **keep order** checkbox of the formulation.
+For example, for numbers, the order is very important: "one hundred and two" is very different from "two hundred and one", and in this case, the order must be kept.
+On the other hand, when registering a reservation, options can be given in any order: "I want a hotel with a spa for Christmas" is the same as "I want a hotel for Christmas with a spa".
 
 
 ### Proximity
 
-It can be very convenient to accept a few extra words in a formulation, as it can be very powerful to be very strict on the definition of what is accepted or not
+It can be very convenient to accept a few additional words in a formulation, just as it may be necessary to be very strict on the definition of what is accepted or not.
 
-For example: the sentences "I want coffee", "I want **a** coffee" and "I want **some** coffee" are exactly the same whereas no word must be accepted between "new" and "york" in the name of the "New-York" city.
+For instance: the sentences "I want coffee" or "I want **a** coffee" are semantically the same while no words should be accepted between "New" and "York" in the city name "New York".
 
 By default, the proximity is set to **close**. The possible values are:
 
-* **glued**: no extra word is allowed
+* **glued**: no extra words are allowed
 * **glued + punc**: only punctuation is allowed between 2 consecutive matched words
 * **very close**: approximately 1 word (8 letters) is allowed between 2 consecutive matched words
 * **close**: approximately 3 words (20 letters) are allowed between 2 consecutive matched words
@@ -167,8 +165,8 @@ By default, the proximity is set to **close**. The possible values are:
 
 There are only two generic types of interpretations:
 
-* Number: represents digital number such as 12 or 34.56
-* Regex: introduces the possibility of adding a regex as an interpretation
+* **Number**: represents digital number such as 12 or 34.56
+* **Regex**: introduces the possibility of adding a regex as an interpretation
 
 It is very important to notice that there are only two types of interpretations that are not encoded within the framework of viky.ai. This is because we want to limit the number of primitive function within our NLP component, in order to achieve maximum expressiveness of the interpretation's language.
 
