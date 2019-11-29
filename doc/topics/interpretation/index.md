@@ -165,25 +165,25 @@ By default, the proximity is set to **close**. The possible values are:
 
 There are only two generic types of interpretations:
 
-* **Number**: represents digital number such as 12 or 34.56
+* **Number**: represents a numerical number such as 12 or 34.56
 * **Regex**: introduces the possibility of adding a regex as an interpretation
 
-It is very important to notice that there are only two types of interpretations that are not encoded within the framework of viky.ai. This is because we want to limit the number of primitive function within our NLP component, in order to achieve maximum expressiveness of the interpretation's language.
+It is important to note that there are only two types of interpretations that are not coded in the viky.ai framework. This is because we want to limit the number of primitive functions in our NLP component, in order to achieve maximum expressiveness of the interpretation language.
 
 
 #### Type Number
 
-The generic interpretation 'Number' matches only numbers such as 12 or 34.56, it has been used to create the Numbers agent, which is much more general, and is to be used most of the time.
+The generic interpretation "Number" only matches numbers such as 12 or 34.56, it is used in the Numbers agent, which is much more general, and should be used most of the time.
 
 
 #### Type Regex
 
-The generic interpretation 'Regex' does something that no interpretation can easily do: match specific list of characters using regular expressions to make it as an interpretation.
+The generic interpretation "Regex" does something that no interpretation can easily do: match a specific list of characters by using regular expressions to make an interpretation.
 
-For example, we can use regular expressions to recognize IP addresses with the following regular expression:
+For example, we can use regular expressions to recognize IP addresses with:
 
 ```
 (25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)
 ```
 
-Check our [IP addresses agent](https://www.viky.ai/agents/viky/ip-address) to see how it is working.
+Check our [IP addresses agent](https://www.viky.ai/agents/viky/ip-address) to see how it works.
