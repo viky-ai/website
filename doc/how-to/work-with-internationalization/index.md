@@ -1,12 +1,12 @@
 ---
 layout: doc
 title: "Work with internationalization"
-description: "How to handle languages specific sentences."
+description: "How to manage language specific sentences."
 image: site_assets/img/social.jpg
 order: 302
 ---
 
-When analyzing sentences in different languages it is often possible to find common patterns on how the idea is expressed. In viky.ai, agents are multi-lingual. It allows you to harness the power to factor these common models together.
+By analyzing sentences in different languages, it is often possible to find common patterns of how an idea is expressed. In viky.ai, agents are multilingual, allowing you to leverage the full power of factoring these models together.
 
 
 ## Configure your agent
@@ -137,7 +137,7 @@ This means that even if you specify "en" as the only accepted language, it will 
 ## The universal language
 
 
-In our day-to-day life we often use more than words to communicate, we use emojis :grinning:!
+In our everyday lives, we often use more than words to communicate, we use emojis :grinning:!
 
 In the "food" entities list, create a new entity for eggs in English, French and emoji (no language):
 

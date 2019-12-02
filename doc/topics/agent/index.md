@@ -6,7 +6,7 @@ image: site_assets/img/social.jpg
 order: 201
 ---
 
-Understanding unstructured texts expressed in natural language is a complex subject and has been an active area of research and development for years.
+Understanding unstructured texts expressed in natural language is a complex subject that has been the subject of active research and development for years.
 
 A major difficulty is the connotation that people introduce into their daily communications such as idioms, humour (irony, sarcasm...) or metaphor, to name a few. This creates an ambiguity that only a human being is able to understand through the context of the conversation.
 

@@ -1,12 +1,12 @@
 ---
 layout: doc
 title: "Discover and try agents"
-description: "How to discover what agents can be useful for your use case."
+description: "How to discover which agents can be useful for your use case."
 image: site_assets/img/social.jpg
 order: 300
 ---
 
-The number of publicly available agents can be overwhelming when you are looking for an existing one that could fit your requirements. Several tools can help you find the best agent for your use case.
+The number of publicly available agents can be overwhelming when you are looking for an existing agent that could meet your needs. Several tools can help you find the best agent for your use case.
 
 In this example we want to analyze texts such as this one:
 
@@ -17,14 +17,14 @@ In this example we want to analyze texts such as this one:
 > The Imitation Game grossed over $233 million worldwide on a $14 million production budget, making it the highest-grossing independent film of 2014. It received eight nominations at the 87th Academy Awards, winning for Best Adapted Screenplay, five nominations in the 72nd Golden Globe Awards, and three nominations at the 21st Screen Actors Guild Awards. It also received nine BAFTA nominations and won the People's Choice Award at the 39th Toronto International Film Festival.
 > <cite><a href="https://en.wikipedia.org/wiki/The_Imitation_Game">The Imitation Game</a>, from Wikipedia</cite>
 
-Beyond its cinematic subject this text contains lots of common entities like names, amounts of money, dates and so on. A good way to begin is to search for existing agents and reuse them as dependencies which can save us a lot of work.
+Beyond its cinematographic subject, this text contains many common entities such as names, amounts of money, dates and so on. A good way to start is to search for existing agents and reuse them as dependencies, which can save us a lot of work.
 
 
 ## Agents index
 
 The main agents index lists every agents available to you. Some of them have a `public` ribbon meaning any users can access them at least as read-only.
 
-From the agents index you can access the search bar allowing you to filter agents by name, by user name or by slug. You can also filter agents by ownership and by visibility. Use the search bar to filter the list and display only public agents.
+From the agents index, you can access the search bar that allows you to filter agents by name, user name or slug. You can also filter agents by owner and visibility. Use the search bar to filter the list and display only public agents.
 
 ![Public agents list screenshot](./img/01_public_agents.png "Filter the list to show only public agents")
 

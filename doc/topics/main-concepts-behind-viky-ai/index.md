@@ -6,7 +6,7 @@ image: site_assets/img/social.jpg
 order: 200
 ---
 
-We discuss here the main concepts behind viky.ai. If the terms "NLP", "semantic solution", "agent", "interpretation", "formulation", "entity" do not tell you anything, it is completely normal. We hope that reading this documentation will help you clarify these terms, in order to understand viky.ai.
+We discuss here the main concepts behind viky.ai. If the terms "NLP", "semantic solution", "agent", "interpretation", "formulation", "entity" do not mean anything to you, this is completely normal. We hope that reading this documentation will help you to clarify these terms, in order to understand viky.ai.
 
 
 ## NLP

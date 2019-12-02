@@ -1,12 +1,12 @@
 ---
 layout: doc
 title: "Work collaboratively"
-description: "This guide shows how viky.ai supports collaborative working."
+description: "This guide shows how viky.ai supports collaborative work."
 image: site_assets/img/social.jpg
 order: 301
 ---
 
-viky.ai allows you to work collaboratively with agents and thus benefit from the contributions of your collaborators. Here we explain how to proceed.
+viky.ai allows you to work collaboratively on agents and thus benefit from the contributions of your collaborators. Here we explain how to proceed.
 
 
 ## Owner status
@@ -17,7 +17,7 @@ You can check this by consulting the "Overview" tab of the agents, in the "Shari
 
 ![Agent overview screenshot, focus on Share overview section](img/01_sharing_overview.png "Jean-Marie is owner of Address Tutorial agent.")
 
-The status of owner of an agent allows you to see, modify, delete it but also to invite people to collaborate with you on this agent. We look at it in details now.
+The owner status of an agent allows you to view, modify, delete and invite people to collaborate with you on this agent. Let us look at this in detail now.
 
 
 ## Invite collaborators
@@ -55,9 +55,9 @@ You can repeat this operation with as many persons as you want.
 </aside>
 
 
-## Transfert your agent ownership
+## Transfer ownership of your agent
 
-An agent can have only one owner. However, as an owner, you can transfer your agent ownership at any time. To do this, access the dedicated form by clicking on the "Transfer ownership" button.
+An agent can only have one owner. However, as an owner, you can transfer ownership of your agent at any time. To do this, access the dedicated form by clicking on the "Transfer ownership" button.
 
 ![Agent overview screenshot, focus on Transfert ownership button](img/05_transfert_btn.png "Access to the dedicated form by clicking on the "Transfer ownership" button")
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: viky.ai is released in open source
-description: The viky.ai platform is released in open source on November, 29th 2019.
+description: The viky.ai platform is released in open source on December 2, 2019.
 author: Patrick Constant
 avatar: patrick-constant.jpg
 image: /blog/2019/12/02/viky-ai-available-in-open-source/open-source.jpg
