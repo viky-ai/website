@@ -1,7 +1,7 @@
 ---
 layout: doc
 title: "Make non regression tests"
-description: "Present how to test what sentences an agent can understand and how to guarantee this behavior over time."
+description: "How to test the sentences that an agent can understand and how to ensure this behaviour over time."
 image: site_assets/img/social.jpg
 order: 304
 ---

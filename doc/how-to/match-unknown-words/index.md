@@ -6,11 +6,11 @@ image: site_assets/img/social.jpg
 order: 306
 ---
 
-Usually your agent will use annotations to define the sentence structure. But having a well defined and consistent structure can be challenging and even sometimes impossible. One way to solve this problem is to use the **"Any" option**.
+Usually, your agent uses annotations to define the sentence structure. But having a well-defined and consistent structure can be difficult, if not impossible. One way to solve this problem is to use the **"Any option "**.
 
 ## "Any" option to the rescue
 
-When annotating a formulation, a special option "Any" is available. It allows the agent to match anything on this position in the sentence and bind it to the associated JavaScript variable in the solution.
+When annotating a formulation, a special option called "Any" is available. It allows the agent to match anything to this position in the sentence and link it to the associated JavaScript variable in the solution.
 
 You already saw how an agent can match an unexpected road name for the "Address Tutorial" agent that we created in the "[Getting started](/doc/tutorials/getting-started-part-3/#route-name)" tutorial. Let's dig a little deeper with this example.
 
@@ -47,7 +47,7 @@ If you type the road name with the known road name, here "12 avenue Rivoli 75019
 
 ![Console any perfect match](img/04_any_perfect_match.png "Perfect match on expected road name even with the 'any' option")
 
-What happens is that the annotated interpretation or list of entities will be used first, but if nothing matches, the "Any" option will be used as a fallback and will still collect the corresponding text. In that case the associated score will be decreased compare to not triggering the "Any" option.
+What happened is that the annotated interpretation or list of entities will be used first, but if nothing matches, the "Any" option will be used as a fallback solution and will still collect the corresponding text. In this case, the associated score will be decreased compared to not triggering the "Any" option.
 
 <aside class="warning">
   <p>
