@@ -11,7 +11,7 @@ Beside its structure, the sentence carries another kind of information in the fo
 
 ## What is an entity?
 
-[Named entities](https://en.wikipedia.org/wiki/Named_entity) are a well known concept in the NLP world. They are texts representing a real-world object, such as persons, locations, organizations, products, etc. If we view an interpretation as the tree structure of the sentence, then entities are leaves in this tree.
+[Named entities](https://en.wikipedia.org/wiki/Named_entity) are a well known concept in the NLP world. They are expressions representing a real-world object, such as persons, locations, organizations, products, etc. If we view an interpretation as the tree structure of the sentence, then entities are the leaves in this tree.
 
 Once an entity is detected, the goal is to associate it with a meaning in the form of an arbitrary semantic solution. For example, we can represent the town "London" as the following solution:
 
@@ -34,18 +34,18 @@ We can see that most of this information is quite arbitrary:
 
 Once we have a normalized way to describe the entity, we can now associate every synonymous expressions with this representation. For instance, when we read the French translation "Londres" or if we say "capital of the UK" we are still talking about the same city. Thus we are able to link all of them with the core idea identified by the semantic solution.
 
-In viky.ai, it is not just about detecting the presence of an entity but also to give a structured meaning helping you process it further down your own business use case.
+In viky.ai, it is not just about detecting the presence of an entity but also to give a structured meaning which will help you process it further down in your own business use case.
 
 
 ## Why a list?
 
-Now that we understand what an entity is in viky.ai, why are they grouped into list?
+Now that we understand what an entity is in viky.ai, why are they grouped into lists?
 
 Even if an entity can live on its own once it is attached to a semantic solution, we often have to deal with many of the same kind. For instance if we have sentences stating something about colors, money or brands we usually need to understand not just one but several variations of them. Thus it is easier to manage an entities list that embody a common theme or at least bind entities in a meaningful way for your use case.
 
 When using standardize concepts such as cities, countries, etc. you will often find external third-party knowledge bases. To help you, viky.ai provides tools to massively import or export those lists.
 
-Inside an entities list each item is present with a possible translation and with a corresponding solution. When building a list, the amount of data you can put can be huge but if you are not careful this has some downsides.
+Inside an entities list each item is present with a possible translation and with a corresponding solution. When building a list, the amount of data you can put can be huge. If you are not careful this has some downsides.
 
 
 ## KISS
