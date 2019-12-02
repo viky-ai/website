@@ -1,18 +1,18 @@
 stages:
   - build
   - docker_tag
-  - push_dockerhub
   - deploy
-  - admin
-
-  # generic setup
-image: vikyai/tools-gitlab-auto-deploy-image:latest
-before_script:
-  # load auto-deploy if exits (not in test)
-  - if [ -f /auto-deploy.sh ]; then . /auto-deploy.sh ; fi
 
 variables:
-  DOCKER_IMAGE_DOC: ${CI_REGISTRY_IMAGE}
+  GIT_SUBMODULE_STRATEGY: none
+  DOCKER_IMAGE_DOC: $CI_REGISTRY_IMAGE/doc
+  DOCKERHUB_IMAGE_DOC: vikyai/doc
+
+image: vikyai/tools-gitlab-auto-deploy-image:latest
+before_script:
+  - if [ "${TRACE:-false}" == "true" ] ; then  set -x ; fi
+  # load auto-deploy if exits (not in test)
+  - if [ -f /auto-deploy.sh ] ; then . /auto-deploy.sh ; fi
 
 .kubernetes_runner:
   tags:
@@ -27,52 +27,119 @@ build_doc:
   script:
     - docker_build ${DOCKER_IMAGE_DOC} .
 
-# Tag docker image to latest
-tag_doc:
+# Tag docker image to lasted
+tag_latest:
   extends: .kubernetes_runner
   stage: docker_tag
+  variables:
+    GIT_STRATEGY: none
   only:
-    - master
+    refs:
+      - master
+  except:
+    refs:
+      - tags
   script:
     - docker_tag_latest ${DOCKER_IMAGE_DOC}
 
 # Push Docker image to Dockerhub only when on Master and it's a Tag
-push_dockerhub:
+.push_dockerhub:
   extends: .kubernetes_runner
-  stage: push_dockerhub
-  needs:
-    - "tag_doc"
-  only:
-    - master
+  stage: docker_tag
+  environment:
+    name: viky-ai-production
   script:
-    - docker_push_gitlab_to_dockerhub "${DOCKER_IMAGE_DOC}:latest" "vikyai/doc:latest"
+    - export VIKY_GITLAB_TAG="${CI_COMMIT_REF_SLUG:-latest}"
+    - docker_push_gitlab_to_dockerhub "${DOCKER_IMAGE_DOC}:${VIKY_GITLAB_TAG}"          "${DOCKERHUB_IMAGE_DOC}:${VIKY_DOCKERHUB_TAG}"
 
-# Deploy
-deploy:
+push_dockerhub_master:
+  extends: .push_dockerhub
+  stage: docker_tag
+  only:
+    refs:
+      - master
+    variables:
+      - $DOCKER_HUB_LOGIN
+      - $DOCKER_HUB_PASSWORD
+  variables:
+    VIKY_DOCKERHUB_TAG: "latest"
+  environment:
+    name: viky-ai-production
+
+push_dockerhub_tag:
+  extends: .push_dockerhub
+  stage: docker_tag
+  only:
+    refs:
+      - tags
+    variables:
+      - $DOCKER_HUB_LOGIN
+      - $DOCKER_HUB_PASSWORD
+  variables:
+    VIKY_DOCKERHUB_TAG: ${CI_COMMIT_TAG}
+  environment:
+    name: viky-ai-production
+
+push_dockerhub_saas:
+  extends: .push_dockerhub
+  stage: docker_tag
+  only:
+    refs:
+      - saas
+    variables:
+      - $DOCKER_HUB_LOGIN
+      - $DOCKER_HUB_PASSWORD
+  variables:
+    VIKY_DOCKERHUB_TAG: "saas"
+
+deploy_dev:
+  extends: .kubernetes_runner
+  only:
+    variables:
+      - $DEPLOY_GITLAB_CI_URL_DEV_B64
+  except:
+    refs:
+      - saas
+      - tags
+  environment:
+    name: dev-${CI_COMMIT_REF_SLUG}
+    url: https://viky-${CI_ENVIRONMENT_SLUG}-kube.viky.ai
+    # TODO trigger auto delete env with api env stop : https://docs.gitlab.com/ee/api/environments.html#stop-an-environment
+    #on_stop: delete_env
   extends: .kubernetes_runner
   stage: deploy
-  environment:
-    name: ${CI_COMMIT_REF_NAME}
-    url: https://viky-dev-doc-${CI_COMMIT_REF_SLUG}-kube.viky.ai
-    on_stop: delete_env
   script:
-    # update image fo the doc
-    - kube_setup
-    - cd deployment
-    - export DOCKER_IMAGE_DOC_TAG=$(docker_digest_tag "${DOCKER_IMAGE_DOC}:${CI_COMMIT_REF_SLUG}")
-    - export DOC_DOMAIN="viky-dev-doc-${CI_COMMIT_REF_SLUG}-kube.viky.ai"
-    - envsubst < deploy.yaml | kubectl apply -f -
+    - |
+      # Deploy to dev
+      export DEPLOY_GITLAB_CI_URL=$(echo "${DEPLOY_GITLAB_CI_URL_DEV_B64}" | base64 -d)
+      curl --show-error --silent --output /dev/null -X POST \
+      -F token=${DEPLOYMENT_TOKEN_DEV} \
+      -F ref=master \
+      -F variables[VIKY_DOCKER_TAG]=${CI_COMMIT_REF_SLUG} \
+      -F variables[NOTIFY_DEPLOYMENT_INFO]=${CI_COMMIT_SHORT_SHA} \
+      "${DEPLOY_GITLAB_CI_URL}"
 
-# Remove
-delete_env:
+deploy_production:
   extends: .kubernetes_runner
-  stage: admin
+  only:
+    refs:
+      - saas
+    variables:
+      - $DEPLOY_GITLAB_CI_URL_PROD_B64
+  except:
+    refs:
+      - tags
   environment:
-    name: ${CI_COMMIT_REF_NAME}
-    action: stop
+    name: viky-ai-production
+    url: https://www.viky.ai
+  stage: deploy
   script:
-    - kube_setup
-    - kubectl get all
-    - kube_cleanup
-  when: manual
-  allow_failure: true
+    - |
+      # Deploy to production
+      export DEPLOY_GITLAB_CI_URL=$(echo "${DEPLOY_GITLAB_CI_URL_PROD_B64}" | base64 -d)
+      curl --show-error --silent --output /dev/null -X POST \
+      -F token=${DEPLOYMENT_TOKEN_PROD} \
+      -F ref=master \
+      -F variables[VIKY_DOCKER_TAG]=saas \
+      -F variables[NOTIFY_DEPLOYMENT_INFO]=${CI_COMMIT_SHORT_SHA} \
+      "${DEPLOY_GITLAB_CI_URL}"
