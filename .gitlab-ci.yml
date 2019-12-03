@@ -112,7 +112,7 @@ deploy_dev:
     - |
       # Deploy to dev
       export DOCKER_IMAGE_DOC_TAG="${CI_COMMIT_REF_SLUG}"
-      if [ "${DOCKER_IMAGE_DOC_TAG}" == "master" ] ; then DOCKER_IMAGE_DOC_TAG="latest" ; if
+      if [ "${DOCKER_IMAGE_DOC_TAG}" == "master" ] ; then DOCKER_IMAGE_DOC_TAG="latest" ; fi
       export DEPLOY_GITLAB_CI_URL=$(echo "${DEPLOY_GITLAB_CI_URL_DEV_B64}" | base64 -d)
       curl --show-error --silent --output /dev/null -X POST \
       -F token=${DEPLOYMENT_TOKEN_DEV} \
