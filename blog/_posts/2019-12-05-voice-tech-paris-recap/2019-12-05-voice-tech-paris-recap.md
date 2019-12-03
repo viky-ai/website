@@ -4,7 +4,7 @@ title: Voice Tech Paris Recap
 description: Recap of Patrick Constant talk at Paris Voice Tech
 author: Patrick Constant
 avatar: patrick-constant.jpg
-image: site_assets/img/social.jpg
+image: /blog/2019/12/05/voice-tech-paris-recap/social.jpg
 ---
 
 I wanted to give you a small recap of my talk at Paris Voice Tech, last week.
@@ -13,11 +13,11 @@ As Noam Chomsky said, "language is the mirror of the mind", and this is basicall
 
 <!--keep reading-->
 
-Yes, machine learning has done great progress, and we now have decent speech to text and translation, but **we still have a long way to go to handle human language**.
+Yes, **machine learning has done great progress**, and we now have decent speech to text and translation, **but we still have a long way to go to handle human language**.
 
 ![Patrick Constant giving a speech at Voice Tech Paris 2019](patrick_constant_voice_tech_paris.jpg "Patrick Constant at Voice Tech Paris 2019")
 
-Human language have been described by grammars for a very long time. Thus creating a platform such as viky.ai which can help creating rules to describe piece by piece natural languages, still seems a good way to go.
+Human language have been described by grammars for a very long time. Thus **creating a platform such as viky.ai which can help creating rules to describe piece by piece natural languages, still seems a good way to go**.
 
 But we want to have a platform where we can do it simply, collaboratively and with an idea of reusability of the rules that have been created. After all, **many rules have been the same for centuries**!
 
