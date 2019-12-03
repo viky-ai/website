@@ -6,8 +6,8 @@ Describe the big picture of your changes here to communicate to the maintainers 
 
 Before you submit a pull request, please make sure you have to following:
 
-- [ ] The documentation render correctly in your browser
-- [ ] If you included illustrations, they follow the [CONTRIBUTING](https://github.com/viky-ai/website/blob/master/CONTRIBUTING.md) recommendations
+- [ ] The documentation render correctly in your browser.
+- [ ] If you included illustrations, they follow the [CONTRIBUTING](https://github.com/viky-ai/website/blob/master/CONTRIBUTING.md) recommendations.
 
 **Further comments**
 
