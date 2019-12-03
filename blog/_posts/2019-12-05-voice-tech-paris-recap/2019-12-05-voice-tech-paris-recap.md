@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Voice Tech Paris Recap
-description: "Great news to share on viky.ai: Play interface and case sensitivity"
+description: Recap of Patrick Constant talk at Paris Voice Tech
 author: Patrick Constant
 avatar: patrick-constant.jpg
 image: site_assets/img/social.jpg
@@ -9,7 +9,7 @@ image: site_assets/img/social.jpg
 
 I wanted to give you a small recap of my talk at Paris Voice Tech, last week.
 
-As Noam Chomsky said, language is the mirror of the Mind Chomsky, and this is basically the idea I wanted to convey: we need to understand better the human mind if we want to better handle human languages. And the reverse could be true: if we handle better the human languages, we will be able to understand better the human mind.
+As Noam Chomsky said, "language is the mirror of the mind", and this is basically the idea I wanted to convey: we need to understand better the human mind if we want to better handle human languages. And the reverse could be true: if we handle better the human languages, we will be able to understand better the human mind.
 
 <!--keep reading-->
 
@@ -24,5 +24,3 @@ But we want to have a platform where we can do it simply, collaboratively and wi
 I really hope that viky.ai will help pave the way to a better natural language understanding and thus a better understanding of the human mind.
 
 Cheers!
-
-
