@@ -4,7 +4,6 @@ about: Create a report to help us improve.
 title: ''
 labels: documentation
 assignees: ''
-
 ---
 
 If you find something is missing in the documentation, if you found a typo or if you have a better way to explain something, you are welcome to make a suggestion!
