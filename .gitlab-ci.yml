@@ -102,7 +102,7 @@ deploy_dev:
       - saas
       - tags
   environment:
-    name: dev-${CI_COMMIT_REF_SLUG}
+    name: dev-website-${CI_COMMIT_REF_SLUG}
     url: https://viky-${CI_ENVIRONMENT_SLUG}-kube.viky.ai
     # TODO trigger auto delete env with api env stop : https://docs.gitlab.com/ee/api/environments.html#stop-an-environment
     #on_stop: delete_env
@@ -111,11 +111,15 @@ deploy_dev:
   script:
     - |
       # Deploy to dev
+      export DOCKER_IMAGE_DOC_TAG="${CI_COMMIT_REF_SLUG}"
+      if [ "${DOCKER_IMAGE_DOC_TAG}" == "master" ] ; then DOCKER_IMAGE_DOC_TAG="latest" ; fi
       export DEPLOY_GITLAB_CI_URL=$(echo "${DEPLOY_GITLAB_CI_URL_DEV_B64}" | base64 -d)
       curl --show-error --silent --output /dev/null -X POST \
       -F token=${DEPLOYMENT_TOKEN_DEV} \
       -F ref=master \
-      -F variables[VIKY_DOCKER_TAG]=${CI_COMMIT_REF_SLUG} \
+      -F variables[VIKY_DEPLOY_NAME]=${CI_ENVIRONMENT_NAME} \
+      -F variables[VIKY_DOCKER_TAG]=latest \
+      -F variables[DOCKER_IMAGE_DOC_TAG]=${DOCKER_IMAGE_DOC_TAG} \
       -F variables[NOTIFY_DEPLOYMENT_INFO]=${CI_COMMIT_SHORT_SHA} \
       "${DEPLOY_GITLAB_CI_URL}"
 
@@ -140,6 +144,8 @@ deploy_production:
       curl --show-error --silent --output /dev/null -X POST \
       -F token=${DEPLOYMENT_TOKEN_PROD} \
       -F ref=master \
+      -F variables[VIKY_DEPLOY_NAME]=viky-ai-production \
       -F variables[VIKY_DOCKER_TAG]=saas \
+      -F variables[DOCKER_IMAGE_DOC_TAG]=saas \
       -F variables[NOTIFY_DEPLOYMENT_INFO]=${CI_COMMIT_SHORT_SHA} \
       "${DEPLOY_GITLAB_CI_URL}"
