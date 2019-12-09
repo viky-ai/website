@@ -9,3 +9,6 @@ CONTRIBUTING.md
 .git
 .gitignore
 .gitlab-ci.yml
+
+# Markdown doc
+doc/reference/markdown-reference/
