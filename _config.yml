@@ -25,7 +25,7 @@ feed:
 defaults:
   -
     scope:
-      path:            "404.html"
+      path:            "40x.html"
     values:
       sitemap:         false
   -

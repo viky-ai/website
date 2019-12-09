@@ -7,7 +7,7 @@ image: site_assets/img/social.jpg
 
 # Privacy policy
 
-<p class="legal-last-update">Last updated: November 14, 2019</p>
+<p class="legal-last-update">Last updated: December 9, 2019</p>
 
 
 ## Preamble
@@ -18,6 +18,22 @@ This statement also informs you of your data protection rights and obligations w
 
 
 ## Retention and Use of your personal data
+
+### Website tracking
+
+In order for us to provide you the best possible experience on our websites, we need to collect and process certain information, that include:
+
+**Usage data** — When you visit our site, we will store: the website from which you visited us from, the parts of our site you visit, the date and duration of your visit, your anonymised IP address, information from the device (device type, operating system, screen resolution, language, country you are located in, and web browser type) you used during your visit, and [more](https://matomo.org/faq/general/faq_18254/). We process this usage data in Matomo Analytics for statistical purposes, to improve our site and to recognize and stop any misuse.
+
+**Cookies** — we use cookies (small data files transferred onto computers or devices by sites) for record-keeping purposes and to enhance functionality on our site. You may deactivate or restrict the transmission of cookies by changing the settings of your web browser. Cookies that are already stored may be deleted at any time.
+
+### Opt-out of website tracking
+
+<iframe
+  style="border: 1px solid rgba(0,0,0,.1); height: auto; width: 100%;border-radius: 3px;padding: 0 .5em;background-color: #fff;"
+  src="https://vikyai.matomo.cloud/index.php?module=CoreAdminHome&action=optOut&language=en&backgroundColor=&fontColor=&fontSize=16px&fontFamily=Roboto"></iframe>
+
+### Account personal data
 
 The information collected on the forms for creating an account and managing your profile is recorded in a computer file by Pertimm to allow you to access the www.viky.ai platform.
 
