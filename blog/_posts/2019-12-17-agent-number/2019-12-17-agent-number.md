@@ -9,11 +9,13 @@ image: /blog/2019/12/15/2019-12-15-agent-number/social.jpg
 
 This is the first in a long series of articles in which I would like to provide a review of our public agents.
 
-First of all, to have the list of viky public agents search agent with "viky/" in the search bar and you will get their list in decreasing popularity order.
+First of all, to have the list of viky public agents, search agents with "viky/" in the search bar and you will get their list in decreasing popularity order.
 
-The first agent I want to share with you is the **Numbers** agent.
+The first agent I want to share with you is the **[Numbers](https://www.viky.ai/agents/viky/numbers)** agent.
 
 <!--keep reading-->
+
+![the image of the agent number](agent_numbers.jpg "The Numbers agent")
 
 Numbers are very common in texts. They are also very easy to understand and recognize.
 
@@ -36,9 +38,9 @@ And the funny thing is that those separators depend upon the country they are us
 
 Of course, they do not combine very well together, and these combinations depend on the different countries in which they are used. The main formats are the following:
 
-* **120 000 000.90** or **120,000,000.90**: that format would be used in the U.S. and most English speaking countries, as well as some other countries
-* **120 000 000,90** or **120.000.000,90**: that format would be used in most European countries that not speak English
-* **120'000'000.90**: that format is mostly used in Switzerland !
+* **120 000 000.90** or **120,000,000.90**: that format would be used in the U.S. and most English speaking countries, as well as some other countries;
+* **120 000 000,90** or **120.000.000,90**: that format would be used in most European countries that do not speak English;
+* **120'000'000.90**: that format is mostly used in Switzerland!
 
 Viky is making a best effort to recognize all numbers in any formats, whether some language is specified in the request or not.
 
@@ -47,7 +49,7 @@ We have decided to keep the parsing of those numbers internally (we use regexes)
 
 ## Letter numbers
 
-Letter numbers are numbers that are written with words and thus letters. They depend upon the language. Currently, the Numbers agent is working on two languages:
+Letter numbers are numbers that are written with words and thus letters. They depend upon the language. Currently, the **Numbers** agent is working on two languages:
 
 * English
 * French
@@ -64,7 +66,7 @@ Many other languages can be added with the following rule: add the new language 
 
 ## Other numbers
 
-But numbers are not that simple, for example what do we do with the following examples?
+But numbers can be expressed in many other ways. They can be very fuzzy, for example what do we do with the following examples?
 
 * thousands of people
 * tens of thousands of people
