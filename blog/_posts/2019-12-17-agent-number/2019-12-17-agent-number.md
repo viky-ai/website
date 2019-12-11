@@ -4,14 +4,12 @@ title: Public Agent Numbers
 description: Recap of Patrick Constant talk at Paris Voice Tech
 author: Patrick Constant
 avatar: patrick-constant.jpg
-image: /blog/2019/12/15/2019-12-15-agent-number/social.jpg
+image: /blog/2019/12/17/2019-12-17-agent-number/agent_numbers.jpg
 ---
 
-This is the first in a long series of articles in which I would like to provide a review of our public agents.
+This is the first in a long series of articles in which we will review the set of officially supported agents.
 
-First of all, to have the list of viky public agents, search agents with "viky/" in the search bar and you will get their list in decreasing popularity order.
-
-The first agent I want to share with you is the **[Numbers](https://www.viky.ai/agents/viky/numbers)** agent.
+The first agent I want to share with you today is the **[Numbers](https://www.viky.ai/agents/viky/numbers)** agent.
 
 <!--keep reading-->
 
@@ -22,11 +20,11 @@ Numbers are very common in texts. They are also very easy to understand and reco
 Numbers come basically in two different forms:
 
 * using digits, such as **23**
-* using letters, such as **twenty three**
+* using letters, such as **twenty-three**
 
 ## Digit numbers
 
-Digit numbers are already a challenge in themselves because they can have different formats. those formats are used for readability, and they involve mostly two features:
+Digit numbers are already a challenge in themselves because they can have different formats. Those formats are used for readability, and they involve mostly two features:
 
 * Thousand separators
 * Decimal separators
@@ -42,7 +40,7 @@ Of course, they do not combine very well together, and these combinations depend
 * **120 000 000,90** or **120.000.000,90**: that format would be used in most European countries that do not speak English;
 * **120'000'000.90**: that format is mostly used in Switzerland!
 
-Viky is making a best effort to recognize all numbers in any formats, whether some language is specified in the request or not.
+viky.ai is making a best effort to recognize all numbers in any formats, whether some language is specified in the request or not.
 
 We have decided to keep the parsing of those numbers internally (we use regexes). But maybe you could create an agent using only regexes, that could do the same thing. In any case, it would be a good exercise !
 
@@ -57,10 +55,9 @@ Letter numbers are numbers that are written with words and thus letters. They de
 Here are a few letter numbers:
 
 * twenty (20)
-* two hundred and forty two (242)
-* one hundred and sixty thousand four hundred and thirty two (160432)
-* two hundred and fifty billion three hundred and twenty millions one hundred and sixty thousand four hundred and thirty two (250320160432)
-
+* two hundred and forty-two (242)
+* one hundred and sixty thousand four hundred and thirty-two (160432)
+* two hundred fifty billion three hundred twenty million one hundred sixty thousand four hundred thirty-two (250320160432)
 
 Many other languages can be added with the following rule: add the new language in this agent (by creating a copy) and then share the results with us. We most certainly will add the new language to the viky.ai Numbers agent.
 
@@ -73,11 +70,6 @@ But numbers can be expressed in many other ways. They can be very fuzzy, for exa
 * hundreds of millions of people
 * many thousands of people
 
-viky.ai handles that as well! And we encourage you to tests those sentences in the console of the Numbers agent, and tell us what you think.
+viky.ai handles that as well! And we encourage you to tests those sentences in the console of the [Numbers agent](https://www.viky.ai/agents/viky/numbers), and tell us what you think.
 
 Have fun !
-
-
-
-
-
