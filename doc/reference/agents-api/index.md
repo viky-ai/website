@@ -185,10 +185,21 @@ _JSON response:_
           The language code in which the sentence is written.
         </p>
         <p>
-          Use the <a href="https://tools.ietf.org/html/rfc7231#section-5.3.5">HTTP Header Accept-Language conventions</a>.
+          This parameter is inspired from the <a href="https://tools.ietf.org/html/rfc7231#section-5.3.5">HTTP Header Accept-Language conventions</a>.
         </p>
         <p>
-          <small>Example: <code>en-US, en;q=0.9</code></small>
+          <small>
+            Examples:
+            <ul>
+              <li>
+                <code>*</code>, all languages can be interpreted (default value).
+              </li>
+              <li>
+                <code>en-US, en;=0.9,fr;q=0.5</code>, favor US english over other english and over french languages.
+                But no other languages will be interpreted.
+              </li>
+            </ul>
+          </small>
         </p>
       </td>
     </tr>
