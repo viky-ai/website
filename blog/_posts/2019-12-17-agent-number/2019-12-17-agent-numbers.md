@@ -56,11 +56,11 @@ Letter numbers are numbers that are written with words and therefore letters. Th
 Here are a few letter numbers:
 
 * twenty (20)
-* two hundred and forty-two (242)
-* one hundred and sixty thousand four hundred and thirty-two (160432)
-* two hundred fifty billion three hundred twenty million one hundred sixty thousand four hundred thirty-two (250320160432)
+* two hundred and forty-two and a half (242.5)
+* one hundred and sixty thousand four hundred and thirty-two (160 432)
+* two hundred fifty billion three hundred twenty million one hundred sixty thousand four hundred thirty-two (250 320 160 432)
 
-## Ordinal numbers
+## Approximate numbers
 
 Numbers can be expressed in many other ways. They can be very fuzzy, for example, what do we do with the following examples?
 
