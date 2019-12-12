@@ -21,8 +21,8 @@ Numbers are very common in texts. We find them in different contexts such as dat
 
 We find numbers essentially in two different forms: cardinal and ordinal. Each of these forms can be expressed in two ways:
 
-* using digits, such as **23**
-* using letters, such as **twenty-three**
+* using digits, such as **23** and **23rd**
+* using letters, such as **twenty-three** and **twenty-third**
 
 ## Digit numbers
 
