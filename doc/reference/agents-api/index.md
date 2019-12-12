@@ -195,7 +195,10 @@ _JSON response:_
                 <code>*</code>, all languages can be interpreted (default value).
               </li>
               <li>
-                <code>en-US, en;=0.9,fr;q=0.5</code>, favor US english over other english and over french languages.
+                <code>fr</code>, only french language will be interpreted.
+              </li>
+              <li>
+                <code>en,fr;q=0.5</code>, favor english over french languages.
                 But no other languages will be interpreted.
               </li>
             </ul>
