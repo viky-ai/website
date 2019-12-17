@@ -4,7 +4,7 @@ title: Public Agent Numbers
 description: Introducing the official viky.ai Numbers agent
 author: Patrick Constant
 avatar: patrick-constant.jpg
-image: /blog/2019/12/17/2019-12-17-agent-numbers/social.jpg
+image: /blog/2019/12/17/agent-numbers/social.jpg
 ---
 
 _This is the first of a long series of articles in which we will review officially supported agents._
