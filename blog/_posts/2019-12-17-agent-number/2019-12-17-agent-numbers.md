@@ -4,7 +4,7 @@ title: Public Agent Numbers
 description: Introducing the official viky.ai Numbers agent
 author: Patrick Constant
 avatar: patrick-constant.jpg
-image: /blog/2019/12/17/2019-12-17-agent-numbers/agent_numbers.png
+image: /blog/2019/12/17/2019-12-17-agent-numbers/social.jpg
 ---
 
 _This is the first of a long series of articles in which we will review officially supported agents._
@@ -15,7 +15,7 @@ Today, I want to share with you the **[Numbers agent](https://www.viky.ai/agents
 
 <!--keep reading-->
 
-![Illustration of the Numbers agent](agent_numbers.png "The Numbers agent")
+![Illustration of the Numbers agent](agent_numbers.jpg "The Numbers agent")
 
 Numbers are very common in texts. We find them in different contexts such as dates, quantities, financial data, weather indicators, etc. They are often an essential element in understanding the meaning of a sentence.
 
